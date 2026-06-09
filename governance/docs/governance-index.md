@@ -39,7 +39,8 @@ Blueprint governance is organized into levels:
 | Recovery templates | Provide reusable recovery artifacts | Included |
 | Source coverage maps | Track transfer coverage and system relationships | Included |
 | Other templates | Provide reusable installation artifacts beyond recovery | Planned |
-| Examples | Show adoption patterns | Planned |
+| AI product example | Show a sanitized adoption pattern | Included |
+| Additional examples | Show broader adoption patterns | Planned |
 | Checklists | Provide acceptance criteria | Included |
 
 Planned levels are not included until their files exist in the repository.
@@ -79,6 +80,7 @@ Planned levels are not included until their files exist in the repository.
 | Guardian template bundle | `templates/guardian/README.md` | Reusable Guardian template bundle ownership |
 | Recovery template bundle | `templates/recovery/README.md` | Reusable recovery template bundle ownership |
 | Checklist bundle | `checklists/README.md` | Reusable acceptance checklist bundle ownership |
+| AI product example | `examples/ai-product/README.md` | Sanitized AI product adoption example ownership |
 
 ## Future Ownership Map
 
@@ -86,7 +88,7 @@ These areas are planned, but they are not active owners until their files are ad
 
 | Planned area | Intended owner pattern |
 | --- | --- |
-| Example projects | `examples/**` |
+| Additional example projects | `examples/**` |
 
 Do not cite planned owners as included assets before the files exist.
 
@@ -174,7 +176,7 @@ Release PRs target `main`.
 
 Current planned gaps:
 
-- Example projects are planned for a later phase.
+- Additional example projects are planned for a later phase.
 - Optional automation is not included.
 
 These gaps should not be described as included assets.

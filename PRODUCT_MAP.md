@@ -99,7 +99,7 @@ The loop is intentionally scalable. Small tasks do not pay the cost of full proc
 | PR handoff templates | Provide reusable PR handoff and memory-update artifacts | `templates/pr-handoff/**` | Yes |
 | Guardian templates | Provide reusable Guardian review artifacts | `templates/guardian/**` | Yes |
 | Checklists | Provide installation, recovery, branch, PR, and clean-start acceptance criteria | `checklists/**` | Yes |
-| Examples | Show sanitized adoption patterns | `examples/**` | Planned |
+| Examples | Show sanitized adoption patterns | `examples/**` | First example included |
 | Optional extensions | Provide future automation outside core | Extension repositories or future extension layer | Not core |
 
 ## Process Levels
@@ -332,14 +332,14 @@ Full installation adds:
 
 Full installation is covered by the included owner documents, templates, Guardian assets, and checklists.
 
-Public release packaging still requires examples and release preparation.
+Public release packaging still requires release preparation and any explicitly selected additional examples.
 
 ## Completion Gates Before Public Packaging
 
 Do not treat Blueprint as complete until:
 
 1. `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` has no unresolved `Partial` or `Planned` system items unless they are explicitly excluded.
-2. `examples/**` exists or is explicitly deferred from the release scope.
+2. Example scope exists or is explicitly deferred from the release scope.
 3. Public docs distinguish included, planned, excluded, and released states.
 4. Local validation, link checks, wording scans, and contribution hygiene checks pass.
 
@@ -347,7 +347,7 @@ Do not treat Blueprint as complete until:
 
 Build the remaining system in this order:
 
-1. Examples.
+1. Additional examples only if selected for the release scope.
 2. Public release packaging.
 
 This order protects the system from losing core logic while converting source-reference behavior into portable open-source artifacts.

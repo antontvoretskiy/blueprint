@@ -83,12 +83,16 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `checklists/branch-governance-checklist.md` | Included | Branch governance acceptance checklist |
 | `checklists/pr-readiness-checklist.md` | Included | PR readiness acceptance checklist |
 | `checklists/clean-start-checklist.md` | Included | Clean-start acceptance checklist |
+| `examples/ai-product/README.md` | Included | AI product adoption example guide, v0.3.0 |
+| `examples/ai-product/ADOPTION_MAP.md` | Included | AI product adoption mapping example |
+| `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` | Included | AI product branch governance example |
+| `examples/ai-product/RECOVERY_WALKTHROUGH.md` | Included | AI product recovery walkthrough |
 
 ## Planned Later
 
 | Area | Planned paths |
 | --- | --- |
-| Examples | `examples/ai-product/` first, then SaaS, marketplace, CRM, regulated platform |
+| Additional examples | SaaS, marketplace, CRM, regulated platform |
 | Extensions | CLI, installer, GitHub Actions, MCP integration, validation scripts |
 
 Planned content must stay marked as planned until it exists in the repository.

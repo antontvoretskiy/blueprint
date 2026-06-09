@@ -39,7 +39,7 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Checklist artifacts | 5 | 5 | 0 | 0 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, recovery templates, and checklists are covered.
+Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, recovery templates, checklists, and the first sanitized example are covered.
 
 ## Product Model And Process-Level Coverage
 
@@ -146,6 +146,17 @@ The active standard exists in `core/FEATURE_LIFECYCLE_STANDARD.md`, and reusable
 | PR readiness checklist | `checklists/pr-readiness-checklist.md` | Covered | PR readiness acceptance criteria exist |
 | Clean-start checklist | `checklists/clean-start-checklist.md` | Covered | Clean-start acceptance criteria exist |
 
+## Example Coverage
+
+Examples are not source-reference system documents. They are public adoption aids that demonstrate how the covered system can be applied to sanitized repository shapes.
+
+| Example item | Blueprint owner | Status | Notes |
+| --- | --- | --- | --- |
+| AI product adoption example | `examples/ai-product/README.md` | Covered | First sanitized adoption example exists |
+| AI product adoption map | `examples/ai-product/ADOPTION_MAP.md` | Covered | Maps Blueprint assets to adopter paths |
+| AI product branch governance example | `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` | Covered | Shows module-to-branch mapping |
+| AI product recovery walkthrough | `examples/ai-product/RECOVERY_WALKTHROUGH.md` | Covered | Shows fresh-session recovery flow |
+
 ## Explicit Exclusions
 
 The following source-reference areas must not be imported into Blueprint core:
@@ -165,7 +176,7 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Add sanitized example projects in separate scoped PRs.
-2. Prepare public release packaging only after example scope is decided.
+1. Add additional examples only if they are selected for the release scope.
+2. Prepare public release packaging.
 
 Do not start public packaging while this matrix contains `Partial` or `Planned` system items.

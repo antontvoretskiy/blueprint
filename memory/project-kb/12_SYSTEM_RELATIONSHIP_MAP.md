@@ -25,7 +25,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Project Memory | `memory/project-kb/**` | Record current state, decisions, references, and recovery points |
 | Templates | `templates/**` | Provide reusable artifacts for other repositories |
 | Checklists | `checklists/**` | Provide acceptance criteria |
-| Examples | `examples/**` | Show sanitized adoption examples when added |
+| Examples | `examples/**` | Show sanitized adoption examples |
 
 ## Owner Map
 
@@ -57,6 +57,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Current recovery point | `memory/project-kb/08_CURRENT_STATE.md` | `memory/project-kb/current/CLEAN_START_BRIEF.md` |
 | Implementation status | `memory/project-kb/05_IMPLEMENTATION_STATUS.md` | `BUNDLE_MANIFEST.md` |
 | Reference map | `memory/project-kb/10_REFERENCE.md` | all owner documents |
+| AI product example | `examples/ai-product/README.md` | `ARCHITECTURE.md`, `BUNDLE_MANIFEST.md`, `memory/project-kb/10_REFERENCE.md` |
 
 ## Dependency Flow
 
@@ -193,6 +194,6 @@ The following relationships are not complete yet:
 
 | Missing item | Required owner |
 | --- | --- |
-| Example projects | `examples/**` |
+| Additional example projects | `examples/**` |
 
 Do not treat public packaging as complete until these relationships are resolved or explicitly deferred from the release scope.

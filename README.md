@@ -133,13 +133,14 @@ Included now:
 | Guardian templates | Included |
 | Checklists | Included |
 | Recovery templates | Included |
+| AI product example | Included |
 | Source coverage maps | Included |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
 
 Not included yet:
 
-- example projects;
+- additional example projects;
 - CLI;
 - installer;
 - automation;
@@ -162,8 +163,9 @@ Read the bootstrap documents:
 11. [Guardian Templates](templates/guardian/README.md)
 12. [Checklists](checklists/README.md)
 13. [Recovery Templates](templates/recovery/README.md)
+14. [AI Product Example](examples/ai-product/README.md)
 
-Blueprint is currently a documentation-first framework. Additional template bundles, examples, and automation will come later and must remain clearly marked until implemented.
+Blueprint is currently a documentation-first framework. Additional example projects and automation will come later and must remain clearly marked until implemented.
 
 ## Repository Development
 
@@ -212,8 +214,8 @@ make clean   # stop containers and remove local volumes
 | --- | --- |
 | v0.1.0 | Public repository bootstrap, architecture, manifest, contribution policy, preview environment |
 | v0.2.0 | Core operating contracts, governance standards, and Project Memory structure |
-| v0.3.0 | Recovery, Guardian, PR handoff, validation templates, and checklists |
-| v0.4.0 | Sanitized example project and adoption guide |
+| v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, and first AI product example |
+| v0.4.0 | Additional sanitized examples and adoption guide |
 | v1.0.0 | Stable manual installation path and complete public docs |
 
 ## Open Source Presentation Benchmark
