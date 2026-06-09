@@ -30,6 +30,7 @@ Blueprint governance is organized into levels:
 | --- | --- | --- |
 | Public entrypoint | Explain what Blueprint is and how to start | Included |
 | Product boundary | Define what belongs inside and outside Blueprint | Included |
+| Product map | Define complete subsystem shape, process levels, and project/feature management | Included |
 | Architecture boundary | Define core, extension, and example layers | Included |
 | Core contracts | Define agent entry, task routing, lifecycle, handoff, security baseline | Included |
 | Governance standards | Define branch, PR, verification, documentation, ADR, and engineering rules | Included |
@@ -48,11 +49,13 @@ Planned levels are not included until their files exist in the repository.
 | --- | --- | --- |
 | Public positioning | `README.md` | Landing page, promise, status, quick start |
 | Product definition | `OPEN_SOURCE_SPEC.md` | Scope, audience, problem, non-goals |
+| Complete product map | `PRODUCT_MAP.md` | Product shape, process levels, project management, feature management, completion gates |
 | Architecture boundary | `ARCHITECTURE.md` | Core, extension, and example layers |
 | Bundle composition | `BUNDLE_MANIFEST.md` | Included, planned, and excluded content |
 | Contribution rules | `CONTRIBUTING.md` | Public contribution process and hygiene |
 | Agent entrypoint | `core/AGENTS.md` | How agents start, recover, validate, and hand off work |
 | Task routing | `core/TASK_PROCESS_ROUTER.md` | How work is classified before implementation |
+| Process levels | `core/TASK_PROCESS_ROUTER.md` | How much procedure L0-L4 work requires |
 | Feature lifecycle | `core/FEATURE_LIFECYCLE_STANDARD.md` | How meaningful changes move from request to PR |
 | PR handoff and clean start | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | How PRs stay reviewable and recoverable |
 | Security baseline | `core/SECURITY.md` | Portable security expectations |
@@ -118,6 +121,7 @@ Do not introduce a new naming standard in a summary document.
 ```text
 README.md
   -> OPEN_SOURCE_SPEC.md
+  -> PRODUCT_MAP.md
   -> ARCHITECTURE.md
   -> BUNDLE_MANIFEST.md
   -> CONTRIBUTING.md

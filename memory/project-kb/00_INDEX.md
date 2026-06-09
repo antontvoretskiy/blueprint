@@ -10,17 +10,18 @@ For a fresh session, read:
 
 1. `README.md`
 2. `OPEN_SOURCE_SPEC.md`
-3. `ARCHITECTURE.md`
-4. `BUNDLE_MANIFEST.md`
-5. `core/AGENTS.md`
-6. `core/TASK_PROCESS_ROUTER.md`
-7. `memory/project-kb/08_CURRENT_STATE.md`
-8. `memory/project-kb/05_IMPLEMENTATION_STATUS.md`
-9. `memory/project-kb/10_REFERENCE.md`
+3. `PRODUCT_MAP.md`
+4. `ARCHITECTURE.md`
+5. `BUNDLE_MANIFEST.md`
+6. `core/AGENTS.md`
+7. `core/TASK_PROCESS_ROUTER.md`
+8. `memory/project-kb/08_CURRENT_STATE.md`
+9. `memory/project-kb/05_IMPLEMENTATION_STATUS.md`
+10. `memory/project-kb/10_REFERENCE.md`
 
 Load governance documents when the task changes rules, branches, PR standards, validation, documentation, or ADR policy.
 
-Load `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` and `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` when the task changes source-reference coverage, ownership, system relationships, or transfer completeness.
+Load `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` and `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` when the task changes source-reference coverage, ownership, system relationships, process levels, project/feature management, or transfer completeness.
 
 ## Memory Files
 

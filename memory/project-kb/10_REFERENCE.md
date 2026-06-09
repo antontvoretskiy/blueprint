@@ -7,6 +7,7 @@ This file lists canonical project references for recovery.
 | Reference | Path |
 | --- | --- |
 | Product definition | `OPEN_SOURCE_SPEC.md` |
+| Complete product map | `PRODUCT_MAP.md` |
 | Architecture | `ARCHITECTURE.md` |
 | Bundle manifest | `BUNDLE_MANIFEST.md` |
 | Contribution rules | `CONTRIBUTING.md` |

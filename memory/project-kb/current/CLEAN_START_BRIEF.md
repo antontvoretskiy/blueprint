@@ -6,7 +6,7 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint has bootstrap, core contracts, governance standards, self-hosting governance, Project Memory structure, recovery templates, source coverage matrix, and system relationship map on `develop`.
+Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, recovery templates, source coverage matrix, and system relationship map on `develop`.
 
 ## Read First
 
@@ -14,7 +14,8 @@ Blueprint has bootstrap, core contracts, governance standards, self-hosting gove
 2. `memory/project-kb/08_CURRENT_STATE.md`
 3. `memory/project-kb/05_IMPLEMENTATION_STATUS.md`
 4. `memory/project-kb/10_REFERENCE.md`
-5. `core/TASK_PROCESS_ROUTER.md`
+5. `PRODUCT_MAP.md`
+6. `core/TASK_PROCESS_ROUTER.md`
 
 ## Active Branch Model
 
@@ -24,7 +25,7 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Close remaining coverage gaps before public packaging.
+Close remaining coverage gaps before public packaging, using `PRODUCT_MAP.md` as the product-shape reference.
 
 Recommended next scoped PRs:
 

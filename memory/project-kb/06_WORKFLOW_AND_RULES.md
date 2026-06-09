@@ -51,13 +51,14 @@ Recommended build order:
 4. Project Memory structure.
 5. Recovery templates.
 6. Source coverage and relationship mapping.
-7. Project Memory templates.
-8. Feature lifecycle templates.
-9. PR handoff templates.
-10. Guardian templates.
-11. Checklists.
-12. Sanitized examples.
-13. Release PR into `main`.
+7. Complete product map.
+8. Project Memory templates.
+9. Feature lifecycle templates.
+10. PR handoff templates.
+11. Guardian templates.
+12. Checklists.
+13. Sanitized examples.
+14. Release PR into `main`.
 
 ## Canonical References
 
@@ -73,5 +74,6 @@ Recommended build order:
 - Documentation: `governance/docs/documentation-standard.md`
 - ADR policy: `governance/docs/adr-policy.md`
 - Recovery templates: `templates/recovery/README.md`
+- Complete product map: `PRODUCT_MAP.md`
 - Source coverage: `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md`
 - System relationship map: `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md`

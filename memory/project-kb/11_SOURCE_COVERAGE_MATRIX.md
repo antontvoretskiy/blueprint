@@ -26,6 +26,7 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 
 | Area | Source items | Covered | Partial | Planned | Excluded |
 | --- | ---: | ---: | ---: | ---: | ---: |
+| Product model and process levels | 2 | 2 | 0 | 0 | 0 |
 | Core contracts | 5 | 5 | 0 | 0 | 0 |
 | Governance standards | 7 | 7 | 0 | 0 | 0 |
 | Project Memory root files | 11 | 7 | 4 | 0 | 0 |
@@ -35,7 +36,14 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Recovery reusable templates | 3 | 3 | 0 | 0 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: core and governance are covered; Project Memory templates, feature lifecycle templates, PR handoff templates, and Guardian templates are not complete yet.
+Current conclusion: product model, process levels, core, and governance are covered; Project Memory templates, feature lifecycle templates, PR handoff templates, and Guardian templates are not complete yet.
+
+## Product Model And Process-Level Coverage
+
+| System item | Blueprint owner | Status | Notes |
+| --- | --- | --- | --- |
+| Complete product shape | `PRODUCT_MAP.md` | Covered | Defines subsystems, ownership, project/feature management, and packaging gates |
+| L0-L4 process levels | `core/TASK_PROCESS_ROUTER.md` | Covered | Defines task-size routing so small work does not require full procedure |
 
 ## Core Contract Coverage
 

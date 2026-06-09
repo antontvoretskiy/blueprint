@@ -9,6 +9,7 @@ It defines how a repository manages:
 - governance;
 - project memory;
 - task routing;
+- process levels;
 - feature lifecycle;
 - PR lifecycle;
 - branch governance;
@@ -55,20 +56,25 @@ A repository using Blueprint should be able to answer:
 6. What makes a PR ready for review?
 7. What must be checked before a clean start after merge?
 8. What claims are proven, planned, or out of scope?
+9. How much process is required for this task?
+10. Which project or feature artifacts must exist before implementation?
 
 ## Operating Layers
 
-Blueprint is organized around seven operating layers:
+Blueprint is organized around connected operating layers:
 
 | Layer | Responsibility |
 | --- | --- |
 | Governance | Repository rules, ownership, source of truth, standards |
 | Project Memory | Project knowledge, current state, decision history, recovery input |
+| Process Levels | L0-L4 task-size model that prevents unnecessary procedure |
 | Recovery | New-chat recovery, handoff, clean-start briefs |
 | Guardian | Pre-work, pre-merge, and scope-drift checks |
 | Branch Governance | Branch roles, architecture boundaries, merge sequencing |
 | Feature Lifecycle | Feature intake, planning, implementation, validation |
 | PR Lifecycle | PR scope, review readiness, handoff, post-merge reset |
+
+The complete product shape is owned by `PRODUCT_MAP.md`.
 
 ## Non-Goals
 

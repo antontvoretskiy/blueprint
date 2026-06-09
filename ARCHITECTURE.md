@@ -13,6 +13,7 @@ Core includes:
 - governance;
 - agent entrypoint;
 - task routing;
+- process levels;
 - Project Memory;
 - recovery;
 - Guardian checks;
@@ -52,8 +53,10 @@ Only the Core Layer defines canonical rules. Extensions and examples must not re
 
 | Component | Responsibility |
 | --- | --- |
+| Product Map | Complete product shape, subsystem links, process levels, and completion gates |
 | Governance | Rule ownership, source of truth, engineering policy, documentation policy |
 | Project Memory | Durable project knowledge, current state, decisions, recovery inputs |
+| Process Levels | L0-L4 procedure sizing by task risk and scope |
 | Recovery | New-chat and handoff continuity from repository state |
 | Guardian | Scope, boundary, source-leak, and truthfulness checks |
 | Branch Governance | Branch roles, architecture mapping, merge sequencing |
@@ -104,6 +107,7 @@ Blueprint core includes:
 
 | Path | Purpose |
 | --- | --- |
+| `PRODUCT_MAP.md` | Complete product map and project/feature management model |
 | `core/AGENTS.md` | Agent entrypoint rules |
 | `core/TASK_PROCESS_ROUTER.md` | Task routing by operating layer |
 | `core/FEATURE_LIFECYCLE_STANDARD.md` | Feature lifecycle standard |

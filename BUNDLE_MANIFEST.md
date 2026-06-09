@@ -10,6 +10,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `LICENSE` | Included | MIT license |
 | `CONTRIBUTING.md` | Included | Contribution rules and validation expectations |
 | `OPEN_SOURCE_SPEC.md` | Included | Product definition and scope |
+| `PRODUCT_MAP.md` | Included | Complete product shape, process levels, and project/feature management model |
 | `ARCHITECTURE.md` | Included | Core, extension, and example layer boundaries |
 | `BUNDLE_MANIFEST.md` | Included | Bundle composition and boundaries |
 | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` | Included | Public presentation benchmark |
