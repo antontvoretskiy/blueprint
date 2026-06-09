@@ -31,12 +31,21 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `governance/docs/verification-standard.md` | Included | Validation evidence standard |
 | `governance/docs/documentation-standard.md` | Included | Documentation truthfulness standard |
 | `governance/docs/adr-policy.md` | Included | Architecture decision record policy |
+| `memory/project-kb/00_INDEX.md` | Included | Project Memory entrypoint |
+| `memory/project-kb/05_IMPLEMENTATION_STATUS.md` | Included | Implementation status memory |
+| `memory/project-kb/06_WORKFLOW_AND_RULES.md` | Included | Workflow memory |
+| `memory/project-kb/07_DECISIONS_LOG.md` | Included | Decisions memory |
+| `memory/project-kb/08_CURRENT_STATE.md` | Included | Current-state memory |
+| `memory/project-kb/09_TASK_HISTORY.md` | Included | Task-history memory |
+| `memory/project-kb/10_REFERENCE.md` | Included | Reference map |
+| `memory/project-kb/current/CLEAN_START_BRIEF.md` | Included | Current clean-start brief |
+| `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Included | Guardian process architecture |
+| `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Included | Generic Guardian validation scenarios |
 
 ## Planned Later
 
 | Area | Planned paths |
 | --- | --- |
-| Project Memory | `memory/project-kb/00_INDEX.md`, `05_IMPLEMENTATION_STATUS.md`, `06_WORKFLOW_AND_RULES.md`, `07_DECISIONS_LOG.md`, `08_CURRENT_STATE.md`, `09_TASK_HISTORY.md`, `10_REFERENCE.md` |
 | Templates | `templates/project-memory/`, `templates/feature-lifecycle/`, `templates/pr-handoff/`, `templates/guardian/`, `templates/recovery/` |
 | Examples | `examples/ai-product/` first, then SaaS, marketplace, CRM, regulated platform |
 | Checklists | installation, recovery, branch governance, PR readiness, clean start |
