@@ -76,6 +76,7 @@ Planned levels are not included until their files exist in the repository.
 | Project Memory template bundle | `templates/project-memory/README.md` | Reusable Project Memory template bundle ownership |
 | Feature Lifecycle template bundle | `templates/feature-lifecycle/README.md` | Reusable Feature Lifecycle template bundle ownership |
 | PR handoff template bundle | `templates/pr-handoff/README.md` | Reusable PR handoff template bundle ownership |
+| Guardian template bundle | `templates/guardian/README.md` | Reusable Guardian template bundle ownership |
 | Recovery template bundle | `templates/recovery/README.md` | Reusable recovery template bundle ownership |
 
 ## Future Ownership Map
@@ -84,7 +85,6 @@ These areas are planned, but they are not active owners until their files are ad
 
 | Planned area | Intended owner pattern |
 | --- | --- |
-| Guardian templates | `templates/guardian/**` |
 | Example projects | `examples/**` |
 | Checklists | `checklists/**` |
 
@@ -174,7 +174,6 @@ Release PRs target `main`.
 
 Current planned gaps:
 
-- Guardian templates are planned for a later phase.
 - Example projects are planned for a later phase.
 - Checklists are planned for a later phase.
 - Optional automation is not included.

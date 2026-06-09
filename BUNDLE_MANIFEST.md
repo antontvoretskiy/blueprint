@@ -66,6 +66,13 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `templates/pr-handoff/PR_HANDOFF.template.md` | Included | PR handoff summary template |
 | `templates/pr-handoff/MEMORY_UPDATE_DECISION.template.md` | Included | Memory update decision template |
 | `templates/pr-handoff/CLEAN_START_TRANSITION.template.md` | Included | Clean-start transition template |
+| `templates/guardian/README.md` | Included | Guardian template bundle guide, v0.3.0 |
+| `templates/guardian/REPOSITORY_GUARDIAN.template.md` | Included | Repository identity and branch guard template |
+| `templates/guardian/CHANGE_GUARDIAN.template.md` | Included | Scope and public-claim guard template |
+| `templates/guardian/ARCHITECTURE_GUARDIAN.template.md` | Included | Architecture boundary guard template |
+| `templates/guardian/MEMORY_GUARDIAN.template.md` | Included | Project Memory update guard template |
+| `templates/guardian/PR_GUARDIAN.template.md` | Included | PR readiness guard template |
+| `templates/guardian/RELEASE_GUARDIAN.template.md` | Included | Release readiness guard template |
 | `templates/recovery/README.md` | Included | Recovery template bundle guide, v0.3.0 |
 | `templates/recovery/RECOVERY_PATH.template.md` | Included | Fresh-session recovery path template |
 | `templates/recovery/CLEAN_START_BRIEF.template.md` | Included | Clean-start brief template |
@@ -75,7 +82,6 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 
 | Area | Planned paths |
 | --- | --- |
-| Templates | `templates/guardian/` |
 | Examples | `examples/ai-product/` first, then SaaS, marketplace, CRM, regulated platform |
 | Checklists | installation, recovery, branch governance, PR readiness, clean start |
 | Extensions | CLI, installer, GitHub Actions, MCP integration, validation scripts |

@@ -97,7 +97,7 @@ The loop is intentionally scalable. Small tasks do not pay the cost of full proc
 | Project Memory templates | Provide reusable memory files for adopters | `templates/project-memory/**` | Yes |
 | Feature lifecycle templates | Provide reusable `FEATURE`, `CLARIFICATION`, `PLAN`, and `TASKS` artifacts | `templates/feature-lifecycle/**` | Yes |
 | PR handoff templates | Provide reusable PR handoff and memory-update artifacts | `templates/pr-handoff/**` | Yes |
-| Guardian templates | Provide reusable Guardian review artifacts | `templates/guardian/**` | Planned |
+| Guardian templates | Provide reusable Guardian review artifacts | `templates/guardian/**` | Yes |
 | Checklists | Provide installation, recovery, branch, PR, and clean-start acceptance criteria | `checklists/**` | Planned |
 | Examples | Show sanitized adoption patterns | `examples/**` | Planned |
 | Optional extensions | Provide future automation outside core | Extension repositories or future extension layer | Not core |
@@ -330,25 +330,23 @@ Full installation adds:
 - ADR process;
 - security baseline.
 
-Full installation is not complete until Guardian templates and checklists exist.
+Full installation is not complete until checklists exist.
 
 ## Completion Gates Before Public Packaging
 
 Do not treat Blueprint as complete until:
 
 1. `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` has no unresolved `Partial` or `Planned` system items unless they are explicitly excluded.
-2. `templates/guardian/**` exists and covers repository, change, architecture, memory, PR, and release checks.
-3. `checklists/**` exists for installation, recovery, branch governance, PR readiness, and clean start.
-4. Public docs distinguish included, planned, excluded, and released states.
-5. Local validation, link checks, wording scans, and contribution hygiene checks pass.
+2. `checklists/**` exists for installation, recovery, branch governance, PR readiness, and clean start.
+3. Public docs distinguish included, planned, excluded, and released states.
+4. Local validation, link checks, wording scans, and contribution hygiene checks pass.
 
 ## Next Build Order
 
 Build the remaining system in this order:
 
-1. Guardian templates.
-2. Checklists.
-3. Examples.
-4. Public release packaging.
+1. Checklists.
+2. Examples.
+3. Public release packaging.
 
 This order protects the system from losing core logic while converting source-reference behavior into portable open-source artifacts.

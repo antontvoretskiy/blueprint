@@ -19,6 +19,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-09 | PR #11 | Added complete Blueprint product map | `develop` |
 | 2026-06-09 | PR #12 | Added Project Memory templates | `develop` |
 | 2026-06-09 | PR #13 | Added Feature Lifecycle templates | `develop` |
+| 2026-06-09 | PR #14 | Added PR handoff templates | `develop` |
 
 ## Update Rules
 
