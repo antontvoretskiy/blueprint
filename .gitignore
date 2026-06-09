@@ -1,0 +1,33 @@
+.DS_Store
+
+# Local environment files. Keep .env.example public and committed.
+.env
+.env.*
+!.env.example
+
+# Logs and runtime state
+*.log
+logs/
+tmp/
+.cache/
+
+# Node / frontend outputs
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.next/
+
+# Python outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# IDE/editor state
+.idea/
+.vscode/
