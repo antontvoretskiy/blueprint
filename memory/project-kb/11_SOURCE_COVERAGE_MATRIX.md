@@ -36,10 +36,10 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Feature lifecycle artifacts | 4 | 4 | 0 | 0 | 0 |
 | PR handoff reusable artifacts | 4 | 4 | 0 | 0 | 0 |
 | Recovery reusable templates | 3 | 3 | 0 | 0 | 0 |
-| Checklist artifacts | 5 | 0 | 0 | 5 | 0 |
+| Checklist artifacts | 5 | 5 | 0 | 0 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, and recovery templates are covered; checklist artifacts are not complete yet.
+Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, recovery templates, and checklists are covered.
 
 ## Product Model And Process-Level Coverage
 
@@ -140,11 +140,11 @@ The active standard exists in `core/FEATURE_LIFECYCLE_STANDARD.md`, and reusable
 
 | Source-reference item | Blueprint owner | Status | Notes |
 | --- | --- | --- | --- |
-| Installation checklist | None yet | Planned | Must become `checklists/installation-checklist.md` |
-| Recovery checklist | None yet | Planned | Must become `checklists/recovery-checklist.md` |
-| Branch governance checklist | None yet | Planned | Must become `checklists/branch-governance-checklist.md` |
-| PR readiness checklist | None yet | Planned | Must become `checklists/pr-readiness-checklist.md` |
-| Clean-start checklist | None yet | Planned | Must become `checklists/clean-start-checklist.md` |
+| Installation checklist | `checklists/installation-checklist.md` | Covered | Installation acceptance criteria exist |
+| Recovery checklist | `checklists/recovery-checklist.md` | Covered | Recovery acceptance criteria exist |
+| Branch governance checklist | `checklists/branch-governance-checklist.md` | Covered | Branch governance acceptance criteria exist |
+| PR readiness checklist | `checklists/pr-readiness-checklist.md` | Covered | PR readiness acceptance criteria exist |
+| Clean-start checklist | `checklists/clean-start-checklist.md` | Covered | Clean-start acceptance criteria exist |
 
 ## Explicit Exclusions
 
@@ -165,7 +165,7 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Add checklists for installation, recovery, branch governance, PR readiness, and clean start.
-2. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
+1. Add sanitized example projects in separate scoped PRs.
+2. Prepare public release packaging only after example scope is decided.
 
 Do not start public packaging while this matrix contains `Partial` or `Planned` system items.

@@ -89,3 +89,9 @@ This file lists canonical project references for recovery.
 | Recovery path template | `templates/recovery/RECOVERY_PATH.template.md` |
 | Clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` |
 | Recovery validation template | `templates/recovery/RECOVERY_VALIDATION.template.md` |
+| Checklist guide | `checklists/README.md` |
+| Installation checklist | `checklists/installation-checklist.md` |
+| Recovery checklist | `checklists/recovery-checklist.md` |
+| Branch governance checklist | `checklists/branch-governance-checklist.md` |
+| PR readiness checklist | `checklists/pr-readiness-checklist.md` |
+| Clean-start checklist | `checklists/clean-start-checklist.md` |

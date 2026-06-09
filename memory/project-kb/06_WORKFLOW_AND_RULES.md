@@ -79,5 +79,6 @@ Recommended build order:
 - Feature Lifecycle templates: `templates/feature-lifecycle/README.md`
 - PR handoff templates: `templates/pr-handoff/README.md`
 - Guardian templates: `templates/guardian/README.md`
+- Checklists: `checklists/README.md`
 - Source coverage: `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md`
 - System relationship map: `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md`

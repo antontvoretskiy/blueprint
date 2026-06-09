@@ -77,13 +77,18 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `templates/recovery/RECOVERY_PATH.template.md` | Included | Fresh-session recovery path template |
 | `templates/recovery/CLEAN_START_BRIEF.template.md` | Included | Clean-start brief template |
 | `templates/recovery/RECOVERY_VALIDATION.template.md` | Included | Recovery validation template |
+| `checklists/README.md` | Included | Checklist bundle guide, v0.3.0 |
+| `checklists/installation-checklist.md` | Included | Installation acceptance checklist |
+| `checklists/recovery-checklist.md` | Included | Recovery acceptance checklist |
+| `checklists/branch-governance-checklist.md` | Included | Branch governance acceptance checklist |
+| `checklists/pr-readiness-checklist.md` | Included | PR readiness acceptance checklist |
+| `checklists/clean-start-checklist.md` | Included | Clean-start acceptance checklist |
 
 ## Planned Later
 
 | Area | Planned paths |
 | --- | --- |
 | Examples | `examples/ai-product/` first, then SaaS, marketplace, CRM, regulated platform |
-| Checklists | installation, recovery, branch governance, PR readiness, clean start |
 | Extensions | CLI, installer, GitHub Actions, MCP integration, validation scripts |
 
 Planned content must stay marked as planned until it exists in the repository.

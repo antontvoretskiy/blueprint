@@ -150,6 +150,19 @@ Blueprint Guardian templates include:
 | `templates/guardian/PR_GUARDIAN.template.md` | PR title, body, validation, and handoff guard template |
 | `templates/guardian/RELEASE_GUARDIAN.template.md` | Release readiness guard template |
 
+## Checklists
+
+Blueprint checklists include:
+
+| Path | Purpose |
+| --- | --- |
+| `checklists/README.md` | Checklist bundle guide |
+| `checklists/installation-checklist.md` | Installation acceptance checklist |
+| `checklists/recovery-checklist.md` | Recovery acceptance checklist |
+| `checklists/branch-governance-checklist.md` | Branch governance acceptance checklist |
+| `checklists/pr-readiness-checklist.md` | PR readiness acceptance checklist |
+| `checklists/clean-start-checklist.md` | Clean-start acceptance checklist |
+
 ## Source of Truth
 
 The repository is the source of truth.
