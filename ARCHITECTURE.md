@@ -82,7 +82,9 @@ Blueprint core includes:
 
 These files define the portable operating contract. Detailed governance standards, memory templates, examples, checklists, and extensions are separate layers.
 
-## Planned Governance Documents
+## Governance Documents
+
+Blueprint governance includes:
 
 | Path | Purpose |
 | --- | --- |
@@ -94,7 +96,7 @@ These files define the portable operating contract. Detailed governance standard
 | `governance/docs/documentation-standard.md` | Documentation governance |
 | `governance/docs/adr-policy.md` | Architecture decision record policy |
 
-These files are planned. They are not part of the bootstrap PR.
+These files define the detailed governance layer. They do not add automation or enforcement tooling.
 
 ## Extension Layer
 

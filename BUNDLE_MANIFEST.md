@@ -24,12 +24,18 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `core/FEATURE_LIFECYCLE_STANDARD.md` | Included | Feature lifecycle standard |
 | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | Included | PR handoff and clean-start standard |
 | `core/SECURITY.md` | Included | Portable security baseline |
+| `governance/docs/governance-index.md` | Included | Governance authority map |
+| `governance/docs/engineering-governance.md` | Included | Engineering operating model |
+| `governance/docs/git-policy.md` | Included | Branch and merge policy |
+| `governance/docs/pr-standard.md` | Included | Pull request standard |
+| `governance/docs/verification-standard.md` | Included | Validation evidence standard |
+| `governance/docs/documentation-standard.md` | Included | Documentation truthfulness standard |
+| `governance/docs/adr-policy.md` | Included | Architecture decision record policy |
 
 ## Planned Later
 
 | Area | Planned paths |
 | --- | --- |
-| Governance standards | `governance/docs/governance-index.md`, `engineering-governance.md`, `git-policy.md`, `pr-standard.md`, `verification-standard.md`, `documentation-standard.md`, `adr-policy.md` |
 | Project Memory | `memory/project-kb/00_INDEX.md`, `05_IMPLEMENTATION_STATUS.md`, `06_WORKFLOW_AND_RULES.md`, `07_DECISIONS_LOG.md`, `08_CURRENT_STATE.md`, `09_TASK_HISTORY.md`, `10_REFERENCE.md` |
 | Templates | `templates/project-memory/`, `templates/feature-lifecycle/`, `templates/pr-handoff/`, `templates/guardian/`, `templates/recovery/` |
 | Examples | `examples/ai-product/` first, then SaaS, marketplace, CRM, regulated platform |
