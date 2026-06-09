@@ -2,7 +2,7 @@
 
 This document defines the portable security baseline for Blueprint-governed work.
 
-It is a framework rule document, not a substitute for a repository-specific vulnerability disclosure policy. A public project may add a root `SECURITY.md` later for maintainer contact and private reporting details.
+It is a framework rule document, not a substitute for the repository-specific vulnerability disclosure policy in the root `SECURITY.md`.
 
 ## Security Principles
 

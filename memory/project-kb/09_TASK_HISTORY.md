@@ -22,6 +22,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-09 | PR #14 | Added PR handoff templates | `develop` |
 | 2026-06-09 | PR #15 | Added Guardian templates | `develop` |
 | 2026-06-09 | PR #16 | Added operational checklists | `develop` |
+| 2026-06-09 | PR #17 | Added AI product adoption example | `develop` |
 
 ## Update Rules
 

@@ -39,7 +39,7 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Checklist artifacts | 5 | 5 | 0 | 0 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, recovery templates, checklists, and the first sanitized example are covered.
+Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, recovery templates, checklists, first sanitized example, and public release packaging are covered.
 
 ## Product Model And Process-Level Coverage
 
@@ -157,6 +157,24 @@ Examples are not source-reference system documents. They are public adoption aid
 | AI product branch governance example | `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` | Covered | Shows module-to-branch mapping |
 | AI product recovery walkthrough | `examples/ai-product/RECOVERY_WALKTHROUGH.md` | Covered | Shows fresh-session recovery flow |
 
+## Public Release Packaging Coverage
+
+Public release packaging is not source-reference system logic. It is the public open-source surface needed before a release PR into `main`.
+
+| Packaging item | Blueprint owner | Status | Notes |
+| --- | --- | --- | --- |
+| Version target | `VERSION` | Covered | Current release target exists |
+| Changelog | `CHANGELOG.md` | Covered | Versioned public change history exists |
+| Release process | `RELEASE.md` | Covered | Manual release gates exist |
+| Open-source guide | `OPEN_SOURCE_GUIDE.md` | Covered | Public entry point guide exists |
+| Adaptation guide | `ADAPTATION_GUIDE.md` | Covered | Adoption path exists |
+| Migration guide | `MIGRATION_GUIDE.md` | Covered | Sanitized migration path exists |
+| Validation checklist | `VALIDATION_CHECKLIST.md` | Covered | Public validation checklist exists |
+| Support | `SUPPORT.md` | Covered | Support boundaries exist |
+| Security policy | `SECURITY.md` | Covered | Public security reporting exists |
+| Code of conduct | `CODE_OF_CONDUCT.md` | Covered | Participation rules exist |
+| GitHub contribution templates | `.github/**` | Covered | PR and issue intake templates exist |
+
 ## Explicit Exclusions
 
 The following source-reference areas must not be imported into Blueprint core:
@@ -176,7 +194,7 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Add additional examples only if they are selected for the release scope.
-2. Prepare public release packaging.
+1. Prepare an explicit release PR into `main`.
+2. Add additional examples only if they are selected for a later release scope.
 
 Do not start public packaging while this matrix contains `Partial` or `Planned` system items.

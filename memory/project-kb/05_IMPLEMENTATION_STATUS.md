@@ -20,13 +20,14 @@ This file records what is currently included in Blueprint and what remains plann
 | Recovery templates | Included | Recovery path, clean-start brief, and recovery validation templates |
 | Source coverage map | Included | Coverage matrix and relationship map for transfer completeness |
 | AI product example | Included | Sanitized adoption example for applying Blueprint to an AI product repository |
+| Public release packaging | Included | Version, changelog, release process, validation checklist, support, conduct, security, and GitHub contribution templates |
 
 ## Planned
 
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| Release process | Planned | Release PR from `develop` into `main` |
+| Release PR into main | Planned | Release PR from `develop` into `main` |
 
 ## Excluded From Core
 

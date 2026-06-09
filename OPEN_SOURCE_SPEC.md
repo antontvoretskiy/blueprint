@@ -146,9 +146,12 @@ v0.1.0 does not include:
 Before the first public release:
 
 - license is present;
+- version, changelog, and release process are present;
 - README explains the product and its limits;
 - architecture and manifest agree on current scope;
 - contribution rules prevent product-specific leakage;
+- support, conduct, and security files are present;
+- GitHub contribution templates are present;
 - product-term scan is clean or justified;
 - quickstart does not require private context;
 - planned work is clearly marked as planned.
