@@ -7,7 +7,7 @@ This file records the current recovery point for Blueprint.
 | Branch | Role | Current meaning |
 | --- | --- | --- |
 | `main` | Release-ready public state | Bootstrap presentation only until a release PR lands |
-| `develop` | Integration branch | Contains bootstrap, complete product map, core contracts, governance standards, self-hosting, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, recovery templates, and source coverage maps |
+| `develop` | Integration branch | Contains bootstrap, complete product map, core contracts, governance standards, self-hosting, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, recovery templates, and source coverage maps |
 
 ## Current Work
 
@@ -27,13 +27,13 @@ Next work should close the remaining coverage gaps before public packaging.
 - Project Memory templates;
 - Feature Lifecycle templates;
 - PR handoff templates;
+- Guardian templates;
 - recovery templates;
 - source coverage matrix;
 - system relationship map.
 
 ## Not Yet Included
 
-- Guardian templates;
 - checklists;
 - examples;
 - release PR into `main`;
@@ -48,6 +48,6 @@ Next work should close the remaining coverage gaps before public packaging.
 
 ## Next Recommended Work
 
-Use `PRODUCT_MAP.md` and the coverage matrix to add missing Guardian templates and checklists in separate scoped PRs.
+Use `PRODUCT_MAP.md` and the coverage matrix to add missing checklists in a separate scoped PR.
 
 Do not move `develop` to `main` until a release PR is explicitly prepared.

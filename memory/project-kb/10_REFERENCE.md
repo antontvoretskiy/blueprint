@@ -78,6 +78,13 @@ This file lists canonical project references for recovery.
 | PR handoff template | `templates/pr-handoff/PR_HANDOFF.template.md` |
 | Memory update decision template | `templates/pr-handoff/MEMORY_UPDATE_DECISION.template.md` |
 | Clean-start transition template | `templates/pr-handoff/CLEAN_START_TRANSITION.template.md` |
+| Guardian template guide | `templates/guardian/README.md` |
+| Repository Guardian template | `templates/guardian/REPOSITORY_GUARDIAN.template.md` |
+| Change Guardian template | `templates/guardian/CHANGE_GUARDIAN.template.md` |
+| Architecture Guardian template | `templates/guardian/ARCHITECTURE_GUARDIAN.template.md` |
+| Memory Guardian template | `templates/guardian/MEMORY_GUARDIAN.template.md` |
+| PR Guardian template | `templates/guardian/PR_GUARDIAN.template.md` |
+| Release Guardian template | `templates/guardian/RELEASE_GUARDIAN.template.md` |
 | Recovery template guide | `templates/recovery/README.md` |
 | Recovery path template | `templates/recovery/RECOVERY_PATH.template.md` |
 | Clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` |

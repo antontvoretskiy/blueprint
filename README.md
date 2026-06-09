@@ -130,6 +130,7 @@ Included now:
 | Project Memory templates | Included |
 | Feature Lifecycle templates | Included |
 | PR handoff templates | Included |
+| Guardian templates | Included |
 | Recovery templates | Included |
 | Source coverage maps | Included |
 | Local preview environment | Included |
@@ -137,7 +138,6 @@ Included now:
 
 Not included yet:
 
-- Guardian templates;
 - example projects;
 - checklists;
 - CLI;
@@ -159,7 +159,8 @@ Read the bootstrap documents:
 8. [Governance Index](governance/docs/governance-index.md)
 9. [Project Memory Index](memory/project-kb/00_INDEX.md)
 10. [PR Handoff Templates](templates/pr-handoff/README.md)
-11. [Recovery Templates](templates/recovery/README.md)
+11. [Guardian Templates](templates/guardian/README.md)
+12. [Recovery Templates](templates/recovery/README.md)
 
 Blueprint is currently a documentation-first framework. Additional template bundles, examples, and automation will come later and must remain clearly marked until implemented.
 

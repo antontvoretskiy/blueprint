@@ -32,12 +32,14 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Project Memory root files | 11 | 11 | 0 | 0 | 0 |
 | Clean start | 1 | 1 | 0 | 0 | 0 |
 | Guardian memory docs | 2 | 2 | 0 | 0 | 0 |
+| Guardian reusable artifacts | 6 | 6 | 0 | 0 | 0 |
 | Feature lifecycle artifacts | 4 | 4 | 0 | 0 | 0 |
 | PR handoff reusable artifacts | 4 | 4 | 0 | 0 | 0 |
 | Recovery reusable templates | 3 | 3 | 0 | 0 | 0 |
+| Checklist artifacts | 5 | 0 | 0 | 5 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, and recovery templates are covered; Guardian templates are not complete yet.
+Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, and recovery templates are covered; checklist artifacts are not complete yet.
 
 ## Product Model And Process-Level Coverage
 
@@ -103,9 +105,14 @@ The source `01` through `04` documents were converted into reusable templates in
 | --- | --- | --- | --- |
 | `project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Covered | Active architecture summary exists |
 | `project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Covered | Generic validation scenarios exist |
-| Guardian reusable templates | None yet | Planned | Must become `templates/guardian/**` |
+| Repository Guardian template | `templates/guardian/REPOSITORY_GUARDIAN.template.md` | Covered by template | Repository identity, branch, and source-reference guard exists |
+| Change Guardian template | `templates/guardian/CHANGE_GUARDIAN.template.md` | Covered by template | Scope and public-claim guard exists |
+| Architecture Guardian template | `templates/guardian/ARCHITECTURE_GUARDIAN.template.md` | Covered by template | Layer boundary and non-goal guard exists |
+| Memory Guardian template | `templates/guardian/MEMORY_GUARDIAN.template.md` | Covered by template | Project Memory update guard exists |
+| PR Guardian template | `templates/guardian/PR_GUARDIAN.template.md` | Covered by template | PR readiness guard exists |
+| Release Guardian template | `templates/guardian/RELEASE_GUARDIAN.template.md` | Covered by template | Release readiness guard exists |
 
-Guardian process logic exists, but reusable Guardian templates are not complete yet.
+Guardian process logic and reusable Guardian templates are covered.
 
 ## Feature Lifecycle Artifact Coverage
 
@@ -129,6 +136,16 @@ The active standard exists in `core/FEATURE_LIFECYCLE_STANDARD.md`, and reusable
 | Clean-start transition template | `templates/pr-handoff/CLEAN_START_TRANSITION.template.md` | Covered by template | Portable clean-start transition template exists |
 | Reusable clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` | Covered by template | Portable clean-start brief template exists |
 
+## Checklist Coverage
+
+| Source-reference item | Blueprint owner | Status | Notes |
+| --- | --- | --- | --- |
+| Installation checklist | None yet | Planned | Must become `checklists/installation-checklist.md` |
+| Recovery checklist | None yet | Planned | Must become `checklists/recovery-checklist.md` |
+| Branch governance checklist | None yet | Planned | Must become `checklists/branch-governance-checklist.md` |
+| PR readiness checklist | None yet | Planned | Must become `checklists/pr-readiness-checklist.md` |
+| Clean-start checklist | None yet | Planned | Must become `checklists/clean-start-checklist.md` |
+
 ## Explicit Exclusions
 
 The following source-reference areas must not be imported into Blueprint core:
@@ -148,8 +165,7 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Add Guardian templates.
-2. Add checklists for recovery, branch governance, PR readiness, and clean start.
-3. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
+1. Add checklists for installation, recovery, branch governance, PR readiness, and clean start.
+2. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
 
 Do not start public packaging while this matrix contains `Partial` or `Planned` system items.

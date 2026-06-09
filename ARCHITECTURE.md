@@ -136,6 +136,20 @@ Blueprint PR handoff templates include:
 | `templates/pr-handoff/MEMORY_UPDATE_DECISION.template.md` | Memory update decision template |
 | `templates/pr-handoff/CLEAN_START_TRANSITION.template.md` | Clean-start transition template |
 
+## Guardian Templates
+
+Blueprint Guardian templates include:
+
+| Path | Purpose |
+| --- | --- |
+| `templates/guardian/README.md` | Guardian template bundle guide |
+| `templates/guardian/REPOSITORY_GUARDIAN.template.md` | Repository identity, branch, and source-reference guard template |
+| `templates/guardian/CHANGE_GUARDIAN.template.md` | Scope, allowed-path, forbidden-path, and public-claim guard template |
+| `templates/guardian/ARCHITECTURE_GUARDIAN.template.md` | Layer boundary and non-goal guard template |
+| `templates/guardian/MEMORY_GUARDIAN.template.md` | Project Memory and owner document update guard template |
+| `templates/guardian/PR_GUARDIAN.template.md` | PR title, body, validation, and handoff guard template |
+| `templates/guardian/RELEASE_GUARDIAN.template.md` | Release readiness guard template |
+
 ## Source of Truth
 
 The repository is the source of truth.

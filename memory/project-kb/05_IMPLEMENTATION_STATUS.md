@@ -15,6 +15,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Project Memory templates | Included | Reusable templates for project context, map, architecture, domain model, status, workflow, decisions, current state, history, and references |
 | Feature lifecycle templates | Included | Reusable FEATURE, CLARIFICATION, PLAN, and TASKS templates |
 | PR handoff templates | Included | Reusable PR body, handoff, memory update decision, and clean-start transition templates |
+| Guardian templates | Included | Reusable repository, change, architecture, memory, PR, and release guard templates |
 | Recovery templates | Included | Recovery path, clean-start brief, and recovery validation templates |
 | Source coverage map | Included | Coverage matrix and relationship map for transfer completeness |
 
@@ -22,7 +23,6 @@ This file records what is currently included in Blueprint and what remains plann
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Guardian templates | Planned | To be added after recovery shape is stable |
 | Checklists | Planned | Installation, recovery, branch, PR readiness, clean start |
 | Examples | Planned | Sanitized examples only |
 | Release process | Planned | Release PR from `develop` into `main` |

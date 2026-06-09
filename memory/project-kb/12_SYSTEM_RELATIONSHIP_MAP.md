@@ -40,6 +40,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Task routing | `core/TASK_PROCESS_ROUTER.md` | `governance/docs/engineering-governance.md` |
 | Process levels | `core/TASK_PROCESS_ROUTER.md` | `PRODUCT_MAP.md`, `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` |
 | Feature lifecycle | `core/FEATURE_LIFECYCLE_STANDARD.md` | `templates/feature-lifecycle/**` |
+| Guardian process | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md`, `templates/guardian/**` |
 | Project management model | `PRODUCT_MAP.md` | `memory/project-kb/00_INDEX.md`, `templates/project-memory/**` |
 | Feature management model | `core/FEATURE_LIFECYCLE_STANDARD.md` | `PRODUCT_MAP.md`, `templates/feature-lifecycle/**` |
 | PR handoff and clean start | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | `templates/pr-handoff/**`, `templates/recovery/CLEAN_START_BRIEF.template.md` |
@@ -191,7 +192,6 @@ The following relationships are not complete yet:
 
 | Missing item | Required owner |
 | --- | --- |
-| Guardian templates | `templates/guardian/**` |
 | Checklists | `checklists/**` |
 
 Do not treat the system transfer as complete until these relationships are resolved or explicitly excluded.
