@@ -13,6 +13,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Governance standards | Included | Governance index, engineering, git, PR, verification, documentation, ADR |
 | Project Memory structure | Included | Reusable Project Memory files and recovery entrypoint |
 | Project Memory templates | Included | Reusable templates for project context, map, architecture, domain model, status, workflow, decisions, current state, history, and references |
+| Feature lifecycle templates | Included | Reusable FEATURE, CLARIFICATION, PLAN, and TASKS templates |
 | Recovery templates | Included | Recovery path, clean-start brief, and recovery validation templates |
 | Source coverage map | Included | Coverage matrix and relationship map for transfer completeness |
 
@@ -21,7 +22,6 @@ This file records what is currently included in Blueprint and what remains plann
 | Area | Status | Notes |
 | --- | --- | --- |
 | Guardian templates | Planned | To be added after recovery shape is stable |
-| Feature lifecycle templates | Planned | Reusable FEATURE, CLARIFICATION, PLAN, and TASKS templates |
 | PR handoff templates | Planned | Reusable PR handoff and memory update templates |
 | Checklists | Planned | Installation, recovery, branch, PR readiness, clean start |
 | Examples | Planned | Sanitized examples only |

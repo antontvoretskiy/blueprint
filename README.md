@@ -128,6 +128,7 @@ Included now:
 | Governance standards | Included |
 | Project Memory structure | Included |
 | Project Memory templates | Included |
+| Feature Lifecycle templates | Included |
 | Recovery templates | Included |
 | Source coverage maps | Included |
 | Local preview environment | Included |
@@ -136,7 +137,6 @@ Included now:
 Not included yet:
 
 - Guardian templates;
-- feature lifecycle templates;
 - PR handoff templates;
 - example projects;
 - checklists;

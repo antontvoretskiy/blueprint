@@ -6,7 +6,7 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, recovery templates, source coverage matrix, and system relationship map on `develop`.
+Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, recovery templates, source coverage matrix, and system relationship map on `develop`.
 
 ## Read First
 
@@ -29,10 +29,9 @@ Close remaining coverage gaps before public packaging, using `PRODUCT_MAP.md` as
 
 Recommended next scoped PRs:
 
-1. Feature lifecycle templates.
-2. PR handoff templates.
-3. Guardian templates.
-4. Checklists after templates are complete.
+1. PR handoff templates.
+2. Guardian templates.
+3. Checklists after templates are complete.
 
 ## Do Not Do
 
