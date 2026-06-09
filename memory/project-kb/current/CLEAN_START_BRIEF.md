@@ -6,7 +6,7 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, recovery templates, source coverage matrix, and system relationship map on `develop`.
+Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, and system relationship map on `develop`.
 
 ## Read First
 
@@ -29,13 +29,13 @@ Close remaining coverage gaps before public packaging, using `PRODUCT_MAP.md` as
 
 Recommended next scoped PRs:
 
-1. Checklists.
-2. Examples after checklists are complete.
+1. Sanitized example project.
+2. Public release packaging after example scope is decided.
 
 ## Do Not Do
 
 - Do not modify source-reference repositories.
 - Do not start public packaging while coverage contains `Partial` or `Planned` system items.
 - Do not mix unrelated template families in one PR.
-- Do not add examples or checklists before template coverage is complete.
+- Do not add examples before checklist coverage is complete.
 - Do not move `develop` to `main` until release preparation is approved.

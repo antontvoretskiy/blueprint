@@ -24,7 +24,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Governance | `governance/docs/**` | Define rule ownership and standards |
 | Project Memory | `memory/project-kb/**` | Record current state, decisions, references, and recovery points |
 | Templates | `templates/**` | Provide reusable artifacts for other repositories |
-| Checklists | `checklists/**` | Provide acceptance criteria when added |
+| Checklists | `checklists/**` | Provide acceptance criteria |
 | Examples | `examples/**` | Show sanitized adoption examples when added |
 
 ## Owner Map
@@ -47,6 +47,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Branch governance | `governance/docs/git-policy.md` | `governance/docs/pr-standard.md` |
 | PR lifecycle | `governance/docs/pr-standard.md` | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` |
 | Verification language | `governance/docs/verification-standard.md` | `Makefile`, PR body |
+| Acceptance checklists | `checklists/README.md` | `checklists/**`, `governance/docs/verification-standard.md` |
 | Documentation truthfulness | `governance/docs/documentation-standard.md` | `BUNDLE_MANIFEST.md` |
 | ADR process | `governance/docs/adr-policy.md` | future `governance/docs/adr/**` |
 | Security baseline | `core/SECURITY.md` | `CONTRIBUTING.md` |
@@ -192,6 +193,6 @@ The following relationships are not complete yet:
 
 | Missing item | Required owner |
 | --- | --- |
-| Checklists | `checklists/**` |
+| Example projects | `examples/**` |
 
-Do not treat the system transfer as complete until these relationships are resolved or explicitly excluded.
+Do not treat public packaging as complete until these relationships are resolved or explicitly deferred from the release scope.

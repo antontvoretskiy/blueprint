@@ -40,7 +40,7 @@ Blueprint governance is organized into levels:
 | Source coverage maps | Track transfer coverage and system relationships | Included |
 | Other templates | Provide reusable installation artifacts beyond recovery | Planned |
 | Examples | Show adoption patterns | Planned |
-| Checklists | Provide acceptance criteria | Planned |
+| Checklists | Provide acceptance criteria | Included |
 
 Planned levels are not included until their files exist in the repository.
 
@@ -78,6 +78,7 @@ Planned levels are not included until their files exist in the repository.
 | PR handoff template bundle | `templates/pr-handoff/README.md` | Reusable PR handoff template bundle ownership |
 | Guardian template bundle | `templates/guardian/README.md` | Reusable Guardian template bundle ownership |
 | Recovery template bundle | `templates/recovery/README.md` | Reusable recovery template bundle ownership |
+| Checklist bundle | `checklists/README.md` | Reusable acceptance checklist bundle ownership |
 
 ## Future Ownership Map
 
@@ -86,7 +87,6 @@ These areas are planned, but they are not active owners until their files are ad
 | Planned area | Intended owner pattern |
 | --- | --- |
 | Example projects | `examples/**` |
-| Checklists | `checklists/**` |
 
 Do not cite planned owners as included assets before the files exist.
 
@@ -175,7 +175,6 @@ Release PRs target `main`.
 Current planned gaps:
 
 - Example projects are planned for a later phase.
-- Checklists are planned for a later phase.
 - Optional automation is not included.
 
 These gaps should not be described as included assets.
