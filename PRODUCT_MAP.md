@@ -94,7 +94,7 @@ The loop is intentionally scalable. Small tasks do not pay the cost of full proc
 | ADR process | Capture durable architecture decisions | `governance/docs/adr-policy.md` | Yes |
 | Project Memory | Store compact durable recovery state | `memory/project-kb/**` | Yes |
 | Recovery templates | Provide reusable recovery artifacts | `templates/recovery/**` | Yes |
-| Project Memory templates | Provide reusable memory files for adopters | `templates/project-memory/**` | Planned |
+| Project Memory templates | Provide reusable memory files for adopters | `templates/project-memory/**` | Yes |
 | Feature lifecycle templates | Provide reusable `FEATURE`, `CLARIFICATION`, `PLAN`, and `TASKS` artifacts | `templates/feature-lifecycle/**` | Planned |
 | Guardian templates | Provide reusable Guardian review artifacts | `templates/guardian/**` | Planned |
 | PR handoff templates | Provide reusable PR handoff and memory-update artifacts | `templates/pr-handoff/**` | Planned |
@@ -330,31 +330,29 @@ Full installation adds:
 - ADR process;
 - security baseline.
 
-Full installation is not complete until Project Memory, feature lifecycle, Guardian, PR handoff, and checklist templates exist.
+Full installation is not complete until feature lifecycle, Guardian, PR handoff, and checklist templates exist.
 
 ## Completion Gates Before Public Packaging
 
 Do not treat Blueprint as complete until:
 
 1. `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` has no unresolved `Partial` or `Planned` system items unless they are explicitly excluded.
-2. `templates/project-memory/**` exists and covers `01` through `10`.
-3. `templates/feature-lifecycle/**` exists and covers `FEATURE`, `CLARIFICATION`, `PLAN`, and `TASKS`.
-4. `templates/guardian/**` exists and covers repository, change, architecture, memory, PR, and release checks.
-5. `templates/pr-handoff/**` exists and covers PR handoff, memory update decision, and clean-start transition.
-6. `checklists/**` exists for installation, recovery, branch governance, PR readiness, and clean start.
-7. Public docs distinguish included, planned, excluded, and released states.
-8. Local validation, link checks, wording scans, and contribution hygiene checks pass.
+2. `templates/feature-lifecycle/**` exists and covers `FEATURE`, `CLARIFICATION`, `PLAN`, and `TASKS`.
+3. `templates/guardian/**` exists and covers repository, change, architecture, memory, PR, and release checks.
+4. `templates/pr-handoff/**` exists and covers PR handoff, memory update decision, and clean-start transition.
+5. `checklists/**` exists for installation, recovery, branch governance, PR readiness, and clean start.
+6. Public docs distinguish included, planned, excluded, and released states.
+7. Local validation, link checks, wording scans, and contribution hygiene checks pass.
 
 ## Next Build Order
 
 Build the remaining system in this order:
 
-1. Project Memory templates.
-2. Feature lifecycle templates.
-3. PR handoff templates.
-4. Guardian templates.
-5. Checklists.
-6. Examples.
-7. Public release packaging.
+1. Feature lifecycle templates.
+2. PR handoff templates.
+3. Guardian templates.
+4. Checklists.
+5. Examples.
+6. Public release packaging.
 
 This order protects the system from losing core logic while converting source-reference behavior into portable open-source artifacts.

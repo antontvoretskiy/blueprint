@@ -35,6 +35,7 @@ Blueprint governance is organized into levels:
 | Core contracts | Define agent entry, task routing, lifecycle, handoff, security baseline | Included |
 | Governance standards | Define branch, PR, verification, documentation, ADR, and engineering rules | Included |
 | Project Memory materials | Define recovery-oriented state files | Included |
+| Project Memory templates | Provide reusable Project Memory files | Included |
 | Recovery templates | Provide reusable recovery artifacts | Included |
 | Source coverage maps | Track transfer coverage and system relationships | Included |
 | Other templates | Provide reusable installation artifacts beyond recovery | Planned |
@@ -72,6 +73,7 @@ Planned levels are not included until their files exist in the repository.
 | Reference map | `memory/project-kb/10_REFERENCE.md` | Canonical navigation map |
 | Source coverage matrix | `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` | Coverage status for source-reference system logic |
 | System relationship map | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Owner and dependency flow across system documents |
+| Project Memory template bundle | `templates/project-memory/README.md` | Reusable Project Memory template bundle ownership |
 | Recovery template bundle | `templates/recovery/README.md` | Reusable recovery template bundle ownership |
 
 ## Future Ownership Map
@@ -80,7 +82,6 @@ These areas are planned, but they are not active owners until their files are ad
 
 | Planned area | Intended owner pattern |
 | --- | --- |
-| Project Memory templates | `templates/project-memory/**` |
 | Feature lifecycle templates | `templates/feature-lifecycle/**` |
 | PR handoff templates | `templates/pr-handoff/**` |
 | Guardian templates | `templates/guardian/**` |
@@ -173,7 +174,6 @@ Release PRs target `main`.
 
 Current planned gaps:
 
-- Project Memory templates are planned for a later phase.
 - Feature lifecycle templates are planned for a later phase.
 - PR handoff templates are planned for a later phase.
 - Guardian templates are planned for a later phase.

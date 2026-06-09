@@ -56,6 +56,18 @@ This file lists canonical project references for recovery.
 
 | Reference | Path |
 | --- | --- |
+| Project Memory template guide | `templates/project-memory/README.md` |
+| Project Memory index template | `templates/project-memory/00_INDEX.template.md` |
+| Project context template | `templates/project-memory/01_PROJECT_CONTEXT.template.md` |
+| Project map template | `templates/project-memory/02_PROJECT_MAP.template.md` |
+| System architecture memory template | `templates/project-memory/03_SYSTEM_ARCHITECTURE.template.md` |
+| Domain model template | `templates/project-memory/04_DOMAIN_MODEL.template.md` |
+| Implementation status template | `templates/project-memory/05_IMPLEMENTATION_STATUS.template.md` |
+| Workflow and rules template | `templates/project-memory/06_WORKFLOW_AND_RULES.template.md` |
+| Decisions log template | `templates/project-memory/07_DECISIONS_LOG.template.md` |
+| Current state template | `templates/project-memory/08_CURRENT_STATE.template.md` |
+| Task history template | `templates/project-memory/09_TASK_HISTORY.template.md` |
+| Reference map template | `templates/project-memory/10_REFERENCE.template.md` |
 | Recovery template guide | `templates/recovery/README.md` |
 | Recovery path template | `templates/recovery/RECOVERY_PATH.template.md` |
 | Clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` |

@@ -93,6 +93,25 @@ Blueprint recovery templates include:
 
 Recovery templates are reusable assets. They do not replace Project Memory, governance owner documents, PR review, or validation evidence.
 
+## Project Memory Templates
+
+Blueprint Project Memory templates include:
+
+| Path | Purpose |
+| --- | --- |
+| `templates/project-memory/README.md` | Project Memory template bundle guide |
+| `templates/project-memory/00_INDEX.template.md` | Recovery entrypoint and memory navigation template |
+| `templates/project-memory/01_PROJECT_CONTEXT.template.md` | Project identity and context template |
+| `templates/project-memory/02_PROJECT_MAP.template.md` | Project area and ownership map template |
+| `templates/project-memory/03_SYSTEM_ARCHITECTURE.template.md` | Architecture memory summary template |
+| `templates/project-memory/04_DOMAIN_MODEL.template.md` | Shared vocabulary and boundary template |
+| `templates/project-memory/05_IMPLEMENTATION_STATUS.template.md` | Implementation status template |
+| `templates/project-memory/06_WORKFLOW_AND_RULES.template.md` | Workflow and rules template |
+| `templates/project-memory/07_DECISIONS_LOG.template.md` | Decisions log template |
+| `templates/project-memory/08_CURRENT_STATE.template.md` | Current state template |
+| `templates/project-memory/09_TASK_HISTORY.template.md` | Task history template |
+| `templates/project-memory/10_REFERENCE.template.md` | Reference map template |
+
 ## Source of Truth
 
 The repository is the source of truth.
