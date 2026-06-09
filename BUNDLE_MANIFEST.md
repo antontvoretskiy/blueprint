@@ -7,12 +7,27 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | Path | Status | Purpose |
 | --- | --- | --- |
 | `README.md` | Included | Public product landing page |
+| `VERSION` | Included | Current release target |
+| `CHANGELOG.md` | Included | Versioned public change history |
+| `RELEASE.md` | Included | Manual release process |
 | `LICENSE` | Included | MIT license |
+| `CODE_OF_CONDUCT.md` | Included | Public participation rules |
+| `SUPPORT.md` | Included | Public support boundaries |
+| `SECURITY.md` | Included | Public security reporting policy |
 | `CONTRIBUTING.md` | Included | Contribution rules and validation expectations |
 | `OPEN_SOURCE_SPEC.md` | Included | Product definition and scope |
+| `OPEN_SOURCE_GUIDE.md` | Included | Public entry points and quality rules |
+| `ADAPTATION_GUIDE.md` | Included | Adoption and installation guide |
+| `MIGRATION_GUIDE.md` | Included | Migration and sanitization guide |
+| `VALIDATION_CHECKLIST.md` | Included | Public release and adoption validation checklist |
 | `PRODUCT_MAP.md` | Included | Complete product shape, process levels, and project/feature management model |
 | `ARCHITECTURE.md` | Included | Core, extension, and example layer boundaries |
 | `BUNDLE_MANIFEST.md` | Included | Bundle composition and boundaries |
+| `.github/CODEOWNERS` | Included | Repository ownership hint |
+| `.github/PULL_REQUEST_TEMPLATE.md` | Included | Public PR structure template |
+| `.github/ISSUE_TEMPLATE/config.yml` | Included | Public issue template configuration |
+| `.github/ISSUE_TEMPLATE/framework_change.yml` | Included | Framework change request template |
+| `.github/ISSUE_TEMPLATE/docs_issue.yml` | Included | Documentation issue template |
 | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` | Included | Public presentation benchmark |
 | `media/blueprint-logo.png` | Included | Public brand asset |
 | `Makefile` | Included | Local validation commands |

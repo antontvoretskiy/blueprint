@@ -20,6 +20,9 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Product map | `PRODUCT_MAP.md` | Define complete product shape, process levels, project management, feature management, and completion gates |
 | Architecture boundary | `ARCHITECTURE.md` | Define layer boundaries and non-goals |
 | Bundle manifest | `BUNDLE_MANIFEST.md` | Declare included, planned, and excluded files |
+| Release packaging | `VERSION`, `CHANGELOG.md`, `RELEASE.md`, `VALIDATION_CHECKLIST.md` | Define release target, change history, release flow, and validation gates |
+| Public support | `SUPPORT.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md` | Define support, security, and participation boundaries |
+| GitHub contribution templates | `.github/**` | Structure public issue and PR intake |
 | Core contracts | `core/**` | Define required process contracts |
 | Governance | `governance/docs/**` | Define rule ownership and standards |
 | Project Memory | `memory/project-kb/**` | Record current state, decisions, references, and recovery points |
@@ -34,6 +37,11 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Public positioning | `README.md` | `OPEN_SOURCE_SPEC.md`, `BUNDLE_MANIFEST.md` |
 | Product boundary | `OPEN_SOURCE_SPEC.md` | `ARCHITECTURE.md`, `BUNDLE_MANIFEST.md` |
 | Complete product shape | `PRODUCT_MAP.md` | `OPEN_SOURCE_SPEC.md`, `ARCHITECTURE.md`, `BUNDLE_MANIFEST.md` |
+| Release target | `VERSION` | `CHANGELOG.md`, `RELEASE.md`, `README.md` |
+| Release process | `RELEASE.md` | `VALIDATION_CHECKLIST.md`, `CONTRIBUTING.md`, `governance/docs/git-policy.md` |
+| Public adoption | `ADAPTATION_GUIDE.md` | `OPEN_SOURCE_GUIDE.md`, `MIGRATION_GUIDE.md`, `examples/ai-product/**` |
+| Public support and security | `SUPPORT.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md` | `CONTRIBUTING.md`, `core/SECURITY.md` |
+| GitHub contribution intake | `.github/**` | `CONTRIBUTING.md`, `governance/docs/pr-standard.md` |
 | Layer boundary | `ARCHITECTURE.md` | `governance/docs/engineering-governance.md` |
 | Included/planned/excluded status | `BUNDLE_MANIFEST.md` | `memory/project-kb/05_IMPLEMENTATION_STATUS.md` |
 | Agent recovery entrypoint | `core/AGENTS.md` | `memory/project-kb/00_INDEX.md`, `memory/project-kb/08_CURRENT_STATE.md` |
@@ -188,12 +196,13 @@ When two documents conflict:
 4. Update summaries and memory second.
 5. Report the conflict and resolution in the PR body.
 
-## Current Missing Relationship Owners
+## Current Remaining Release Actions
 
-The following relationships are not complete yet:
+The following actions are not complete yet:
 
-| Missing item | Required owner |
+| Remaining item | Required owner or action |
 | --- | --- |
-| Additional example projects | `examples/**` |
+| Additional example projects | `examples/**` when selected for a later release scope |
+| Release PR into `main` | Explicit release PR |
 
-Do not treat public packaging as complete until these relationships are resolved or explicitly deferred from the release scope.
+Do not treat `main` as release-ready until the release PR is explicitly prepared and merged.

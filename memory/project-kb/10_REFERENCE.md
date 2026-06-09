@@ -13,6 +13,16 @@ This file lists canonical project references for recovery.
 | Contribution rules | `CONTRIBUTING.md` |
 | Public README | `README.md` |
 | Spec Kit presentation benchmark | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` |
+| Version target | `VERSION` |
+| Changelog | `CHANGELOG.md` |
+| Release process | `RELEASE.md` |
+| Open-source guide | `OPEN_SOURCE_GUIDE.md` |
+| Adaptation guide | `ADAPTATION_GUIDE.md` |
+| Migration guide | `MIGRATION_GUIDE.md` |
+| Validation checklist | `VALIDATION_CHECKLIST.md` |
+| Support | `SUPPORT.md` |
+| Security policy | `SECURITY.md` |
+| Code of conduct | `CODE_OF_CONDUCT.md` |
 
 ## Core References
 
@@ -104,3 +114,13 @@ This file lists canonical project references for recovery.
 | AI product adoption map | `examples/ai-product/ADOPTION_MAP.md` |
 | AI product branch governance example | `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` |
 | AI product recovery walkthrough | `examples/ai-product/RECOVERY_WALKTHROUGH.md` |
+
+## GitHub Contribution References
+
+| Reference | Path |
+| --- | --- |
+| Code owners | `.github/CODEOWNERS` |
+| Pull request template | `.github/PULL_REQUEST_TEMPLATE.md` |
+| Issue template configuration | `.github/ISSUE_TEMPLATE/config.yml` |
+| Framework change issue template | `.github/ISSUE_TEMPLATE/framework_change.yml` |
+| Documentation issue template | `.github/ISSUE_TEMPLATE/docs_issue.yml` |

@@ -1,0 +1,55 @@
+name: Framework change
+description: Propose a Blueprint framework, template, checklist, governance, or recovery change.
+title: "[Framework] "
+labels:
+  - framework
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What repository operation problem should Blueprint solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change?
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options:
+        - Core
+        - Governance
+        - Project Memory
+        - Recovery
+        - Guardian
+        - Branch Governance
+        - Feature Lifecycle
+        - PR Lifecycle
+        - Example
+        - Public docs
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: How would this change be checked?
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundaries
+      options:
+        - label: This request does not add product implementation.
+          required: true
+        - label: This request does not include private project data.
+          required: true
+        - label: This request does not require automation unless automation is explicitly the scope.
+          required: true

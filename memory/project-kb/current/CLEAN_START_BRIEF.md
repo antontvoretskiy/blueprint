@@ -6,7 +6,7 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, and the AI product example on `develop`.
+Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, and public release packaging on `develop`.
 
 ## Read First
 
@@ -25,17 +25,16 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Prepare public release packaging, or add additional examples only if they are selected for the release scope.
+Prepare an explicit release PR into `main`, or add additional examples only if they are selected for a later release scope.
 
 Recommended next scoped PRs:
 
-1. Public release packaging.
-2. Additional examples only if selected for the release scope.
+1. Release PR into `main`.
+2. Additional examples only if selected for a later release scope.
 
 ## Do Not Do
 
 - Do not modify source-reference repositories.
 - Do not start public packaging while coverage contains unresolved `Partial` or `Planned` system items.
 - Do not mix unrelated template families in one PR.
-- Do not add examples before checklist coverage is complete.
 - Do not move `develop` to `main` until release preparation is approved.

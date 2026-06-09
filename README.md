@@ -8,6 +8,12 @@
   <strong>Operating framework for AI-native software development.</strong>
 </p>
 
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
+  <a href="VERSION"><img alt="Version: v0.3.0" src="https://img.shields.io/badge/version-v0.3.0-blue"></a>
+  <a href="BUNDLE_MANIFEST.md"><img alt="Status: release candidate" src="https://img.shields.io/badge/status-release%20candidate-0f766e"></a>
+</p>
+
 Blueprint is an open-source operating framework that helps software teams and AI agents keep repository governance, project memory, task routing, feature lifecycle, PR lifecycle, branch governance, recovery, Guardian checks, and clean starts in one durable place: the repository.
 
 Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS starter kit, product framework, or UI framework.
@@ -22,9 +28,12 @@ Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS
 - [How Blueprint Differs From GitHub Spec Kit](#how-blueprint-differs-from-github-spec-kit)
 - [Current Status](#current-status)
 - [Quick Start](#quick-start)
+- [Open Source Adoption](#open-source-adoption)
 - [Repository Development](#repository-development)
 - [Roadmap](#roadmap)
+- [Release Packaging](#release-packaging)
 - [Open Source Presentation Benchmark](#open-source-presentation-benchmark)
+- [Support And Security](#support-and-security)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -90,7 +99,7 @@ Blueprint focuses on the operating layer:
 
 The complete product shape is defined in [PRODUCT_MAP.md](PRODUCT_MAP.md).
 
-It explains how Blueprint connects governance, process levels, project management, feature management, Project Memory, recovery, Guardian checks, PR handoff, and clean start before public packaging.
+It explains how Blueprint connects governance, process levels, project management, feature management, Project Memory, recovery, Guardian checks, PR handoff, clean start, and public release packaging.
 
 ## How Blueprint Differs From GitHub Spec Kit
 
@@ -134,6 +143,9 @@ Included now:
 | Checklists | Included |
 | Recovery templates | Included |
 | AI product example | Included |
+| Public release packaging | Included |
+| Support, security, and conduct files | Included |
+| GitHub contribution templates | Included |
 | Source coverage maps | Included |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
@@ -164,8 +176,24 @@ Read the bootstrap documents:
 12. [Checklists](checklists/README.md)
 13. [Recovery Templates](templates/recovery/README.md)
 14. [AI Product Example](examples/ai-product/README.md)
+15. [Open Source Guide](OPEN_SOURCE_GUIDE.md)
+16. [Adaptation Guide](ADAPTATION_GUIDE.md)
+17. [Migration Guide](MIGRATION_GUIDE.md)
+18. [Validation Checklist](VALIDATION_CHECKLIST.md)
 
 Blueprint is currently a documentation-first framework. Additional example projects and automation will come later and must remain clearly marked until implemented.
+
+## Open Source Adoption
+
+Use these guides when applying Blueprint to another repository:
+
+| Guide | Purpose |
+| --- | --- |
+| [Open Source Guide](OPEN_SOURCE_GUIDE.md) | Public entry points, status language, and quality rules |
+| [Adaptation Guide](ADAPTATION_GUIDE.md) | Minimal and full installation flow |
+| [Migration Guide](MIGRATION_GUIDE.md) | How to migrate an existing governance system safely |
+| [Validation Checklist](VALIDATION_CHECKLIST.md) | Release and adoption validation gates |
+| [AI Product Example](examples/ai-product/README.md) | First sanitized example adoption pattern |
 
 ## Repository Development
 
@@ -214,15 +242,35 @@ make clean   # stop containers and remove local volumes
 | --- | --- |
 | v0.1.0 | Public repository bootstrap, architecture, manifest, contribution policy, preview environment |
 | v0.2.0 | Core operating contracts, governance standards, and Project Memory structure |
-| v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, and first AI product example |
-| v0.4.0 | Additional sanitized examples and adoption guide |
+| v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, first AI product example, and public release packaging |
+| v0.4.0 | Additional sanitized examples and optional extension planning |
 | v1.0.0 | Stable manual installation path and complete public docs |
+
+## Release Packaging
+
+Current release target: v0.3.0.
+
+Release-facing files:
+
+- [VERSION](VERSION)
+- [Changelog](CHANGELOG.md)
+- [Release Process](RELEASE.md)
+- [Validation Checklist](VALIDATION_CHECKLIST.md)
+
+Release PRs target `main` only after `develop` is validated.
 
 ## Open Source Presentation Benchmark
 
 Blueprint uses [github/spec-kit](https://github.com/github/spec-kit) as the reference for open-source repository presentation, README structure, value proposition, documentation navigation, and community trust surfaces.
 
 See [docs/benchmarks/spec-kit-open-source-marketing-benchmark.md](docs/benchmarks/spec-kit-open-source-marketing-benchmark.md).
+
+## Support And Security
+
+- [Support](SUPPORT.md)
+- [Security Policy](SECURITY.md)
+- [Code Of Conduct](CODE_OF_CONDUCT.md)
+- [Core Security Baseline](core/SECURITY.md)
 
 ## Contributing
 

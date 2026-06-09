@@ -38,6 +38,8 @@ Blueprint governance is organized into levels:
 | Project Memory templates | Provide reusable Project Memory files | Included |
 | Recovery templates | Provide reusable recovery artifacts | Included |
 | Source coverage maps | Track transfer coverage and system relationships | Included |
+| Public release packaging | Define version, changelog, release process, validation, support, conduct, and security | Included |
+| GitHub contribution templates | Structure public issue and PR intake | Included |
 | Other templates | Provide reusable installation artifacts beyond recovery | Planned |
 | AI product example | Show a sanitized adoption pattern | Included |
 | Additional examples | Show broader adoption patterns | Planned |
@@ -55,6 +57,19 @@ Planned levels are not included until their files exist in the repository.
 | Architecture boundary | `ARCHITECTURE.md` | Core, extension, and example layers |
 | Bundle composition | `BUNDLE_MANIFEST.md` | Included, planned, and excluded content |
 | Contribution rules | `CONTRIBUTING.md` | Public contribution process and hygiene |
+| Version target | `VERSION` | Current release target |
+| Changelog | `CHANGELOG.md` | Versioned public change history |
+| Release process | `RELEASE.md` | Manual release gates and PR flow |
+| Open-source guide | `OPEN_SOURCE_GUIDE.md` | Public entry points and status language |
+| Adaptation guide | `ADAPTATION_GUIDE.md` | How adopters apply Blueprint |
+| Migration guide | `MIGRATION_GUIDE.md` | How existing systems are adapted and sanitized |
+| Validation checklist | `VALIDATION_CHECKLIST.md` | Public release and adoption validation gates |
+| Public support | `SUPPORT.md` | Support channels and boundaries |
+| Public security policy | `SECURITY.md` | Public vulnerability reporting guidance |
+| Code of conduct | `CODE_OF_CONDUCT.md` | Participation rules |
+| GitHub PR template | `.github/PULL_REQUEST_TEMPLATE.md` | Public PR structure |
+| GitHub issue templates | `.github/ISSUE_TEMPLATE/**` | Public issue intake |
+| Code owners | `.github/CODEOWNERS` | Repository ownership hint |
 | Agent entrypoint | `core/AGENTS.md` | How agents start, recover, validate, and hand off work |
 | Task routing | `core/TASK_PROCESS_ROUTER.md` | How work is classified before implementation |
 | Process levels | `core/TASK_PROCESS_ROUTER.md` | How much procedure L0-L4 work requires |
@@ -109,7 +124,9 @@ If no owner exists, add one in the same PR that introduces the rule.
 | Naming area | Owner |
 | --- | --- |
 | Repository name and public description | `README.md`, `OPEN_SOURCE_SPEC.md` |
-| Version numbers | `CONTRIBUTING.md`, release PR body |
+| Version numbers | `VERSION`, `CONTRIBUTING.md`, release PR body |
+| Changelog entries | `CHANGELOG.md` |
+| Release PR process | `RELEASE.md` |
 | Branch names | `governance/docs/git-policy.md` |
 | Commit titles | `governance/docs/git-policy.md`, `CONTRIBUTING.md` |
 | PR titles | `governance/docs/pr-standard.md`, `CONTRIBUTING.md` |
@@ -178,6 +195,7 @@ Current planned gaps:
 
 - Additional example projects are planned for a later phase.
 - Optional automation is not included.
+- Release PR into `main` is not opened yet.
 
 These gaps should not be described as included assets.
 

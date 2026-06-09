@@ -1,0 +1,34 @@
+name: Documentation issue
+description: Report a documentation gap, broken link, unclear template, or adoption guide problem.
+title: "[Docs] "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Which file or section is affected?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is unclear, incorrect, missing, or broken?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected improvement
+      description: What should the documentation help users do?
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This issue does not include private project data.
+          required: true

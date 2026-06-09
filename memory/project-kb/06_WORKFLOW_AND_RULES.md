@@ -58,7 +58,8 @@ Recommended build order:
 11. Guardian templates.
 12. Checklists.
 13. Sanitized examples.
-14. Release PR into `main`.
+14. Public release packaging.
+15. Release PR into `main`.
 
 ## Canonical References
 
@@ -81,5 +82,14 @@ Recommended build order:
 - Guardian templates: `templates/guardian/README.md`
 - Checklists: `checklists/README.md`
 - AI product example: `examples/ai-product/README.md`
+- Open-source guide: `OPEN_SOURCE_GUIDE.md`
+- Adaptation guide: `ADAPTATION_GUIDE.md`
+- Migration guide: `MIGRATION_GUIDE.md`
+- Validation checklist: `VALIDATION_CHECKLIST.md`
+- Release process: `RELEASE.md`
+- Changelog: `CHANGELOG.md`
+- Public support: `SUPPORT.md`
+- Public security policy: `SECURITY.md`
+- Code of conduct: `CODE_OF_CONDUCT.md`
 - Source coverage: `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md`
 - System relationship map: `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md`

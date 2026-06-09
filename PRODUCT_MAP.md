@@ -80,6 +80,9 @@ The loop is intentionally scalable. Small tasks do not pay the cost of full proc
 | Product map | Define the complete product shape and missing system pieces | `PRODUCT_MAP.md` | Yes |
 | Architecture boundary | Define core, extension, and example layers | `ARCHITECTURE.md` | Yes |
 | Bundle manifest | Declare included, planned, and excluded assets | `BUNDLE_MANIFEST.md` | Yes |
+| Release packaging | Prepare public release files and manual release gates | `VERSION`, `CHANGELOG.md`, `RELEASE.md`, `VALIDATION_CHECKLIST.md` | Yes |
+| Open-source support | Define public support, conduct, and security boundaries | `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` | Yes |
+| GitHub contribution templates | Structure public issues and PRs | `.github/**` | Yes |
 | Agent entrypoint | Define how agents start and recover | `core/AGENTS.md` | Yes |
 | Task router | Classify work before implementation | `core/TASK_PROCESS_ROUTER.md` | Yes |
 | Process levels | Scale required procedure to task size | `core/TASK_PROCESS_ROUTER.md` | Yes |
@@ -332,7 +335,9 @@ Full installation adds:
 
 Full installation is covered by the included owner documents, templates, Guardian assets, and checklists.
 
-Public release packaging still requires release preparation and any explicitly selected additional examples.
+Public release packaging is covered by release docs, validation checklist, support, security, conduct, and GitHub contribution templates.
+
+The release PR into `main` is still a separate approval-gated step.
 
 ## Completion Gates Before Public Packaging
 
@@ -342,12 +347,13 @@ Do not treat Blueprint as complete until:
 2. Example scope exists or is explicitly deferred from the release scope.
 3. Public docs distinguish included, planned, excluded, and released states.
 4. Local validation, link checks, wording scans, and contribution hygiene checks pass.
+5. Release docs, changelog, version, support, security, and conduct files agree.
 
 ## Next Build Order
 
 Build the remaining system in this order:
 
-1. Additional examples only if selected for the release scope.
-2. Public release packaging.
+1. Release PR into `main` after explicit approval.
+2. Additional examples only if selected for a later release scope.
 
 This order protects the system from losing core logic while converting source-reference behavior into portable open-source artifacts.
