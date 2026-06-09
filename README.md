@@ -105,7 +105,7 @@ Use Spec Kit when you need a spec-centered delivery workflow. Use Blueprint when
 
 ## Current Status
 
-Blueprint is in public repository bootstrap.
+Blueprint is in public repository bootstrap and core contract buildout.
 
 Included now:
 
@@ -115,12 +115,13 @@ Included now:
 | Architecture boundary | Included |
 | Bundle manifest | Included |
 | Contribution policy | Included |
+| Core operating contracts | Included |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
 
 Not included yet:
 
-- core governance documents;
+- detailed governance standards;
 - Project Memory templates;
 - Guardian templates;
 - recovery templates;
@@ -139,6 +140,8 @@ Read the bootstrap documents:
 2. [Architecture](ARCHITECTURE.md)
 3. [Bundle Manifest](BUNDLE_MANIFEST.md)
 4. [Contributing Guide](CONTRIBUTING.md)
+5. [Agent Operating Contract](core/AGENTS.md)
+6. [Task Process Router](core/TASK_PROCESS_ROUTER.md)
 
 Blueprint is currently a documentation-first framework. Template bundles, examples, and automation will come later and must remain clearly marked until implemented.
 
@@ -188,7 +191,7 @@ make clean   # stop containers and remove local volumes
 | Version | Scope |
 | --- | --- |
 | v0.1.0 | Public repository bootstrap, architecture, manifest, contribution policy, preview environment |
-| v0.2.0 | Core governance documents and governance standards |
+| v0.2.0 | Core operating contracts and governance standards |
 | v0.3.0 | Project Memory, recovery, Guardian, PR handoff, and validation templates |
 | v0.4.0 | Sanitized example project and adoption guide |
 | v1.0.0 | Stable manual installation path and complete public docs |

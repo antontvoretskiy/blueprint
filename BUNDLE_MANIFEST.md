@@ -1,6 +1,6 @@
 # Blueprint Bundle Manifest
 
-This manifest defines what belongs in the Blueprint bootstrap bundle, what is planned later, and what is explicitly excluded from core.
+This manifest defines what belongs in the current Blueprint bundle, what is planned later, and what is explicitly excluded from core.
 
 ## Included Now
 
@@ -19,12 +19,16 @@ This manifest defines what belongs in the Blueprint bootstrap bundle, what is pl
 | `.env.example` | Included | Non-secret local environment defaults |
 | `public/` | Included | Static preview surface |
 | `public/api/` | Included | Static API preview endpoint for local smoke checks |
+| `core/AGENTS.md` | Included | Agent operating contract |
+| `core/TASK_PROCESS_ROUTER.md` | Included | Task routing by operating layer |
+| `core/FEATURE_LIFECYCLE_STANDARD.md` | Included | Feature lifecycle standard |
+| `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | Included | PR handoff and clean-start standard |
+| `core/SECURITY.md` | Included | Portable security baseline |
 
 ## Planned Later
 
 | Area | Planned paths |
 | --- | --- |
-| Core governance | `core/AGENTS.md`, `core/TASK_PROCESS_ROUTER.md`, `core/FEATURE_LIFECYCLE_STANDARD.md`, `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md`, `core/SECURITY.md` |
 | Governance standards | `governance/docs/governance-index.md`, `engineering-governance.md`, `git-policy.md`, `pr-standard.md`, `verification-standard.md`, `documentation-standard.md`, `adr-policy.md` |
 | Project Memory | `memory/project-kb/00_INDEX.md`, `05_IMPLEMENTATION_STATUS.md`, `06_WORKFLOW_AND_RULES.md`, `07_DECISIONS_LOG.md`, `08_CURRENT_STATE.md`, `09_TASK_HISTORY.md`, `10_REFERENCE.md` |
 | Templates | `templates/project-memory/`, `templates/feature-lifecycle/`, `templates/pr-handoff/`, `templates/guardian/`, `templates/recovery/` |

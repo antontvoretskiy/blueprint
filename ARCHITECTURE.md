@@ -11,6 +11,8 @@ Blueprint core is the portable operating contract.
 Core includes:
 
 - governance;
+- agent entrypoint;
+- task routing;
 - Project Memory;
 - recovery;
 - Guardian checks;
@@ -66,9 +68,9 @@ Chat history can help execution, but durable project rules, state, decisions, an
 
 Each rule should have one canonical owner. Summary files may link to an owner, but they must not redefine the rule.
 
-## Planned Core Documents
+## Core Documents
 
-The next implementation phase should add:
+Blueprint core includes:
 
 | Path | Purpose |
 | --- | --- |
@@ -78,7 +80,7 @@ The next implementation phase should add:
 | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | PR handoff and post-merge clean start |
 | `core/SECURITY.md` | Security baseline for agent-driven work |
 
-These files are planned. They are not part of the bootstrap PR.
+These files define the portable operating contract. Detailed governance standards, memory templates, examples, checklists, and extensions are separate layers.
 
 ## Planned Governance Documents
 
