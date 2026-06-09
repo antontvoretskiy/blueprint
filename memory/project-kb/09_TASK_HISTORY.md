@@ -15,6 +15,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-09 | PR #7 | Aligned governance standards with the source reference and added self-hosting | `develop` |
 | 2026-06-09 | PR #8 | Added Project Memory structure | `develop` |
 | 2026-06-09 | PR #9 | Added recovery templates | `develop` |
+| 2026-06-09 | PR #10 | Added source coverage matrix and system relationship map | `develop` |
 
 ## Update Rules
 
