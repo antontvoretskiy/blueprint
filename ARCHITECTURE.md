@@ -60,6 +60,21 @@ Only the Core Layer defines canonical rules. Extensions and examples must not re
 | Feature Lifecycle | Intake, clarification, planning, tasks, implementation, validation |
 | PR Lifecycle | PR scope, review readiness, validation evidence, clean start |
 
+## Project Memory Documents
+
+Blueprint Project Memory includes:
+
+| Path | Purpose |
+| --- | --- |
+| `memory/project-kb/00_INDEX.md` | Memory entrypoint and recovery order |
+| `memory/project-kb/05_IMPLEMENTATION_STATUS.md` | Included, planned, and excluded state |
+| `memory/project-kb/06_WORKFLOW_AND_RULES.md` | Active workflow summary |
+| `memory/project-kb/07_DECISIONS_LOG.md` | Durable accepted decisions |
+| `memory/project-kb/08_CURRENT_STATE.md` | Current recovery point |
+| `memory/project-kb/09_TASK_HISTORY.md` | Durable task history |
+| `memory/project-kb/10_REFERENCE.md` | Canonical reference map |
+| `memory/project-kb/current/CLEAN_START_BRIEF.md` | Short current handoff |
+
 ## Source of Truth
 
 The repository is the source of truth.

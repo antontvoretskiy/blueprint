@@ -1,0 +1,61 @@
+# Blueprint Workflow And Rules
+
+This file summarizes active workflow rules for recovery.
+
+Canonical rules live in core and governance documents. This file should link to them instead of redefining them in full.
+
+## Branch Flow
+
+Current Blueprint flow:
+
+```text
+main
+  -> develop
+  -> docs/<scope> or fix/<scope>
+  -> PR into develop
+  -> release PR into main
+```
+
+`main` is release-ready public state.
+
+`develop` is integration state for unreleased framework work.
+
+## PR Rules
+
+Meaningful PRs use:
+
+- Problem;
+- Solution;
+- Scope;
+- Validation;
+- Risks;
+- Follow-ups.
+
+One PR should have one scope.
+
+## Current Layer Order
+
+Recommended build order:
+
+1. Bootstrap public repository presentation.
+2. Core contracts.
+3. Governance standards.
+4. Project Memory structure.
+5. Recovery and Guardian templates.
+6. Checklists.
+7. Sanitized examples.
+8. Release PR into `main`.
+
+## Canonical References
+
+- Agent contract: `core/AGENTS.md`
+- Task routing: `core/TASK_PROCESS_ROUTER.md`
+- Feature lifecycle: `core/FEATURE_LIFECYCLE_STANDARD.md`
+- PR handoff: `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md`
+- Security: `core/SECURITY.md`
+- Governance index: `governance/docs/governance-index.md`
+- Git policy: `governance/docs/git-policy.md`
+- PR standard: `governance/docs/pr-standard.md`
+- Verification: `governance/docs/verification-standard.md`
+- Documentation: `governance/docs/documentation-standard.md`
+- ADR policy: `governance/docs/adr-policy.md`

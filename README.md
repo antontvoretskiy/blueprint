@@ -117,12 +117,12 @@ Included now:
 | Contribution policy | Included |
 | Core operating contracts | Included |
 | Governance standards | Included |
+| Project Memory structure | Included |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
 
 Not included yet:
 
-- Project Memory templates;
 - Guardian templates;
 - recovery templates;
 - example projects;
@@ -143,6 +143,7 @@ Read the bootstrap documents:
 5. [Agent Operating Contract](core/AGENTS.md)
 6. [Task Process Router](core/TASK_PROCESS_ROUTER.md)
 7. [Governance Index](governance/docs/governance-index.md)
+8. [Project Memory Index](memory/project-kb/00_INDEX.md)
 
 Blueprint is currently a documentation-first framework. Template bundles, examples, and automation will come later and must remain clearly marked until implemented.
 
