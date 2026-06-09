@@ -95,3 +95,12 @@ This file lists canonical project references for recovery.
 | Branch governance checklist | `checklists/branch-governance-checklist.md` |
 | PR readiness checklist | `checklists/pr-readiness-checklist.md` |
 | Clean-start checklist | `checklists/clean-start-checklist.md` |
+
+## Example References
+
+| Reference | Path |
+| --- | --- |
+| AI product example guide | `examples/ai-product/README.md` |
+| AI product adoption map | `examples/ai-product/ADOPTION_MAP.md` |
+| AI product branch governance example | `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` |
+| AI product recovery walkthrough | `examples/ai-product/RECOVERY_WALKTHROUGH.md` |

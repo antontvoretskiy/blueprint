@@ -226,9 +226,12 @@ Extension rules:
 
 Examples are educational only.
 
-Allowed future examples:
+Included examples:
 
 - AI product;
+
+Allowed future examples:
+
 - SaaS;
 - marketplace;
 - CRM;
@@ -240,6 +243,15 @@ Example rules:
 - examples must not include product code from private projects;
 - examples must not become source of truth;
 - examples must not be required for installation.
+
+Current example documents:
+
+| Path | Purpose |
+| --- | --- |
+| `examples/ai-product/README.md` | Example overview and adoption flow |
+| `examples/ai-product/ADOPTION_MAP.md` | Blueprint-to-adopter mapping for an AI product repository |
+| `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` | Branch family and module mapping example |
+| `examples/ai-product/RECOVERY_WALKTHROUGH.md` | Fresh-session recovery walkthrough |
 
 ## Non-Goals
 
