@@ -24,6 +24,22 @@ Before changing files, an agent must confirm:
 
 If the task names a reference repository, the agent may inspect it only as a source reference. The agent must not create branches, commits, PRs, issues, tags, or file changes in that reference repository unless the maintainer gives explicit approval.
 
+## Mandatory First Checks
+
+For any task that may change files, branches, PRs, release state, or public documentation, perform:
+
+1. repository identity check;
+2. branch and base branch check;
+3. working tree check;
+4. scope and forbidden-path check;
+5. source-reference read-only check;
+6. task classification through `core/TASK_PROCESS_ROUTER.md`;
+7. validation plan check.
+
+If any check fails, stop before editing and report the blocker.
+
+For audit-only work, do not edit files and do not create branches or PRs.
+
 ## Recovery Path
 
 For a fresh session, read:
@@ -36,6 +52,20 @@ For a fresh session, read:
 6. `core/TASK_PROCESS_ROUTER.md`
 
 When Project Memory is added later, the recovery path will also load the memory index and current-state files. Until then, the root specification and core contracts are the recovery baseline.
+
+## Source Of Truth Priority
+
+Use this priority order when evidence conflicts:
+
+1. repository files on the active branch;
+2. merged PR history;
+3. current open PR body and diff;
+4. explicit maintainer instruction in the current task;
+5. chat context.
+
+Chat context may guide execution, but it must not override canonical repository files unless the maintainer explicitly asks to change those files.
+
+When documentation and implementation conflict, report the conflict. Do not silently make implementation claims that documentation does not support.
 
 ## Task Flow
 
@@ -51,6 +81,17 @@ For every meaningful task:
 8. Update handoff notes in the PR body.
 
 Do not start implementation when the user asks for audit-only, planning-only, or read-only work.
+
+## Source Reference Handling
+
+When a task uses a source-reference repository:
+
+- read only the files needed for the current scope;
+- record the source branch and commit when relevant;
+- classify each source file as include, parameterize, convert to template, review, or exclude;
+- remove product-specific names, paths, release history, incidents, and private project memory;
+- preserve portable rules and relationships;
+- do not create branches, commits, tags, issues, or PRs in the source-reference repository.
 
 ## Scope Guard
 
@@ -125,6 +166,22 @@ The PR body must make it clear what was included, what was deliberately excluded
 After a PR is merged, the next session must be able to recover from repository state and PR history.
 
 If a future agent needs old chat history to understand what happened, the handoff failed.
+
+## Final Report Requirement
+
+After completing implementation, report:
+
+- repository;
+- branch;
+- base branch;
+- files changed;
+- validation results;
+- PR link, when created;
+- what was explicitly not changed;
+- risks;
+- next step.
+
+For read-only audits, report the source commit inspected, target branch inspected, mapping gaps, and recommended next action.
 
 ## Agent Hygiene
 
