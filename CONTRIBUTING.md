@@ -44,6 +44,24 @@ Examples:
 
 If a change touches multiple operating layers, explain why they must land together.
 
+## Branch Strategy
+
+Blueprint uses `main` for release-ready public state and `develop` for integration work before release.
+
+Default flow:
+
+```text
+main
+  -> develop
+  -> docs/<scope> or fix/<scope>
+  -> PR into develop
+  -> release PR into main
+```
+
+Create feature branches from `develop` unless the maintainer explicitly requests a release or hotfix branch.
+
+Do not create branches in source-reference repositories.
+
 ## Commit And PR Title Standard
 
 Use clear, reviewable titles with the format:
