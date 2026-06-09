@@ -1,90 +1,388 @@
 # Blueprint Git Policy
 
-This policy defines branch roles, branch naming, and merge flow for Blueprint.
+This policy defines repository identity checks, branch roles, branch naming, commit naming, merge flow, and branch cleanup for Blueprint.
 
-## Branch Roles
+## Purpose
+
+The Git policy keeps repository history reviewable and recoverable.
+
+It prevents:
+
+- work in the wrong repository;
+- direct changes to release-ready state;
+- branch names tied to people instead of scope;
+- mixed-scope PRs;
+- stale branches that no longer match the target branch;
+- source-reference repositories being changed by accident;
+- local generated files leaking into public history.
+
+## Ownership
+
+This document owns:
+
+- repository identity checks;
+- branch role definitions;
+- branch naming rules;
+- commit naming rules;
+- branch lifecycle;
+- stale branch handling;
+- merge and cleanup rules.
+
+The PR body structure is owned by `governance/docs/pr-standard.md`.
+
+Validation language is owned by `governance/docs/verification-standard.md`.
+
+## Dependencies
+
+This policy depends on:
+
+- `CONTRIBUTING.md` for public contribution expectations;
+- `governance/docs/pr-standard.md` for PR scope and merge requirements;
+- `governance/docs/verification-standard.md` for evidence reporting;
+- `governance/docs/governance-index.md` for rule ownership.
+
+When those documents conflict, use `governance/docs/governance-index.md` to identify the canonical owner.
+
+## Repository Identity Rule
+
+Before creating a branch, editing files, committing, pushing, or opening a PR, confirm:
+
+- current working directory;
+- `git remote -v`;
+- current branch;
+- target base branch;
+- worktree status;
+- whether any ignored local files are expected.
+
+Blueprint work must happen only in the Blueprint repository.
+
+Source-reference repositories are read-only inputs. Do not create branches, commits, tags, pushes, or PRs in a source-reference repository unless maintainers explicitly approve it for that repository.
+
+## Canonical Branch Rule
+
+Blueprint uses two long-lived branches:
 
 | Branch | Role |
 | --- | --- |
 | `main` | Release-ready public state |
 | `develop` | Integration branch for unreleased framework work |
-| `docs/<scope>` | Documentation or framework contract work |
-| `fix/<scope>` | Small corrections or repair work |
-| `chore/<scope>` | Repository maintenance without framework semantics |
-| `release/vX.Y.Z` | Release preparation branch when needed |
 
-`main` should not receive normal feature work directly.
+Normal framework work starts from `develop` and opens PRs back into `develop`.
 
-## Default Flow
+Release preparation targets `main` through an explicit release PR.
 
-```text
-main
-  -> develop
-  -> docs/<scope> or fix/<scope>
-  -> PR into develop
-  -> release PR into main
-```
+Do not use `main` as a scratch branch.
 
-Create feature branches from `develop` unless the maintainer explicitly requests a release or hotfix branch.
+## Branch Naming Standard
 
-## Branch Naming
+Branch names must describe the scope of the work, not the person doing it.
 
-Use names that describe the work, not the person.
+Approved branch families:
+
+| Branch family | Purpose |
+| --- | --- |
+| `docs/<scope>` | Documentation, governance, framework contracts, templates, examples, and checklists |
+| `fix/<scope>` | Small corrections, broken links, formatting repairs, or wording fixes |
+| `chore/<scope>` | Repository maintenance with no public framework semantics |
+| `release/vX.Y.Z` | Release preparation when maintainers choose a dedicated release branch |
+| `hotfix/<scope>` | Urgent release-state repair with maintainer approval |
 
 Good examples:
 
-- `docs/core-operating-contracts`
-- `docs/governance-standards`
-- `docs/project-memory-templates`
-- `fix/manifest-links`
-- `release/v0.2.0`
+```text
+docs/core-operating-contracts
+docs/governance-standards
+docs/project-memory-templates
+docs/recovery-checklists
+fix/manifest-links
+release/v0.2.0
+```
 
-Avoid vague names, personal names, and work-in-progress labels.
+Avoid:
+
+- branch names based on a person;
+- vague labels such as `wip`, `misc`, or `updates`;
+- branch names that combine unrelated scopes;
+- pre-created future branches with no active work.
 
 ## Scope Mapping
 
-| Scope | Branch prefix |
+Use this mapping unless maintainers approve a more specific branch name:
+
+| Work area | Branch pattern |
 | --- | --- |
+| Public bootstrap docs | `docs/bootstrap-*` |
 | Core contracts | `docs/core-*` |
 | Governance standards | `docs/governance-*` |
-| Project Memory | `docs/memory-*` |
+| Project Memory materials | `docs/memory-*` |
+| Recovery materials | `docs/recovery-*` |
+| Guardian materials | `docs/guardian-*` |
 | Templates | `docs/templates-*` |
 | Examples | `docs/examples-*` |
 | Checklists | `docs/checklists-*` |
 | Release preparation | `release/vX.Y.Z` |
-| Small fixes | `fix/*` |
+| Small repairs | `fix/*` |
 
-## Merge Rules
+If a PR needs more than one branch pattern, split it unless maintainers explicitly accept the combined scope.
 
-For integration PRs:
+## Branch Purpose Categories
 
-- base branch should be `develop`;
-- squash merge is preferred;
-- squash title should follow `CONTRIBUTING.md`;
-- PR body should remain useful after merge.
+Every branch should have one purpose:
 
-For release PRs:
-
-- base branch should be `main`;
-- source branch should be `develop` or `release/vX.Y.Z`;
-- release version must be clear;
-- public claims must be revalidated.
-
-## Protected Boundaries
-
-Do not create branches in source-reference repositories.
-
-Do not push private source-derived content into Blueprint.
-
-Do not use `main` as a scratch branch.
+| Category | Allowed change type |
+| --- | --- |
+| Bootstrap | Public presentation, root docs, local preview scaffolding |
+| Core | Agent entrypoint, task routing, lifecycle, handoff, security baseline |
+| Governance | Branch, PR, verification, documentation, ADR, and engineering standards |
+| Memory | Project Memory structure and recovery-oriented state templates |
+| Template | Reusable files intended to be copied into other repositories |
+| Example | Educational sample implementation of Blueprint adoption |
+| Checklist | Reviewable acceptance criteria and manual validation lists |
+| Release | Version preparation, changelog, manifest, release status updates |
 
 Do not mix release preparation with unrelated framework changes.
 
-## Cleanup
+## Commit Naming Standard
 
-After a PR merges:
+Use:
 
-- sync the target branch locally;
-- delete the feature branch when it is no longer needed;
-- repeat relevant validation on the target branch;
-- report the clean-start state.
+```text
+type(scope): concise outcome
+```
+
+Examples:
+
+```text
+docs: bootstrap blueprint public repository
+docs(core): add portable operating contracts
+docs(governance): add branch and PR standards
+docs(memory): add project memory templates
+fix(docs): repair manifest links
+docs(release): prepare blueprint v0.1.0
+```
+
+For versioned public assets, maintainers may use:
+
+```text
+[Template] Add project memory templates v0.2.0
+[Checklist] Add recovery checklist v0.2.0
+[Example] Add AI product adoption example v0.3.0
+[Release] Prepare Blueprint v0.1.0
+```
+
+Commit messages must not include noisy or process-only wording such as:
+
+- vague update labels;
+- work-in-progress labels;
+- accidental tool provenance;
+- unapproved co-author trailers;
+- uncertainty phrases in the title.
+
+## Commit Scope Rule
+
+A commit should explain the durable outcome.
+
+For meaningful changes, include a body with:
+
+- Problem;
+- Solution;
+- Scope;
+- Validation;
+- Risks;
+- Follow-ups.
+
+Small typo or link fixes may use a title-only commit if the title is specific.
+
+## Branch Lifecycle
+
+Standard lifecycle:
+
+```text
+sync develop
+create scoped branch
+make scoped changes
+run validation
+commit intentionally
+push branch
+open PR into develop
+review
+squash merge
+sync develop
+delete merged branch
+run post-merge validation
+```
+
+Release branches follow the release process and target `main`.
+
+## Branch Reuse Rule
+
+Do not reuse an old branch for unrelated work.
+
+Reuse is allowed only when:
+
+- the branch is still open for the same scope;
+- the target base has not moved in a way that changes review context;
+- the PR remains understandable as one review story.
+
+When in doubt, create a fresh branch from the updated target branch.
+
+## Branch Ownership Rule
+
+The branch owner is responsible for:
+
+- keeping the branch aligned with its target;
+- keeping the PR scope narrow;
+- removing unrelated local files before commit;
+- reporting validation honestly;
+- deleting the branch after merge when it is no longer needed.
+
+Ownership does not override governance rules.
+
+## Branch Age Guidance
+
+A branch becomes risky when:
+
+- the target branch has moved substantially;
+- the PR has no recent validation;
+- the diff has accumulated unrelated scope;
+- the branch name no longer matches the content.
+
+Refresh or split stale branches before review.
+
+## Stale Branch Policy
+
+For a stale branch:
+
+1. Re-check repository identity and target base.
+2. Inspect the diff against the target branch.
+3. Decide whether to rebase, merge target, split scope, or close and recreate.
+4. Re-run validation after the branch is refreshed.
+5. Report the stale-branch handling in the PR body when it affects review.
+
+Do not hide stale-branch repair inside an unrelated PR.
+
+## Squash Merge Cleanup Rule
+
+Squash merge is preferred for Blueprint PRs.
+
+The squash title becomes the public history line and must follow the commit naming standard.
+
+The squash body should preserve the meaningful review record:
+
+- Problem;
+- Solution;
+- Scope;
+- Validation;
+- Risks;
+- Follow-ups.
+
+Do not add accidental tool provenance or unapproved co-author trailers.
+
+## Stacked PR Policy
+
+Stacked PRs are allowed only when maintainers approve the dependency chain.
+
+Each stacked PR must state:
+
+- base branch;
+- parent PR, if any;
+- paths in scope;
+- paths out of scope;
+- validation that belongs to this layer;
+- what becomes valid only after the parent merges.
+
+When a parent PR merges, refresh dependent branches before review.
+
+## Dirty Worktree Policy
+
+Before staging, inspect the worktree.
+
+If unrelated files exist:
+
+- do not stage them silently;
+- do not delete user work;
+- stage explicit paths only;
+- mention ignored local files only when they affect validation or environment setup.
+
+## Multi-Checkout Policy
+
+When multiple local checkouts exist, repository identity checks are required before:
+
+- branch creation;
+- file edits;
+- commits;
+- pushes;
+- PR creation.
+
+The active checkout must match the intended repository and remote.
+
+## Generated And Local Files Policy
+
+Do not commit:
+
+- local environment files;
+- generated preview artifacts that are not part of the public repository;
+- logs;
+- cache files;
+- editor metadata;
+- private credentials;
+- local dependency directories.
+
+Generated public assets may be committed only when:
+
+- they are intentionally part of the product presentation;
+- their source or generation process is documented when relevant;
+- validation confirms they render or link correctly.
+
+## Branch Cleanup Safety Levels
+
+| Action | Requirement |
+| --- | --- |
+| Delete merged local branch | Allowed after confirming merge |
+| Delete merged remote branch | Allowed after confirming PR merge and no dependent PR needs it |
+| Delete unmerged local branch | Requires maintainer approval or clear abandoned scope |
+| Delete unmerged remote branch | Requires maintainer approval |
+| Rewrite published history | Requires explicit maintainer approval |
+
+## Merge Policy
+
+Integration PRs:
+
+- target `develop`;
+- use squash merge by default;
+- include current validation evidence;
+- avoid unrelated root-doc status changes.
+
+Release PRs:
+
+- target `main`;
+- name the release version;
+- verify public status documents;
+- summarize what moves from `develop` to release-ready state.
+
+## Relationship To PR Standard
+
+This policy defines branch and commit mechanics.
+
+`governance/docs/pr-standard.md` defines PR title, body, scope, review, and merge expectations.
+
+## Relationship To Verification Standard
+
+This policy requires validation before commit, PR, merge, and post-merge handoff.
+
+`governance/docs/verification-standard.md` defines the accepted validation terms and evidence levels.
+
+## Review Checklist
+
+Before opening or merging a PR, confirm:
+
+- repository identity is correct;
+- branch starts from the expected base;
+- branch name matches one scope;
+- changed paths match the branch purpose;
+- no source-reference repository was changed;
+- no unrelated local files are staged;
+- commit title follows the naming standard;
+- PR targets the correct branch;
+- validation is current;
+- branch cleanup plan is clear.
