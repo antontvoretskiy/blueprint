@@ -48,3 +48,12 @@ This file lists canonical project references for recovery.
 | Clean-start brief | `memory/project-kb/current/CLEAN_START_BRIEF.md` |
 | Guardian architecture | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` |
 | Guardian validation scenarios | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` |
+
+## Template References
+
+| Reference | Path |
+| --- | --- |
+| Recovery template guide | `templates/recovery/README.md` |
+| Recovery path template | `templates/recovery/RECOVERY_PATH.template.md` |
+| Clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` |
+| Recovery validation template | `templates/recovery/RECOVERY_VALIDATION.template.md` |

@@ -6,7 +6,7 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint has bootstrap, core contracts, governance standards, self-hosting governance, and Project Memory structure on `develop`.
+Blueprint has bootstrap, core contracts, governance standards, self-hosting governance, Project Memory structure, and recovery templates on `develop`.
 
 ## Read First
 
@@ -24,11 +24,11 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Add recovery and Guardian templates in separate scoped PRs.
+Add Guardian templates in a separate scoped PR.
 
 ## Do Not Do
 
 - Do not modify source-reference repositories.
-- Do not add templates in the memory structure PR.
-- Do not add examples or checklists in the memory structure PR.
+- Do not mix Guardian templates with recovery template changes.
+- Do not add examples or checklists in the recovery template PR.
 - Do not move `develop` to `main` until release preparation is approved.

@@ -49,10 +49,11 @@ Recommended build order:
 2. Core contracts.
 3. Governance standards.
 4. Project Memory structure.
-5. Recovery and Guardian templates.
-6. Checklists.
-7. Sanitized examples.
-8. Release PR into `main`.
+5. Recovery templates.
+6. Guardian templates.
+7. Checklists.
+8. Sanitized examples.
+9. Release PR into `main`.
 
 ## Canonical References
 
@@ -67,3 +68,4 @@ Recommended build order:
 - Verification: `governance/docs/verification-standard.md`
 - Documentation: `governance/docs/documentation-standard.md`
 - ADR policy: `governance/docs/adr-policy.md`
+- Recovery templates: `templates/recovery/README.md`
