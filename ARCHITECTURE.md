@@ -73,6 +73,8 @@ Blueprint Project Memory includes:
 | `memory/project-kb/08_CURRENT_STATE.md` | Current recovery point |
 | `memory/project-kb/09_TASK_HISTORY.md` | Durable task history |
 | `memory/project-kb/10_REFERENCE.md` | Canonical reference map |
+| `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` | Source-reference coverage and remaining gaps |
+| `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Owner, dependency, and workflow relationship map |
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Short current handoff |
 
 ## Recovery Templates

@@ -33,8 +33,10 @@ Blueprint governance is organized into levels:
 | Architecture boundary | Define core, extension, and example layers | Included |
 | Core contracts | Define agent entry, task routing, lifecycle, handoff, security baseline | Included |
 | Governance standards | Define branch, PR, verification, documentation, ADR, and engineering rules | Included |
-| Project Memory materials | Define recovery-oriented state files | Planned |
-| Templates | Provide reusable installation artifacts | Planned |
+| Project Memory materials | Define recovery-oriented state files | Included |
+| Recovery templates | Provide reusable recovery artifacts | Included |
+| Source coverage maps | Track transfer coverage and system relationships | Included |
+| Other templates | Provide reusable installation artifacts beyond recovery | Planned |
 | Examples | Show adoption patterns | Planned |
 | Checklists | Provide acceptance criteria | Planned |
 
@@ -61,19 +63,24 @@ Planned levels are not included until their files exist in the repository.
 | Verification standard | `governance/docs/verification-standard.md` | Validation language and evidence requirements |
 | Documentation standard | `governance/docs/documentation-standard.md` | Documentation truthfulness, lifecycle, and portability |
 | ADR policy | `governance/docs/adr-policy.md` | Architecture decision record rules |
+| Project Memory index | `memory/project-kb/00_INDEX.md` | Recovery-oriented memory entrypoint |
+| Implementation status | `memory/project-kb/05_IMPLEMENTATION_STATUS.md` | Included, planned, and excluded project state |
+| Current recovery state | `memory/project-kb/08_CURRENT_STATE.md` | Current recovery point and next work |
+| Reference map | `memory/project-kb/10_REFERENCE.md` | Canonical navigation map |
+| Source coverage matrix | `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` | Coverage status for source-reference system logic |
+| System relationship map | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Owner and dependency flow across system documents |
+| Recovery template bundle | `templates/recovery/README.md` | Reusable recovery template bundle ownership |
 
-## Planned Ownership Map
+## Future Ownership Map
 
 These areas are planned, but they are not active owners until their files are added:
 
 | Planned area | Intended owner pattern |
 | --- | --- |
-| Project Memory index | `memory/project-kb/00_INDEX.md` |
-| Implementation status template | `memory/project-kb/05_IMPLEMENTATION_STATUS.md` |
-| Current recovery state | `memory/project-kb/08_CURRENT_STATE.md` |
-| Reference map | `memory/project-kb/10_REFERENCE.md` |
-| Guardian architecture | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` |
-| Template bundles | `templates/**` |
+| Project Memory templates | `templates/project-memory/**` |
+| Feature lifecycle templates | `templates/feature-lifecycle/**` |
+| PR handoff templates | `templates/pr-handoff/**` |
+| Guardian templates | `templates/guardian/**` |
 | Example projects | `examples/**` |
 | Checklists | `checklists/**` |
 
@@ -162,8 +169,10 @@ Release PRs target `main`.
 
 Current planned gaps:
 
-- Project Memory files are planned for a later phase.
-- Template bundles are planned for a later phase.
+- Project Memory templates are planned for a later phase.
+- Feature lifecycle templates are planned for a later phase.
+- PR handoff templates are planned for a later phase.
+- Guardian templates are planned for a later phase.
 - Example projects are planned for a later phase.
 - Checklists are planned for a later phase.
 - Optional automation is not included.

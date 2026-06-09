@@ -20,6 +20,8 @@ For a fresh session, read:
 
 Load governance documents when the task changes rules, branches, PR standards, validation, documentation, or ADR policy.
 
+Load `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` and `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` when the task changes source-reference coverage, ownership, system relationships, or transfer completeness.
+
 ## Memory Files
 
 | File | Purpose |
@@ -30,6 +32,8 @@ Load governance documents when the task changes rules, branches, PR standards, v
 | `08_CURRENT_STATE.md` | Current repository state and next recommended work |
 | `09_TASK_HISTORY.md` | Durable task history after merged work |
 | `10_REFERENCE.md` | Canonical references and owner documents |
+| `11_SOURCE_COVERAGE_MATRIX.md` | Source-reference coverage status and remaining gaps |
+| `12_SYSTEM_RELATIONSHIP_MAP.md` | Owners, dependencies, and document interaction map |
 | `current/CLEAN_START_BRIEF.md` | Short current handoff for the next session |
 | `architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Guardian process architecture |
 | `GUARDIAN_VALIDATION_SCENARIOS.md` | Generic Guardian validation scenarios |
