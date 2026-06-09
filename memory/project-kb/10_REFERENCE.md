@@ -59,6 +59,7 @@ This file lists canonical project references for recovery.
 | Source coverage matrix | `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` |
 | System relationship map | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` |
 | Clean-start brief | `memory/project-kb/current/CLEAN_START_BRIEF.md` |
+| Recovery validation | `memory/project-kb/current/RECOVERY_VALIDATION.md` |
 | Guardian architecture | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` |
 | Guardian validation scenarios | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` |
 

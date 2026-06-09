@@ -46,12 +46,19 @@ For a fresh session, read:
 
 1. `README.md`
 2. `OPEN_SOURCE_SPEC.md`
-3. `ARCHITECTURE.md`
-4. `BUNDLE_MANIFEST.md`
-5. `CONTRIBUTING.md`
-6. `core/TASK_PROCESS_ROUTER.md`
+3. `PRODUCT_MAP.md`
+4. `ARCHITECTURE.md`
+5. `BUNDLE_MANIFEST.md`
+6. `memory/project-kb/00_INDEX.md`
+7. `memory/project-kb/08_CURRENT_STATE.md`
+8. `memory/project-kb/05_IMPLEMENTATION_STATUS.md`
+9. `memory/project-kb/10_REFERENCE.md`
+10. `core/TASK_PROCESS_ROUTER.md`
+11. `CONTRIBUTING.md`
 
-When Project Memory is added later, the recovery path will also load the memory index and current-state files. Until then, the root specification and core contracts are the recovery baseline.
+Load governance documents when the task changes rules, branch policy, PR standards, validation, documentation, or ADR policy.
+
+Load `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` and `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` when the task changes source-reference coverage, ownership, system relationships, process levels, project management, feature management, or transfer completeness.
 
 ## Source Of Truth Priority
 

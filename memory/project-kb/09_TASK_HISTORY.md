@@ -23,6 +23,9 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-09 | PR #15 | Added Guardian templates | `develop` |
 | 2026-06-09 | PR #16 | Added operational checklists | `develop` |
 | 2026-06-09 | PR #17 | Added AI product adoption example | `develop` |
+| 2026-06-10 | PR #18 | Prepared v0.3.0 public release packaging | `develop` |
+| 2026-06-10 | PR #19 | Released Blueprint v0.3.0 to `main` | `main` |
+| 2026-06-10 | Release `v0.3.0` | Published the first complete public framework bundle | `main` |
 
 ## Update Rules
 
