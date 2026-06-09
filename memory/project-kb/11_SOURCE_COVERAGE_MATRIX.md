@@ -32,11 +32,11 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Project Memory root files | 11 | 11 | 0 | 0 | 0 |
 | Clean start | 1 | 1 | 0 | 0 | 0 |
 | Guardian memory docs | 2 | 2 | 0 | 0 | 0 |
-| Feature lifecycle artifacts | 4 | 0 | 0 | 4 | 0 |
+| Feature lifecycle artifacts | 4 | 4 | 0 | 0 | 0 |
 | Recovery reusable templates | 3 | 3 | 0 | 0 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: product model, process levels, core, governance, and Project Memory templates are covered; feature lifecycle templates, PR handoff templates, and Guardian templates are not complete yet.
+Current conclusion: product model, process levels, core, governance, Project Memory templates, and Feature Lifecycle templates are covered; PR handoff templates and Guardian templates are not complete yet.
 
 ## Product Model And Process-Level Coverage
 
@@ -110,12 +110,12 @@ Guardian process logic exists, but reusable Guardian templates are not complete 
 
 | Source-reference item | Blueprint owner | Status | Notes |
 | --- | --- | --- | --- |
-| `project-kb/features/<feature>/FEATURE.md` | None yet | Planned | Must become `templates/feature-lifecycle/FEATURE.template.md` |
-| `project-kb/features/<feature>/CLARIFICATION.md` | None yet | Planned | Must become `templates/feature-lifecycle/CLARIFICATION.template.md` |
-| `project-kb/features/<feature>/PLAN.md` | None yet | Planned | Must become `templates/feature-lifecycle/PLAN.template.md` |
-| `project-kb/features/<feature>/TASKS.md` | None yet | Planned | Must become `templates/feature-lifecycle/TASKS.template.md` |
+| `project-kb/features/<feature>/FEATURE.md` | `templates/feature-lifecycle/FEATURE.template.md` | Covered | Reusable template exists |
+| `project-kb/features/<feature>/CLARIFICATION.md` | `templates/feature-lifecycle/CLARIFICATION.template.md` | Covered | Reusable template exists |
+| `project-kb/features/<feature>/PLAN.md` | `templates/feature-lifecycle/PLAN.template.md` | Covered | Reusable template exists |
+| `project-kb/features/<feature>/TASKS.md` | `templates/feature-lifecycle/TASKS.template.md` | Covered | Reusable template exists |
 
-The active standard exists in `core/FEATURE_LIFECYCLE_STANDARD.md`, but reusable feature artifacts are not yet included.
+The active standard exists in `core/FEATURE_LIFECYCLE_STANDARD.md`, and reusable feature artifacts now exist in `templates/feature-lifecycle/**`.
 
 ## PR Handoff Template Coverage
 
@@ -144,10 +144,9 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Add feature lifecycle templates.
+1. Add PR handoff templates.
 2. Add Guardian templates.
-3. Add PR handoff templates.
-4. Add checklists for recovery, branch governance, PR readiness, and clean start.
-5. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
+3. Add checklists for recovery, branch governance, PR readiness, and clean start.
+4. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
 
 Do not start public packaging while this matrix contains `Partial` or `Planned` system items.

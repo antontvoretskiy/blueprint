@@ -112,6 +112,18 @@ Blueprint Project Memory templates include:
 | `templates/project-memory/09_TASK_HISTORY.template.md` | Task history template |
 | `templates/project-memory/10_REFERENCE.template.md` | Reference map template |
 
+## Feature Lifecycle Templates
+
+Blueprint Feature Lifecycle templates include:
+
+| Path | Purpose |
+| --- | --- |
+| `templates/feature-lifecycle/README.md` | Feature Lifecycle template bundle guide |
+| `templates/feature-lifecycle/FEATURE.template.md` | Feature specification template |
+| `templates/feature-lifecycle/CLARIFICATION.template.md` | Feature clarification template |
+| `templates/feature-lifecycle/PLAN.template.md` | Feature implementation plan template |
+| `templates/feature-lifecycle/TASKS.template.md` | Feature task breakdown template |
+
 ## Source of Truth
 
 The repository is the source of truth.

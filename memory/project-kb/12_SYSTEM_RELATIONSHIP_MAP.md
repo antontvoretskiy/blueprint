@@ -39,9 +39,9 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Agent recovery entrypoint | `core/AGENTS.md` | `memory/project-kb/00_INDEX.md`, `memory/project-kb/08_CURRENT_STATE.md` |
 | Task routing | `core/TASK_PROCESS_ROUTER.md` | `governance/docs/engineering-governance.md` |
 | Process levels | `core/TASK_PROCESS_ROUTER.md` | `PRODUCT_MAP.md`, `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` |
-| Feature lifecycle | `core/FEATURE_LIFECYCLE_STANDARD.md` | future `templates/feature-lifecycle/**` |
+| Feature lifecycle | `core/FEATURE_LIFECYCLE_STANDARD.md` | `templates/feature-lifecycle/**` |
 | Project management model | `PRODUCT_MAP.md` | `memory/project-kb/00_INDEX.md`, `templates/project-memory/**` |
-| Feature management model | `core/FEATURE_LIFECYCLE_STANDARD.md` | `PRODUCT_MAP.md`, future `templates/feature-lifecycle/**` |
+| Feature management model | `core/FEATURE_LIFECYCLE_STANDARD.md` | `PRODUCT_MAP.md`, `templates/feature-lifecycle/**` |
 | PR handoff and clean start | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | `templates/recovery/CLEAN_START_BRIEF.template.md` |
 | Branch governance | `governance/docs/git-policy.md` | `governance/docs/pr-standard.md` |
 | PR lifecycle | `governance/docs/pr-standard.md` | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` |
@@ -191,7 +191,6 @@ The following relationships are not complete yet:
 
 | Missing item | Required owner |
 | --- | --- |
-| Feature artifact templates | `templates/feature-lifecycle/**` |
 | Guardian templates | `templates/guardian/**` |
 | PR handoff templates | `templates/pr-handoff/**` |
 | Checklists | `checklists/**` |

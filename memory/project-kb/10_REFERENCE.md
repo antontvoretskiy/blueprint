@@ -68,6 +68,11 @@ This file lists canonical project references for recovery.
 | Current state template | `templates/project-memory/08_CURRENT_STATE.template.md` |
 | Task history template | `templates/project-memory/09_TASK_HISTORY.template.md` |
 | Reference map template | `templates/project-memory/10_REFERENCE.template.md` |
+| Feature Lifecycle template guide | `templates/feature-lifecycle/README.md` |
+| Feature specification template | `templates/feature-lifecycle/FEATURE.template.md` |
+| Feature clarification template | `templates/feature-lifecycle/CLARIFICATION.template.md` |
+| Feature plan template | `templates/feature-lifecycle/PLAN.template.md` |
+| Feature tasks template | `templates/feature-lifecycle/TASKS.template.md` |
 | Recovery template guide | `templates/recovery/README.md` |
 | Recovery path template | `templates/recovery/RECOVERY_PATH.template.md` |
 | Clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` |
