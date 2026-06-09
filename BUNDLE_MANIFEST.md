@@ -44,6 +44,18 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Included | Current clean-start brief |
 | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Included | Guardian process architecture |
 | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Included | Generic Guardian validation scenarios |
+| `templates/project-memory/README.md` | Included | Project Memory template bundle guide, v0.2.0 |
+| `templates/project-memory/00_INDEX.template.md` | Included | Project Memory index template |
+| `templates/project-memory/01_PROJECT_CONTEXT.template.md` | Included | Project context template |
+| `templates/project-memory/02_PROJECT_MAP.template.md` | Included | Project map template |
+| `templates/project-memory/03_SYSTEM_ARCHITECTURE.template.md` | Included | System architecture memory template |
+| `templates/project-memory/04_DOMAIN_MODEL.template.md` | Included | Domain model template |
+| `templates/project-memory/05_IMPLEMENTATION_STATUS.template.md` | Included | Implementation status template |
+| `templates/project-memory/06_WORKFLOW_AND_RULES.template.md` | Included | Workflow and rules template |
+| `templates/project-memory/07_DECISIONS_LOG.template.md` | Included | Decisions log template |
+| `templates/project-memory/08_CURRENT_STATE.template.md` | Included | Current state template |
+| `templates/project-memory/09_TASK_HISTORY.template.md` | Included | Task history template |
+| `templates/project-memory/10_REFERENCE.template.md` | Included | Reference map template |
 | `templates/recovery/README.md` | Included | Recovery template bundle guide, v0.3.0 |
 | `templates/recovery/RECOVERY_PATH.template.md` | Included | Fresh-session recovery path template |
 | `templates/recovery/CLEAN_START_BRIEF.template.md` | Included | Clean-start brief template |
@@ -53,7 +65,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 
 | Area | Planned paths |
 | --- | --- |
-| Templates | `templates/project-memory/`, `templates/feature-lifecycle/`, `templates/pr-handoff/`, `templates/guardian/` |
+| Templates | `templates/feature-lifecycle/`, `templates/pr-handoff/`, `templates/guardian/` |
 | Examples | `examples/ai-product/` first, then SaaS, marketplace, CRM, regulated platform |
 | Checklists | installation, recovery, branch governance, PR readiness, clean start |
 | Extensions | CLI, installer, GitHub Actions, MCP integration, validation scripts |

@@ -29,14 +29,14 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Product model and process levels | 2 | 2 | 0 | 0 | 0 |
 | Core contracts | 5 | 5 | 0 | 0 | 0 |
 | Governance standards | 7 | 7 | 0 | 0 | 0 |
-| Project Memory root files | 11 | 7 | 4 | 0 | 0 |
+| Project Memory root files | 11 | 11 | 0 | 0 | 0 |
 | Clean start | 1 | 1 | 0 | 0 | 0 |
 | Guardian memory docs | 2 | 2 | 0 | 0 | 0 |
 | Feature lifecycle artifacts | 4 | 0 | 0 | 4 | 0 |
 | Recovery reusable templates | 3 | 3 | 0 | 0 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: product model, process levels, core, and governance are covered; Project Memory templates, feature lifecycle templates, PR handoff templates, and Guardian templates are not complete yet.
+Current conclusion: product model, process levels, core, governance, and Project Memory templates are covered; feature lifecycle templates, PR handoff templates, and Guardian templates are not complete yet.
 
 ## Product Model And Process-Level Coverage
 
@@ -73,21 +73,19 @@ Product-specific source sections inside governance docs were not copied. Portabl
 
 | Source-reference document | Blueprint owner | Status | Notes |
 | --- | --- | --- | --- |
-| `project-kb/00_INDEX.md` | `memory/project-kb/00_INDEX.md` | Covered | Active Blueprint memory entrypoint exists |
-| `project-kb/01_PROJECT_CONTEXT.md` | None yet | Partial | Must become `templates/project-memory/01_PROJECT_CONTEXT.template.md` |
-| `project-kb/02_PRODUCT_MAP.md` | None yet | Partial | Must become `templates/project-memory/02_PROJECT_MAP.template.md` |
-| `project-kb/03_SYSTEM_ARCHITECTURE.md` | `ARCHITECTURE.md` | Partial | Active architecture exists, but reusable Project Memory template is missing |
-| `project-kb/04_DOMAIN_MODEL.md` | None yet | Partial | Must become `templates/project-memory/04_DOMAIN_MODEL.template.md` |
-| `project-kb/05_IMPLEMENTATION_STATUS.md` | `memory/project-kb/05_IMPLEMENTATION_STATUS.md` | Covered | Active Blueprint implementation status exists |
-| `project-kb/06_WORKFLOW_AND_RULES.md` | `memory/project-kb/06_WORKFLOW_AND_RULES.md` | Covered | Active recovery summary exists |
-| `project-kb/07_DECISIONS_LOG.md` | `memory/project-kb/07_DECISIONS_LOG.md` | Covered | Active decisions log exists |
-| `project-kb/08_CURRENT_STATE.md` | `memory/project-kb/08_CURRENT_STATE.md` | Covered | Active current recovery state exists |
-| `project-kb/09_TASK_HISTORY.md` | `memory/project-kb/09_TASK_HISTORY.md` | Covered | Active task history exists |
-| `project-kb/10_REFERENCE.md` | `memory/project-kb/10_REFERENCE.md` | Covered | Active reference map exists |
+| `project-kb/00_INDEX.md` | `memory/project-kb/00_INDEX.md`, `templates/project-memory/00_INDEX.template.md` | Covered | Active Blueprint memory entrypoint and reusable template exist |
+| `project-kb/01_PROJECT_CONTEXT.md` | `templates/project-memory/01_PROJECT_CONTEXT.template.md` | Covered | Reusable template exists |
+| `project-kb/02_PRODUCT_MAP.md` | `templates/project-memory/02_PROJECT_MAP.template.md` | Covered | Reusable template exists |
+| `project-kb/03_SYSTEM_ARCHITECTURE.md` | `ARCHITECTURE.md`, `templates/project-memory/03_SYSTEM_ARCHITECTURE.template.md` | Covered | Active architecture and reusable memory template exist |
+| `project-kb/04_DOMAIN_MODEL.md` | `templates/project-memory/04_DOMAIN_MODEL.template.md` | Covered | Reusable template exists |
+| `project-kb/05_IMPLEMENTATION_STATUS.md` | `memory/project-kb/05_IMPLEMENTATION_STATUS.md`, `templates/project-memory/05_IMPLEMENTATION_STATUS.template.md` | Covered | Active Blueprint implementation status and reusable template exist |
+| `project-kb/06_WORKFLOW_AND_RULES.md` | `memory/project-kb/06_WORKFLOW_AND_RULES.md`, `templates/project-memory/06_WORKFLOW_AND_RULES.template.md` | Covered | Active recovery summary and reusable template exist |
+| `project-kb/07_DECISIONS_LOG.md` | `memory/project-kb/07_DECISIONS_LOG.md`, `templates/project-memory/07_DECISIONS_LOG.template.md` | Covered | Active decisions log and reusable template exist |
+| `project-kb/08_CURRENT_STATE.md` | `memory/project-kb/08_CURRENT_STATE.md`, `templates/project-memory/08_CURRENT_STATE.template.md` | Covered | Active current recovery state and reusable template exist |
+| `project-kb/09_TASK_HISTORY.md` | `memory/project-kb/09_TASK_HISTORY.md`, `templates/project-memory/09_TASK_HISTORY.template.md` | Covered | Active task history and reusable template exist |
+| `project-kb/10_REFERENCE.md` | `memory/project-kb/10_REFERENCE.md`, `templates/project-memory/10_REFERENCE.template.md` | Covered | Active reference map and reusable template exist |
 
-The missing `01` through `04` documents are not safe to copy as current Blueprint memory because the source content is product-specific.
-
-They should be converted into reusable templates before the transfer can be called complete.
+The source `01` through `04` documents were converted into reusable templates instead of active Blueprint memory because their source content was product-specific.
 
 ## Clean Start And Recovery Coverage
 
@@ -146,11 +144,10 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Add Project Memory templates for `01` through `10`.
-2. Add feature lifecycle templates.
-3. Add Guardian templates.
-4. Add PR handoff templates.
-5. Add checklists for recovery, branch governance, PR readiness, and clean start.
-6. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
+1. Add feature lifecycle templates.
+2. Add Guardian templates.
+3. Add PR handoff templates.
+4. Add checklists for recovery, branch governance, PR readiness, and clean start.
+5. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
 
 Do not start public packaging while this matrix contains `Partial` or `Planned` system items.

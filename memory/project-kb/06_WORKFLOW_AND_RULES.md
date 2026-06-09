@@ -75,5 +75,6 @@ Recommended build order:
 - ADR policy: `governance/docs/adr-policy.md`
 - Recovery templates: `templates/recovery/README.md`
 - Complete product map: `PRODUCT_MAP.md`
+- Project Memory templates: `templates/project-memory/README.md`
 - Source coverage: `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md`
 - System relationship map: `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md`
