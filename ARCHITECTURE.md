@@ -124,6 +124,18 @@ Blueprint Feature Lifecycle templates include:
 | `templates/feature-lifecycle/PLAN.template.md` | Feature implementation plan template |
 | `templates/feature-lifecycle/TASKS.template.md` | Feature task breakdown template |
 
+## PR Handoff Templates
+
+Blueprint PR handoff templates include:
+
+| Path | Purpose |
+| --- | --- |
+| `templates/pr-handoff/README.md` | PR handoff template bundle guide |
+| `templates/pr-handoff/PR_BODY.template.md` | Structured PR body template |
+| `templates/pr-handoff/PR_HANDOFF.template.md` | PR handoff summary template |
+| `templates/pr-handoff/MEMORY_UPDATE_DECISION.template.md` | Memory update decision template |
+| `templates/pr-handoff/CLEAN_START_TRANSITION.template.md` | Clean-start transition template |
+
 ## Source of Truth
 
 The repository is the source of truth.

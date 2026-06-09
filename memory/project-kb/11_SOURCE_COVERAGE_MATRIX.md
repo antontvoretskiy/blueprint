@@ -33,10 +33,11 @@ Do not mark the transfer complete while any system item is `Partial` or `Planned
 | Clean start | 1 | 1 | 0 | 0 | 0 |
 | Guardian memory docs | 2 | 2 | 0 | 0 | 0 |
 | Feature lifecycle artifacts | 4 | 4 | 0 | 0 | 0 |
+| PR handoff reusable artifacts | 4 | 4 | 0 | 0 | 0 |
 | Recovery reusable templates | 3 | 3 | 0 | 0 | 0 |
 | Product-specific memory and history | Variable | 0 | 0 | 0 | Variable |
 
-Current conclusion: product model, process levels, core, governance, Project Memory templates, and Feature Lifecycle templates are covered; PR handoff templates and Guardian templates are not complete yet.
+Current conclusion: product model, process levels, core, governance, Project Memory templates, Feature Lifecycle templates, PR handoff templates, and recovery templates are covered; Guardian templates are not complete yet.
 
 ## Product Model And Process-Level Coverage
 
@@ -122,8 +123,11 @@ The active standard exists in `core/FEATURE_LIFECYCLE_STANDARD.md`, and reusable
 | Source-reference item | Blueprint owner | Status | Notes |
 | --- | --- | --- | --- |
 | PR handoff summary format | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | Covered | Active standard exists |
-| Reusable PR handoff template | None yet | Planned | Must become `templates/pr-handoff/**` |
-| Reusable clean-start template | `templates/recovery/CLEAN_START_BRIEF.template.md` | Covered by template | Template exists |
+| Reusable PR body template | `templates/pr-handoff/PR_BODY.template.md` | Covered by template | Portable PR body template exists |
+| Reusable PR handoff template | `templates/pr-handoff/PR_HANDOFF.template.md` | Covered by template | Portable PR handoff template exists |
+| Memory update decision template | `templates/pr-handoff/MEMORY_UPDATE_DECISION.template.md` | Covered by template | Portable memory update decision template exists |
+| Clean-start transition template | `templates/pr-handoff/CLEAN_START_TRANSITION.template.md` | Covered by template | Portable clean-start transition template exists |
+| Reusable clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` | Covered by template | Portable clean-start brief template exists |
 
 ## Explicit Exclusions
 
@@ -144,9 +148,8 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Add PR handoff templates.
-2. Add Guardian templates.
-3. Add checklists for recovery, branch governance, PR readiness, and clean start.
-4. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
+1. Add Guardian templates.
+2. Add checklists for recovery, branch governance, PR readiness, and clean start.
+3. Re-run this matrix and change `Partial` or `Planned` only when the target files exist.
 
 Do not start public packaging while this matrix contains `Partial` or `Planned` system items.

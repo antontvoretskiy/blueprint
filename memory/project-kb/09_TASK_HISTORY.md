@@ -16,6 +16,9 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-09 | PR #8 | Added Project Memory structure | `develop` |
 | 2026-06-09 | PR #9 | Added recovery templates | `develop` |
 | 2026-06-09 | PR #10 | Added source coverage matrix and system relationship map | `develop` |
+| 2026-06-09 | PR #11 | Added complete Blueprint product map | `develop` |
+| 2026-06-09 | PR #12 | Added Project Memory templates | `develop` |
+| 2026-06-09 | PR #13 | Added Feature Lifecycle templates | `develop` |
 
 ## Update Rules
 

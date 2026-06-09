@@ -73,6 +73,11 @@ This file lists canonical project references for recovery.
 | Feature clarification template | `templates/feature-lifecycle/CLARIFICATION.template.md` |
 | Feature plan template | `templates/feature-lifecycle/PLAN.template.md` |
 | Feature tasks template | `templates/feature-lifecycle/TASKS.template.md` |
+| PR handoff template guide | `templates/pr-handoff/README.md` |
+| PR body template | `templates/pr-handoff/PR_BODY.template.md` |
+| PR handoff template | `templates/pr-handoff/PR_HANDOFF.template.md` |
+| Memory update decision template | `templates/pr-handoff/MEMORY_UPDATE_DECISION.template.md` |
+| Clean-start transition template | `templates/pr-handoff/CLEAN_START_TRANSITION.template.md` |
 | Recovery template guide | `templates/recovery/README.md` |
 | Recovery path template | `templates/recovery/RECOVERY_PATH.template.md` |
 | Clean-start brief template | `templates/recovery/CLEAN_START_BRIEF.template.md` |

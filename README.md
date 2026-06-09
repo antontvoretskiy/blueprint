@@ -129,6 +129,7 @@ Included now:
 | Project Memory structure | Included |
 | Project Memory templates | Included |
 | Feature Lifecycle templates | Included |
+| PR handoff templates | Included |
 | Recovery templates | Included |
 | Source coverage maps | Included |
 | Local preview environment | Included |
@@ -137,7 +138,6 @@ Included now:
 Not included yet:
 
 - Guardian templates;
-- PR handoff templates;
 - example projects;
 - checklists;
 - CLI;
@@ -158,7 +158,8 @@ Read the bootstrap documents:
 7. [Task Process Router](core/TASK_PROCESS_ROUTER.md)
 8. [Governance Index](governance/docs/governance-index.md)
 9. [Project Memory Index](memory/project-kb/00_INDEX.md)
-10. [Recovery Templates](templates/recovery/README.md)
+10. [PR Handoff Templates](templates/pr-handoff/README.md)
+11. [Recovery Templates](templates/recovery/README.md)
 
 Blueprint is currently a documentation-first framework. Additional template bundles, examples, and automation will come later and must remain clearly marked until implemented.
 

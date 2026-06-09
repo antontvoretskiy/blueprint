@@ -42,7 +42,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Feature lifecycle | `core/FEATURE_LIFECYCLE_STANDARD.md` | `templates/feature-lifecycle/**` |
 | Project management model | `PRODUCT_MAP.md` | `memory/project-kb/00_INDEX.md`, `templates/project-memory/**` |
 | Feature management model | `core/FEATURE_LIFECYCLE_STANDARD.md` | `PRODUCT_MAP.md`, `templates/feature-lifecycle/**` |
-| PR handoff and clean start | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | `templates/recovery/CLEAN_START_BRIEF.template.md` |
+| PR handoff and clean start | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | `templates/pr-handoff/**`, `templates/recovery/CLEAN_START_BRIEF.template.md` |
 | Branch governance | `governance/docs/git-policy.md` | `governance/docs/pr-standard.md` |
 | PR lifecycle | `governance/docs/pr-standard.md` | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` |
 | Verification language | `governance/docs/verification-standard.md` | `Makefile`, PR body |
@@ -192,7 +192,6 @@ The following relationships are not complete yet:
 | Missing item | Required owner |
 | --- | --- |
 | Guardian templates | `templates/guardian/**` |
-| PR handoff templates | `templates/pr-handoff/**` |
 | Checklists | `checklists/**` |
 
 Do not treat the system transfer as complete until these relationships are resolved or explicitly excluded.
