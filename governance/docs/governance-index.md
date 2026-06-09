@@ -1,0 +1,224 @@
+# Blueprint Governance Index
+
+This index is the authority map for Blueprint governance.
+
+Use it to find the canonical owner for each rule. Summary documents may link to an owner, but they must not redefine the rule.
+
+## Purpose
+
+The governance index prevents duplicate ownership.
+
+It answers:
+
+- which document owns each rule;
+- which document wins when rules conflict;
+- which naming standard applies;
+- which documents depend on each other;
+- when this index must be updated.
+
+## Governance Principle
+
+One rule should have one owner.
+
+If two documents conflict, use this index to identify the canonical owner, then update summaries to point back to that owner.
+
+## Governance Levels
+
+Blueprint governance is organized into levels:
+
+| Level | Purpose | Current status |
+| --- | --- | --- |
+| Public entrypoint | Explain what Blueprint is and how to start | Included |
+| Product boundary | Define what belongs inside and outside Blueprint | Included |
+| Product map | Define complete subsystem shape, process levels, and project/feature management | Included |
+| Architecture boundary | Define core, extension, and example layers | Included |
+| Core contracts | Define agent entry, task routing, lifecycle, handoff, security baseline | Included |
+| Governance standards | Define branch, PR, verification, documentation, ADR, and engineering rules | Included |
+| Project Memory materials | Define recovery-oriented state files | Included |
+| Project Memory templates | Provide reusable Project Memory files | Included |
+| Recovery templates | Provide reusable recovery artifacts | Included |
+| Source coverage maps | Track transfer coverage and system relationships | Included |
+| Public release packaging | Define version, changelog, release process, validation, support, conduct, and security | Included |
+| GitHub contribution templates | Structure public issue and PR intake | Included |
+| Other templates | Provide reusable installation artifacts beyond recovery | Planned |
+| AI product example | Show a sanitized adoption pattern | Included |
+| Additional examples | Show broader adoption patterns | Planned |
+| Checklists | Provide acceptance criteria | Included |
+
+Planned levels are not included until their files exist in the repository.
+
+## Source-Of-Truth Ownership Map
+
+| Area | Canonical owner | Purpose |
+| --- | --- | --- |
+| Public positioning | `README.md` | Landing page, promise, status, quick start |
+| Product definition | `OPEN_SOURCE_SPEC.md` | Scope, audience, problem, non-goals |
+| Complete product map | `PRODUCT_MAP.md` | Product shape, process levels, project management, feature management, completion gates |
+| Architecture boundary | `ARCHITECTURE.md` | Core, extension, and example layers |
+| Bundle composition | `BUNDLE_MANIFEST.md` | Included, planned, and excluded content |
+| Contribution rules | `CONTRIBUTING.md` | Public contribution process and hygiene |
+| Version target | `VERSION` | Current release target |
+| Changelog | `CHANGELOG.md` | Versioned public change history |
+| Release process | `RELEASE.md` | Manual release gates and PR flow |
+| Open-source guide | `OPEN_SOURCE_GUIDE.md` | Public entry points and status language |
+| Adaptation guide | `ADAPTATION_GUIDE.md` | How adopters apply Blueprint |
+| Migration guide | `MIGRATION_GUIDE.md` | How existing systems are adapted and sanitized |
+| Validation checklist | `VALIDATION_CHECKLIST.md` | Public release and adoption validation gates |
+| Public support | `SUPPORT.md` | Support channels and boundaries |
+| Public security policy | `SECURITY.md` | Public vulnerability reporting guidance |
+| Code of conduct | `CODE_OF_CONDUCT.md` | Participation rules |
+| GitHub PR template | `.github/PULL_REQUEST_TEMPLATE.md` | Public PR structure |
+| GitHub issue templates | `.github/ISSUE_TEMPLATE/**` | Public issue intake |
+| Code owners | `.github/CODEOWNERS` | Repository ownership hint |
+| Agent entrypoint | `core/AGENTS.md` | How agents start, recover, validate, and hand off work |
+| Task routing | `core/TASK_PROCESS_ROUTER.md` | How work is classified before implementation |
+| Process levels | `core/TASK_PROCESS_ROUTER.md` | How much procedure L0-L4 work requires |
+| Feature lifecycle | `core/FEATURE_LIFECYCLE_STANDARD.md` | How meaningful changes move from request to PR |
+| PR handoff and clean start | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | How PRs stay reviewable and recoverable |
+| Security baseline | `core/SECURITY.md` | Portable security expectations |
+| Engineering governance | `governance/docs/engineering-governance.md` | Engineering operating model and ownership |
+| Self-hosting rule | `governance/docs/engineering-governance.md` | Requirement that Blueprint applies its own rules before release |
+| Git policy | `governance/docs/git-policy.md` | Repository identity, branches, commits, merge, cleanup |
+| PR standard | `governance/docs/pr-standard.md` | PR title, body, scope, review, merge rules |
+| Verification standard | `governance/docs/verification-standard.md` | Validation language and evidence requirements |
+| Documentation standard | `governance/docs/documentation-standard.md` | Documentation truthfulness, lifecycle, and portability |
+| ADR policy | `governance/docs/adr-policy.md` | Architecture decision record rules |
+| Project Memory index | `memory/project-kb/00_INDEX.md` | Recovery-oriented memory entrypoint |
+| Implementation status | `memory/project-kb/05_IMPLEMENTATION_STATUS.md` | Included, planned, and excluded project state |
+| Current recovery state | `memory/project-kb/08_CURRENT_STATE.md` | Current recovery point and next work |
+| Reference map | `memory/project-kb/10_REFERENCE.md` | Canonical navigation map |
+| Source coverage matrix | `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` | Coverage status for source-reference system logic |
+| System relationship map | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Owner and dependency flow across system documents |
+| Project Memory template bundle | `templates/project-memory/README.md` | Reusable Project Memory template bundle ownership |
+| Feature Lifecycle template bundle | `templates/feature-lifecycle/README.md` | Reusable Feature Lifecycle template bundle ownership |
+| PR handoff template bundle | `templates/pr-handoff/README.md` | Reusable PR handoff template bundle ownership |
+| Guardian template bundle | `templates/guardian/README.md` | Reusable Guardian template bundle ownership |
+| Recovery template bundle | `templates/recovery/README.md` | Reusable recovery template bundle ownership |
+| Checklist bundle | `checklists/README.md` | Reusable acceptance checklist bundle ownership |
+| AI product example | `examples/ai-product/README.md` | Sanitized AI product adoption example ownership |
+
+## Future Ownership Map
+
+These areas are planned, but they are not active owners until their files are added:
+
+| Planned area | Intended owner pattern |
+| --- | --- |
+| Additional example projects | `examples/**` |
+
+Do not cite planned owners as included assets before the files exist.
+
+## Authority Resolution
+
+When rules conflict:
+
+1. Identify the affected area.
+2. Use the ownership map to find the canonical owner.
+3. Treat the owner document as active policy.
+4. Update non-owner documents so they summarize or link instead of redefining.
+5. Report the conflict and fix in the PR body.
+
+If no owner exists, add one in the same PR that introduces the rule.
+
+## Naming Authority Map
+
+| Naming area | Owner |
+| --- | --- |
+| Repository name and public description | `README.md`, `OPEN_SOURCE_SPEC.md` |
+| Version numbers | `VERSION`, `CONTRIBUTING.md`, release PR body |
+| Changelog entries | `CHANGELOG.md` |
+| Release PR process | `RELEASE.md` |
+| Branch names | `governance/docs/git-policy.md` |
+| Commit titles | `governance/docs/git-policy.md`, `CONTRIBUTING.md` |
+| PR titles | `governance/docs/pr-standard.md`, `CONTRIBUTING.md` |
+| ADR filenames | `governance/docs/adr-policy.md` |
+| Documentation status labels | `governance/docs/documentation-standard.md` |
+| Validation terms | `governance/docs/verification-standard.md` |
+
+Do not introduce a new naming standard in a summary document.
+
+## Dependency Graph
+
+```text
+README.md
+  -> OPEN_SOURCE_SPEC.md
+  -> PRODUCT_MAP.md
+  -> ARCHITECTURE.md
+  -> BUNDLE_MANIFEST.md
+  -> CONTRIBUTING.md
+  -> governance/docs/governance-index.md
+
+governance/docs/governance-index.md
+  -> governance/docs/engineering-governance.md
+  -> governance/docs/git-policy.md
+  -> governance/docs/pr-standard.md
+  -> governance/docs/verification-standard.md
+  -> governance/docs/documentation-standard.md
+  -> governance/docs/adr-policy.md
+
+core/AGENTS.md
+  -> core/TASK_PROCESS_ROUTER.md
+  -> core/FEATURE_LIFECYCLE_STANDARD.md
+  -> core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md
+  -> core/SECURITY.md
+```
+
+Dependency direction means "summarizes, links to, or relies on".
+
+It does not mean the dependent document may redefine the owner.
+
+## Conflict Prevention Rules
+
+- Add rules to owner documents, not summaries.
+- Link from summaries instead of duplicating full standards.
+- Update this index when a new governance owner is created.
+- Keep owner documents portable and sanitized.
+- Do not store private product history in governance files.
+- Keep planned layers clearly marked as planned until files exist.
+
+## Governance Change Rule
+
+Governance changes must include:
+
+- one clear scope;
+- affected owner document;
+- validation evidence;
+- impact on README, architecture, or manifest when public claims change;
+- explicit exclusions.
+
+Governance PRs target `develop` by default.
+
+Release PRs target `main`.
+
+## Known Governance Gaps
+
+Current planned gaps:
+
+- Additional example projects are planned for a later phase.
+- Optional automation is not included.
+- Release PR into `main` is not opened yet.
+
+These gaps should not be described as included assets.
+
+## Update Process
+
+Update this index when:
+
+- a new rule owner is added;
+- a rule owner moves;
+- a new layer becomes included;
+- a planned owner becomes real;
+- a conflict is resolved by changing ownership;
+- public naming authority changes.
+
+Do not update this index for minor wording fixes that do not affect ownership.
+
+## Review Checklist
+
+Before merging governance index changes, confirm:
+
+- each listed current owner file exists;
+- planned owners are clearly marked as planned;
+- naming authorities point to one owner;
+- dependencies do not imply duplicate ownership;
+- public status agrees with `BUNDLE_MANIFEST.md`;
+- no private source details are included.
