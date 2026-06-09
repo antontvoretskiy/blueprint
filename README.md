@@ -18,6 +18,7 @@ Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS
 - [Problem](#problem)
 - [Who It Is For](#who-it-is-for)
 - [What Blueprint Manages](#what-blueprint-manages)
+- [Product Map](#product-map)
 - [How Blueprint Differs From GitHub Spec Kit](#how-blueprint-differs-from-github-spec-kit)
 - [Current Status](#current-status)
 - [Quick Start](#quick-start)
@@ -78,11 +79,18 @@ Blueprint focuses on the operating layer:
 | --- | --- |
 | Governance | Rules, ownership, source of truth, and validation policy |
 | Project Memory | Durable project knowledge and current-state recovery |
+| Process Levels | How much procedure is required for L0-L4 tasks |
 | Recovery | Clean handoff between AI chats and work sessions |
 | Guardian | Pre-work and pre-merge checks that catch scope drift |
 | Branch Governance | Branch naming, layering, and merge sequencing |
 | Feature Lifecycle | How a feature moves from request to implementation |
 | PR Lifecycle | How a PR is scoped, reviewed, handed off, and closed |
+
+## Product Map
+
+The complete product shape is defined in [PRODUCT_MAP.md](PRODUCT_MAP.md).
+
+It explains how Blueprint connects governance, process levels, project management, feature management, Project Memory, recovery, Guardian checks, PR handoff, and clean start before public packaging.
 
 ## How Blueprint Differs From GitHub Spec Kit
 
@@ -112,6 +120,7 @@ Included now:
 | Area | Status |
 | --- | --- |
 | Product definition | Included |
+| Product map | Included |
 | Architecture boundary | Included |
 | Bundle manifest | Included |
 | Contribution policy | Included |
@@ -141,14 +150,15 @@ Not included yet:
 Read the bootstrap documents:
 
 1. [Open Source Spec](OPEN_SOURCE_SPEC.md)
-2. [Architecture](ARCHITECTURE.md)
-3. [Bundle Manifest](BUNDLE_MANIFEST.md)
-4. [Contributing Guide](CONTRIBUTING.md)
-5. [Agent Operating Contract](core/AGENTS.md)
-6. [Task Process Router](core/TASK_PROCESS_ROUTER.md)
-7. [Governance Index](governance/docs/governance-index.md)
-8. [Project Memory Index](memory/project-kb/00_INDEX.md)
-9. [Recovery Templates](templates/recovery/README.md)
+2. [Product Map](PRODUCT_MAP.md)
+3. [Architecture](ARCHITECTURE.md)
+4. [Bundle Manifest](BUNDLE_MANIFEST.md)
+5. [Contributing Guide](CONTRIBUTING.md)
+6. [Agent Operating Contract](core/AGENTS.md)
+7. [Task Process Router](core/TASK_PROCESS_ROUTER.md)
+8. [Governance Index](governance/docs/governance-index.md)
+9. [Project Memory Index](memory/project-kb/00_INDEX.md)
+10. [Recovery Templates](templates/recovery/README.md)
 
 Blueprint is currently a documentation-first framework. Additional template bundles, examples, and automation will come later and must remain clearly marked until implemented.
 
