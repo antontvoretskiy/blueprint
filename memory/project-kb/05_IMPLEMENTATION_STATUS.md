@@ -11,12 +11,12 @@ This file records what is currently included in Blueprint and what remains plann
 | Core contracts | Included | Agent contract, task router, lifecycle, handoff, security |
 | Governance standards | Included | Governance index, engineering, git, PR, verification, documentation, ADR |
 | Project Memory structure | Included | Reusable Project Memory files and recovery entrypoint |
+| Recovery templates | Included | Recovery path, clean-start brief, and recovery validation templates |
 
 ## Planned
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Recovery templates | Planned | To be added after memory structure is reviewed |
 | Guardian templates | Planned | To be added after recovery shape is stable |
 | Checklists | Planned | Installation, recovery, branch, PR readiness, clean start |
 | Examples | Planned | Sanitized examples only |

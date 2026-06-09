@@ -118,13 +118,13 @@ Included now:
 | Core operating contracts | Included |
 | Governance standards | Included |
 | Project Memory structure | Included |
+| Recovery templates | Included |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
 
 Not included yet:
 
 - Guardian templates;
-- recovery templates;
 - example projects;
 - checklists;
 - CLI;
@@ -144,8 +144,9 @@ Read the bootstrap documents:
 6. [Task Process Router](core/TASK_PROCESS_ROUTER.md)
 7. [Governance Index](governance/docs/governance-index.md)
 8. [Project Memory Index](memory/project-kb/00_INDEX.md)
+9. [Recovery Templates](templates/recovery/README.md)
 
-Blueprint is currently a documentation-first framework. Template bundles, examples, and automation will come later and must remain clearly marked until implemented.
+Blueprint is currently a documentation-first framework. Additional template bundles, examples, and automation will come later and must remain clearly marked until implemented.
 
 ## Repository Development
 

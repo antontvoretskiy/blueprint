@@ -41,12 +41,16 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Included | Current clean-start brief |
 | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Included | Guardian process architecture |
 | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Included | Generic Guardian validation scenarios |
+| `templates/recovery/README.md` | Included | Recovery template bundle guide, v0.3.0 |
+| `templates/recovery/RECOVERY_PATH.template.md` | Included | Fresh-session recovery path template |
+| `templates/recovery/CLEAN_START_BRIEF.template.md` | Included | Clean-start brief template |
+| `templates/recovery/RECOVERY_VALIDATION.template.md` | Included | Recovery validation template |
 
 ## Planned Later
 
 | Area | Planned paths |
 | --- | --- |
-| Templates | `templates/project-memory/`, `templates/feature-lifecycle/`, `templates/pr-handoff/`, `templates/guardian/`, `templates/recovery/` |
+| Templates | `templates/project-memory/`, `templates/feature-lifecycle/`, `templates/pr-handoff/`, `templates/guardian/` |
 | Examples | `examples/ai-product/` first, then SaaS, marketplace, CRM, regulated platform |
 | Checklists | installation, recovery, branch governance, PR readiness, clean start |
 | Extensions | CLI, installer, GitHub Actions, MCP integration, validation scripts |

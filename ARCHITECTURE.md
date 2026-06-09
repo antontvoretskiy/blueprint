@@ -75,6 +75,19 @@ Blueprint Project Memory includes:
 | `memory/project-kb/10_REFERENCE.md` | Canonical reference map |
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Short current handoff |
 
+## Recovery Templates
+
+Blueprint recovery templates include:
+
+| Path | Purpose |
+| --- | --- |
+| `templates/recovery/README.md` | Recovery template bundle guide |
+| `templates/recovery/RECOVERY_PATH.template.md` | Fresh-session recovery contract |
+| `templates/recovery/CLEAN_START_BRIEF.template.md` | Single active clean-start brief format |
+| `templates/recovery/RECOVERY_VALIDATION.template.md` | Manual validation that recovery works from repository files |
+
+Recovery templates are reusable assets. They do not replace Project Memory, governance owner documents, PR review, or validation evidence.
+
 ## Source of Truth
 
 The repository is the source of truth.
