@@ -13,6 +13,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-09 | PR #4 | Added governance standards | `develop` |
 | 2026-06-09 | PR #6 | Aligned core contracts with the source reference | `develop` |
 | 2026-06-09 | PR #7 | Aligned governance standards with the source reference and added self-hosting | `develop` |
+| 2026-06-09 | PR #8 | Added Project Memory structure | `develop` |
 
 ## Update Rules
 
