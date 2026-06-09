@@ -55,6 +55,7 @@ Planned levels are not included until their files exist in the repository.
 | PR handoff and clean start | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | How PRs stay reviewable and recoverable |
 | Security baseline | `core/SECURITY.md` | Portable security expectations |
 | Engineering governance | `governance/docs/engineering-governance.md` | Engineering operating model and ownership |
+| Self-hosting rule | `governance/docs/engineering-governance.md` | Requirement that Blueprint applies its own rules before release |
 | Git policy | `governance/docs/git-policy.md` | Repository identity, branches, commits, merge, cleanup |
 | PR standard | `governance/docs/pr-standard.md` | PR title, body, scope, review, merge rules |
 | Verification standard | `governance/docs/verification-standard.md` | Validation language and evidence requirements |

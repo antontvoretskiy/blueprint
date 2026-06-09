@@ -26,6 +26,7 @@ It prevents:
 | One PR, one scope | PRs should stay reviewable and recoverable |
 | Planned is not included | Documentation must not claim future work as available |
 | Manual before automation | Framework rules come before optional tooling |
+| Self-hosted governance | Blueprint should apply its own rules before release |
 | Sanitized by default | Portable docs must not leak private source details |
 | Validation is evidence | Claims need commands, checks, or clear manual proof |
 
@@ -90,6 +91,36 @@ Blueprint has three product layers:
 Core changes must not absorb optional tools, project-specific implementation, or examples.
 
 Extension and example work must not redefine core rules.
+
+## Self-Hosting Rule
+
+Blueprint develops by using Blueprint.
+
+New governance, memory, recovery, lifecycle, template, example, or checklist rules are accepted only when they can govern the Blueprint repository itself.
+
+The self-hosting path is:
+
+```text
+develop
+  -> scoped branch
+  -> PR into develop
+  -> validation using Blueprint rules
+  -> merge into develop
+  -> post-merge recovery check
+  -> release PR into main only after the rule works on Blueprint
+```
+
+This means:
+
+- `develop` is the integration branch where Blueprint rules are tested on Blueprint;
+- `main` receives only release-ready state after the rules have been exercised on `develop`;
+- new rules must be written as portable rules, not as one-off instructions for a single chat;
+- a rule that cannot guide Blueprint itself is not ready for core governance;
+- failures found while using the rule on Blueprint should update the owner document before release.
+
+Self-hosting does not require every future optional extension to be included in core.
+
+It requires the rule boundary to be real, recoverable, and useful inside this repository before it is presented as release-ready.
 
 ## Branch Model
 

@@ -232,6 +232,7 @@ Governance PRs should confirm:
 - summaries do not redefine owner documents;
 - changed standards link to adjacent standards;
 - branch and PR scope remain aligned;
+- new rules can be applied to Blueprint itself before release;
 - validation evidence uses the standard terms;
 - no private product history entered governance files.
 
