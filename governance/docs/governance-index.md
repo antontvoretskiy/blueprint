@@ -75,6 +75,7 @@ Planned levels are not included until their files exist in the repository.
 | System relationship map | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Owner and dependency flow across system documents |
 | Project Memory template bundle | `templates/project-memory/README.md` | Reusable Project Memory template bundle ownership |
 | Feature Lifecycle template bundle | `templates/feature-lifecycle/README.md` | Reusable Feature Lifecycle template bundle ownership |
+| PR handoff template bundle | `templates/pr-handoff/README.md` | Reusable PR handoff template bundle ownership |
 | Recovery template bundle | `templates/recovery/README.md` | Reusable recovery template bundle ownership |
 
 ## Future Ownership Map
@@ -83,7 +84,6 @@ These areas are planned, but they are not active owners until their files are ad
 
 | Planned area | Intended owner pattern |
 | --- | --- |
-| PR handoff templates | `templates/pr-handoff/**` |
 | Guardian templates | `templates/guardian/**` |
 | Example projects | `examples/**` |
 | Checklists | `checklists/**` |
@@ -174,7 +174,6 @@ Release PRs target `main`.
 
 Current planned gaps:
 
-- PR handoff templates are planned for a later phase.
 - Guardian templates are planned for a later phase.
 - Example projects are planned for a later phase.
 - Checklists are planned for a later phase.
