@@ -7,13 +7,13 @@ This file records the current recovery point for Blueprint.
 | Branch | Role | Current meaning |
 | --- | --- | --- |
 | `main` | Release-ready public state | Bootstrap presentation only until a release PR lands |
-| `develop` | Integration branch | Contains bootstrap, core contracts, governance standards, self-hosting, Project Memory structure, and recovery templates |
+| `develop` | Integration branch | Contains bootstrap, core contracts, governance standards, self-hosting, Project Memory structure, recovery templates, and source coverage maps |
 
 ## Current Work
 
-Recovery templates are the current reusable template layer for Blueprint.
+Source coverage and relationship mapping are the current control layer for Blueprint.
 
-Next work should add Guardian templates in a separate scoped PR.
+Next work should close the remaining coverage gaps before public packaging.
 
 ## Current Included Layers
 
@@ -23,11 +23,16 @@ Next work should add Guardian templates in a separate scoped PR.
 - governance standards;
 - self-hosting governance;
 - Project Memory structure;
-- recovery templates.
+- recovery templates;
+- source coverage matrix;
+- system relationship map.
 
 ## Not Yet Included
 
 - Guardian templates;
+- Project Memory templates;
+- feature lifecycle templates;
+- PR handoff templates;
 - checklists;
 - examples;
 - release PR into `main`;
@@ -42,6 +47,6 @@ Next work should add Guardian templates in a separate scoped PR.
 
 ## Next Recommended Work
 
-Add Guardian templates in a separate scoped PR.
+Add missing Project Memory templates, feature lifecycle templates, PR handoff templates, and Guardian templates in separate scoped PRs.
 
 Do not move `develop` to `main` until a release PR is explicitly prepared.

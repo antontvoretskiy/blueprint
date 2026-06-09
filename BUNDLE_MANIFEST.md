@@ -38,6 +38,8 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `memory/project-kb/08_CURRENT_STATE.md` | Included | Current-state memory |
 | `memory/project-kb/09_TASK_HISTORY.md` | Included | Task-history memory |
 | `memory/project-kb/10_REFERENCE.md` | Included | Reference map |
+| `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` | Included | Source-reference coverage matrix |
+| `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Included | Owner and dependency relationship map |
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Included | Current clean-start brief |
 | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Included | Guardian process architecture |
 | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Included | Generic Guardian validation scenarios |
