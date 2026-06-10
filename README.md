@@ -124,7 +124,7 @@ Use Spec Kit when you need a spec-centered delivery workflow. Use Blueprint when
 
 Blueprint v0.3.0 is released on `main`.
 
-The `develop` branch contains unreleased v0.4.0 validation work. The current development step is to run the system use-case validation suite before branch cleanup, public packaging, or new public assets.
+The `develop` branch contains unreleased v0.4.0 validation work. The system use-case validation suite has passed, post-validation branch cleanup is complete, and the next development step is to select the next v0.4.0 scope or prepare release packaging.
 
 Included now:
 
@@ -150,6 +150,7 @@ Included now:
 | GitHub contribution templates | Included |
 | Source coverage maps | Included |
 | System use-case validation suite | Included on `develop` |
+| System use-case validation result | Included on `develop` |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
 
@@ -247,7 +248,7 @@ make clean   # stop containers and remove local volumes
 | v0.1.0 | Public repository bootstrap, architecture, manifest, contribution policy, preview environment |
 | v0.2.0 | Core operating contracts, governance standards, and Project Memory structure |
 | v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, first AI product example, and public release packaging |
-| v0.4.0 | System use-case validation, dependency verification, branch cleanup readiness, and packaging readiness |
+| v0.4.0 | System use-case validation, dependency verification, branch cleanup completion, and packaging readiness |
 | v1.0.0 | Stable manual installation path and complete public docs |
 
 ## Release Packaging

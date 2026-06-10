@@ -3,7 +3,7 @@
 Status: Completed validation result.
 Repository: `antontvoretskiy/blueprint`
 Branch validated: `develop`
-Validated base commit: `478e7be`
+Validated base commit: `2df10a5`
 Validator: Blueprint Maintainers
 Date: `2026-06-10`
 
@@ -54,6 +54,7 @@ Not changed:
 | Noisy wording scan | PASS with reviewed exception | Only the existing git-policy example for forbidden branch labels appears |
 | Manifest included path check | PASS | 99 included manifest entries resolve |
 | Open PR check | PASS | No open PRs before recording this result |
+| Post-cleanup ref check | PASS | Merged docs branches after PRs #20 through #25 were removed locally and remotely after maintainer approval |
 
 ## Use-Case Results
 
@@ -84,17 +85,18 @@ Not changed:
 | Checklist index includes validation checklist | PASS | `checklists/README.md` links the system use-case validation checklist |
 | Memory agrees with release state | PASS | `main` is v0.3.0; `develop` contains unreleased validation work |
 | No stale current branch or PR | PASS | Current state and clean-start brief no longer point to merged validation branches |
-| Branch cleanup candidates identified | PASS | Merged docs branches remain local and remote; deletion is approval-gated |
+| Branch cleanup completed after approval | PASS | Merged docs branches were removed locally and remotely after maintainer approval |
 
-## Branch Cleanup Candidates
+## Branch Cleanup Result
 
-These branches are merged or stale after PRs #20 through #24 and can be cleaned only after maintainer approval:
+These branches were merged or stale after PRs #20 through #25 and were removed locally and remotely after maintainer approval:
 
 - `docs/dogfood-recovery-validation`
 - `docs/post-merge-clean-start`
 - `docs/coverage-clean-start`
 - `docs/validation-use-case-suite`
 - `docs/validation-state-alignment`
+- `docs/system-use-case-validation-result`
 
 Keep:
 
@@ -109,4 +111,4 @@ Selected result:
 
 Reason:
 
-`Blueprint passed the manual system use-case validation suite on develop. The next step is approval-gated branch cleanup, followed by public packaging or release preparation only after maintainers select the next scope.`
+`Blueprint passed the manual system use-case validation suite on develop. Post-validation branch cleanup is complete. The next step is v0.4.0 scope selection or release packaging only after maintainers select the next scope.`
