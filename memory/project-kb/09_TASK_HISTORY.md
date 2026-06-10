@@ -26,6 +26,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-10 | PR #18 | Prepared v0.3.0 public release packaging | `develop` |
 | 2026-06-10 | PR #19 | Released Blueprint v0.3.0 to `main` | `main` |
 | 2026-06-10 | Release `v0.3.0` | Published the first complete public framework bundle | `main` |
+| 2026-06-10 | PR #20 | Refreshed post-release recovery state and recorded recovery validation | `develop` |
 
 ## Update Rules
 
