@@ -6,11 +6,11 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.3.0 is released on `main`.
+Blueprint v0.4.0 is released on `main`.
 
-The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, and public release packaging.
+The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, a passing validation result, and completed post-validation branch cleanup.
 
-The `develop` branch also includes the unreleased system use-case validation suite, a passing system use-case validation result, and completed post-validation branch cleanup.
+The `develop` branch remains the base for the next scoped framework work.
 
 ## Read First
 
@@ -29,12 +29,12 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Select the next v0.4.0 scope through `core/TASK_PROCESS_ROUTER.md`, or prepare release packaging if maintainers decide the validated `develop` state is ready for `main`.
+Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
 
 Recommended next scoped PRs:
 
-1. v0.4.0 scope planning.
-2. Public packaging or release preparation if the validation bundle should move to `main`.
+1. Next release scope planning.
+2. Public packaging or release preparation only after the next scope is selected.
 3. Additional examples or public polish only after the next scope is selected.
 
 ## Do Not Do

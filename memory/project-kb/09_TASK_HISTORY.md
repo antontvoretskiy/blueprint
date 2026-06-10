@@ -33,6 +33,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-10 | PR #24 | Aligned current validation state after the validation suite landed | `develop` |
 | 2026-06-10 | PR #25 | Recorded the system use-case validation result | `develop` |
 | 2026-06-10 | Branch cleanup | Removed merged docs branches after PRs #20 through #25 | local and remote refs |
+| 2026-06-10 | Release `v0.4.0` | Published validation suite, validation result, and post-cleanup recovery state | `main` |
 
 ## Update Rules
 

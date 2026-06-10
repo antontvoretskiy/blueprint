@@ -30,7 +30,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| v0.4.0 scope selection | Planned | Must happen before additional examples, public polish, automation, CLI, installer, or integrations |
+| Next release scope selection | Planned | Must happen before additional examples, public polish, automation, CLI, installer, or integrations |
 
 ## Excluded From Core
 

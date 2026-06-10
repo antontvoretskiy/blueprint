@@ -6,12 +6,12 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.3.0 public framework bundle |
-| `develop` | Integration branch | Contains unreleased v0.4.0 validation work and is the base for the next scoped work |
+| `main` | Release-ready public state | Contains the released v0.4.0 public framework bundle |
+| `develop` | Integration branch | Base branch for the next scoped framework work |
 
 ## Current Work
 
-Blueprint v0.3.0 has been released from `develop` to `main`.
+Blueprint v0.4.0 has been released from validated `develop` state to `main`.
 
 Post-release recovery validation has landed in `develop`.
 
@@ -21,7 +21,7 @@ System use-case validation has passed on `develop`.
 
 Post-validation branch cleanup is complete. The merged docs branches were removed locally and remotely, and the durable branch baseline is `main` plus `develop`.
 
-Current work is v0.4.0 scope selection or release packaging preparation.
+Current work is next-scope selection for the release after v0.4.0.
 
 ## Current Included Layers
 
@@ -61,6 +61,6 @@ Current work is v0.4.0 scope selection or release packaging preparation.
 
 ## Next Recommended Work
 
-Select the next v0.4.0 scope through `core/TASK_PROCESS_ROUTER.md`, or prepare release packaging if maintainers decide the validated `develop` state is ready for `main`.
+Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
 
 Do not start new public assets until the next scope is classified and approved.
