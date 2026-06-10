@@ -17,7 +17,9 @@ Post-release recovery validation has landed in `develop`.
 
 The system use-case validation suite has landed in `develop`.
 
-Current work is running the system use-case validation suite against Blueprint. The next contributor should recover from repository files, validate UC-01 through UC-15, fix failures through scoped PRs, and only then select one scoped v0.4.0 work item.
+System use-case validation has passed on `develop`.
+
+Current work is approval-gated branch cleanup for merged docs branches. After cleanup, maintainers can select the next v0.4.0 scope or prepare release packaging.
 
 ## Current Included Layers
 
@@ -37,6 +39,7 @@ Current work is running the system use-case validation suite against Blueprint. 
 - source coverage matrix;
 - system relationship map;
 - system use-case validation suite;
+- system use-case validation result;
 - AI product example;
 - public release packaging;
 - support, security, and conduct files;
@@ -56,6 +59,6 @@ Current work is running the system use-case validation suite against Blueprint. 
 
 ## Next Recommended Work
 
-Run the system use-case validation suite before creating new templates, examples, automation, CLI, or integration work.
+Clean merged docs branches after maintainer approval.
 
-Do not start new public assets until the next scope is classified and approved.
+Do not start new public assets until branch cleanup is resolved or explicitly deferred and the next scope is classified and approved.
