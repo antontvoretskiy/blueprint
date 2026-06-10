@@ -110,13 +110,18 @@ Use `PASS`, `FAIL`, or `NOT RUN` with a reason.
 
 Do not report a validation command as passing if it masked an error. If a command gives a false positive, fix the command or report the limitation.
 
-Minimum validation for documentation PRs:
+Minimum compact validation for L1 docs-only PRs:
 
 ```bash
-make doctor
-make smoke
 git diff --check
 ```
+
+Also confirm:
+
+- dirty worktree state was checked before staging;
+- changed files match docs-only scope;
+- no runtime, code, dependency, release-state, or branch-state changes are hidden in the diff;
+- skipped validation is reported as `NOT RUN` or `N/A` with a reason.
 
 Public-facing documentation should also include:
 
@@ -126,6 +131,8 @@ Public-facing documentation should also include:
 - commit and PR title quality check;
 - noisy AI phrase scan;
 - bad commit wording scan.
+
+Run `make doctor` and `make smoke` when local preview, release readiness, environment files, or validation claims depend on them. Do not require preview validation for a small docs-only handoff that does not touch preview behavior.
 
 ## Memory Update Check
 
@@ -320,12 +327,32 @@ Task Router decides how much process is required.
 | Process level | Handoff expectation |
 | --- | --- |
 | L0 | Response summary is enough |
-| L1 | Docs handoff when the docs affect recovery, governance, or source of truth |
+| L1 | Compact docs handoff when docs affect recovery, governance, or source of truth |
 | L2 | Layer-specific validation and boundary handoff |
 | L3 | Feature Lifecycle links plus PR handoff |
 | L4 | Full Guardian, source-of-truth, memory update, and clean-start readiness |
 
 Do not apply full handoff ceremony to trivial changes. Do require repository handoff when the next session or reviewer would lose important context without it.
+
+### Compact L1 Handoff
+
+Use this shape for docs-only commits, PR-ready handoffs, clean status checks, and post-merge sync reports when no release, merge, architecture, migration, runtime, code, dependency, or public asset version changed:
+
+```text
+Repo:
+Branch:
+Scope: docs-only
+Changed:
+Validation:
+- dirty tree:
+- scope check:
+- no runtime/code changes:
+- docs checks:
+Risks:
+Next:
+```
+
+Escalate from compact L1 handoff to the full handoff when the work changes release state, branch state, owner boundaries, architecture decisions, migrations, versioned public assets, or implementation claims.
 
 ## Conflict Resolution
 

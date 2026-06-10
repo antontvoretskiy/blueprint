@@ -46,6 +46,93 @@ Before choosing a route, identify:
 
 Do not apply L4 ceremony to L0/L1 tasks. The router exists to reduce governance overload, not add bureaucracy.
 
+## Process Efficiency Rule
+
+Use the lightest process level that protects the repository.
+
+If a task is docs-only, answer-only, status-only, or a small scoped report, default to L0 or L1 unless it changes a source-of-truth model, release state, branch state, architecture boundary, migration plan, public asset version, or implementation behavior.
+
+Process level is a control, not a status symbol.
+
+Escalate only when the task adds real risk. Do not escalate because the repository has strict governance.
+
+## Compact Mode For L0 And L1
+
+Compact mode is required for L0 and L1 tasks unless the maintainer explicitly asks for a full audit.
+
+Compact mode keeps the safety gates but removes repeated ceremony.
+
+Required compact checks:
+
+- repository identity when editing or reporting repository state;
+- current branch and dirty worktree check;
+- owner or scope check;
+- no hidden runtime, code, dependency, or release-state changes;
+- validation honesty with `PASS`, `FAIL`, `NOT RUN`, or `N/A`;
+- repository files remain the source of truth.
+
+Allowed compact output:
+
+```text
+Repo:
+Branch:
+Scope:
+Changed:
+Validation:
+Risks:
+Next:
+```
+
+For L0/L1 tasks, do not repeat the full forbidden-action list when:
+
+- the repository identity is correct;
+- the work is explicitly docs-only or read-only;
+- no source-reference repository is being modified;
+- the diff contains no runtime, code, dependency, release, or branch-state changes.
+
+### L0 Compact Template
+
+Use for clean status checks, typo fixes, tiny formatting changes, and answer-only repository checks.
+
+```text
+Repo: <owner>/<repo>
+Branch: <branch>
+Status: <clean/dirty>
+Validation: <git diff --check or N/A>
+Risk: <none/short>
+Next: <one action>
+```
+
+### L1 Docs-Only Compact Template
+
+Use for docs-only architecture wording, PR-ready handoff, clean-start report, small memory/status updates, and docs-only commits.
+
+```text
+Repo: <owner>/<repo>
+Branch: <branch> -> <base>
+Scope: docs-only
+Changed: <files>
+Validation:
+- dirty tree before: <clean/dirty>
+- scope check: PASS
+- no runtime/code changes: PASS
+- docs checks: <PASS/NOT RUN with reason>
+Risks: <short>
+Next: <commit/PR/merge/wait>
+```
+
+### Compact Escalation Triggers
+
+Move out of compact mode when any of these are true:
+
+- architecture ownership or source-of-truth boundaries change;
+- release state, version, tag, merge, or branch policy changes;
+- migration, source-reference transfer, or branch snapshot movement is involved;
+- a public template, example, checklist, or installable bundle is added or versioned;
+- implementation, runtime, CLI, automation, dependency, or integration files change;
+- a docs claim requires runtime or product evidence;
+- the task spans multiple operating layers.
+
 ## Task Classes
 
 | Task class | Description | Default action |
@@ -81,7 +168,8 @@ Process:
 - confirm repository identity if editing;
 - confirm scope;
 - inspect changed files;
-- run `git diff --check`.
+- run `git diff --check` when files changed;
+- use L0 compact output.
 
 Skipped by default:
 
@@ -105,7 +193,8 @@ Process:
 - identify owner document;
 - check source-of-truth ownership;
 - confirm docs-only scope;
-- run docs validation.
+- run docs validation that matches the changed files;
+- use L1 compact output unless the task hits a compact escalation trigger.
 
 Product or runtime validation is not required unless the docs claim product behavior, implementation status, or release readiness changed.
 
