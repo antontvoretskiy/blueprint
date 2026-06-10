@@ -34,6 +34,12 @@ PR #30 merged the process-level regression hardening into `develop`.
 PR #32 merged context and recovery budgets into `develop` so L0/L1 work limits
 both response size and recovery-document loading.
 
+PR #36 merged the v0.4.1 process-efficiency dogfood audit into `develop`.
+The audit validates that simple L0/L1 docs-only and status tasks can stay
+compact without full recovery reloads.
+
+Post-dogfood branch cleanup is complete for the merged PR #36 branch.
+
 Current work is next-scope selection for the release after v0.4.1.
 
 ## Current Included Layers
