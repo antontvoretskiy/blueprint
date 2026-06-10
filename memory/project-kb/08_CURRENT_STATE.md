@@ -6,12 +6,12 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.4.1 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.4.2 public framework bundle |
 | `develop` | Integration branch | Base branch for the next scoped framework work |
 
 ## Current Work
 
-Blueprint v0.4.1 has been released from validated `develop` state to `main`.
+Blueprint v0.4.2 has been released from validated `develop` state to `main`.
 
 Post-release recovery validation has landed in `develop`.
 
@@ -34,7 +34,16 @@ PR #30 merged the process-level regression hardening into `develop`.
 PR #32 merged context and recovery budgets into `develop` so L0/L1 work limits
 both response size and recovery-document loading.
 
-Current work is next-scope selection for the release after v0.4.1.
+PR #36 merged the v0.4.1 process-efficiency dogfood audit into `develop`.
+The audit validates that simple L0/L1 docs-only and status tasks can stay
+compact without full recovery reloads.
+
+Post-dogfood branch cleanup is complete for the merged PR #36 branch.
+
+Release `v0.4.2` publishes the dogfood audit and post-audit memory refresh from
+validated `develop` state to `main`.
+
+Current work is next-scope selection for the release after v0.4.2.
 
 ## Current Included Layers
 

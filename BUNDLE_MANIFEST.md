@@ -21,6 +21,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `MIGRATION_GUIDE.md` | Included | Migration and sanitization guide |
 | `VALIDATION_CHECKLIST.md` | Included | Public release and adoption validation checklist |
 | `docs/validation/system-use-case-suite.md` | Included | Manual system use-case validation suite, v0.4.1 |
+| `docs/validation/process-efficiency-dogfood-v0.4.1.md` | Included | Manual process-efficiency dogfood audit, v0.4.1 |
 | `PRODUCT_MAP.md` | Included | Complete product shape, process levels, and project/feature management model |
 | `ARCHITECTURE.md` | Included | Core, extension, and example layer boundaries |
 | `BUNDLE_MANIFEST.md` | Included | Bundle composition and boundaries |

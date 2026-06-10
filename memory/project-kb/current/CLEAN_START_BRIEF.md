@@ -6,9 +6,9 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.4.1 is released on `main`.
+Blueprint v0.4.2 is released on `main`.
 
-The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, and completed post-validation branch cleanup.
+The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, and completed post-validation branch cleanup.
 
 After v0.4.0, PR #30 landed process-level regression hardening in `develop`.
 UC-03 now requires RT-01 through RT-18 scenario evidence before future
@@ -17,6 +17,15 @@ packaging can claim task-routing validation.
 PR #32 landed router context and recovery budgets in `develop`.
 L0/L1 work now has explicit limits for response length, context loading, and
 recovery-document loading.
+
+PR #36 landed the v0.4.1 process-efficiency dogfood audit in `develop`.
+The audit records that L0/L1/L2 routing budgets can be applied to Blueprint
+itself without full-process escalation for simple docs-only work.
+
+The merged dogfood audit branch was removed locally and remotely after PR #36.
+
+Release `v0.4.2` publishes PR #36 and PR #37 from validated `develop` state to
+`main`.
 
 The `develop` branch remains the base for the next scoped framework work.
 
