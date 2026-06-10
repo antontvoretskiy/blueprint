@@ -28,7 +28,8 @@ This file records what is currently included in Blueprint and what remains plann
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| v0.4.0 scope selection | Planned | Must be selected through the task router after post-release recovery validation |
+| System use-case validation run | Planned | Must be run before branch cleanup, public packaging, or new public assets |
+| v0.4.0 scope selection | Planned | Must happen after system use-case validation results are reviewed |
 
 ## Excluded From Core
 

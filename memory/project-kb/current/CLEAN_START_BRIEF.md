@@ -10,6 +10,8 @@ Blueprint v0.3.0 is released on `main`.
 
 The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, and public release packaging.
 
+The `develop` branch also includes the unreleased system use-case validation suite.
+
 ## Read First
 
 1. `memory/project-kb/00_INDEX.md`
@@ -27,12 +29,13 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Select the next v0.4.0 scope through `core/TASK_PROCESS_ROUTER.md`.
+Run the system use-case validation suite from `docs/validation/system-use-case-suite.md`.
 
 Recommended next scoped PRs:
 
-1. v0.4.0 scope planning into `develop`.
-2. Additional examples, docs-site polish, validation automation, CLI, installer, or integrations only if selected as the explicit v0.4.0 scope.
+1. System use-case validation result into `develop`.
+2. Scoped fixes for any failed UC scenario.
+3. v0.4.0 scope planning only after validation results are reviewed.
 
 ## Do Not Do
 

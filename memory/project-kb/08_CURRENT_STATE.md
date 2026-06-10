@@ -15,7 +15,9 @@ Blueprint v0.3.0 has been released from `develop` to `main`.
 
 Post-release recovery validation has landed in `develop`.
 
-Current work is clean-start v0.4.0 scope selection. The next contributor should recover from repository files, route the work through `core/TASK_PROCESS_ROUTER.md`, and select one scoped v0.4.0 work item before implementation.
+The system use-case validation suite has landed in `develop`.
+
+Current work is running the system use-case validation suite against Blueprint. The next contributor should recover from repository files, validate UC-01 through UC-15, fix failures through scoped PRs, and only then select one scoped v0.4.0 work item.
 
 ## Current Included Layers
 
