@@ -163,7 +163,7 @@ Public release packaging is not source-reference system logic. It is the public 
 
 | Packaging item | Blueprint owner | Status | Notes |
 | --- | --- | --- | --- |
-| Version target | `VERSION` | Covered | Current release target exists |
+| Version marker | `VERSION` | Covered | Current released version marker exists |
 | Changelog | `CHANGELOG.md` | Covered | Versioned public change history exists |
 | Release process | `RELEASE.md` | Covered | Manual release gates exist |
 | Open-source guide | `OPEN_SOURCE_GUIDE.md` | Covered | Public entry point guide exists |

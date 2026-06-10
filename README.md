@@ -11,7 +11,7 @@
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
   <a href="VERSION"><img alt="Version: v0.3.0" src="https://img.shields.io/badge/version-v0.3.0-blue"></a>
-  <a href="BUNDLE_MANIFEST.md"><img alt="Status: release candidate" src="https://img.shields.io/badge/status-release%20candidate-0f766e"></a>
+  <a href="BUNDLE_MANIFEST.md"><img alt="Status: validation" src="https://img.shields.io/badge/status-validation-0f766e"></a>
 </p>
 
 Blueprint is an open-source operating framework that helps software teams and AI agents keep repository governance, project memory, task routing, feature lifecycle, PR lifecycle, branch governance, recovery, Guardian checks, and clean starts in one durable place: the repository.
@@ -122,7 +122,9 @@ Use Spec Kit when you need a spec-centered delivery workflow. Use Blueprint when
 
 ## Current Status
 
-Blueprint is in public repository bootstrap and core contract buildout.
+Blueprint v0.3.0 is released on `main`.
+
+The `develop` branch contains unreleased v0.4.0 validation work. The current development step is to run the system use-case validation suite before branch cleanup, public packaging, or new public assets.
 
 Included now:
 
@@ -147,12 +149,14 @@ Included now:
 | Support, security, and conduct files | Included |
 | GitHub contribution templates | Included |
 | Source coverage maps | Included |
+| System use-case validation suite | Included on `develop` |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
 
 Not included yet:
 
 - additional example projects;
+- validation automation;
 - CLI;
 - installer;
 - automation;
@@ -243,12 +247,14 @@ make clean   # stop containers and remove local volumes
 | v0.1.0 | Public repository bootstrap, architecture, manifest, contribution policy, preview environment |
 | v0.2.0 | Core operating contracts, governance standards, and Project Memory structure |
 | v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, first AI product example, and public release packaging |
-| v0.4.0 | Additional sanitized examples and optional extension planning |
+| v0.4.0 | System use-case validation, dependency verification, branch cleanup readiness, and packaging readiness |
 | v1.0.0 | Stable manual installation path and complete public docs |
 
 ## Release Packaging
 
-Current release target: v0.3.0.
+Last released version: v0.3.0.
+
+Next release target: not selected.
 
 Release-facing files:
 

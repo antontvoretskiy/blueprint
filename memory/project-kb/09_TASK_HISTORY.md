@@ -28,6 +28,8 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-10 | Release `v0.3.0` | Published the first complete public framework bundle | `main` |
 | 2026-06-10 | PR #20 | Refreshed post-release recovery state and recorded recovery validation | `develop` |
 | 2026-06-10 | PR #21 | Refreshed post-merge clean-start state after recovery validation | `develop` |
+| 2026-06-10 | PR #22 | Refreshed source coverage next steps for v0.4.0 scope selection | `develop` |
+| 2026-06-10 | PR #23 | Added system use-case validation suite and checklist | `develop` |
 
 ## Update Rules
 

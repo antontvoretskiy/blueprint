@@ -7,7 +7,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | Path | Status | Purpose |
 | --- | --- | --- |
 | `README.md` | Included | Public product landing page |
-| `VERSION` | Included | Current release target |
+| `VERSION` | Included | Current version marker |
 | `CHANGELOG.md` | Included | Versioned public change history |
 | `RELEASE.md` | Included | Manual release process |
 | `LICENSE` | Included | MIT license |
