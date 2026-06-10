@@ -27,13 +27,12 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Complete post-release recovery validation on `docs/dogfood-recovery-validation`.
+Select the next v0.4.0 scope through `core/TASK_PROCESS_ROUTER.md`.
 
 Recommended next scoped PRs:
 
-1. Post-release recovery validation into `develop`.
-2. v0.4.0 scope selection through `core/TASK_PROCESS_ROUTER.md`.
-3. Additional examples or public polish only if selected for a later release scope.
+1. v0.4.0 scope planning into `develop`.
+2. Additional examples, docs-site polish, validation automation, CLI, installer, or integrations only if selected as the explicit v0.4.0 scope.
 
 ## Do Not Do
 

@@ -13,7 +13,9 @@ This file records the current recovery point for Blueprint.
 
 Blueprint v0.3.0 has been released from `develop` to `main`.
 
-Current work is post-release recovery validation on `docs/dogfood-recovery-validation`. The goal is to prove that a fresh session can recover from repository files after release, without depending on old chat history.
+Post-release recovery validation has landed in `develop`.
+
+Current work is clean-start v0.4.0 scope selection. The next contributor should recover from repository files, route the work through `core/TASK_PROCESS_ROUTER.md`, and select one scoped v0.4.0 work item before implementation.
 
 ## Current Included Layers
 
@@ -51,6 +53,6 @@ Current work is post-release recovery validation on `docs/dogfood-recovery-valid
 
 ## Next Recommended Work
 
-Complete the post-release recovery validation PR into `develop`.
+Select the next v0.4.0 scope through the task router before creating new templates, examples, automation, CLI, or integration work.
 
-After that, select the next v0.4.0 scope through the task router before creating new templates, examples, automation, CLI, or integration work.
+Do not start new public assets until the next scope is classified and approved.

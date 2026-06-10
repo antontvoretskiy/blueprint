@@ -1,9 +1,10 @@
 # Blueprint Recovery Validation
 
-Status: Active recovery validation.
+Status: Completed recovery validation.
 Repository: `antontvoretskiy/blueprint`
-Branch: `docs/dogfood-recovery-validation`
-Target branch: `develop`
+Branch: `develop`
+Merged validation branch: `docs/dogfood-recovery-validation`
+Merged PR: `#20`
 Validator: Blueprint Maintainers
 Date: `2026-06-10`
 
@@ -50,11 +51,11 @@ This branch updates those recovery owners so repository state, release state, an
 
 ```text
 Repository: antontvoretskiy/blueprint
-Branch: docs/dogfood-recovery-validation
-Current recovery point: v0.3.0 released on main; next work starts from develop
+Branch: develop
+Current recovery point: v0.3.0 released on main; v0.4.0 scope selection starts from develop
 Included state: v0.3.0 public framework bundle
 Not included: automation, CLI, installer, MCP integration, execution layers, additional examples
-Next recommended work: complete post-release recovery validation, then select v0.4.0 scope through the task router
+Next recommended work: select v0.4.0 scope through the task router
 Applicable owner documents: core/AGENTS.md, memory/project-kb/00_INDEX.md, memory/project-kb/08_CURRENT_STATE.md, memory/project-kb/05_IMPLEMENTATION_STATUS.md, memory/project-kb/10_REFERENCE.md, core/TASK_PROCESS_ROUTER.md
 ```
 
