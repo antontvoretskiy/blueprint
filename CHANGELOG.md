@@ -18,6 +18,8 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
   for future public packaging without the process-level regression matrix.
 - Recorded the first v0.4.1 process-level regression pass for RT-01 through
   RT-18 in the current validation ledger.
+- Added context budgets for L0, L1, L2, L3, and L4 so small tasks limit both
+  procedure and context loading.
 
 ## v0.4.0 - 2026-06-10
 

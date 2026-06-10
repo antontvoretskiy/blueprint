@@ -61,6 +61,120 @@ change by itself. Treat branch state as changed only when the task changes the
 branch strategy, base branch, target branch, merge state, release branch, tag,
 branch cleanup, branch synchronization, or published remote state.
 
+## Context Budget By Process Level
+
+Process levels limit both procedure and context loading.
+
+Do not spend L4 context on L0/L1 work. If the task is narrower than the report,
+the process level was wrong.
+
+Root docs are loaded once per meaningful work session, not before every L0 or
+L1 action. Do not reload context that is already represented by
+`memory/project-kb/08_CURRENT_STATE.md` unless the task needs the original
+owner document.
+
+For L0 and L1, cite or mention only the specific file or command that changed
+the decision.
+
+### L0 Context Budget
+
+Use L0 for status checks, clean checks, read-only branch checks, answer-only
+repository questions, and sync checks that do not change branch state.
+
+Allowed context:
+
+- current command output;
+- `git status`;
+- current branch;
+- current task instruction.
+
+Forbidden context:
+
+- do not read the full Project Memory;
+- do not read architecture docs;
+- do not read the governance bundle;
+- do not write a full final report.
+
+Maximum response:
+
+```text
+3-5 lines
+```
+
+Template:
+
+```text
+Status: ...
+Validation: ...
+Next: ...
+```
+
+### L1 Context Budget
+
+Use L1 for docs-only commits, PR-ready handoff reports, small memory updates,
+and scoped documentation fixes without ownership, release, branch-state,
+architecture, migration, public asset, or implementation triggers.
+
+Allowed context:
+
+- touched file list;
+- relevant owner document only when needed;
+- `git diff` or `git status`;
+- direct user instruction.
+
+Forbidden context:
+
+- do not reread all root docs;
+- do not repeat the full forbidden-scope list;
+- do not write a long `Not Changed` block.
+
+Maximum response:
+
+```text
+10 lines
+```
+
+Template:
+
+```text
+Summary: ...
+Files: ...
+Validation: ...
+Next: ...
+```
+
+### L2 Context Budget
+
+Use L2 for scoped layer changes that affect a specific owner document or layer
+but do not change architecture ownership, release state, branch state,
+migration state, or implementation behavior.
+
+Allowed context:
+
+- owner document;
+- touched domain or layer docs;
+- validation commands.
+
+Maximum response:
+
+```text
+20 lines unless FAIL/risk.
+```
+
+### L3 And L4 Context Budget
+
+Use full process only for:
+
+- new architecture decision;
+- migration;
+- runtime behavior change;
+- extraction implementation with broad scope;
+- release or merge conflicts;
+- cross-domain work.
+
+Branch synchronization, merge, branch cleanup, push-to-release, tag, and release
+PR work remain L4 because they change branch or release state.
+
 ## Compact Mode For L0 And L1
 
 Compact mode is required for L0 and L1 tasks unless the maintainer explicitly asks for a full audit.
