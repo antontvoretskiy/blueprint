@@ -59,6 +59,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Included | Owner and dependency relationship map |
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Included | Current clean-start brief |
 | `memory/project-kb/current/RECOVERY_VALIDATION.md` | Included | Current recovery validation result |
+| `memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md` | Included | Current system use-case validation result |
 | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Included | Guardian process architecture |
 | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Included | Generic Guardian validation scenarios |
 | `templates/project-memory/README.md` | Included | Project Memory template bundle guide, v0.2.0 |

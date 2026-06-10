@@ -6,6 +6,7 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+- Recorded a passing system use-case validation result for `develop`.
 - Added a manual system use-case validation suite and checklist for v0.4.0 scope validation.
 - Aligned README and Project Memory with the current validation-suite development state.
 - Post-release Project Memory and clean-start recovery state refreshed after v0.3.0.
