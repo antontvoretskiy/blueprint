@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
-  <a href="VERSION"><img alt="Version: v0.4.0" src="https://img.shields.io/badge/version-v0.4.0-blue"></a>
+  <a href="VERSION"><img alt="Version: v0.4.1" src="https://img.shields.io/badge/version-v0.4.1-blue"></a>
   <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
 </p>
 
@@ -122,9 +122,9 @@ Use Spec Kit when you need a spec-centered delivery workflow. Use Blueprint when
 
 ## Current Status
 
-Blueprint v0.4.0 is released on `main`.
+Blueprint v0.4.1 is released on `main`.
 
-The v0.4.0 bundle includes the system use-case validation suite, a historical validation result, and completed post-validation branch cleanup. Current `develop` work hardens UC-03 process-level validation so future packaging proves that small tasks stay L0/L1 and risky work escalates to the correct level before the next release scope is selected.
+The v0.4.1 bundle includes the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, and completed post-validation branch cleanup.
 
 Included now:
 
@@ -137,6 +137,7 @@ Included now:
 | Contribution policy | Included |
 | Core operating contracts | Included |
 | Governance standards | Included |
+| Context and recovery budgets | Included |
 | Project Memory structure | Included |
 | Project Memory templates | Included |
 | Feature Lifecycle templates | Included |
@@ -249,11 +250,12 @@ make clean   # stop containers and remove local volumes
 | v0.2.0 | Core operating contracts, governance standards, and Project Memory structure |
 | v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, first AI product example, and public release packaging |
 | v0.4.0 | System use-case validation, dependency verification, branch cleanup completion, and packaging readiness |
+| v0.4.1 | Process-level regression hardening, context budgets, and recovery budgets |
 | v1.0.0 | Stable manual installation path and complete public docs |
 
 ## Release Packaging
 
-Last released version: v0.4.0.
+Last released version: v0.4.1.
 
 Next release target: not selected.
 

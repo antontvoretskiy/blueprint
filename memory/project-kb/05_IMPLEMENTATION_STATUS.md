@@ -9,7 +9,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Public repository presentation | Included | README, license, contribution guide, architecture, manifest |
 | Local preview environment | Included | Docker Compose preview and smoke checks |
 | Complete product map | Included | Product shape, subsystem links, process levels, project management, and feature management |
-| Core contracts | Included | Agent contract, task router, compact process levels, lifecycle, handoff, security |
+| Core contracts | Included | Agent contract, task router, compact process levels, context budgets, recovery budgets, lifecycle, handoff, security |
 | Governance standards | Included | Governance index, engineering, git, PR, verification, documentation, ADR |
 | Project Memory structure | Included | Reusable Project Memory files and recovery entrypoint |
 | Project Memory templates | Included | Reusable templates for project context, map, architecture, domain model, status, workflow, decisions, current state, history, and references |
@@ -30,7 +30,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| Next release scope selection | Planned | Must happen after process-level regression hardening lands and before additional examples, public polish, automation, CLI, installer, or integrations |
+| Next release scope selection | Planned | Must happen after v0.4.1 release and before additional examples, public polish, automation, CLI, installer, or integrations |
 
 ## Excluded From Core
 

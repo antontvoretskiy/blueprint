@@ -6,6 +6,10 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+No unreleased changes yet.
+
+## v0.4.1 - 2026-06-10
+
 ### Changed
 
 - Hardened process-level validation so UC-03 requires scenario evidence for
@@ -20,6 +24,8 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
   RT-18 in the current validation ledger.
 - Added context budgets for L0, L1, L2, L3, and L4 so small tasks limit both
   procedure and context loading.
+- Added recovery budgets for L0, L1, L2, L3, and L4 so small tasks limit
+  recovery-document loading.
 
 ## v0.4.0 - 2026-06-10
 

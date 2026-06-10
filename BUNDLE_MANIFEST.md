@@ -37,7 +37,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `public/` | Included | Static preview surface |
 | `public/api/` | Included | Static API preview endpoint for local smoke checks |
 | `core/AGENTS.md` | Included | Agent operating contract |
-| `core/TASK_PROCESS_ROUTER.md` | Included | Task routing by operating layer |
+| `core/TASK_PROCESS_ROUTER.md` | Included | Task routing, process levels, context budgets, and recovery budgets |
 | `core/FEATURE_LIFECYCLE_STANDARD.md` | Included | Feature lifecycle standard |
 | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | Included | PR handoff and clean-start standard |
 | `core/SECURITY.md` | Included | Portable security baseline |

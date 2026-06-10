@@ -36,6 +36,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-10 | Release `v0.4.0` | Published validation suite, validation result, and post-cleanup recovery state | `main` |
 | 2026-06-10 | PR #30 | Hardened process-level regression validation for UC-03 and recorded RT-01 through RT-18 evidence | `develop` |
 | 2026-06-10 | PR #32 | Added context and recovery budgets for process levels | `develop` |
+| 2026-06-10 | Release `v0.4.1` | Published process-level regression hardening, context budgets, and recovery budgets | `main` |
 
 ## Update Rules
 

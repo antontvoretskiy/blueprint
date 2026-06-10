@@ -6,9 +6,9 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.4.0 is released on `main`.
+Blueprint v0.4.1 is released on `main`.
 
-The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, a historical validation result, and completed post-validation branch cleanup.
+The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, and completed post-validation branch cleanup.
 
 After v0.4.0, PR #30 landed process-level regression hardening in `develop`.
 UC-03 now requires RT-01 through RT-18 scenario evidence before future

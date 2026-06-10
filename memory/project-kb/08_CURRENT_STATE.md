@@ -6,12 +6,12 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.4.0 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.4.1 public framework bundle |
 | `develop` | Integration branch | Base branch for the next scoped framework work |
 
 ## Current Work
 
-Blueprint v0.4.0 has been released from validated `develop` state to `main`.
+Blueprint v0.4.1 has been released from validated `develop` state to `main`.
 
 Post-release recovery validation has landed in `develop`.
 
@@ -34,7 +34,7 @@ PR #30 merged the process-level regression hardening into `develop`.
 PR #32 merged context and recovery budgets into `develop` so L0/L1 work limits
 both response size and recovery-document loading.
 
-Current work is next-scope selection for the release after v0.4.0.
+Current work is next-scope selection for the release after v0.4.1.
 
 ## Current Included Layers
 
