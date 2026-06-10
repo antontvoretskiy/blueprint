@@ -20,6 +20,7 @@ This file lists canonical project references for recovery.
 | Adaptation guide | `ADAPTATION_GUIDE.md` |
 | Migration guide | `MIGRATION_GUIDE.md` |
 | Validation checklist | `VALIDATION_CHECKLIST.md` |
+| System use-case validation suite | `docs/validation/system-use-case-suite.md` |
 | Support | `SUPPORT.md` |
 | Security policy | `SECURITY.md` |
 | Code of conduct | `CODE_OF_CONDUCT.md` |
@@ -59,6 +60,8 @@ This file lists canonical project references for recovery.
 | Source coverage matrix | `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` |
 | System relationship map | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` |
 | Clean-start brief | `memory/project-kb/current/CLEAN_START_BRIEF.md` |
+| Recovery validation | `memory/project-kb/current/RECOVERY_VALIDATION.md` |
+| System use-case validation result | `memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md` |
 | Guardian architecture | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` |
 | Guardian validation scenarios | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` |
 
@@ -105,6 +108,7 @@ This file lists canonical project references for recovery.
 | Branch governance checklist | `checklists/branch-governance-checklist.md` |
 | PR readiness checklist | `checklists/pr-readiness-checklist.md` |
 | Clean-start checklist | `checklists/clean-start-checklist.md` |
+| System use-case validation checklist | `checklists/system-use-case-validation-checklist.md` |
 
 ## Example References
 

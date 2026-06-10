@@ -57,7 +57,7 @@ Planned levels are not included until their files exist in the repository.
 | Architecture boundary | `ARCHITECTURE.md` | Core, extension, and example layers |
 | Bundle composition | `BUNDLE_MANIFEST.md` | Included, planned, and excluded content |
 | Contribution rules | `CONTRIBUTING.md` | Public contribution process and hygiene |
-| Version target | `VERSION` | Current release target |
+| Version marker | `VERSION` | Current released version marker |
 | Changelog | `CHANGELOG.md` | Versioned public change history |
 | Release process | `RELEASE.md` | Manual release gates and PR flow |
 | Open-source guide | `OPEN_SOURCE_GUIDE.md` | Public entry points and status language |

@@ -7,7 +7,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | Path | Status | Purpose |
 | --- | --- | --- |
 | `README.md` | Included | Public product landing page |
-| `VERSION` | Included | Current release target |
+| `VERSION` | Included | Current version marker |
 | `CHANGELOG.md` | Included | Versioned public change history |
 | `RELEASE.md` | Included | Manual release process |
 | `LICENSE` | Included | MIT license |
@@ -20,6 +20,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `ADAPTATION_GUIDE.md` | Included | Adoption and installation guide |
 | `MIGRATION_GUIDE.md` | Included | Migration and sanitization guide |
 | `VALIDATION_CHECKLIST.md` | Included | Public release and adoption validation checklist |
+| `docs/validation/system-use-case-suite.md` | Included | Manual system use-case validation suite, v0.4.0 |
 | `PRODUCT_MAP.md` | Included | Complete product shape, process levels, and project/feature management model |
 | `ARCHITECTURE.md` | Included | Core, extension, and example layer boundaries |
 | `BUNDLE_MANIFEST.md` | Included | Bundle composition and boundaries |
@@ -57,6 +58,8 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` | Included | Source-reference coverage matrix |
 | `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Included | Owner and dependency relationship map |
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Included | Current clean-start brief |
+| `memory/project-kb/current/RECOVERY_VALIDATION.md` | Included | Current recovery validation result |
+| `memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md` | Included | Current system use-case validation result |
 | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Included | Guardian process architecture |
 | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Included | Generic Guardian validation scenarios |
 | `templates/project-memory/README.md` | Included | Project Memory template bundle guide, v0.2.0 |
@@ -98,6 +101,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `checklists/branch-governance-checklist.md` | Included | Branch governance acceptance checklist |
 | `checklists/pr-readiness-checklist.md` | Included | PR readiness acceptance checklist |
 | `checklists/clean-start-checklist.md` | Included | Clean-start acceptance checklist |
+| `checklists/system-use-case-validation-checklist.md` | Included | System use-case validation checklist |
 | `examples/ai-product/README.md` | Included | AI product adoption example guide, v0.3.0 |
 | `examples/ai-product/ADOPTION_MAP.md` | Included | AI product adoption mapping example |
 | `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` | Included | AI product branch governance example |

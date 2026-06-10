@@ -6,10 +6,29 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
-- Additional examples are planned for later release scope selection.
+No unreleased changes yet.
+
+## v0.4.0 - 2026-06-10
+
+### Added
+
+- Recorded a passing system use-case validation result for `develop`.
+- Added a manual system use-case validation suite and checklist for v0.4.0 scope validation.
+
+### Changed
+
+- Aligned README and Project Memory with the current validation-suite development state.
+- Post-release Project Memory and clean-start recovery state refreshed after v0.3.0.
+- Post-merge clean-start state refreshed after recovery validation landed in `develop`.
+- Source coverage next steps refreshed for v0.4.0 scope selection.
+- Recorded completed branch cleanup after PRs #20 through #25.
+
+### Excluded
+
+- Additional examples remain planned for later release scope selection.
 - Optional extensions remain outside the current bundle.
 
-## v0.3.0 - Release Candidate
+## v0.3.0 - 2026-06-10
 
 ### Added
 

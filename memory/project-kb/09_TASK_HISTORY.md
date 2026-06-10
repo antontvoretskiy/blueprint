@@ -23,6 +23,17 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-09 | PR #15 | Added Guardian templates | `develop` |
 | 2026-06-09 | PR #16 | Added operational checklists | `develop` |
 | 2026-06-09 | PR #17 | Added AI product adoption example | `develop` |
+| 2026-06-10 | PR #18 | Prepared v0.3.0 public release packaging | `develop` |
+| 2026-06-10 | PR #19 | Released Blueprint v0.3.0 to `main` | `main` |
+| 2026-06-10 | Release `v0.3.0` | Published the first complete public framework bundle | `main` |
+| 2026-06-10 | PR #20 | Refreshed post-release recovery state and recorded recovery validation | `develop` |
+| 2026-06-10 | PR #21 | Refreshed post-merge clean-start state after recovery validation | `develop` |
+| 2026-06-10 | PR #22 | Refreshed source coverage next steps for v0.4.0 scope selection | `develop` |
+| 2026-06-10 | PR #23 | Added system use-case validation suite and checklist | `develop` |
+| 2026-06-10 | PR #24 | Aligned current validation state after the validation suite landed | `develop` |
+| 2026-06-10 | PR #25 | Recorded the system use-case validation result | `develop` |
+| 2026-06-10 | Branch cleanup | Removed merged docs branches after PRs #20 through #25 | local and remote refs |
+| 2026-06-10 | Release `v0.4.0` | Published validation suite, validation result, and post-cleanup recovery state | `main` |
 
 ## Update Rules
 

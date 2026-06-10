@@ -163,7 +163,7 @@ Public release packaging is not source-reference system logic. It is the public 
 
 | Packaging item | Blueprint owner | Status | Notes |
 | --- | --- | --- | --- |
-| Version target | `VERSION` | Covered | Current release target exists |
+| Version marker | `VERSION` | Covered | Current released version marker exists |
 | Changelog | `CHANGELOG.md` | Covered | Versioned public change history exists |
 | Release process | `RELEASE.md` | Covered | Manual release gates exist |
 | Open-source guide | `OPEN_SOURCE_GUIDE.md` | Covered | Public entry point guide exists |
@@ -194,7 +194,7 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Prepare an explicit release PR into `main`.
-2. Add additional examples only if they are selected for a later release scope.
+1. Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
+2. Add additional examples, public polish, automation, CLI, installer, or integrations only if selected as the explicit next scope.
 
-Do not start public packaging while this matrix contains `Partial` or `Planned` system items.
+Do not start new public assets while this matrix contains unresolved required transfer gaps.

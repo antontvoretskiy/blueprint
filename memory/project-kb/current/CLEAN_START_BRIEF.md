@@ -6,7 +6,11 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, and public release packaging on `develop`.
+Blueprint v0.4.0 is released on `main`.
+
+The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, a passing validation result, and completed post-validation branch cleanup.
+
+The `develop` branch remains the base for the next scoped framework work.
 
 ## Read First
 
@@ -25,16 +29,18 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Prepare an explicit release PR into `main`, or add additional examples only if they are selected for a later release scope.
+Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
 
 Recommended next scoped PRs:
 
-1. Release PR into `main`.
-2. Additional examples only if selected for a later release scope.
+1. Next release scope planning.
+2. Public packaging or release preparation only after the next scope is selected.
+3. Additional examples or public polish only after the next scope is selected.
 
 ## Do Not Do
 
 - Do not modify source-reference repositories.
-- Do not start public packaging while coverage contains unresolved `Partial` or `Planned` system items.
 - Do not mix unrelated template families in one PR.
-- Do not move `develop` to `main` until release preparation is approved.
+- Do not move `develop` to `main` without a release PR.
+- Do not start automation, CLI, installer, integration, or execution-layer work without explicit scope approval.
+- Do not delete branches without explicit maintainer approval.

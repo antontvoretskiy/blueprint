@@ -19,6 +19,9 @@ This file records what is currently included in Blueprint and what remains plann
 | Checklists | Included | Installation, recovery, branch governance, PR readiness, and clean-start acceptance checklists |
 | Recovery templates | Included | Recovery path, clean-start brief, and recovery validation templates |
 | Source coverage map | Included | Coverage matrix and relationship map for transfer completeness |
+| System use-case validation suite | Included | Manual validation suite and checklist for recovery, routing, memory, Guardian, release, and public-quality use cases |
+| System use-case validation result | Included | First full manual validation run passed on `develop` |
+| Post-validation branch cleanup | Included | Merged docs branches after PRs #20 through #25 were removed locally and remotely after maintainer approval |
 | AI product example | Included | Sanitized adoption example for applying Blueprint to an AI product repository |
 | Public release packaging | Included | Version, changelog, release process, validation checklist, support, conduct, security, and GitHub contribution templates |
 
@@ -27,7 +30,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| Release PR into main | Planned | Release PR from `develop` into `main` |
+| Next release scope selection | Planned | Must happen before additional examples, public polish, automation, CLI, installer, or integrations |
 
 ## Excluded From Core
 

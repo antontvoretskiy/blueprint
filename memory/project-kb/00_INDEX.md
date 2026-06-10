@@ -36,6 +36,8 @@ Load `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` and `memory/project-kb/12_
 | `11_SOURCE_COVERAGE_MATRIX.md` | Source-reference coverage status and remaining gaps |
 | `12_SYSTEM_RELATIONSHIP_MAP.md` | Owners, dependencies, and document interaction map |
 | `current/CLEAN_START_BRIEF.md` | Short current handoff for the next session |
+| `current/RECOVERY_VALIDATION.md` | Current recovery validation result |
+| `current/SYSTEM_USE_CASE_VALIDATION.md` | Current system use-case validation result |
 | `architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Guardian process architecture |
 | `GUARDIAN_VALIDATION_SCENARIOS.md` | Generic Guardian validation scenarios |
 

@@ -8,10 +8,13 @@ For framework security expectations inside Blueprint-governed work, see `core/SE
 
 | Version | Supported |
 | --- | --- |
-| Current release candidate | Yes |
+| Latest release on `main` | Yes |
+| Unreleased `develop` snapshots | Best effort |
 | Older unreleased snapshots | No |
 
-Until a release PR lands on `main`, the supported public target is the current release candidate on `develop`.
+The supported public target is the latest released Blueprint version on `main`.
+
+Unreleased `develop` snapshots may receive fixes before the next release, but they are not the public support baseline.
 
 ## Reporting A Vulnerability
 
