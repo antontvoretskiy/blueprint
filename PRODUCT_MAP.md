@@ -111,8 +111,8 @@ Blueprint uses process levels to avoid unnecessary ceremony.
 
 | Level | Meaning | Required procedure | Skipped by default | Owner |
 | --- | --- | --- | --- | --- |
-| L0 | Trivial task | Repository identity when editing, scope check, `git diff --check` | Feature Lifecycle, full Guardian, architecture review, migration matrix | `core/TASK_PROCESS_ROUTER.md` |
-| L1 | Documentation or small scoped change | Owner lookup, source-of-truth check, docs validation | Feature Lifecycle unless public workflow changes | `core/TASK_PROCESS_ROUTER.md` |
+| L0 | Trivial task | Repository identity when editing, scope check, `git diff --check` when files changed | Feature Lifecycle, full Guardian, architecture review, migration matrix | `core/TASK_PROCESS_ROUTER.md` |
+| L1 | Documentation or small scoped change | Owner lookup, source-of-truth check, compact docs validation | Feature Lifecycle, full Guardian, release validation unless escalation triggers apply | `core/TASK_PROCESS_ROUTER.md` |
 | L2 | Scoped layer change | Layer owner, allowed paths, boundary checks, relevant validation | Full release gates unless release work | `core/TASK_PROCESS_ROUTER.md` |
 | L3 | Meaningful feature implementation | Feature Lifecycle, Guardian validation, PR handoff | None of the feature planning gates | `core/FEATURE_LIFECYCLE_STANDARD.md` |
 | L4 | Architecture, migration, release, or merge | Full Guardian, source-of-truth analysis, memory and release gates | No major process gates | `core/TASK_PROCESS_ROUTER.md` |
@@ -124,6 +124,20 @@ Do not apply L4 procedure to L0 or L1 work.
 ```
 
 If a small task is being overloaded, downgrade it and explain which rules are skipped.
+
+For L0 and L1 work, use compact mode:
+
+```text
+repo identity
+-> dirty tree
+-> scope check
+-> changed files
+-> relevant validation
+-> risks
+-> next step
+```
+
+Escalate only when the task changes source-of-truth boundaries, release state, branch state, architecture, migration, versioned public assets, implementation claims, runtime, code, dependencies, or multiple operating layers.
 
 If a task is unclear, risky, cross-layer, or changes public claims, classify it higher and decompose it.
 
@@ -337,11 +351,11 @@ Full installation is covered by the included owner documents, templates, Guardia
 
 Public release packaging is covered by release docs, validation checklist, support, security, conduct, and GitHub contribution templates.
 
-The release PR into `main` is still a separate approval-gated step.
+The v0.4.0 release PR into `main` has landed. Future releases remain separate approval-gated PRs.
 
-## Completion Gates Before Public Packaging
+## Completion Gates Before Future Public Packaging
 
-Do not treat Blueprint as complete until:
+Do not treat future release scopes as complete until:
 
 1. `memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md` has no unresolved `Partial` or `Planned` system items unless they are explicitly excluded.
 2. Example scope exists or is explicitly deferred from the release scope.
@@ -353,7 +367,8 @@ Do not treat Blueprint as complete until:
 
 Build the remaining system in this order:
 
-1. Release PR into `main` after explicit approval.
-2. Additional examples only if selected for a later release scope.
+1. Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
+2. Add additional examples only if selected for a later release scope.
+3. Prepare a release PR into `main` only after the selected scope is validated.
 
 This order protects the system from losing core logic while converting source-reference behavior into portable open-source artifacts.
