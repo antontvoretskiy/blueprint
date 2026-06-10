@@ -21,6 +21,7 @@ This file lists canonical project references for recovery.
 | Migration guide | `MIGRATION_GUIDE.md` |
 | Validation checklist | `VALIDATION_CHECKLIST.md` |
 | System use-case validation suite | `docs/validation/system-use-case-suite.md` |
+| Process efficiency dogfood audit | `docs/validation/process-efficiency-dogfood-v0.4.1.md` |
 | Support | `SUPPORT.md` |
 | Security policy | `SECURITY.md` |
 | Code of conduct | `CODE_OF_CONDUCT.md` |
