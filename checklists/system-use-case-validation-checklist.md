@@ -1,6 +1,6 @@
 # Blueprint System Use-Case Validation Checklist
 
-Status: Checklist v0.4.0.
+Status: Checklist v0.4.1.
 
 Use this checklist with `docs/validation/system-use-case-suite.md` before public packaging, release preparation, or branch cleanup.
 
@@ -33,6 +33,35 @@ Use this checklist with `docs/validation/system-use-case-suite.md` before public
 | UC-13 Release flow | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | UC-14 Public quality gate | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | UC-15 Adoption path | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+
+## Process-Level Regression Results
+
+UC-03 is not complete until these scenarios have expected and actual process
+levels recorded.
+
+| Scenario | Expected level | Actual level | Result | Evidence |
+| --- | --- | --- | --- | --- |
+| RT-01 Answer-only repository question | L0 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-02 Clean repository status check | L0 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-03 Single Markdown typo fix | L0 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-04 Docs-only wording update | L1 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-05 Docs-only PR-ready handoff report | L1 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-06 Clean-start status report without state change | L1 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-07 Docs-only commit on scoped branch | L1 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-08 Small Project Memory status correction | L1 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-09 Checklist, template, or validation asset versioning | L2 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-10 Sanitized example project addition | L2 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-11 Core contract update without ownership change | L2 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-12 Rule ownership or source-of-truth boundary change | L4 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-13 Meaningful feature implementation | L3 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-14 New public workflow requiring feature artifacts | L3 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-15 Source-reference transfer | L4 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-16 Release version, tag, or release PR | L4 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-17 Merge, branch synchronization, or branch cleanup | L4 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| RT-18 Runtime, CLI, automation, dependency, or integration modification | L4 | `<LEVEL>` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+
+UC-03 fails when an L0 or L1 scenario escalates to L4 without a documented
+escalation trigger.
 
 ## Dependency Results
 
@@ -69,6 +98,7 @@ Selected result:
 - `<VALIDATION_BLOCKED_DEPENDENCY_FAILURE>`
 - `<VALIDATION_BLOCKED_STALE_RECOVERY>`
 - `<VALIDATION_BLOCKED_SCOPE_DRIFT>`
+- `<VALIDATION_BLOCKED_PROCESS_LEVEL_REGRESSION>`
 
 Reason:
 

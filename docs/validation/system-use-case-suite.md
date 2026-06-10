@@ -1,7 +1,7 @@
 # Blueprint System Use-Case Validation Suite
 
 Asset: system-use-case-validation-suite
-Version: v0.4.0
+Version: v0.4.1
 Type: Validation Suite
 Author: Blueprint Maintainers
 Status: Unreleased on `develop`
@@ -64,13 +64,33 @@ Load additional owner documents when a test touches that owner.
 
 Do not mark the suite complete when a required test is `FAIL`.
 
+## Process-Level Validation Rule
+
+UC-03 validates router behavior, not only router text.
+
+Do not mark UC-03 as `PASS` when the only evidence is that
+`core/TASK_PROCESS_ROUTER.md` defines L0-L4. A `PASS` result requires scenario
+evidence showing that small tasks stay small and risky tasks escalate.
+
+For each process-level scenario, record:
+
+- scenario ID;
+- input task;
+- expected process level;
+- actual selected process level;
+- compact mode expectation;
+- escalation trigger, if any;
+- result.
+
+If any required scenario selects L4 without a real L4 trigger, UC-03 is `FAIL`.
+
 ## Use-Case Matrix
 
 | ID | Use case | Owner documents | Method | Pass criteria |
 | --- | --- | --- | --- | --- |
 | UC-01 | Repository identity and start gate | `core/AGENTS.md`, `VALIDATION_CHECKLIST.md` | Confirm remote, branch, base branch, dirty state, and forbidden paths | Repository is `antontvoretskiy/blueprint`; work starts from a scoped branch; source references stay read-only |
 | UC-02 | Fresh recovery without chat history | `memory/project-kb/00_INDEX.md`, `memory/project-kb/08_CURRENT_STATE.md`, `memory/project-kb/10_REFERENCE.md` | Follow the recovery path from repository files only | Current state, included state, planned state, excluded state, and next work are clear |
-| UC-03 | Task routing by process level | `core/TASK_PROCESS_ROUTER.md` | Classify sample L0, L1, L2, L3, and L4 tasks | Small tasks do not trigger full ceremony; risky work gets the correct gates |
+| UC-03 | Task routing by process level | `core/TASK_PROCESS_ROUTER.md` | Classify the process-level regression scenarios below | Small tasks stay L0/L1, scoped layer work stays L2, feature work reaches L3, and architecture, migration, release, merge, or branch-state work reaches L4 |
 | UC-04 | Owner document resolution | `memory/project-kb/10_REFERENCE.md`, `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Pick a rule and trace it to one owner | The rule has one canonical owner and summaries do not redefine it |
 | UC-05 | Project Memory integrity | `memory/project-kb/05_IMPLEMENTATION_STATUS.md`, `memory/project-kb/08_CURRENT_STATE.md`, `BUNDLE_MANIFEST.md` | Compare included, planned, and excluded states | Memory, manifest, and release status agree |
 | UC-06 | Clean start after merge | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md`, `memory/project-kb/current/CLEAN_START_BRIEF.md` | Inspect the latest merged PR and current clean-start brief | The next session does not need the previous chat or completed branch |
@@ -83,6 +103,55 @@ Do not mark the suite complete when a required test is `FAIL`.
 | UC-13 | Release flow | `RELEASE.md`, `CHANGELOG.md`, `VERSION` | Validate release state and branch targets | `develop` contains unreleased work; `main` receives only release-ready snapshots |
 | UC-14 | Public quality gate | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md`, `README.md` | Review README, guides, checks, contribution flow, and trust signals | Public surface meets the active quality standard or lists gaps honestly |
 | UC-15 | Adoption path | `ADAPTATION_GUIDE.md`, `OPEN_SOURCE_GUIDE.md`, `examples/ai-product/**` | Follow the install/adaptation path for one sanitized repository shape | A user can identify what to copy, what to customize, and what remains external |
+
+## Process-Level Regression Matrix
+
+Run this matrix whenever UC-03 is validated.
+
+| Scenario | Input task | Expected level | Compact mode | Escalation trigger | Pass criteria |
+| --- | --- | --- | --- | --- | --- |
+| RT-01 | Answer a simple repository question without edits | L0 | Yes | None | Answer does not run full Guardian or release checks |
+| RT-02 | Report clean repository status | L0 | Yes | None | Report includes repo, branch, status, risk, and next step only |
+| RT-03 | Fix a single typo in one Markdown file | L0 | Yes | None | Validation is scoped to identity, dirty tree, scope, and `git diff --check` |
+| RT-04 | Update docs-only wording without changing ownership or public claims | L1 | Yes | None | Owner/source-of-truth check runs; Feature Lifecycle and full Guardian are skipped |
+| RT-05 | Prepare a PR-ready handoff report for docs-only work without creating the PR | L1 | Yes | None | Uses compact handoff and does not run release or merge gates |
+| RT-06 | Produce a clean-start status report after a docs PR already merged | L1 | Yes | None when no branch or release state changes | Reports current state without re-running full release validation |
+| RT-07 | Commit docs-only changes on an already scoped branch | L1 | Yes | None | Commit validation stays docs-only; ordinary branch HEAD movement is not treated as L4 |
+| RT-08 | Update compact Project Memory after a small docs-only state correction | L1 | Yes | None | Memory update stays scoped and does not become architecture review |
+| RT-09 | Add or version a checklist, template, or validation asset | L2 | No | Public asset versioned | Layer boundary and manifest/reference checks run |
+| RT-10 | Add a sanitized example project | L2 | No | Example layer changes | Example boundaries and leakage checks run |
+| RT-11 | Update a core contract without changing architecture ownership | L2 | No | Core layer changes | Core owner and adjacent standards are checked |
+| RT-12 | Change rule ownership or source-of-truth boundaries | L4 | No | Architecture/source-of-truth boundary changes | Architecture review, owner map, and memory checks run |
+| RT-13 | Start meaningful feature implementation | L3 | No | Feature implementation | Feature Lifecycle artifacts are required before implementation |
+| RT-14 | Add a new public workflow that requires feature artifacts | L3 | No | Meaningful public workflow | FEATURE, CLARIFICATION, PLAN, and TASKS are present or implementation stops |
+| RT-15 | Transfer material from a source-reference repository | L4 | No | Migration/source-reference transfer | Include/review/exclude matrix and sanitization checks run |
+| RT-16 | Prepare release version, tag, or release PR into `main` | L4 | No | Release state changes | Release Guardian, version, changelog, and manifest checks run |
+| RT-17 | Merge, branch synchronization, or branch cleanup | L4 | No | Merge or branch-state changes | Branch policy, clean start, and recovery state checks run |
+| RT-18 | Modify runtime, CLI, automation, dependencies, or integrations | L4 | No | Implementation or integration surface changes | Stops unless explicitly approved and routed to the correct owner |
+
+Required UC-03 evidence format:
+
+```text
+Process-Level Regression:
+- RT-01 expected L0, actual <LEVEL>, result <PASS_FAIL>
+- RT-02 expected L0, actual <LEVEL>, result <PASS_FAIL>
+- RT-03 expected L0, actual <LEVEL>, result <PASS_FAIL>
+- RT-04 expected L1, actual <LEVEL>, result <PASS_FAIL>
+- RT-05 expected L1, actual <LEVEL>, result <PASS_FAIL>
+- RT-06 expected L1, actual <LEVEL>, result <PASS_FAIL>
+- RT-07 expected L1, actual <LEVEL>, result <PASS_FAIL>
+- RT-08 expected L1, actual <LEVEL>, result <PASS_FAIL>
+- RT-09 expected L2, actual <LEVEL>, result <PASS_FAIL>
+- RT-10 expected L2, actual <LEVEL>, result <PASS_FAIL>
+- RT-11 expected L2, actual <LEVEL>, result <PASS_FAIL>
+- RT-12 expected L4, actual <LEVEL>, result <PASS_FAIL>
+- RT-13 expected L3, actual <LEVEL>, result <PASS_FAIL>
+- RT-14 expected L3, actual <LEVEL>, result <PASS_FAIL>
+- RT-15 expected L4, actual <LEVEL>, result <PASS_FAIL>
+- RT-16 expected L4, actual <LEVEL>, result <PASS_FAIL>
+- RT-17 expected L4, actual <LEVEL>, result <PASS_FAIL>
+- RT-18 expected L4, actual <LEVEL>, result <PASS_FAIL>
+```
 
 ## Dependency Verification
 
@@ -129,7 +198,7 @@ Use this format in PR bodies and release validation notes:
 System Use-Case Validation:
 - UC-01 Repository identity and start gate: PASS
 - UC-02 Fresh recovery without chat history: PASS
-- UC-03 Task routing by process level: PASS
+- UC-03 Task routing by process level: PASS, with process-level regression evidence attached
 - UC-04 Owner document resolution: PASS
 - UC-05 Project Memory integrity: PASS
 - UC-06 Clean start after merge: PASS

@@ -124,7 +124,7 @@ Use Spec Kit when you need a spec-centered delivery workflow. Use Blueprint when
 
 Blueprint v0.4.0 is released on `main`.
 
-The v0.4.0 bundle includes the system use-case validation suite, a passing validation result, and completed post-validation branch cleanup. The next development step is to select the next scoped release focus on `develop`.
+The v0.4.0 bundle includes the system use-case validation suite, a historical validation result, and completed post-validation branch cleanup. Current `develop` work hardens UC-03 process-level validation so future packaging proves that small tasks stay L0/L1 and risky work escalates to the correct level before the next release scope is selected.
 
 Included now:
 

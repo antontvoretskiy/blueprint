@@ -17,11 +17,20 @@ Post-release recovery validation has landed in `develop`.
 
 The system use-case validation suite has landed in `develop`.
 
-System use-case validation has passed on `develop`.
+System use-case validation passed for the v0.4.0 release baseline.
+
+After v0.4.0, UC-03 process-level routing evidence was found too weak because
+it checked that L0-L4 rules existed, not that realistic tasks selected the
+right level. Current work is the v0.4.1 validation hardening that adds
+process-level regression scenarios.
+
+The first v0.4.1 process-level regression pass is recorded in
+`memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md`.
 
 Post-validation branch cleanup is complete. The merged docs branches were removed locally and remotely, and the durable branch baseline is `main` plus `develop`.
 
-Current work is next-scope selection for the release after v0.4.0.
+Current work is review and merge of the process-level regression hardening
+before the next release scope is selected.
 
 ## Current Included Layers
 
@@ -61,6 +70,9 @@ Current work is next-scope selection for the release after v0.4.0.
 
 ## Next Recommended Work
 
-Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
+Open a scoped PR from `fix/validation-router-regression` into `develop`.
+
+After this hardening lands, select the next release scope through
+`core/TASK_PROCESS_ROUTER.md`.
 
 Do not start new public assets until the next scope is classified and approved.

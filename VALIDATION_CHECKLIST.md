@@ -41,6 +41,7 @@ Use this checklist for public-facing PRs and release preparation.
 - [ ] `make config` passes.
 - [ ] `make smoke` passes.
 - [ ] System use-case validation suite is run when preparing public packaging, release, or branch cleanup.
+- [ ] UC-03 process-level regression matrix passes before claiming task-routing validation for future packaging.
 - [ ] Additional checks are listed in the PR body.
 - [ ] Not-run checks are reported honestly.
 

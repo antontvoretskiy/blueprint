@@ -6,7 +6,18 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
-No unreleased changes yet.
+### Changed
+
+- Hardened process-level validation so UC-03 requires scenario evidence for
+  L0, L1, L2, L3, and L4 routing instead of only checking that router rules
+  exist.
+- Clarified that docs-only commits on already scoped branches do not escalate
+  to L4 unless a real release, merge, branch-state, architecture, migration, or
+  implementation trigger is present.
+- Marked the v0.4.0 UC-03 validation evidence as historical and insufficient
+  for future public packaging without the process-level regression matrix.
+- Recorded the first v0.4.1 process-level regression pass for RT-01 through
+  RT-18 in the current validation ledger.
 
 ## v0.4.0 - 2026-06-10
 

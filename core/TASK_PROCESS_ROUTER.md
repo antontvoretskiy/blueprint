@@ -56,6 +56,11 @@ Process level is a control, not a status symbol.
 
 Escalate only when the task adds real risk. Do not escalate because the repository has strict governance.
 
+An ordinary commit on an already scoped work branch is not a branch-state
+change by itself. Treat branch state as changed only when the task changes the
+branch strategy, base branch, target branch, merge state, release branch, tag,
+branch cleanup, branch synchronization, or published remote state.
+
 ## Compact Mode For L0 And L1
 
 Compact mode is required for L0 and L1 tasks unless the maintainer explicitly asks for a full audit.
@@ -132,6 +137,30 @@ Move out of compact mode when any of these are true:
 - implementation, runtime, CLI, automation, dependency, or integration files change;
 - a docs claim requires runtime or product evidence;
 - the task spans multiple operating layers.
+
+Do not escalate L0 or L1 work to L4 only because the repository contains strict
+governance. L4 requires a real architecture, migration, release, merge, or
+branch-state trigger.
+
+### Process-Level Regression Guard
+
+When validating the router itself, a `PASS` result requires sample tasks, the
+expected process level, the actual selected process level, and a mismatch
+result.
+
+Do not mark process-level routing as validated by checking only that L0-L4
+rules exist in this file.
+
+Router regression validation must prove:
+
+- L0 tasks stay L0 unless an escalation trigger is present;
+- L1 docs-only tasks stay L1 unless an escalation trigger is present;
+- PR-ready handoff reports do not become release or merge work by default;
+- clean status checks stay L0;
+- docs-only commits on scoped branches stay L1;
+- meaningful feature work escalates to L3;
+- architecture, migration, release, merge, and branch synchronization work
+  escalates to L4.
 
 ## Task Classes
 

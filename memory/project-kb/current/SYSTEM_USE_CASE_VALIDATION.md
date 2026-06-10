@@ -1,6 +1,6 @@
 # Blueprint System Use-Case Validation Result
 
-Status: Completed validation result.
+Status: Historical v0.4.0 validation result with a known UC-03 evidence gap.
 Repository: `antontvoretskiy/blueprint`
 Branch validated: `develop`
 Validated base commit: `2df10a5`
@@ -8,6 +8,46 @@ Validator: Blueprint Maintainers
 Date: `2026-06-10`
 
 This result records the first full Blueprint system use-case validation run after the v0.4.0 validation suite landed.
+
+## Post-Validation Finding
+
+The v0.4.0 UC-03 evidence confirmed that the task router defined L0-L4 and
+skipped-rule behavior. It did not prove that the router selects the correct
+level across realistic L0, L1, L2, L3, and L4 task scenarios.
+
+Future public packaging must not reuse this UC-03 result as sufficient process
+evidence. UC-03 now requires the process-level regression matrix in
+`docs/validation/system-use-case-suite.md`.
+
+## v0.4.1 Process-Level Regression Evidence
+
+Status: Completed on `fix/validation-router-regression`.
+Date: `2026-06-10`
+
+This pass validates UC-03 behavior against realistic process-level scenarios.
+
+| Scenario | Expected | Actual | Result | Evidence |
+| --- | --- | --- | --- | --- |
+| RT-01 Answer-only repository question | L0 | L0 | PASS | Answer-only work can remain internal and compact |
+| RT-02 Clean repository status check | L0 | L0 | PASS | L0 compact template covers status-only checks |
+| RT-03 Single Markdown typo fix | L0 | L0 | PASS | Trivial change process uses identity, scope, and `git diff --check` |
+| RT-04 Docs-only wording update | L1 | L1 | PASS | Documentation change process uses owner and source-of-truth checks |
+| RT-05 Docs-only PR-ready handoff report | L1 | L1 | PASS | Compact handoff applies when no PR is created and no release or merge state changes |
+| RT-06 Clean-start status report without state change | L1 | L1 | PASS | Compact report applies when no branch or release state changes |
+| RT-07 Docs-only commit on scoped branch | L1 | L1 | PASS | Ordinary commit on a scoped branch is not treated as L4 branch-state work |
+| RT-08 Small Project Memory status correction | L1 | L1 | PASS | Small memory/status updates use L1 compact output unless escalation triggers appear |
+| RT-09 Checklist, template, or validation asset versioning | L2 | L2 | PASS | Versioned public validation assets require scoped layer validation |
+| RT-10 Sanitized example project addition | L2 | L2 | PASS | Example layer work requires boundary and leakage checks |
+| RT-11 Core contract update without ownership change | L2 | L2 | PASS | Core contract updates use scoped layer validation |
+| RT-12 Rule ownership or source-of-truth boundary change | L4 | L4 | PASS | Ownership or source-of-truth boundary changes trigger architecture review |
+| RT-13 Meaningful feature implementation | L3 | L3 | PASS | Feature implementation requires Feature Lifecycle artifacts |
+| RT-14 New public workflow requiring feature artifacts | L3 | L3 | PASS | Meaningful public workflow changes require feature artifacts |
+| RT-15 Source-reference transfer | L4 | L4 | PASS | Source-reference transfer triggers migration and sanitization gates |
+| RT-16 Release version, tag, or release PR | L4 | L4 | PASS | Release-state changes trigger release validation |
+| RT-17 Merge, branch synchronization, or branch cleanup | L4 | L4 | PASS | Merge and branch-state changes trigger branch and clean-start gates |
+| RT-18 Runtime, CLI, automation, dependency, or integration modification | L4 | L4 | PASS | Implementation or integration surface changes stop unless explicitly approved and routed |
+
+UC-03 process-level regression result: PASS.
 
 ## Scope
 
@@ -62,7 +102,7 @@ Not changed:
 | --- | --- | --- |
 | UC-01 Repository identity and start gate | PASS | Remote is `antontvoretskiy/blueprint`; working branch was `develop`; worktree clean |
 | UC-02 Fresh recovery without chat history | PASS | Recovery path loads Project Memory, current state, implementation status, reference map, and task router |
-| UC-03 Task routing by process level | PASS | `core/TASK_PROCESS_ROUTER.md` defines L0-L4 and skipped-rule behavior |
+| UC-03 Task routing by process level | PASS for v0.4.0 scope; superseded for future packaging | `core/TASK_PROCESS_ROUTER.md` defines L0-L4 and skipped-rule behavior, but future validation requires the process-level regression matrix |
 | UC-04 Owner document resolution | PASS | `memory/project-kb/10_REFERENCE.md` and `12_SYSTEM_RELATIONSHIP_MAP.md` link owner documents |
 | UC-05 Project Memory integrity | PASS | Manifest, implementation status, current state, changelog, and release process agree after alignment |
 | UC-06 Clean start after merge | PASS | Clean-start brief points to validation result and branch cleanup, not a completed branch |
@@ -111,4 +151,4 @@ Selected result:
 
 Reason:
 
-`Blueprint passed the manual system use-case validation suite on develop. Post-validation branch cleanup is complete. The validated state is ready for release as v0.4.0.`
+`Blueprint passed the manual system use-case validation suite on develop for v0.4.0. Post-validation branch cleanup is complete. This historical result alone is not sufficient for future packaging; use the v0.4.1 process-level regression evidence above for UC-03.`
