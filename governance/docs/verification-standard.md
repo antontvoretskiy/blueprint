@@ -158,6 +158,10 @@ Examples:
 
 Do not use a narrow check to validate a broader claim.
 
+Do not use a broad check to create fake confidence for a narrow task.
+
+If a docs-only L1 change does not touch local preview, release state, runtime claims, environment files, or executable behavior, preview validation is not required. Report it as `N/A` or `NOT RUN` with a reason instead of spending time on unrelated validation.
+
 ## Verification Debt
 
 Verification debt exists when a useful check is missing, manual, incomplete, or blocked.
@@ -196,20 +200,40 @@ When unsure, re-run validation.
 
 ## Required Verification Matrix
 
-For meaningful Blueprint documentation PRs:
+For Blueprint changes, route validation by process level:
+
+| Process level | Required verification |
+| --- | --- |
+| L0 | Repository identity when editing, dirty tree check, scope check, `git diff --check` when files changed |
+| L1 | L0 checks, owner/source-of-truth check, docs-only scope check, relevant docs validation |
+| L2 | L1 checks plus layer boundary scan and layer-specific validation |
+| L3 | Feature Lifecycle validation, Guardian checks, implementation validation |
+| L4 | Full Guardian, release/migration/architecture validation, memory and clean-start checks |
+
+For L1 docs-only PRs:
 
 | Check | Required |
 | --- | --- |
-| `make doctor` | Yes |
-| `make smoke` | Yes when the local preview is expected to run |
+| dirty worktree check | Yes |
+| docs-only scope check | Yes |
+| no hidden runtime/code/dependency changes | Yes |
 | `git diff --check` | Yes |
 | forbidden public wording scan | Yes for public-facing docs |
 | product-term scan | Yes for source-derived work |
 | markdown links check | Yes when markdown links are changed |
-| scope boundary scan | Yes for layer-specific PRs |
 | title quality check | Yes for commits and PR title |
-| PR body structure check | Yes for meaningful PRs |
 | noisy phrase scan | Yes for commit and PR text |
+| `make doctor` | Only when local environment, release readiness, or preview claims changed |
+| `make smoke` | Only when local preview behavior, release readiness, or preview claims changed |
+
+For L2 or higher documentation PRs:
+
+| Check | Required |
+| --- | --- |
+| `make doctor` | Yes when repository validation or release readiness depends on local environment |
+| `make smoke` | Yes when local preview is expected to run or release validation requires it |
+| scope boundary scan | Yes |
+| PR body structure check | Yes for meaningful PRs |
 
 If a required check cannot run, report `NOT RUN` with the reason.
 

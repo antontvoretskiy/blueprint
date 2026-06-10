@@ -55,11 +55,11 @@ When tooling is approved later, document:
 
 ## Validation Expectations
 
-For public documentation changes:
+Validation must match the process level and scope.
+
+For L1 public documentation changes that do not touch preview, release, environment, runtime, dependency, or implementation claims:
 
 ```bash
-make doctor
-make smoke
 git diff --check
 ```
 
@@ -69,6 +69,8 @@ Also run scans for:
 - private product terms;
 - noisy AI phrases;
 - bad commit wording.
+
+Run `make doctor` and `make smoke` when the change touches local preview files, environment files, release readiness, or claims about local validation behavior.
 
 For future executable tooling, add tests that verify failure behavior, not only success behavior.
 

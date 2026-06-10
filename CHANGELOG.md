@@ -14,6 +14,7 @@ No unreleased changes yet.
 
 - Recorded a passing system use-case validation result for `develop`.
 - Added a manual system use-case validation suite and checklist for v0.4.0 scope validation.
+- Added compact L0/L1 process rules for docs-only work, handoffs, status checks, and scoped reports.
 
 ### Changed
 
@@ -22,6 +23,7 @@ No unreleased changes yet.
 - Post-merge clean-start state refreshed after recovery validation landed in `develop`.
 - Source coverage next steps refreshed for v0.4.0 scope selection.
 - Recorded completed branch cleanup after PRs #20 through #25.
+- Routed docs-only validation by process level instead of requiring release-style validation for every small documentation task.
 
 ### Excluded
 

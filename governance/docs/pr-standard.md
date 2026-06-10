@@ -156,13 +156,17 @@ Use:
 - `NOT RUN`, with a reason;
 - `N/A`, when the check does not apply.
 
-Minimum documentation validation:
+Minimum L1 docs-only validation:
 
 ```bash
-make doctor
-make smoke
 git diff --check
 ```
+
+Also report:
+
+- dirty tree check;
+- docs-only scope check;
+- no hidden runtime, code, dependency, release-state, or branch-state changes.
 
 Public-facing PRs should also report:
 
@@ -173,6 +177,8 @@ Public-facing PRs should also report:
 - PR title quality check;
 - noisy phrase scan for PR and commit text;
 - bad commit wording scan.
+
+Run `make doctor` and `make smoke` when the PR changes local preview files, environment files, release readiness, or claims about preview/local validation behavior. Report them as `N/A` or `NOT RUN` with a reason for small L1 docs-only PRs where they do not apply.
 
 Do not claim validation that did not run.
 

@@ -200,12 +200,22 @@ Do not claim automation, enforcement, installation, or integration support unles
 
 ## Validation
 
-At minimum, run:
+Validation follows the process level selected by `core/TASK_PROCESS_ROUTER.md`.
+
+For L1 docs-only changes, run:
 
 ```bash
-make doctor
-make smoke
+git diff --check
 ```
+
+Also confirm:
+
+- the working tree was checked before staging;
+- the diff is docs-only;
+- no runtime, code, dependency, release-state, or branch-state changes are hidden in the PR;
+- skipped checks are reported honestly as `NOT RUN` or `N/A`.
+
+Run `make doctor` and `make smoke` when local preview files, environment files, release readiness, or preview validation claims are in scope.
 
 For documentation-only changes, also run a product-term scan before release. Keep the denylist local if it contains private source-project terms:
 

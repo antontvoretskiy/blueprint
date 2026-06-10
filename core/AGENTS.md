@@ -136,12 +136,17 @@ Use placeholders such as:
 
 ## Validation Requirement
 
-At minimum, run:
+Validation is routed by process level.
+
+For L0 and L1 work, use the compact validation path from `core/TASK_PROCESS_ROUTER.md`.
+
+Minimum compact validation for docs-only work:
 
 ```bash
-make doctor
-make smoke
+git diff --check
 ```
+
+Also confirm the diff contains no hidden runtime, code, dependency, release-state, or branch-state changes.
 
 For public-facing documentation changes, also run:
 
@@ -149,9 +154,17 @@ For public-facing documentation changes, also run:
 - product-term scan;
 - README local links check;
 - markdown or whitespace check;
-- `git diff --check`;
 - commit and PR title quality check;
 - noisy AI phrase scan.
+
+`make doctor` and `make smoke` are required when:
+
+- release, merge, or public package readiness changes;
+- local preview, compose, environment, or public preview files change;
+- the documentation claims preview behavior or local validation support;
+- the task is L2 or higher and repository validation depends on the local environment.
+
+For L0/L1 docs-only work that does not touch those areas, report `make doctor` or `make smoke` as `N/A` or `NOT RUN` with the reason instead of running unrelated validation.
 
 Validation failures must be fixed or reported. Do not report a validation command as passing if it returned a false positive or masked an error.
 
@@ -187,6 +200,8 @@ After completing implementation, report:
 - what was explicitly not changed;
 - risks;
 - next step.
+
+For L0 and L1 tasks, use the compact report shape from `core/TASK_PROCESS_ROUTER.md` unless the maintainer asks for a full report.
 
 For read-only audits, report the source commit inspected, target branch inspected, mapping gaps, and recommended next action.
 
