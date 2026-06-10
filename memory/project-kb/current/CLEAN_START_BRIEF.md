@@ -6,7 +6,9 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint has bootstrap, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, and public release packaging on `develop`.
+Blueprint v0.3.0 is released on `main`.
+
+The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, and public release packaging.
 
 ## Read First
 
@@ -25,16 +27,17 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Prepare an explicit release PR into `main`, or add additional examples only if they are selected for a later release scope.
+Complete post-release recovery validation on `docs/dogfood-recovery-validation`.
 
 Recommended next scoped PRs:
 
-1. Release PR into `main`.
-2. Additional examples only if selected for a later release scope.
+1. Post-release recovery validation into `develop`.
+2. v0.4.0 scope selection through `core/TASK_PROCESS_ROUTER.md`.
+3. Additional examples or public polish only if selected for a later release scope.
 
 ## Do Not Do
 
 - Do not modify source-reference repositories.
-- Do not start public packaging while coverage contains unresolved `Partial` or `Planned` system items.
 - Do not mix unrelated template families in one PR.
-- Do not move `develop` to `main` until release preparation is approved.
+- Do not move `develop` to `main` without a release PR.
+- Do not start automation, CLI, installer, integration, or execution-layer work without explicit scope approval.

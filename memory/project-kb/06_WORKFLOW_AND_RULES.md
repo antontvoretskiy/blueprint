@@ -43,7 +43,7 @@ One PR should have one scope.
 
 ## Current Layer Order
 
-Recommended build order:
+Completed v0.3.0 build order:
 
 1. Bootstrap public repository presentation.
 2. Core contracts.
@@ -60,6 +60,9 @@ Recommended build order:
 13. Sanitized examples.
 14. Public release packaging.
 15. Release PR into `main`.
+16. GitHub tag and release.
+
+Next framework work should start from `develop`, use one scoped branch, and select the v0.4.0 scope before adding new public assets.
 
 ## Canonical References
 

@@ -6,10 +6,11 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+- Post-release Project Memory and clean-start recovery state refreshed after v0.3.0.
 - Additional examples are planned for later release scope selection.
 - Optional extensions remain outside the current bundle.
 
-## v0.3.0 - Release Candidate
+## v0.3.0 - 2026-06-10
 
 ### Added
 

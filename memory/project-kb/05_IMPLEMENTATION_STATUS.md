@@ -27,7 +27,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| Release PR into main | Planned | Release PR from `develop` into `main` |
+| v0.4.0 scope selection | Planned | Must be selected through the task router after post-release recovery validation |
 
 ## Excluded From Core
 

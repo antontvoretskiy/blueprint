@@ -6,14 +6,14 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Bootstrap presentation only until a release PR lands |
-| `develop` | Integration branch | Contains bootstrap, complete product map, core contracts, governance standards, self-hosting, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage maps, AI product example, and public release packaging |
+| `main` | Release-ready public state | Contains the released v0.3.0 public framework bundle |
+| `develop` | Integration branch | Contains the validated v0.3.0 integration state and is the base for the next scoped work |
 
 ## Current Work
 
-The complete product map, source coverage matrix, relationship map, first sanitized example, and public release packaging are the current control layer for Blueprint.
+Blueprint v0.3.0 has been released from `develop` to `main`.
 
-Next work should prepare an explicit release PR into `main`, or add additional examples only if they are selected for a later release scope.
+Current work is post-release recovery validation on `docs/dogfood-recovery-validation`. The goal is to prove that a fresh session can recover from repository files after release, without depending on old chat history.
 
 ## Current Included Layers
 
@@ -40,7 +40,6 @@ Next work should prepare an explicit release PR into `main`, or add additional e
 ## Not Yet Included
 
 - additional examples;
-- release PR into `main`;
 - automation;
 - CLI;
 - installer;
@@ -52,6 +51,6 @@ Next work should prepare an explicit release PR into `main`, or add additional e
 
 ## Next Recommended Work
 
-Use `RELEASE.md`, `VALIDATION_CHECKLIST.md`, `PRODUCT_MAP.md`, and the coverage matrix to prepare an explicit release PR into `main`.
+Complete the post-release recovery validation PR into `develop`.
 
-Do not move `develop` to `main` until a release PR is explicitly prepared.
+After that, select the next v0.4.0 scope through the task router before creating new templates, examples, automation, CLI, or integration work.
