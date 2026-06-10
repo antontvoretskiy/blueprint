@@ -14,6 +14,10 @@ After v0.4.0, PR #30 landed process-level regression hardening in `develop`.
 UC-03 now requires RT-01 through RT-18 scenario evidence before future
 packaging can claim task-routing validation.
 
+PR #32 landed router context and recovery budgets in `develop`.
+L0/L1 work now has explicit limits for response length, context loading, and
+recovery-document loading.
+
 The `develop` branch remains the base for the next scoped framework work.
 
 ## Read First

@@ -31,6 +31,9 @@ Post-validation branch cleanup is complete. The merged docs branches were remove
 
 PR #30 merged the process-level regression hardening into `develop`.
 
+PR #32 merged context and recovery budgets into `develop` so L0/L1 work limits
+both response size and recovery-document loading.
+
 Current work is next-scope selection for the release after v0.4.0.
 
 ## Current Included Layers
