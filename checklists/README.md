@@ -19,6 +19,7 @@ They do not replace owner documents, Project Memory, Guardian templates, PR hand
 | `branch-governance-checklist.md` | Confirms branch, base, naming, and scope rules |
 | `pr-readiness-checklist.md` | Confirms a PR is ready for review |
 | `clean-start-checklist.md` | Confirms merged work can be continued from repository state |
+| `system-use-case-validation-checklist.md` | Confirms Blueprint use cases and dependencies before packaging or release preparation |
 
 ## Result Terms
 

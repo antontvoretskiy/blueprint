@@ -40,6 +40,7 @@ Use this checklist for public-facing PRs and release preparation.
 - [ ] `make doctor` passes.
 - [ ] `make config` passes.
 - [ ] `make smoke` passes.
+- [ ] System use-case validation suite is run when preparing public packaging, release, or branch cleanup.
 - [ ] Additional checks are listed in the PR body.
 - [ ] Not-run checks are reported honestly.
 
