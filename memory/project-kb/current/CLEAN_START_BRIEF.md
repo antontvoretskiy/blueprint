@@ -18,6 +18,12 @@ PR #32 landed router context and recovery budgets in `develop`.
 L0/L1 work now has explicit limits for response length, context loading, and
 recovery-document loading.
 
+PR #36 landed the v0.4.1 process-efficiency dogfood audit in `develop`.
+The audit records that L0/L1/L2 routing budgets can be applied to Blueprint
+itself without full-process escalation for simple docs-only work.
+
+The merged dogfood audit branch was removed locally and remotely after PR #36.
+
 The `develop` branch remains the base for the next scoped framework work.
 
 ## Read First
