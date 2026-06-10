@@ -1,6 +1,6 @@
 # Blueprint Release Process
 
-Last released version: v0.4.1.
+Last released version: v0.4.2.
 
 Next release target: not selected.
 

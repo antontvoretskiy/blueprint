@@ -6,10 +6,19 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+No unreleased changes yet.
+
+## v0.4.2 - 2026-06-11
+
 ### Added
 
 - Added a v0.4.1 process-efficiency dogfood audit for process levels, context
   budgets, recovery budgets, and compact L0/L1 behavior.
+
+### Changed
+
+- Refreshed Project Memory and clean-start state after the dogfood audit merged
+  into `develop`.
 
 ## v0.4.1 - 2026-06-10
 
