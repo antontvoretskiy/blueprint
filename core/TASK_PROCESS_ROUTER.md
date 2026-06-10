@@ -175,6 +175,116 @@ Use full process only for:
 Branch synchronization, merge, branch cleanup, push-to-release, tag, and release
 PR work remain L4 because they change branch or release state.
 
+## Recovery Budget By Process Level
+
+Recovery budget limits how many repository recovery documents can be loaded
+before task execution.
+
+### Current State = Primary Recovery Cache
+
+`memory/project-kb/08_CURRENT_STATE.md` is the first recovery file for tasks
+that need repository state.
+
+If the answer is already represented by `memory/project-kb/08_CURRENT_STATE.md`,
+do not read additional recovery, governance, or architecture documents without
+a task-specific reason.
+
+Do not reload repository context already represented by Current State.
+
+Recovery scope must not exceed task scope.
+
+If recovery reads more documents than the task requires, the process level is
+wrong.
+
+### L0 Recovery Budget
+
+Expected recovery documents:
+
+```text
+0
+```
+
+Allowed:
+
+- current command output;
+- current branch;
+- current task instruction.
+
+Forbidden:
+
+- Project Memory reload;
+- governance reload;
+- architecture reload.
+
+### L1 Recovery Budget
+
+Expected recovery documents:
+
+```text
+max 2
+```
+
+Allowed:
+
+- touched file;
+- owner document if needed;
+- current task instruction.
+
+Example:
+
+```text
+memory/project-kb/08_CURRENT_STATE.md
++ owner document
+```
+
+### L2 Recovery Budget
+
+Expected recovery documents:
+
+```text
+max 3
+```
+
+Example:
+
+```text
+memory/project-kb/08_CURRENT_STATE.md
++ owner document
++ validation document
+```
+
+### L3 Recovery Budget
+
+Expected recovery documents:
+
+```text
+max 7
+```
+
+### L4 Recovery Budget
+
+Full recovery is allowed only for:
+
+- new architecture decisions;
+- migrations;
+- release or merge risk;
+- broad extraction implementation;
+- runtime behavior changes;
+- cross-domain work.
+
+### Recovery Escalation Guardrails
+
+Escalate recovery only when there is:
+
+- dirty tree ambiguity;
+- owner conflict;
+- missing current state;
+- runtime, provider, artifact, or trace behavior change;
+- migration;
+- merge conflict;
+- new architecture decision;
+- cross-domain task.
+
 ## Compact Mode For L0 And L1
 
 Compact mode is required for L0 and L1 tasks unless the maintainer explicitly asks for a full audit.
