@@ -20,6 +20,7 @@ This file lists canonical project references for recovery.
 | Adaptation guide | `ADAPTATION_GUIDE.md` |
 | Migration guide | `MIGRATION_GUIDE.md` |
 | Validation checklist | `VALIDATION_CHECKLIST.md` |
+| System use-case validation suite | `docs/validation/system-use-case-suite.md` |
 | Support | `SUPPORT.md` |
 | Security policy | `SECURITY.md` |
 | Code of conduct | `CODE_OF_CONDUCT.md` |
@@ -106,6 +107,7 @@ This file lists canonical project references for recovery.
 | Branch governance checklist | `checklists/branch-governance-checklist.md` |
 | PR readiness checklist | `checklists/pr-readiness-checklist.md` |
 | Clean-start checklist | `checklists/clean-start-checklist.md` |
+| System use-case validation checklist | `checklists/system-use-case-validation-checklist.md` |
 
 ## Example References
 

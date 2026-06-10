@@ -21,6 +21,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Architecture boundary | `ARCHITECTURE.md` | Define layer boundaries and non-goals |
 | Bundle manifest | `BUNDLE_MANIFEST.md` | Declare included, planned, and excluded files |
 | Release packaging | `VERSION`, `CHANGELOG.md`, `RELEASE.md`, `VALIDATION_CHECKLIST.md` | Define release target, change history, release flow, and validation gates |
+| Validation suite | `docs/validation/**` | Define use-case validation scenarios and dependency verification |
 | Public support | `SUPPORT.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md` | Define support, security, and participation boundaries |
 | GitHub contribution templates | `.github/**` | Structure public issue and PR intake |
 | Core contracts | `core/**` | Define required process contracts |
@@ -55,6 +56,7 @@ Chat, handoffs, and clean-start briefs can help execution, but they do not repla
 | Branch governance | `governance/docs/git-policy.md` | `governance/docs/pr-standard.md` |
 | PR lifecycle | `governance/docs/pr-standard.md` | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` |
 | Verification language | `governance/docs/verification-standard.md` | `Makefile`, PR body |
+| System use-case validation | `docs/validation/system-use-case-suite.md` | `checklists/system-use-case-validation-checklist.md`, `VALIDATION_CHECKLIST.md`, `memory/project-kb/10_REFERENCE.md` |
 | Acceptance checklists | `checklists/README.md` | `checklists/**`, `governance/docs/verification-standard.md` |
 | Documentation truthfulness | `governance/docs/documentation-standard.md` | `BUNDLE_MANIFEST.md` |
 | ADR process | `governance/docs/adr-policy.md` | future `governance/docs/adr/**` |
@@ -102,6 +104,14 @@ governance/docs/governance-index.md
 
 memory/project-kb/10_REFERENCE.md
   -> all current owner documents
+
+docs/validation/system-use-case-suite.md
+  -> core/AGENTS.md
+  -> core/TASK_PROCESS_ROUTER.md
+  -> memory/project-kb/10_REFERENCE.md
+  -> BUNDLE_MANIFEST.md
+  -> VALIDATION_CHECKLIST.md
+  -> checklists/system-use-case-validation-checklist.md
 ```
 
 Dependency means the document relies on the owner for active rules.

@@ -34,6 +34,7 @@ Current work is clean-start v0.4.0 scope selection. The next contributor should 
 - recovery templates;
 - source coverage matrix;
 - system relationship map;
+- system use-case validation suite;
 - AI product example;
 - public release packaging;
 - support, security, and conduct files;
@@ -53,6 +54,6 @@ Current work is clean-start v0.4.0 scope selection. The next contributor should 
 
 ## Next Recommended Work
 
-Select the next v0.4.0 scope through the task router before creating new templates, examples, automation, CLI, or integration work.
+Run the system use-case validation suite before creating new templates, examples, automation, CLI, or integration work.
 
 Do not start new public assets until the next scope is classified and approved.

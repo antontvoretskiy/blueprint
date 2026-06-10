@@ -20,6 +20,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `ADAPTATION_GUIDE.md` | Included | Adoption and installation guide |
 | `MIGRATION_GUIDE.md` | Included | Migration and sanitization guide |
 | `VALIDATION_CHECKLIST.md` | Included | Public release and adoption validation checklist |
+| `docs/validation/system-use-case-suite.md` | Included | Manual system use-case validation suite, v0.4.0 |
 | `PRODUCT_MAP.md` | Included | Complete product shape, process levels, and project/feature management model |
 | `ARCHITECTURE.md` | Included | Core, extension, and example layer boundaries |
 | `BUNDLE_MANIFEST.md` | Included | Bundle composition and boundaries |
@@ -99,6 +100,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `checklists/branch-governance-checklist.md` | Included | Branch governance acceptance checklist |
 | `checklists/pr-readiness-checklist.md` | Included | PR readiness acceptance checklist |
 | `checklists/clean-start-checklist.md` | Included | Clean-start acceptance checklist |
+| `checklists/system-use-case-validation-checklist.md` | Included | System use-case validation checklist |
 | `examples/ai-product/README.md` | Included | AI product adoption example guide, v0.3.0 |
 | `examples/ai-product/ADOPTION_MAP.md` | Included | AI product adoption mapping example |
 | `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` | Included | AI product branch governance example |
