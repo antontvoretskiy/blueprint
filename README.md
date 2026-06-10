@@ -10,8 +10,8 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
-  <a href="VERSION"><img alt="Version: v0.3.0" src="https://img.shields.io/badge/version-v0.3.0-blue"></a>
-  <a href="BUNDLE_MANIFEST.md"><img alt="Status: validation" src="https://img.shields.io/badge/status-validation-0f766e"></a>
+  <a href="VERSION"><img alt="Version: v0.4.0" src="https://img.shields.io/badge/version-v0.4.0-blue"></a>
+  <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
 </p>
 
 Blueprint is an open-source operating framework that helps software teams and AI agents keep repository governance, project memory, task routing, feature lifecycle, PR lifecycle, branch governance, recovery, Guardian checks, and clean starts in one durable place: the repository.
@@ -122,9 +122,9 @@ Use Spec Kit when you need a spec-centered delivery workflow. Use Blueprint when
 
 ## Current Status
 
-Blueprint v0.3.0 is released on `main`.
+Blueprint v0.4.0 is released on `main`.
 
-The `develop` branch contains unreleased v0.4.0 validation work. The system use-case validation suite has passed, post-validation branch cleanup is complete, and the next development step is to select the next v0.4.0 scope or prepare release packaging.
+The v0.4.0 bundle includes the system use-case validation suite, a passing validation result, and completed post-validation branch cleanup. The next development step is to select the next scoped release focus on `develop`.
 
 Included now:
 
@@ -149,8 +149,8 @@ Included now:
 | Support, security, and conduct files | Included |
 | GitHub contribution templates | Included |
 | Source coverage maps | Included |
-| System use-case validation suite | Included on `develop` |
-| System use-case validation result | Included on `develop` |
+| System use-case validation suite | Included |
+| System use-case validation result | Included |
 | Local preview environment | Included |
 | Open-source presentation benchmark | Included |
 
@@ -253,7 +253,7 @@ make clean   # stop containers and remove local volumes
 
 ## Release Packaging
 
-Last released version: v0.3.0.
+Last released version: v0.4.0.
 
 Next release target: not selected.
 

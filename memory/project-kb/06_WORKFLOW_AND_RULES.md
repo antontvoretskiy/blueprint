@@ -62,7 +62,7 @@ Completed v0.3.0 build order:
 15. Release PR into `main`.
 16. GitHub tag and release.
 
-Next framework work should start from `develop`, use one scoped branch, and select the v0.4.0 scope before adding new public assets.
+Next framework work should start from `develop`, use one scoped branch, and select the next release scope before adding new public assets.
 
 ## Canonical References
 

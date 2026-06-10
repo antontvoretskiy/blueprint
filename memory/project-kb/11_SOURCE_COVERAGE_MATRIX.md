@@ -194,7 +194,7 @@ Blueprint may provide templates that help another project govern those areas, bu
 
 ## Required Next Steps
 
-1. Select the v0.4.0 scope through `core/TASK_PROCESS_ROUTER.md`.
+1. Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
 2. Add additional examples, public polish, automation, CLI, installer, or integrations only if selected as the explicit next scope.
 
 Do not start new public assets while this matrix contains unresolved required transfer gaps.

@@ -72,7 +72,7 @@ Not changed:
 | UC-10 Guardian boundary checks | PASS | Guardian architecture and scenarios cover repository, scope, architecture, memory, PR, and release checks |
 | UC-11 Sanitization and leakage control | PASS | Product-term and forbidden wording scans pass |
 | UC-12 Documentation truthfulness | PASS | Planned work is not described as released; current validation state is explicit |
-| UC-13 Release flow | PASS | `main` remains at released v0.3.0; `develop` contains unreleased validation work |
+| UC-13 Release flow | PASS | Validated `develop` state is ready for release to `main` as v0.4.0 |
 | UC-14 Public quality gate | PASS | README is truthful for current state and points to guides, manifest, validation, support, and contribution flow |
 | UC-15 Adoption path | PASS | Open-source, adaptation, migration guides, templates, checklists, and AI product example provide the current adoption path |
 
@@ -83,7 +83,7 @@ Not changed:
 | Manifest included files exist | PASS | 99 manifest entries resolve |
 | Validation assets are linked | PASS | Suite and checklist are linked from manifest, reference map, and relationship map |
 | Checklist index includes validation checklist | PASS | `checklists/README.md` links the system use-case validation checklist |
-| Memory agrees with release state | PASS | `main` is v0.3.0; `develop` contains unreleased validation work |
+| Memory agrees with release state | PASS | v0.4.0 release state records the validation bundle, validation result, and post-cleanup recovery state |
 | No stale current branch or PR | PASS | Current state and clean-start brief no longer point to merged validation branches |
 | Branch cleanup completed after approval | PASS | Merged docs branches were removed locally and remotely after maintainer approval |
 
@@ -111,4 +111,4 @@ Selected result:
 
 Reason:
 
-`Blueprint passed the manual system use-case validation suite on develop. Post-validation branch cleanup is complete. The next step is v0.4.0 scope selection or release packaging only after maintainers select the next scope.`
+`Blueprint passed the manual system use-case validation suite on develop. Post-validation branch cleanup is complete. The validated state is ready for release as v0.4.0.`

@@ -206,13 +206,12 @@ When two documents conflict:
 4. Update summaries and memory second.
 5. Report the conflict and resolution in the PR body.
 
-## Current Remaining Release Actions
+## Current Remaining Post-Release Actions
 
-The following actions are not complete yet:
+The following actions are not part of the current released bundle:
 
 | Remaining item | Required owner or action |
 | --- | --- |
 | Additional example projects | `examples/**` when selected for a later release scope |
-| Release PR into `main` | Explicit release PR |
 
-Do not treat `main` as release-ready until the release PR is explicitly prepared and merged.
+Future release work must still use an explicit release PR into `main`.

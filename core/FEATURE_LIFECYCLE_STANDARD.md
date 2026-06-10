@@ -309,11 +309,9 @@ Examples:
 
 Validation should match the change.
 
-At minimum:
+For L1 docs-only work, use the compact validation path from `core/TASK_PROCESS_ROUTER.md`:
 
 ```bash
-make doctor
-make smoke
 git diff --check
 ```
 
@@ -324,6 +322,8 @@ For public docs, also run:
 - README local links check;
 - bad commit wording scan;
 - noisy AI phrase scan.
+
+Run `make doctor` and `make smoke` when the change touches local preview files, environment files, release readiness, or claims about local validation behavior.
 
 For future templates or examples, add installation or adoption validation once those assets exist.
 
