@@ -25,9 +25,12 @@
 ## 🧭 Table of Contents
 
 - [🤔 What Is Blueprint?](#what-is-blueprint)
+- [👥 Who Blueprint Is For](#who-blueprint-is-for)
+- [🚦 When To Use Blueprint](#when-to-use-blueprint)
 - [🧩 What Blueprint Manages](#what-blueprint-manages)
 - [🧭 Use Case Map](#use-case-map)
 - [🔁 Repository Recovery Loop](#repository-recovery-loop)
+- [🧱 Adoption Paths](#adoption-paths)
 - [⚡ Get Started](#get-started)
 - [🧠 Practical AI-Agent Examples](#practical-ai-agent-examples)
 - [🛡️ Guardian Checks](#guardian-checks)
@@ -63,6 +66,32 @@ That matters because AI-native projects fail when a new chat cannot recover stat
 
 Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS starter kit, product framework, or UI framework.
 
+<a id="who-blueprint-is-for"></a>
+
+## 👥 Who Blueprint Is For
+
+Blueprint is for teams that need repository-owned continuity across humans and AI agents:
+
+- solo builders using Codex, Claude, Cursor, ChatGPT, or similar tools;
+- AI-native product teams working across frequent chat sessions;
+- engineering teams that need clear branch, PR, and validation rules;
+- startups where project memory cannot live only in founder or agent context;
+- multi-module repositories where docs, features, releases, and reviews must stay aligned.
+
+<a id="when-to-use-blueprint"></a>
+
+## 🚦 When To Use Blueprint
+
+| Problem | Blueprint response |
+| --- | --- |
+| A new chat does not know the current project state | Recover from repository-owned Project Memory |
+| Rules are repeated across chats and documents | Route each rule to one canonical owner |
+| Small tasks get heavy process overhead | Use L0/L1 process levels with context and recovery budgets |
+| Feature work starts before scope is clear | Require feature artifacts before implementation |
+| PRs mix unrelated changes | Enforce one branch, one scope, one review story |
+| Documentation claims more than validation proves | Track planned, documented, implemented, released, and deprecated states separately |
+| Merge handoff depends on old conversation history | Update Project Memory and create a clean start |
+
 <a id="what-blueprint-manages"></a>
 
 ## 🧩 What Blueprint Manages
@@ -86,22 +115,17 @@ Blueprint governs project work. It does not implement product work.
 
 Blueprint is designed to cover the full repository collaboration loop, not only a few prompts.
 
-| Use case | When it happens | What Blueprint gives you |
+| Stage | Use cases | What Blueprint gives you |
 | --- | --- | --- |
-| Fresh-chat recovery | A new AI chat or contributor needs to continue work | A repository-owned recovery path and current-state summary |
-| Source-of-truth export | Context must move from one AI tool to another | A compact markdown package instead of copied chat history |
-| Task classification | A task might be small, risky, or cross-layer | L0-L4 process levels with context and recovery budgets |
-| Small docs or status work | The task should not spend a full process cycle | Compact L0/L1 reports with only necessary validation |
-| Meaningful feature planning | Work changes behavior, public surface, or architecture | Feature, clarification, plan, and task artifacts before implementation |
-| Project Memory maintenance | Durable state changed after meaningful work | Compact memory updates without turning memory into a transcript |
-| Guardian review | Scope, truthfulness, or boundary risk appears | Repository, change, architecture, memory, and PR checks |
-| Branch governance | Work needs a branch and review path | Branch names and PR targets aligned to scope and release flow |
-| PR handoff | A branch is ready for review or transfer | Problem, solution, scope, files, validation, risks, and follow-ups |
-| Clean start after merge | Old chat context should stop being required | Updated recovery state for the next session |
-| Documentation truthfulness | Docs might describe planned work as shipped | Clear separation between planned, documented, implemented, released, and deprecated |
-| Architecture decision capture | A durable decision changes project direction | ADR-style ownership, consequences, and reference links |
-| Release readiness | A public release or package needs confidence | Validation checklist, manifest checks, changelog, version, and link hygiene |
-| New repository adoption | A team wants Blueprint in another project | Minimal and full installation paths with reusable templates |
+| Recover | fresh-chat recovery, source-of-truth export, current-state review | Repository-owned context instead of old chat history |
+| Route | task classification, small-task handling, owner lookup | L0-L4 process levels with context and recovery budgets |
+| Plan | meaningful feature planning, clarification, technical plan, task breakdown | Feature artifacts before implementation begins |
+| Work | scoped docs work, scoped layer changes, branch governance | One active scope with clear owner boundaries |
+| Review | Guardian review, validation evidence, documentation truthfulness | Checks for scope, claims, dirty state, and proof |
+| Handoff | PR handoff, risk summary, follow-ups, memory update decision | A branch that can be reviewed without chat archaeology |
+| Merge | release readiness, changelog, version, bundle manifest, clean start | Public-state checks before and after merge |
+| Continue | Project Memory maintenance, task history, next safe task | The next chat recovers from the repository |
+| Adopt | minimal installation, full installation, example adaptation | Reusable templates for another repository |
 
 Each use case routes to one owner document. Summaries link to owners; they do not redefine the rules.
 
@@ -135,6 +159,16 @@ Small tasks stay small. Risky tasks get the full process.
 | L2 | scoped layer changes | max 3 recovery docs |
 | L3 | meaningful feature implementation | feature lifecycle required |
 | L4 | architecture, migration, release, merge, cross-domain work | full recovery allowed |
+
+<a id="adoption-paths"></a>
+
+## 🧱 Adoption Paths
+
+| Path | Best for | Start with |
+| --- | --- | --- |
+| Minimal adoption | Small teams or early repos that need recovery and PR discipline first | Agent entrypoint, task router, PR handoff, branch policy, validation, and Project Memory |
+| Full adoption | Long-running repositories with multiple modules, agents, and releases | Governance standards, Project Memory, Guardian templates, recovery templates, checklists, and feature lifecycle |
+| Dogfood in an existing repo | Teams that want to test Blueprint before a full migration | Run recovery, task routing, PR handoff, and clean-start checks on one active branch |
 
 <a id="get-started"></a>
 
