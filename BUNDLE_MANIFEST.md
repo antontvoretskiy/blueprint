@@ -30,12 +30,16 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `.github/ISSUE_TEMPLATE/config.yml` | Included | Public issue template configuration |
 | `.github/ISSUE_TEMPLATE/framework_change.yml` | Included | Framework change request template |
 | `.github/ISSUE_TEMPLATE/docs_issue.yml` | Included | Documentation issue template |
+| `.github/workflows/docs-quality.yml` | Included | Documentation quality workflow |
+| `.github/dependabot.yml` | Included | GitHub Actions dependency update configuration |
 | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` | Included | Public presentation benchmark |
 | `media/blueprint-logo.png` | Included | Public brand asset |
 | `media/use-cases/codex-recovery-prompt.png` | Included | Public README use-case screenshot |
 | `media/use-cases/project-memory-export.png` | Included | Public README use-case screenshot |
 | `media/use-cases/pr-handoff.png` | Included | Public README use-case screenshot |
 | `Makefile` | Included | Local validation commands |
+| `scripts/README.md` | Included | Validation script boundary and usage guide |
+| `scripts/check_quality.py` | Included | Manifest, link, wording, template, and release consistency checks |
 | `compose.yaml` | Included | Isolated local preview environment |
 | `.env.example` | Included | Non-secret local environment defaults |
 | `public/` | Included | Static preview surface |
@@ -116,7 +120,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | Area | Planned paths |
 | --- | --- |
 | Additional examples | SaaS, marketplace, CRM, regulated platform |
-| Extensions | CLI, installer, GitHub Actions, MCP integration, validation scripts |
+| Extensions | CLI, installer, MCP integration, release automation |
 
 Planned content must stay marked as planned until it exists in the repository.
 

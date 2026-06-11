@@ -6,6 +6,13 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+### Added
+
+- Added local documentation quality checks for manifest paths, markdown links,
+  public wording, template indexes, and release consistency.
+- Added a GitHub Actions documentation quality workflow and Dependabot
+  configuration for GitHub Actions updates.
+
 ## v0.5.1 - 2026-06-11
 
 ### Changed

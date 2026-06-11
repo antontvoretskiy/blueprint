@@ -94,6 +94,7 @@ The selected branch model must be recorded in the adopter repository Git policy 
 | Architecture boundary | Define core, extension, and example layers | `ARCHITECTURE.md` | Yes |
 | Bundle manifest | Declare included, planned, and excluded assets | `BUNDLE_MANIFEST.md` | Yes |
 | Release packaging | Prepare public release files and manual release gates | `VERSION`, `CHANGELOG.md`, `RELEASE.md`, `VALIDATION_CHECKLIST.md` | Yes |
+| Documentation quality gates | Validate repository links, manifest paths, public wording, templates, and release consistency | `scripts/check_quality.py`, `.github/workflows/docs-quality.yml` | Yes |
 | Open-source support | Define public support, conduct, and security boundaries | `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` | Yes |
 | GitHub contribution templates | Structure public issues and PRs | `.github/**` | Yes |
 | Agent entrypoint | Define how agents start and recover | `core/AGENTS.md` | Yes |

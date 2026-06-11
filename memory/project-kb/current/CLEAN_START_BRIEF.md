@@ -19,6 +19,10 @@ but they are not part of the public branch list.
 Release `v0.5.1` aligns the public main-only distribution model and adds clearer
 adoption copy maps.
 
+The current stacked local task adds v0.6.0 documentation quality gates with
+`make quality`, `scripts/check_quality.py`, a docs-quality GitHub Actions
+workflow, and Dependabot configuration for GitHub Actions updates.
+
 ## Read First
 
 1. `memory/project-kb/00_INDEX.md`
@@ -40,12 +44,13 @@ Memory.
 
 ## Current Next Step
 
-Start the v0.6.0 documentation quality-gates scope from the v0.5.1 release baseline.
+Complete and validate the v0.5.1 docs-only alignment and v0.6.0 quality-gates
+scope.
 
 Recommended next scoped work:
 
-1. Add documentation quality checks.
-2. Validate fresh-clone adoption path and local quality checks.
+1. Finish documentation quality gates.
+2. Validate fresh-clone adoption path and CI-equivalent local checks.
 3. Publish to public `main` only after maintainer approval.
 
 ## Do Not Do

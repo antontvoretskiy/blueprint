@@ -30,6 +30,16 @@ Release `v0.5.1` publishes documentation alignment for the public branch model:
 - add explicit adoption copy maps;
 - align governance, release, router, and memory documents with the public branch model.
 
+The current stacked local scope adds v0.6.0 documentation quality gates:
+
+- `make quality`;
+- `scripts/check_quality.py`;
+- `.github/workflows/docs-quality.yml`;
+- `.github/dependabot.yml`.
+
+These checks are validation tooling only. They are not a CLI, installer,
+runtime, workflow engine, or code generator.
+
 ## Current Included Layers
 
 - public repository presentation;
@@ -55,6 +65,7 @@ Release `v0.5.1` publishes documentation alignment for the public branch model:
 - GitHub contribution templates;
 - v0.5.1 public README, branch model alignment, adoption copy map, and practical AI-agent use-case media in
   `main`.
+- documentation quality workflow and scripts.
 
 ## Not Yet Included
 
@@ -70,8 +81,8 @@ Release `v0.5.1` publishes documentation alignment for the public branch model:
 
 ## Next Recommended Work
 
-Start the v0.6.0 documentation quality-gates scope from the v0.5.1 release
-baseline.
+Complete the v0.6.0 documentation quality-gates scope, validate it from a fresh
+clone, then publish to public `main` only after maintainer approval.
 
 Do not start additional examples, CLI, installer, or integration work until the
 quality-gates scope is validated.

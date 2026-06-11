@@ -4,7 +4,7 @@ ENV_FILE ?= .env.local
 COMPOSE_ENV := $(if $(wildcard $(ENV_FILE)),--env-file $(ENV_FILE),--env-file .env.example)
 COMPOSE := docker compose $(COMPOSE_ENV)
 
-.PHONY: init doctor config up down restart ps logs smoke clean
+.PHONY: init doctor config quality up down restart ps logs smoke clean
 
 init:
 	@if [[ ! -f "$(ENV_FILE)" ]]; then cp .env.example "$(ENV_FILE)"; echo "created $(ENV_FILE)"; else echo "$(ENV_FILE) already exists"; fi
@@ -70,6 +70,10 @@ doctor: init
 
 config: init
 	@$(COMPOSE) config --quiet
+
+quality:
+	@git diff --check
+	@python3 scripts/check_quality.py
 
 up: init config
 	@$(COMPOSE) up -d --build

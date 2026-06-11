@@ -376,6 +376,7 @@ Included now:
 | System use-case validation suite | Included |
 | Process-efficiency dogfood audit | Included |
 | Public README and practical AI-agent use-case media | Included |
+| Documentation quality workflow and scripts | Included |
 
 Not included yet:
 
@@ -403,6 +404,7 @@ The current release also passed local repository checks:
 ```bash
 make doctor
 make config
+make quality
 make smoke
 git diff --check
 ```
@@ -421,6 +423,7 @@ git diff --check
 | v0.4.2 | Process-efficiency dogfood audit and post-audit recovery state |
 | v0.5.0 | Public README, practical AI-agent use-case media, and adoption guidance |
 | v0.5.1 | Public main-only release model and clearer adoption copy map |
+| v0.6.0 | Documentation quality workflow and validation scripts |
 | Next | Additional examples, adoption polish, and optional validation automation |
 
 <a id="contributing"></a>

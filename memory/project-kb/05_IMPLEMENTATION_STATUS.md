@@ -26,13 +26,14 @@ This file records what is currently included in Blueprint and what remains plann
 | Public release packaging | Included | Version, changelog, release process, validation checklist, support, conduct, security, and GitHub contribution templates |
 | Public use-case media | Included | Blueprint logo and practical AI-agent use-case screenshots for the public README |
 | Public main-only branch model | Included | Public GitHub exposes `main` as the release-ready distribution branch; maintainer integration branches may be local or private |
+| Documentation quality gates | Included | Local `make quality` checks and docs-quality GitHub Actions workflow validate repository documentation claims |
 
 ## Planned
 
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| v0.6.0 quality gates | Planned | Add documentation quality scripts and GitHub Actions workflow |
+| CLI and installer | Planned | Remain outside the current bundle until manual adoption becomes too repetitive |
 
 ## Excluded From Core
 

@@ -1,0 +1,26 @@
+name: Docs Quality
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  docs-quality:
+    name: Documentation quality gates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run quality checks
+        run: make quality
+
+      - name: Validate local preview config
+        run: make config
