@@ -415,7 +415,8 @@ git diff --check
 | v0.4.0 | System use-case validation, dependency verification, branch cleanup completion, and packaging readiness |
 | v0.4.1 | Process-level regression hardening, context budgets, and recovery budgets |
 | v0.4.2 | Process-efficiency dogfood audit and post-audit recovery state |
-| Next | README funnel, practical use-case media, adoption readiness |
+| v0.5.0 | README funnel, practical use-case media, adoption readiness |
+| Next | Additional examples, adoption polish, and optional validation automation |
 
 <a id="contributing"></a>
 
