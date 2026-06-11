@@ -7,7 +7,7 @@ This file records the current recovery point for Blueprint.
 | Branch | Role | Current meaning |
 | --- | --- | --- |
 | `main` | Release-ready public state | Contains the released v0.4.2 public framework bundle |
-| `develop` | Integration branch | Base branch for the next scoped framework work |
+| `develop` | Integration branch | Contains the v0.5.0 README funnel integration state |
 
 ## Current Work
 
@@ -43,7 +43,18 @@ Post-dogfood branch cleanup is complete for the merged PR #36 branch.
 Release `v0.4.2` publishes the dogfood audit and post-audit memory refresh from
 validated `develop` state to `main`.
 
-Current work is next-scope selection for the release after v0.4.2.
+PR #41 merged the v0.5.0 README public funnel into `develop`.
+
+The merged scope includes the refreshed README funnel, updated Blueprint logo,
+practical AI-agent use-case screenshots, bundle manifest updates, changelog
+updates, and v0.5.0 release target notes.
+
+Post-merge validation on `develop` passed for `make doctor`, `make config`,
+`make smoke`, `git diff --check`, README local links/images, forbidden public
+wording scan, noisy wording scan, and bad commit wording scan.
+
+Current work is release preparation for v0.5.0 from validated `develop` state
+to `main`.
 
 ## Current Included Layers
 
@@ -68,6 +79,8 @@ Current work is next-scope selection for the release after v0.4.2.
 - public release packaging;
 - support, security, and conduct files;
 - GitHub contribution templates.
+- v0.5.0 README public funnel and practical AI-agent use-case media in
+  `develop`.
 
 ## Not Yet Included
 
@@ -83,6 +96,12 @@ Current work is next-scope selection for the release after v0.4.2.
 
 ## Next Recommended Work
 
-Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
+Prepare a separate `[Release] Prepare Blueprint v0.5.0` PR from validated
+`develop` to `main`.
 
-Do not start new public assets until the next scope is classified and approved.
+The release PR should bump `VERSION` to `0.5.0`, promote the `CHANGELOG.md`
+`Unreleased` entry to `v0.5.0 - 2026-06-11`, verify README, manifest,
+changelog, release notes, and version consistency, and avoid unrelated scope.
+
+Do not create a tag or GitHub Release until the release PR has merged and
+maintainer approval is given.
