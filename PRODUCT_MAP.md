@@ -94,6 +94,7 @@ The selected branch model must be recorded in the adopter repository Git policy 
 | Architecture boundary | Define core, extension, and example layers | `ARCHITECTURE.md` | Yes |
 | Bundle manifest | Declare included, planned, and excluded assets | `BUNDLE_MANIFEST.md` | Yes |
 | Release packaging | Prepare public release files and manual release gates | `VERSION`, `CHANGELOG.md`, `RELEASE.md`, `VALIDATION_CHECKLIST.md` | Yes |
+| Documentation navigation | Route users from README into quickstart, concepts, reference, governance, validation, and community docs | `docs/index.md`, `docs/nav.md`, `docs/quickstart.md` | Yes |
 | Documentation quality gates | Validate repository links, manifest paths, public wording, templates, and release consistency | `scripts/check_quality.py`, `.github/workflows/docs-quality.yml` | Yes |
 | Open-source support | Define public support, conduct, and security boundaries | `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` | Yes |
 | GitHub contribution templates | Structure public issues and PRs | `.github/**` | Yes |
@@ -381,8 +382,9 @@ Do not treat future release scopes as complete until:
 
 Build the remaining system in this order:
 
-1. Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
+1. Select each next release scope through `core/TASK_PROCESS_ROUTER.md`.
 2. Add additional examples only if selected for a later release scope.
-3. Prepare a release PR into `main` only after the selected scope is validated.
+3. Add release automation only after the manual release process repeats enough to automate safely.
+4. Prepare release PRs into `main` only after the selected scope is validated.
 
 This order protects the system from losing core logic while converting source-reference behavior into portable open-source artifacts.

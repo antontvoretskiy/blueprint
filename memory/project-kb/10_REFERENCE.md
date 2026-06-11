@@ -13,6 +13,13 @@ This file lists canonical project references for recovery.
 | Contribution rules | `CONTRIBUTING.md` |
 | Public README | `README.md` |
 | Public README media | `media/blueprint-logo.png`, `media/use-cases/` |
+| Documentation landing page | `docs/index.md` |
+| Documentation navigation | `docs/nav.md` |
+| Quickstart | `docs/quickstart.md` |
+| Repository-first concept | `docs/concepts/repository-first.md` |
+| Template reference | `docs/reference/templates.md` |
+| Governance reference | `docs/reference/governance.md` |
+| Community guide | `docs/community.md` |
 | Spec Kit presentation benchmark | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` |
 | Version target | `VERSION` |
 | Changelog | `CHANGELOG.md` |

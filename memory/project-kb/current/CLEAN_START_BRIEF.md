@@ -6,11 +6,12 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.6.1 is released on `main`.
+Blueprint v0.7.0 is the current prepared release state.
 
-The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, and completed post-validation branch cleanup.
+The prepared bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, completed post-validation branch cleanup, documentation quality gates, and documentation navigation pages.
 
-GitHub Release `v0.6.1` is published and points to the released `main` commit.
+GitHub Release `v0.6.1` was published from `main`. Publishing a GitHub Release
+or tag for `v0.7.0` remains a separate approval-gated step.
 
 The public GitHub repository now exposes only `main` as the release-ready
 distribution branch. Local or private maintainer integration branches may exist,
@@ -22,6 +23,10 @@ adoption copy maps.
 Release `v0.6.1` keeps documentation quality gates with `make quality`,
 `scripts/check_quality.py`, and a docs-quality GitHub Actions workflow while
 removing Dependabot from the public repository.
+
+Release `v0.7.0` adds `docs/index.md`, `docs/nav.md`, `docs/quickstart.md`,
+`docs/concepts/repository-first.md`, `docs/reference/templates.md`,
+`docs/reference/governance.md`, and `docs/community.md`.
 
 ## Read First
 
@@ -44,13 +49,13 @@ Memory.
 
 ## Current Next Step
 
-Select the next release scope after v0.6.1.
+Select the next release scope after v0.7.0.
 
 Recommended next scoped work:
 
-1. Run fresh-clone verification for public `main`.
-2. Confirm that the public branch list is back to `main` only.
-3. Decide whether the next scope is docs site, examples catalog, or CI expansion.
+1. Run final release validation for the v0.7.0 docs navigation branch.
+2. Confirm that the public branch list remains `main` only after publication.
+3. Decide whether the next scope is validation fixtures, examples catalog, or CI expansion.
 
 ## Do Not Do
 

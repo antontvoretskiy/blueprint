@@ -23,6 +23,13 @@ PUBLIC_WORDING_PATHS = [
     "VALIDATION_CHECKLIST.md",
     "RELEASE.md",
     "CHANGELOG.md",
+    "docs/index.md",
+    "docs/nav.md",
+    "docs/quickstart.md",
+    "docs/concepts/repository-first.md",
+    "docs/reference/templates.md",
+    "docs/reference/governance.md",
+    "docs/community.md",
 ]
 
 FORBIDDEN_PUBLIC_WORDING = [
@@ -161,12 +168,19 @@ def check_release_consistency() -> int:
     required = {
         "README.md": version_tag,
         "CHANGELOG.md": f"## {version_tag}",
-        "RELEASE.md": f"Last released version: {version_tag}.",
     }
     for relative_path, expected in required.items():
         text = (ROOT / relative_path).read_text()
         if expected not in text:
             errors.append(f"{relative_path} does not contain `{expected}`")
+    release_text = (ROOT / "RELEASE.md").read_text()
+    release_markers = [
+        f"Last released version: {version_tag}.",
+        f"Next release target: {version_tag}.",
+    ]
+    if not any(marker in release_text for marker in release_markers):
+        expected = "`Last released version` or `Next release target`"
+        errors.append(f"RELEASE.md does not declare {version_tag} as {expected}")
     return fail("release consistency", errors) if errors else ok("release consistency")
 
 

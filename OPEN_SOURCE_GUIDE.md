@@ -19,6 +19,10 @@ It does not provide product implementation, runtime integrations, application sc
 | `PRODUCT_MAP.md` | Complete framework shape and subsystem map |
 | `ARCHITECTURE.md` | Core, extension, and example layer model |
 | `BUNDLE_MANIFEST.md` | Included, planned, and excluded assets |
+| `docs/index.md` | Documentation landing page |
+| `docs/nav.md` | Documentation navigation map |
+| `docs/quickstart.md` | Documentation-first adoption quickstart |
+| `docs/community.md` | Community and contribution path guide |
 | `ADAPTATION_GUIDE.md` | How an adopter applies Blueprint |
 | `MIGRATION_GUIDE.md` | How to migrate from an existing internal system |
 | `VALIDATION_CHECKLIST.md` | Manual release and adoption checks |
@@ -58,10 +62,12 @@ Public-facing changes must:
 New users should read:
 
 1. `README.md`
-2. `OPEN_SOURCE_SPEC.md`
-3. `ADAPTATION_GUIDE.md`
-4. `BUNDLE_MANIFEST.md`
-5. `examples/ai-product/README.md`
+2. `docs/index.md`
+3. `docs/quickstart.md`
+4. `OPEN_SOURCE_SPEC.md`
+5. `ADAPTATION_GUIDE.md`
+6. `BUNDLE_MANIFEST.md`
+7. `examples/ai-product/README.md`
 
 Maintainers should also read:
 

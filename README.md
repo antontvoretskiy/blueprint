@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/antontvoretskiy/blueprint/releases/tag/v0.6.1"><img alt="Release: v0.6.1" src="https://img.shields.io/badge/release-v0.6.1-blue"></a>
+  <a href="RELEASE.md"><img alt="Release target: v0.7.0" src="https://img.shields.io/badge/release%20target-v0.7.0-blue"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
   <a href="docs/validation/process-efficiency-dogfood-v0.4.1.md"><img alt="Validation: dogfooded" src="https://img.shields.io/badge/validation-dogfooded-0f766e"></a>
   <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
@@ -32,6 +32,7 @@
 - [🔁 Repository Recovery Loop](#repository-recovery-loop)
 - [🧱 Adoption Paths](#adoption-paths)
 - [⚡ Get Started](#get-started)
+- [📚 Documentation](#documentation)
 - [🧠 Practical AI-Agent Examples](#practical-ai-agent-examples)
 - [🛡️ Guardian Checks](#guardian-checks)
 - [📁 Repository Structure](#repository-structure)
@@ -102,6 +103,7 @@ Blueprint is for teams that need repository-owned continuity across humans and A
 | Project Memory | Durable current state and recovery knowledge | [memory/project-kb/00_INDEX.md](memory/project-kb/00_INDEX.md) |
 | Process Levels | How much procedure a task requires | [core/TASK_PROCESS_ROUTER.md](core/TASK_PROCESS_ROUTER.md) |
 | Recovery | Fresh-chat continuation from repository files | [templates/recovery/README.md](templates/recovery/README.md) |
+| Documentation | Navigable docs entrypoint after the public README | [docs/index.md](docs/index.md) |
 | Guardian | Scope, truthfulness, and boundary checks | [templates/guardian/README.md](templates/guardian/README.md) |
 | Branch Governance | Branch naming, layering, and release flow | [governance/docs/git-policy.md](governance/docs/git-policy.md) |
 | Feature Lifecycle | From idea to clarification, plan, tasks, implementation | [core/FEATURE_LIFECYCLE_STANDARD.md](core/FEATURE_LIFECYCLE_STANDARD.md) |
@@ -176,7 +178,7 @@ Small tasks stay small. Risky tasks get the full process.
 
 Blueprint is documentation-first. There is no installer yet.
 
-Start with this 10-minute path:
+Start with the detailed [Quickstart](docs/quickstart.md), or use this 10-minute path:
 
 1. Read the product shape in [PRODUCT_MAP.md](PRODUCT_MAP.md).
 2. Pick an adoption path in [ADAPTATION_GUIDE.md](ADAPTATION_GUIDE.md).
@@ -235,6 +237,22 @@ Check:
 Do not create a second memory system.
 Keep only durable state that helps the next chat recover.
 ```
+
+<a id="documentation"></a>
+
+## 📚 Documentation
+
+Use [Blueprint Documentation](docs/index.md) after the README when you need the
+working map for adoption, governance, validation, and contribution.
+
+| Need | Start with |
+| --- | --- |
+| Full docs map | [Documentation navigation](docs/nav.md) |
+| First adoption path | [Quickstart](docs/quickstart.md) |
+| Repository-first model | [Repository-first concept](docs/concepts/repository-first.md) |
+| Template selection | [Template reference](docs/reference/templates.md) |
+| Governance owners | [Governance reference](docs/reference/governance.md) |
+| Contribution paths | [Community guide](docs/community.md) |
 
 <a id="practical-ai-agent-examples"></a>
 
@@ -345,6 +363,7 @@ Guardian is not CI, not an agent runtime, and not a service.
 | [templates/](templates) | Reusable adoption templates |
 | [checklists/](checklists) | Manual validation and readiness checklists |
 | [examples/](examples) | Sanitized adoption examples |
+| [docs/](docs) | Documentation navigation, concepts, reference, validation, and benchmarks |
 | [docs/validation/](docs/validation) | Manual validation suites and dogfood evidence |
 | [media/](media) | Public brand and README assets |
 
@@ -354,7 +373,7 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 ## ✅ Current Status
 
-Blueprint v0.6.1 is released on `main`.
+Blueprint v0.7.0 is the current prepared release target.
 
 The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
 
@@ -377,6 +396,7 @@ Included now:
 | Process-efficiency dogfood audit | Included |
 | Public README and practical AI-agent use-case media | Included |
 | Documentation quality workflow and scripts | Included |
+| Documentation navigation pages | Included |
 
 Not included yet:
 
@@ -425,7 +445,8 @@ git diff --check
 | v0.5.1 | Public main-only release model and clearer adoption copy map |
 | v0.6.0 | Documentation quality workflow and validation scripts |
 | v0.6.1 | Public main-only cleanup after Dependabot branch leakage |
-| Next | Additional examples, adoption polish, release automation, and optional CI expansion |
+| v0.7.0 | Documentation navigation, quickstart, concepts, reference, and community pages |
+| Next | Additional examples, validation fixtures, release automation, and optional CI expansion |
 
 <a id="contributing"></a>
 
