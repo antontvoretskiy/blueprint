@@ -2,7 +2,7 @@
   <img src="media/blueprint-logo.png" alt="Blueprint logo" width="360">
 </p>
 
-<h1 align="center">📐 Blueprint</h1>
+<h1 align="center">🖌️ Blueprint</h1>
 
 <p align="center">
   <strong>Operating framework for AI-native software development.</strong>
@@ -31,11 +31,9 @@
 - [⚡ Get Started](#get-started)
 - [🧠 Practical AI-Agent Examples](#practical-ai-agent-examples)
 - [🛡️ Guardian Checks](#guardian-checks)
-- [🌱 Blueprint vs GitHub Spec Kit](#blueprint-vs-github-spec-kit)
 - [📁 Repository Structure](#repository-structure)
 - [✅ Current Status](#current-status)
 - [🧪 Validation](#validation)
-- [🛠️ Repository Development](#repository-development)
 - [🗺️ Roadmap](#roadmap)
 - [🤝 Contributing](#contributing)
 - [📄 License](#license)
@@ -300,29 +298,6 @@ Guardian helps catch:
 
 Guardian is not CI, not an agent runtime, and not a service.
 
-<a id="blueprint-vs-github-spec-kit"></a>
-
-## 🌱 Blueprint vs GitHub Spec Kit
-
-[GitHub Spec Kit](https://github.com/github/spec-kit) is focused on Spec-Driven Development: specifications, plans, tasks, and implementation flow.
-
-Blueprint is broader and more operational:
-
-| Area | GitHub Spec Kit | Blueprint |
-| --- | --- | --- |
-| Main focus | Spec-driven development | Repository operating framework |
-| Primary artifact | Specs, plans, tasks | Governance, memory, recovery, lifecycle |
-| AI chat recovery | Not the main layer | Core feature |
-| Project memory | Constitution-style project guidance | Explicit memory system |
-| Branch governance | Not primary | Core layer |
-| PR handoff and clean start | Not primary | Core layer |
-| Guardian process | Not primary | Core layer |
-| Scope | Feature delivery workflow | Full project operation framework |
-
-Use Spec Kit when you need a spec-centered delivery workflow.
-
-Use Blueprint when you need the repository itself to operate predictably across humans, AI agents, branches, PRs, and chats.
-
 <a id="repository-structure"></a>
 
 ## 📁 Repository Structure
@@ -363,7 +338,6 @@ Included now:
 | AI product example | Included |
 | System use-case validation suite | Included |
 | Process-efficiency dogfood audit | Included |
-| Local preview environment | Included |
 
 Not included yet:
 
@@ -395,56 +369,13 @@ make smoke
 git diff --check
 ```
 
-<a id="repository-development"></a>
-
-## 🛠️ Repository Development
-
-This repository includes an isolated local Docker preview environment.
-
-Requirements:
-
-- Docker Desktop with Docker Compose
-- `make`
-
-Start the environment:
-
-```bash
-make doctor
-make up
-make smoke
-```
-
-Default local endpoints:
-
-| Service | URL |
-| --- | --- |
-| App preview | <http://127.0.0.1:3231> |
-| API placeholder | <http://127.0.0.1:8231> |
-| Mailpit | <http://127.0.0.1:8046> |
-| Postgres | `127.0.0.1:55461` |
-| Redis | `127.0.0.1:6406` |
-| SMTP | `127.0.0.1:1046` |
-
-Useful commands:
-
-```bash
-make doctor  # check local port and Docker namespace conflicts
-make config  # validate compose config
-make up      # start the local stack
-make ps      # show containers
-make logs    # stream logs
-make smoke   # verify app and api placeholders respond
-make down    # stop containers
-make clean   # stop containers and remove local volumes
-```
-
 <a id="roadmap"></a>
 
 ## 🗺️ Roadmap
 
 | Version | Scope |
 | --- | --- |
-| v0.1.0 | Public repository bootstrap, architecture, manifest, contribution policy, preview environment |
+| v0.1.0 | Public repository bootstrap, architecture, manifest, and contribution policy |
 | v0.2.0 | Core operating contracts, governance standards, and Project Memory structure |
 | v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, first AI product example, and public release packaging |
 | v0.4.0 | System use-case validation, dependency verification, branch cleanup completion, and packaging readiness |
