@@ -24,11 +24,12 @@
 
 ## 🧭 Table of Contents
 
-- [🧠 Practical AI-Agent Use Cases](#practical-ai-agent-use-cases)
 - [🤔 What Is Blueprint?](#what-is-blueprint)
-- [⚡ Get Started](#get-started)
 - [🧩 What Blueprint Manages](#what-blueprint-manages)
+- [🧭 Use Case Map](#use-case-map)
 - [🔁 Repository Recovery Loop](#repository-recovery-loop)
+- [⚡ Get Started](#get-started)
+- [🧠 Practical AI-Agent Examples](#practical-ai-agent-examples)
 - [🛡️ Guardian Checks](#guardian-checks)
 - [🌱 Blueprint vs GitHub Spec Kit](#blueprint-vs-github-spec-kit)
 - [📁 Repository Structure](#repository-structure)
@@ -38,88 +39,6 @@
 - [🗺️ Roadmap](#roadmap)
 - [🤝 Contributing](#contributing)
 - [📄 License](#license)
-
-<a id="practical-ai-agent-use-cases"></a>
-
-## 🧠 Practical AI-Agent Use Cases
-
-Blueprint is designed to be used directly inside Codex, Claude, Cursor, ChatGPT, and other AI-assisted development workflows.
-
-### 🧭 Recover A New Codex Chat
-
-Use this when you open a new chat and need the agent to continue from the repository, not from memory.
-
-```text
-Recover this repository with Blueprint.
-
-Use the repository as the source of truth.
-Follow the recovery path defined by this project.
-Do not rely on previous chat history.
-
-Tell me:
-1. where the project stands now;
-2. what branch and release state it is in;
-3. what was validated last;
-4. what the next safe task is;
-5. what checks are required before edits.
-```
-
-<p align="center">
-  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="560">
-</p>
-
-This is the core Blueprint behavior: a new AI chat recovers project state from repository-owned files instead of previous conversation history.
-
-### 🔄 Sync Project Context Into Another AI Chat
-
-Use this when you want to update ChatGPT, Claude, or another assistant with the repository source of truth.
-
-```text
-Send me the markdown files that represent the current project source of truth
-so I can update another AI chat.
-
-Use Blueprint to decide what belongs in the context package.
-Exclude private source-reference files and unrelated implementation files.
-
-Return:
-1. package summary;
-2. included context areas;
-3. excluded categories;
-4. files ready to transfer.
-```
-
-<p align="center">
-  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="560">
-</p>
-
-This makes project context portable across AI tools without copying private references or unrelated implementation files.
-
-### 🧾 Prepare A PR Handoff
-
-Use this before opening or handing off a PR.
-
-```text
-Prepare a Blueprint PR handoff for this branch.
-
-Include:
-- problem;
-- solution;
-- scope;
-- changed files;
-- validation;
-- risks;
-- follow-ups;
-- memory update decision;
-- clean-start decision.
-
-Use repository files as the source of truth.
-```
-
-<p align="center">
-  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="560">
-</p>
-
-Blueprint PR handoff keeps problem, solution, scope, validation, risks, memory update, and clean-start decisions attached to the branch instead of trapped in chat.
 
 <a id="what-is-blueprint"></a>
 
@@ -137,8 +56,6 @@ It defines how a repository manages:
 - branch governance and release flow;
 - Guardian checks for scope, truthfulness, and validation.
 
-The shift is simple:
-
 ```text
 old way: project context lives in chat
 new way: project context lives in the repository
@@ -147,6 +64,79 @@ new way: project context lives in the repository
 That matters because AI-native projects fail when a new chat cannot recover state, a PR mixes unrelated scopes, or documentation claims more than the repository proves.
 
 Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS starter kit, product framework, or UI framework.
+
+<a id="what-blueprint-manages"></a>
+
+## 🧩 What Blueprint Manages
+
+| Layer | Purpose | Canonical starting point |
+| --- | --- | --- |
+| Governance | Rule ownership, policy, validation language | [governance/docs/governance-index.md](governance/docs/governance-index.md) |
+| Project Memory | Durable current state and recovery knowledge | [memory/project-kb/00_INDEX.md](memory/project-kb/00_INDEX.md) |
+| Process Levels | How much procedure a task requires | [core/TASK_PROCESS_ROUTER.md](core/TASK_PROCESS_ROUTER.md) |
+| Recovery | Fresh-chat continuation from repository files | [templates/recovery/README.md](templates/recovery/README.md) |
+| Guardian | Scope, truthfulness, and boundary checks | [templates/guardian/README.md](templates/guardian/README.md) |
+| Branch Governance | Branch naming, layering, and release flow | [governance/docs/git-policy.md](governance/docs/git-policy.md) |
+| Feature Lifecycle | From idea to clarification, plan, tasks, implementation | [core/FEATURE_LIFECYCLE_STANDARD.md](core/FEATURE_LIFECYCLE_STANDARD.md) |
+| PR Lifecycle | PR scope, validation, handoff, and clean start | [core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md](core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md) |
+
+Blueprint governs project work. It does not implement product work.
+
+<a id="use-case-map"></a>
+
+## 🧭 Use Case Map
+
+Blueprint is designed to cover the full repository collaboration loop, not only a few prompts.
+
+| Use case | When it happens | What Blueprint gives you |
+| --- | --- | --- |
+| Fresh-chat recovery | A new AI chat or contributor needs to continue work | A repository-owned recovery path and current-state summary |
+| Source-of-truth export | Context must move from one AI tool to another | A compact markdown package instead of copied chat history |
+| Task classification | A task might be small, risky, or cross-layer | L0-L4 process levels with context and recovery budgets |
+| Small docs or status work | The task should not spend a full process cycle | Compact L0/L1 reports with only necessary validation |
+| Meaningful feature planning | Work changes behavior, public surface, or architecture | Feature, clarification, plan, and task artifacts before implementation |
+| Project Memory maintenance | Durable state changed after meaningful work | Compact memory updates without turning memory into a transcript |
+| Guardian review | Scope, truthfulness, or boundary risk appears | Repository, change, architecture, memory, and PR checks |
+| Branch governance | Work needs a branch and review path | Branch names and PR targets aligned to scope and release flow |
+| PR handoff | A branch is ready for review or transfer | Problem, solution, scope, files, validation, risks, and follow-ups |
+| Clean start after merge | Old chat context should stop being required | Updated recovery state for the next session |
+| Documentation truthfulness | Docs might describe planned work as shipped | Clear separation between planned, documented, implemented, released, and deprecated |
+| Architecture decision capture | A durable decision changes project direction | ADR-style ownership, consequences, and reference links |
+| Release readiness | A public release or package needs confidence | Validation checklist, manifest checks, changelog, version, and link hygiene |
+| New repository adoption | A team wants Blueprint in another project | Minimal and full installation paths with reusable templates |
+
+Each use case routes to one owner document. Summaries link to owners; they do not redefine the rules.
+
+<a id="repository-recovery-loop"></a>
+
+## 🔁 Repository Recovery Loop
+
+Blueprint work follows a loop that scales from tiny status checks to release work:
+
+```text
+request
+-> repository identity check
+-> recovery budget
+-> task routing
+-> process level
+-> owner document
+-> scoped work
+-> validation evidence
+-> PR handoff when needed
+-> Project Memory update when durable state changed
+-> clean start
+-> next chat recovers from repository
+```
+
+Small tasks stay small. Risky tasks get the full process.
+
+| Level | Use for | Default recovery |
+| --- | --- | --- |
+| L0 | status checks, clean checks, answer-only repo checks | 0 recovery docs |
+| L1 | docs-only commits, handoff reports, small memory updates | max 2 recovery docs |
+| L2 | scoped layer changes | max 3 recovery docs |
+| L3 | meaningful feature implementation | feature lifecycle required |
+| L4 | architecture, migration, release, merge, cross-domain work | full recovery allowed |
 
 <a id="get-started"></a>
 
@@ -213,53 +203,81 @@ Do not create a second memory system.
 Keep only durable state that helps the next chat recover.
 ```
 
-<a id="what-blueprint-manages"></a>
+<a id="practical-ai-agent-examples"></a>
 
-## 🧩 What Blueprint Manages
+## 🧠 Practical AI-Agent Examples
 
-| Layer | Purpose | Canonical starting point |
-| --- | --- | --- |
-| Governance | Rule ownership, policy, validation language | [governance/docs/governance-index.md](governance/docs/governance-index.md) |
-| Project Memory | Durable current state and recovery knowledge | [memory/project-kb/00_INDEX.md](memory/project-kb/00_INDEX.md) |
-| Process Levels | How much procedure a task requires | [core/TASK_PROCESS_ROUTER.md](core/TASK_PROCESS_ROUTER.md) |
-| Recovery | Fresh-chat continuation from repository files | [templates/recovery/README.md](templates/recovery/README.md) |
-| Guardian | Scope, truthfulness, and boundary checks | [templates/guardian/README.md](templates/guardian/README.md) |
-| Branch Governance | Branch naming, layering, and release flow | [governance/docs/git-policy.md](governance/docs/git-policy.md) |
-| Feature Lifecycle | From idea to clarification, plan, tasks, implementation | [core/FEATURE_LIFECYCLE_STANDARD.md](core/FEATURE_LIFECYCLE_STANDARD.md) |
-| PR Lifecycle | PR scope, validation, handoff, and clean start | [core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md](core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md) |
+These screenshots are examples, not the full product boundary. The complete use-case map above is the product funnel.
 
-Blueprint governs project work. It does not implement product work.
+### 🧭 Recover A New Codex Chat
 
-<a id="repository-recovery-loop"></a>
-
-## 🔁 Repository Recovery Loop
-
-Blueprint work follows a loop that scales from tiny status checks to release work:
+Use this when you open a new chat and need the agent to continue from the repository, not from memory.
 
 ```text
-request
--> repository identity check
--> recovery budget
--> task routing
--> process level
--> owner document
--> scoped work
--> validation evidence
--> PR handoff when needed
--> Project Memory update when durable state changed
--> clean start
--> next chat recovers from repository
+Recover this repository with Blueprint.
+
+Use the repository as the source of truth.
+Follow the recovery path defined by this project.
+Do not rely on previous chat history.
+
+Tell me:
+1. where the project stands now;
+2. what branch and release state it is in;
+3. what was validated last;
+4. what the next safe task is;
+5. what checks are required before edits.
 ```
 
-Small tasks stay small. Risky tasks get the full process.
+<p align="center">
+  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="560">
+</p>
 
-| Level | Use for | Default recovery |
-| --- | --- | --- |
-| L0 | status checks, clean checks, answer-only repo checks | 0 recovery docs |
-| L1 | docs-only commits, handoff reports, small memory updates | max 2 recovery docs |
-| L2 | scoped layer changes | max 3 recovery docs |
-| L3 | meaningful feature implementation | feature lifecycle required |
-| L4 | architecture, migration, release, merge, cross-domain work | full recovery allowed |
+### 🔄 Sync Project Context Into Another AI Chat
+
+Use this when you want to update ChatGPT, Claude, or another assistant with the repository source of truth.
+
+```text
+Send me the markdown files that represent the current project source of truth
+so I can update another AI chat.
+
+Use Blueprint to decide what belongs in the context package.
+Exclude private source-reference files and unrelated implementation files.
+
+Return:
+1. package summary;
+2. included context areas;
+3. excluded categories;
+4. files ready to transfer.
+```
+
+<p align="center">
+  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="560">
+</p>
+
+### 🧾 Prepare A PR Handoff
+
+Use this before opening or handing off a PR.
+
+```text
+Prepare a Blueprint PR handoff for this branch.
+
+Include:
+- problem;
+- solution;
+- scope;
+- changed files;
+- validation;
+- risks;
+- follow-ups;
+- memory update decision;
+- clean-start decision.
+
+Use repository files as the source of truth.
+```
+
+<p align="center">
+  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="560">
+</p>
 
 <a id="guardian-checks"></a>
 
