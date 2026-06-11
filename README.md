@@ -138,18 +138,21 @@ Use this when you want to update ChatGPT, Claude, or another assistant with the 
 Send me the markdown files that represent the current project source of truth
 so I can update another AI chat.
 
-Include:
-- memory/project-kb/00_INDEX.md
-- memory/project-kb/08_CURRENT_STATE.md
-- memory/project-kb/05_IMPLEMENTATION_STATUS.md
-- memory/project-kb/09_TASK_HISTORY.md
-- memory/project-kb/10_REFERENCE.md
-- memory/project-kb/current/CLEAN_START_BRIEF.md
-- core/TASK_PROCESS_ROUTER.md
+Use Blueprint to decide what belongs in the context package.
+Exclude private source-reference files and unrelated implementation files.
 
-Do not summarize them unless I ask.
-Do not include private source-reference files.
+Return:
+1. package summary;
+2. included context areas;
+3. excluded categories;
+4. files ready to transfer.
 ```
+
+<p align="center">
+  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="920">
+</p>
+
+This makes project context portable across AI tools without copying private references or unrelated implementation files.
 
 ### ⚖️ Classify A Task Before Spending Context
 
@@ -189,6 +192,12 @@ Include:
 
 Use repository files as the source of truth.
 ```
+
+<p align="center">
+  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="920">
+</p>
+
+Blueprint PR handoff keeps problem, solution, scope, validation, risks, memory update, and clean-start decisions attached to the branch instead of trapped in chat.
 
 ### 🧼 Clean Start After Merge
 

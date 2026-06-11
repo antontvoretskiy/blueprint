@@ -12,6 +12,7 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
   use cases, and a clearer repository-first adoption path.
 - Updated the public Blueprint logo asset.
 - Added the first README use-case screenshot for fresh-chat recovery.
+- Added README use-case screenshots for context export and PR handoff.
 
 ## v0.4.2 - 2026-06-11
 

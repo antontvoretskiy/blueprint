@@ -33,6 +33,8 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` | Included | Public presentation benchmark |
 | `media/blueprint-logo.png` | Included | Public brand asset |
 | `media/use-cases/codex-recovery-prompt.png` | Included | Public README use-case screenshot |
+| `media/use-cases/project-memory-export.png` | Included | Public README use-case screenshot |
+| `media/use-cases/pr-handoff.png` | Included | Public README use-case screenshot |
 | `Makefile` | Included | Local validation commands |
 | `compose.yaml` | Included | Isolated local preview environment |
 | `.env.example` | Included | Non-secret local environment defaults |
