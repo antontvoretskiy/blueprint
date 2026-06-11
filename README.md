@@ -26,13 +26,95 @@ Chat helps execution. The repository owns durable rules, current state, recovery
 
 Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS starter kit, product framework, or UI framework.
 
+<a id="practical-ai-agent-use-cases"></a>
+
+## 🧠 Practical AI-Agent Use Cases
+
+Blueprint is designed to be used directly inside Codex, Claude, Cursor, ChatGPT, and other AI-assisted development workflows.
+
+### 🧭 Recover A New Codex Chat
+
+Use this when you open a new chat and need the agent to continue from the repository, not from memory.
+
+```text
+Recover this repository with Blueprint.
+
+Use the repository as the source of truth.
+Follow the recovery path defined by this project.
+Do not rely on previous chat history.
+
+Tell me:
+1. where the project stands now;
+2. what branch and release state it is in;
+3. what was validated last;
+4. what the next safe task is;
+5. what checks are required before edits.
+```
+
+<p align="center">
+  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="920">
+</p>
+
+This is the core Blueprint behavior: a new AI chat recovers project state from repository-owned files instead of previous conversation history.
+
+### 🔄 Sync Project Context Into Another AI Chat
+
+Use this when you want to update ChatGPT, Claude, or another assistant with the repository source of truth.
+
+```text
+Send me the markdown files that represent the current project source of truth
+so I can update another AI chat.
+
+Use Blueprint to decide what belongs in the context package.
+Exclude private source-reference files and unrelated implementation files.
+
+Return:
+1. package summary;
+2. included context areas;
+3. excluded categories;
+4. files ready to transfer.
+```
+
+<p align="center">
+  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="920">
+</p>
+
+This makes project context portable across AI tools without copying private references or unrelated implementation files.
+
+### 🧾 Prepare A PR Handoff
+
+Use this before opening or handing off a PR.
+
+```text
+Prepare a Blueprint PR handoff for this branch.
+
+Include:
+- problem;
+- solution;
+- scope;
+- changed files;
+- validation;
+- risks;
+- follow-ups;
+- memory update decision;
+- clean-start decision.
+
+Use repository files as the source of truth.
+```
+
+<p align="center">
+  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="920">
+</p>
+
+Blueprint PR handoff keeps problem, solution, scope, validation, risks, memory update, and clean-start decisions attached to the branch instead of trapped in chat.
+
 <a id="table-of-contents"></a>
 
 ## 🧭 Table of Contents
 
 - [🤔 What Is Blueprint?](#what-is-blueprint)
-- [⚡ Get Started](#get-started)
 - [🧠 Practical AI-Agent Use Cases](#practical-ai-agent-use-cases)
+- [⚡ Get Started](#get-started)
 - [🧩 What Blueprint Manages](#what-blueprint-manages)
 - [🔁 Repository Recovery Loop](#repository-recovery-loop)
 - [🛡️ Guardian Checks](#guardian-checks)
@@ -99,61 +181,6 @@ Use repository files as the source of truth.
 
 If the new chat needs old conversation history to continue, recovery failed.
 
-<a id="practical-ai-agent-use-cases"></a>
-
-## 🧠 Practical AI-Agent Use Cases
-
-Blueprint is designed to be used directly inside Codex, Claude, Cursor, ChatGPT, and other AI-assisted development workflows.
-
-### 🧭 Recover A New Codex Chat
-
-Use this when you open a new chat and need the agent to continue from the repository, not from memory.
-
-```text
-Recover this repository with Blueprint.
-
-Use the repository as the source of truth.
-Follow the recovery path defined by this project.
-Do not rely on previous chat history.
-
-Tell me:
-1. where the project stands now;
-2. what branch and release state it is in;
-3. what was validated last;
-4. what the next safe task is;
-5. what checks are required before edits.
-```
-
-<p align="center">
-  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="920">
-</p>
-
-This is the core Blueprint behavior: a new AI chat recovers project state from repository-owned files instead of previous conversation history.
-
-### 🔄 Sync Project Context Into Another AI Chat
-
-Use this when you want to update ChatGPT, Claude, or another assistant with the repository source of truth.
-
-```text
-Send me the markdown files that represent the current project source of truth
-so I can update another AI chat.
-
-Use Blueprint to decide what belongs in the context package.
-Exclude private source-reference files and unrelated implementation files.
-
-Return:
-1. package summary;
-2. included context areas;
-3. excluded categories;
-4. files ready to transfer.
-```
-
-<p align="center">
-  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="920">
-</p>
-
-This makes project context portable across AI tools without copying private references or unrelated implementation files.
-
 ### ⚖️ Classify A Task Before Spending Context
 
 Use this when the task might be small and you do not want the agent to run a heavy process for a docs-only or status-only request.
@@ -171,33 +198,6 @@ Return:
 
 If the task is L0 or L1, keep the answer compact.
 ```
-
-### 🧾 Prepare A PR Handoff
-
-Use this before opening or handing off a PR.
-
-```text
-Prepare a Blueprint PR handoff for this branch.
-
-Include:
-- problem;
-- solution;
-- scope;
-- changed files;
-- validation;
-- risks;
-- follow-ups;
-- memory update decision;
-- clean-start decision.
-
-Use repository files as the source of truth.
-```
-
-<p align="center">
-  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="920">
-</p>
-
-Blueprint PR handoff keeps problem, solution, scope, validation, risks, memory update, and clean-start decisions attached to the branch instead of trapped in chat.
 
 ### 🧼 Clean Start After Merge
 
