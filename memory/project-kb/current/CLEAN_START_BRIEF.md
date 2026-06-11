@@ -6,14 +6,11 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.7.0 is released on `main`.
+Blueprint v0.8.0 is released on `main`.
 
 The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, completed post-validation branch cleanup, documentation quality gates, and documentation navigation pages.
 
-GitHub Release `v0.7.0` is published and points to the released `main` commit.
-
-Blueprint v0.8.0 is the selected next release target. Its scope is validation
-fixtures, fixture checker coverage, and main-only validation state refresh.
+GitHub Release `v0.8.0` is published and points to the released `main` commit.
 
 The public GitHub repository now exposes only `main` as the release-ready
 distribution branch. Local or private maintainer integration branches may exist,
@@ -30,7 +27,7 @@ Release `v0.7.0` adds `docs/index.md`, `docs/nav.md`, `docs/quickstart.md`,
 `docs/concepts/repository-first.md`, `docs/reference/templates.md`,
 `docs/reference/governance.md`, and `docs/community.md`.
 
-Release target `v0.8.0` adds `docs/validation/fixtures/**` and
+Release `v0.8.0` adds `docs/validation/fixtures/**` and
 `scripts/check_validation_fixtures.py`, then wires those checks into
 `make quality`.
 
@@ -55,14 +52,13 @@ Memory.
 
 ## Current Next Step
 
-Complete the v0.8.0 validation fixture release target.
+Select the next release scope after v0.8.0.
 
 Recommended next scoped work:
 
 1. Confirm that the public branch list remains `main` only.
-2. Run the full validation package.
-3. Prepare a PR into `main`.
-4. Publish a tag or GitHub Release only after explicit maintainer approval.
+2. Decide whether the next scope is examples catalog, release automation, or optional CI expansion.
+3. Run the full validation package before any new release edits.
 
 ## Do Not Do
 

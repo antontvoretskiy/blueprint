@@ -6,19 +6,15 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.7.0 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.8.0 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
-| `codex/validation-fixtures-v0.8.0` | Scoped release-target work | Prepares v0.8.0 validation fixtures before publication |
 
 ## Current Work
 
-Blueprint v0.7.0 is released on public `main`.
+Blueprint v0.8.0 is released on public `main`.
 
-The GitHub Release `v0.7.0` is published and points to the v0.7.0 release
+The GitHub Release `v0.8.0` is published and points to the v0.8.0 release
 commit on `main`.
-
-Blueprint v0.8.0 is the selected next release target. The scope is validation
-fixtures, fixture checking, and main-only validation state refresh.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
@@ -48,7 +44,7 @@ Release `v0.7.0` adds the documentation navigation layer:
 - `docs/reference/governance.md`;
 - `docs/community.md`.
 
-Release target `v0.8.0` adds the validation fixture layer:
+Release `v0.8.0` adds the validation fixture layer:
 
 - `docs/validation/fixtures/README.md`;
 - `docs/validation/fixtures/system-use-cases.json`;
@@ -110,9 +106,9 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Complete the v0.8.0 validation fixture release target.
+Select the next release scope after v0.8.0.
 
-Required validation before publication:
+Required validation before any new release publication:
 
 - `make quality`;
 - `make doctor`;
@@ -123,4 +119,4 @@ Required validation before publication:
 - public branch and open PR checks.
 
 Do not start additional examples, CLI, installer, release automation, or
-integration work until the v0.8.0 validation fixture scope is complete.
+integration work until the next scope is selected.

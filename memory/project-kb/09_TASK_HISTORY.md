@@ -49,6 +49,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-12 | PR #46 | Prepared v0.7.0 documentation navigation release | `main` |
 | 2026-06-12 | Release `v0.7.0` | Published documentation navigation, quickstart, reference, and community pages | `main` |
 | 2026-06-12 | Release target `v0.8.0` | Selected validation fixtures, fixture checker, and main-only validation state refresh | `main` |
+| 2026-06-12 | Release `v0.8.0` | Published validation fixtures, fixture checker, and main-only validation evidence | `main` |
 
 ## Update Rules
 
