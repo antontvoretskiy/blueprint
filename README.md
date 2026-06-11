@@ -110,22 +110,25 @@ Blueprint is designed to be used directly inside Codex, Claude, Cursor, ChatGPT,
 Use this when you open a new chat and need the agent to continue from the repository, not from memory.
 
 ```text
-Recover this repository from its Blueprint files.
+Recover this repository with Blueprint.
 
-Start from:
-- memory/project-kb/00_INDEX.md
-- memory/project-kb/08_CURRENT_STATE.md
-- memory/project-kb/05_IMPLEMENTATION_STATUS.md
-- memory/project-kb/10_REFERENCE.md
-- core/TASK_PROCESS_ROUTER.md
+Use the repository as the source of truth.
+Follow the recovery path defined by this project.
+Do not rely on previous chat history.
 
-Return:
-1. current state;
-2. active branch model;
-3. latest release;
-4. next safe task;
-5. required validation before edits.
+Tell me:
+1. where the project stands now;
+2. what branch and release state it is in;
+3. what was validated last;
+4. what the next safe task is;
+5. what checks are required before edits.
 ```
+
+<p align="center">
+  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="920">
+</p>
+
+This is the core Blueprint behavior: a new AI chat recovers project state from repository-owned files instead of previous conversation history.
 
 ### 🔄 Sync Project Context Into Another AI Chat
 
