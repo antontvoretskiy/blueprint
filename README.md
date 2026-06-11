@@ -1,159 +1,377 @@
 <p align="center">
-  <img src="media/blueprint-logo.png" alt="Blueprint logo" width="220">
+  <img src="media/blueprint-logo.png" alt="Blueprint logo" width="360">
 </p>
 
-<h1 align="center">Blueprint</h1>
+<h1 align="center">🖌️ Blueprint</h1>
 
 <p align="center">
   <strong>Operating framework for AI-native software development.</strong>
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
-  <a href="VERSION"><img alt="Version: v0.4.2" src="https://img.shields.io/badge/version-v0.4.2-blue"></a>
-  <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
+  <strong>Keep project rules, memory, recovery, branch governance, and PR handoff inside the repository.</strong>
 </p>
 
-Blueprint is an open-source operating framework that helps software teams and AI agents keep repository governance, project memory, task routing, feature lifecycle, PR lifecycle, branch governance, recovery, Guardian checks, and clean starts in one durable place: the repository.
+<p align="center">
+  <a href="https://github.com/antontvoretskiy/blueprint/releases/tag/v0.4.2"><img alt="Release: v0.4.2" src="https://img.shields.io/badge/release-v0.4.2-blue"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
+  <a href="docs/validation/process-efficiency-dogfood-v0.4.1.md"><img alt="Validation: dogfooded" src="https://img.shields.io/badge/validation-dogfooded-0f766e"></a>
+  <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
+  <a href="https://github.com/antontvoretskiy/blueprint/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/antontvoretskiy/blueprint?style=social"></a>
+</p>
+
+<a id="table-of-contents"></a>
+
+## 🧭 Table of Contents
+
+- [🤔 What Is Blueprint?](#what-is-blueprint)
+- [👥 Who Blueprint Is For](#who-blueprint-is-for)
+- [🚦 When To Use Blueprint](#when-to-use-blueprint)
+- [🧩 What Blueprint Manages](#what-blueprint-manages)
+- [🧭 Use Case Map](#use-case-map)
+- [🔁 Repository Recovery Loop](#repository-recovery-loop)
+- [🧱 Adoption Paths](#adoption-paths)
+- [⚡ Get Started](#get-started)
+- [🧠 Practical AI-Agent Examples](#practical-ai-agent-examples)
+- [🛡️ Guardian Checks](#guardian-checks)
+- [📁 Repository Structure](#repository-structure)
+- [✅ Current Status](#current-status)
+- [🧪 Validation](#validation)
+- [🗺️ Roadmap](#roadmap)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
+
+<a id="what-is-blueprint"></a>
+
+## 🤔 What Is Blueprint?
+
+Blueprint is a repository-first operating framework for AI-native software development.
+
+It defines how a repository manages:
+
+- governance and source-of-truth ownership;
+- project memory and current-state recovery;
+- task routing and process levels;
+- feature lifecycle and planning boundaries;
+- PR lifecycle, handoff, and clean start;
+- branch governance and release flow;
+- Guardian checks for scope, truthfulness, and validation.
+
+```text
+old way: project context lives in chat
+new way: project context lives in the repository
+```
+
+That matters because AI-native projects fail when a new chat cannot recover state, a PR mixes unrelated scopes, or documentation claims more than the repository proves.
 
 Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS starter kit, product framework, or UI framework.
 
-## Table of Contents
+<a id="who-blueprint-is-for"></a>
 
-- [What Is Blueprint?](#what-is-blueprint)
-- [Problem](#problem)
-- [Who It Is For](#who-it-is-for)
-- [What Blueprint Manages](#what-blueprint-manages)
-- [Product Map](#product-map)
-- [How Blueprint Differs From GitHub Spec Kit](#how-blueprint-differs-from-github-spec-kit)
-- [Current Status](#current-status)
-- [Quick Start](#quick-start)
-- [Open Source Adoption](#open-source-adoption)
-- [Repository Development](#repository-development)
-- [Roadmap](#roadmap)
-- [Release Packaging](#release-packaging)
-- [Open Source Presentation Benchmark](#open-source-presentation-benchmark)
-- [Support And Security](#support-and-security)
-- [Contributing](#contributing)
-- [License](#license)
+## 👥 Who Blueprint Is For
 
-## What Is Blueprint?
+Blueprint is for teams that need repository-owned continuity across humans and AI agents:
 
-Blueprint is a repository operating framework for AI-native software development.
+- solo builders using Codex, Claude, Cursor, ChatGPT, or similar tools;
+- AI-native product teams working across frequent chat sessions;
+- engineering teams that need clear branch, PR, and validation rules;
+- startups where project memory cannot live only in founder or agent context;
+- multi-module repositories where docs, features, releases, and reviews must stay aligned.
 
-It gives a project explicit rules for:
+<a id="when-to-use-blueprint"></a>
 
-- where governance lives;
-- how project memory is stored;
-- how new AI chats recover context;
-- how tasks are routed;
-- how features move from idea to implementation;
-- how PRs stay scoped and reviewable;
-- how branches mirror architecture boundaries;
-- how verification results stay truthful;
-- how teams restart cleanly after merge.
+## 🚦 When To Use Blueprint
 
-The core idea is repository-first operation: durable rules and state belong in the repository, not only in chat history.
-
-## Problem
-
-AI-native teams hit the same operational failures repeatedly:
-
-- AI chat context gets lost.
-- Project rules live in chat instead of the repository.
-- Agents start work without recovery.
-- PRs mix unrelated layers.
-- Branches do not mirror architecture.
-- Documentation claims more than implementation proves.
-- New chats cannot continue without old conversation history.
-
-Blueprint turns those failure modes into explicit operating contracts, templates, and checklists.
-
-## Who It Is For
-
-Blueprint is designed for:
-
-- AI-native product teams;
-- solo builders using Codex, Claude, Cursor, or similar tools;
-- engineering teams using AI agents;
-- startups with fast-moving repositories;
-- multi-module SaaS and product repositories;
-- teams that need repository-first governance.
-
-## What Blueprint Manages
-
-Blueprint focuses on the operating layer:
-
-| Layer | Purpose |
+| Problem | Blueprint response |
 | --- | --- |
-| Governance | Rules, ownership, source of truth, and validation policy |
-| Project Memory | Durable project knowledge and current-state recovery |
-| Process Levels | How much procedure is required for L0-L4 tasks |
-| Recovery | Clean handoff between AI chats and work sessions |
-| Guardian | Pre-work and pre-merge checks that catch scope drift |
-| Branch Governance | Branch naming, layering, and merge sequencing |
-| Feature Lifecycle | How a feature moves from request to implementation |
-| PR Lifecycle | How a PR is scoped, reviewed, handed off, and closed |
+| A new chat does not know the current project state | Recover from repository-owned Project Memory |
+| Rules are repeated across chats and documents | Route each rule to one canonical owner |
+| Small tasks get heavy process overhead | Use L0/L1 process levels with context and recovery budgets |
+| Feature work starts before scope is clear | Require feature artifacts before implementation |
+| PRs mix unrelated changes | Enforce one branch, one scope, one review story |
+| Documentation claims more than validation proves | Track planned, documented, implemented, released, and deprecated states separately |
+| Merge handoff depends on old conversation history | Update Project Memory and create a clean start |
 
-## Product Map
+<a id="what-blueprint-manages"></a>
 
-The complete product shape is defined in [PRODUCT_MAP.md](PRODUCT_MAP.md).
+## 🧩 What Blueprint Manages
 
-It explains how Blueprint connects governance, process levels, project management, feature management, Project Memory, recovery, Guardian checks, PR handoff, clean start, and public release packaging.
-
-## How Blueprint Differs From GitHub Spec Kit
-
-[GitHub Spec Kit](https://github.com/github/spec-kit) is focused on Spec-Driven Development: specifications, plans, tasks, and implementation flow.
-
-Blueprint is broader and more operational:
-
-| Area | GitHub Spec Kit | Blueprint |
+| Layer | Purpose | Canonical starting point |
 | --- | --- | --- |
-| Main focus | Spec-driven development | Repository operating framework |
-| Primary artifact | Specs, plans, tasks | Governance, memory, recovery, lifecycle |
-| AI chat recovery | Not the main layer | Core feature |
-| Project memory | Constitution-style project guidance | Explicit memory system |
-| Branch governance | Not primary | Core layer |
-| PR handoff and clean start | Not primary | Core layer |
-| Guardian process | Not primary | Core layer |
-| Scope | Feature delivery workflow | Full project operation framework |
+| Governance | Rule ownership, policy, validation language | [governance/docs/governance-index.md](governance/docs/governance-index.md) |
+| Project Memory | Durable current state and recovery knowledge | [memory/project-kb/00_INDEX.md](memory/project-kb/00_INDEX.md) |
+| Process Levels | How much procedure a task requires | [core/TASK_PROCESS_ROUTER.md](core/TASK_PROCESS_ROUTER.md) |
+| Recovery | Fresh-chat continuation from repository files | [templates/recovery/README.md](templates/recovery/README.md) |
+| Guardian | Scope, truthfulness, and boundary checks | [templates/guardian/README.md](templates/guardian/README.md) |
+| Branch Governance | Branch naming, layering, and release flow | [governance/docs/git-policy.md](governance/docs/git-policy.md) |
+| Feature Lifecycle | From idea to clarification, plan, tasks, implementation | [core/FEATURE_LIFECYCLE_STANDARD.md](core/FEATURE_LIFECYCLE_STANDARD.md) |
+| PR Lifecycle | PR scope, validation, handoff, and clean start | [core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md](core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md) |
 
-Use Spec Kit when you need a spec-centered delivery workflow. Use Blueprint when you need the repository itself to operate predictably across humans, AI agents, branches, PRs, and chats.
+Blueprint governs project work. It does not implement product work.
 
-## Current Status
+<a id="use-case-map"></a>
+
+## 🧭 Use Case Map
+
+Blueprint is designed to cover the full repository collaboration loop, not only a few prompts.
+
+| Stage | Use cases | What Blueprint gives you |
+| --- | --- | --- |
+| Recover | fresh-chat recovery, source-of-truth export, current-state review | Repository-owned context instead of old chat history |
+| Route | task classification, small-task handling, owner lookup | L0-L4 process levels with context and recovery budgets |
+| Plan | meaningful feature planning, clarification, technical plan, task breakdown | Feature artifacts before implementation begins |
+| Work | scoped docs work, scoped layer changes, branch governance | One active scope with clear owner boundaries |
+| Review | Guardian review, validation evidence, documentation truthfulness | Checks for scope, claims, dirty state, and proof |
+| Handoff | PR handoff, risk summary, follow-ups, memory update decision | A branch that can be reviewed without chat archaeology |
+| Merge | release readiness, changelog, version, bundle manifest, clean start | Public-state checks before and after merge |
+| Continue | Project Memory maintenance, task history, next safe task | The next chat recovers from the repository |
+| Adopt | minimal installation, full installation, example adaptation | Reusable templates for another repository |
+
+Each use case routes to one owner document. Summaries link to owners; they do not redefine the rules.
+
+<a id="repository-recovery-loop"></a>
+
+## 🔁 Repository Recovery Loop
+
+Blueprint work follows a loop that scales from tiny status checks to release work:
+
+```text
+request
+-> repository identity check
+-> recovery budget
+-> task routing
+-> process level
+-> owner document
+-> scoped work
+-> validation evidence
+-> PR handoff when needed
+-> Project Memory update when durable state changed
+-> clean start
+-> next chat recovers from repository
+```
+
+Small tasks stay small. Risky tasks get the full process.
+
+| Level | Use for | Default recovery |
+| --- | --- | --- |
+| L0 | status checks, clean checks, answer-only repo checks | 0 recovery docs |
+| L1 | docs-only commits, handoff reports, small memory updates | max 2 recovery docs |
+| L2 | scoped layer changes | max 3 recovery docs |
+| L3 | meaningful feature implementation | feature lifecycle required |
+| L4 | architecture, migration, release, merge, cross-domain work | full recovery allowed |
+
+<a id="adoption-paths"></a>
+
+## 🧱 Adoption Paths
+
+| Path | Best for | Start with |
+| --- | --- | --- |
+| Minimal adoption | Small teams or early repos that need recovery and PR discipline first | Agent entrypoint, task router, PR handoff, branch policy, validation, and Project Memory |
+| Full adoption | Long-running repositories with multiple modules, agents, and releases | Governance standards, Project Memory, Guardian templates, recovery templates, checklists, and feature lifecycle |
+| Dogfood in an existing repo | Teams that want to test Blueprint before a full migration | Run recovery, task routing, PR handoff, and clean-start checks on one active branch |
+
+<a id="get-started"></a>
+
+## ⚡ Get Started
+
+Blueprint is documentation-first. There is no installer yet.
+
+Start with this 10-minute path:
+
+1. Read the product shape in [PRODUCT_MAP.md](PRODUCT_MAP.md).
+2. Pick an adoption path in [ADAPTATION_GUIDE.md](ADAPTATION_GUIDE.md).
+3. Copy either the minimal or full template set from [templates/](templates).
+4. Create your Project Memory from [templates/project-memory/README.md](templates/project-memory/README.md).
+5. Run a recovery test from a new AI chat using the prompt below.
+
+Fresh-chat recovery prompt:
+
+```text
+Read the repository recovery path and tell me:
+1. current project state;
+2. current branch and release status;
+3. latest validated work;
+4. next recommended task;
+5. files I should read before making changes.
+
+Use repository files as the source of truth.
+```
+
+If the new chat needs old conversation history to continue, recovery failed.
+
+### ⚖️ Classify A Task Before Spending Context
+
+Use this when the task might be small and you do not want the agent to run a heavy process for a docs-only or status-only request.
+
+```text
+Classify this task through Blueprint process levels before doing any work.
+
+Return:
+- selected level: L0, L1, L2, L3, or L4;
+- why this level is enough;
+- recovery budget;
+- context budget;
+- files you need to read;
+- validation required.
+
+If the task is L0 or L1, keep the answer compact.
+```
+
+### 🧼 Clean Start After Merge
+
+Use this after a PR merges so the next chat does not depend on the old conversation.
+
+```text
+Update the repository recovery state after this merge.
+
+Check:
+- current state;
+- task history;
+- clean-start brief;
+- reference map;
+- whether new validation evidence should be linked.
+
+Do not create a second memory system.
+Keep only durable state that helps the next chat recover.
+```
+
+<a id="practical-ai-agent-examples"></a>
+
+## 🧠 Practical AI-Agent Examples
+
+These screenshots are examples, not the full product boundary. The complete use-case map above is the product funnel.
+
+### 🧭 Recover A New Codex Chat
+
+Use this when you open a new chat and need the agent to continue from the repository, not from memory.
+
+```text
+Recover this repository with Blueprint.
+
+Use the repository as the source of truth.
+Follow the recovery path defined by this project.
+Do not rely on previous chat history.
+
+Tell me:
+1. where the project stands now;
+2. what branch and release state it is in;
+3. what was validated last;
+4. what the next safe task is;
+5. what checks are required before edits.
+```
+
+<p align="center">
+  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="560">
+</p>
+
+### 🔄 Sync Project Context Into Another AI Chat
+
+Use this when you want to update ChatGPT, Claude, or another assistant with the repository source of truth.
+
+```text
+Send me the markdown files that represent the current project source of truth
+so I can update another AI chat.
+
+Use Blueprint to decide what belongs in the context package.
+Exclude private source-reference files and unrelated implementation files.
+
+Return:
+1. package summary;
+2. included context areas;
+3. excluded categories;
+4. files ready to transfer.
+```
+
+<p align="center">
+  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="560">
+</p>
+
+### 🧾 Prepare A PR Handoff
+
+Use this before opening or handing off a PR.
+
+```text
+Prepare a Blueprint PR handoff for this branch.
+
+Include:
+- problem;
+- solution;
+- scope;
+- changed files;
+- validation;
+- risks;
+- follow-ups;
+- memory update decision;
+- clean-start decision.
+
+Use repository files as the source of truth.
+```
+
+<p align="center">
+  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="560">
+</p>
+
+<a id="guardian-checks"></a>
+
+## 🛡️ Guardian Checks
+
+Guardian is Blueprint's process-control layer.
+
+It checks whether work is compatible with repository rules before work starts, during review, and before merge.
+
+Guardian helps catch:
+
+- wrong-repository edits;
+- dirty checkout contamination;
+- docs claims without implementation evidence;
+- mixed-scope PRs;
+- branch names that do not match architecture;
+- stale Project Memory;
+- missing PR handoff;
+- chat context that never made it back into the repository.
+
+Guardian is not CI, not an agent runtime, and not a service.
+
+<a id="repository-structure"></a>
+
+## 📁 Repository Structure
+
+| Path | Purpose |
+| --- | --- |
+| [core/](core) | Agent entrypoint, router, lifecycle, handoff, security |
+| [governance/](governance) | Branch, PR, verification, documentation, and ADR standards |
+| [memory/project-kb/](memory/project-kb) | Project Memory and recovery state |
+| [templates/](templates) | Reusable adoption templates |
+| [checklists/](checklists) | Manual validation and readiness checklists |
+| [examples/](examples) | Sanitized adoption examples |
+| [docs/validation/](docs/validation) | Manual validation suites and dogfood evidence |
+| [media/](media) | Public brand and README assets |
+
+The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
+
+<a id="current-status"></a>
+
+## ✅ Current Status
 
 Blueprint v0.4.2 is released on `main`.
-
-The v0.4.2 bundle includes the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, and completed post-validation branch cleanup.
 
 Included now:
 
 | Area | Status |
 | --- | --- |
-| Product definition | Included |
-| Product map | Included |
-| Architecture boundary | Included |
-| Bundle manifest | Included |
-| Contribution policy | Included |
+| Product definition and architecture | Included |
 | Core operating contracts | Included |
 | Governance standards | Included |
-| Context and recovery budgets | Included |
 | Project Memory structure | Included |
 | Project Memory templates | Included |
 | Feature Lifecycle templates | Included |
 | PR handoff templates | Included |
 | Guardian templates | Included |
-| Checklists | Included |
 | Recovery templates | Included |
+| Checklists | Included |
 | AI product example | Included |
-| Public release packaging | Included |
-| Support, security, and conduct files | Included |
-| GitHub contribution templates | Included |
-| Source coverage maps | Included |
 | System use-case validation suite | Included |
-| System use-case validation result | Included |
-| Local preview environment | Included |
-| Open-source presentation benchmark | Included |
+| Process-efficiency dogfood audit | Included |
 
 Not included yet:
 
@@ -161,131 +379,66 @@ Not included yet:
 - validation automation;
 - CLI;
 - installer;
-- automation;
 - runtime integrations.
 
-## Quick Start
+<a id="validation"></a>
 
-Read the bootstrap documents:
+## 🧪 Validation
 
-1. [Open Source Spec](OPEN_SOURCE_SPEC.md)
-2. [Product Map](PRODUCT_MAP.md)
-3. [Architecture](ARCHITECTURE.md)
-4. [Bundle Manifest](BUNDLE_MANIFEST.md)
-5. [Contributing Guide](CONTRIBUTING.md)
-6. [Agent Operating Contract](core/AGENTS.md)
-7. [Task Process Router](core/TASK_PROCESS_ROUTER.md)
-8. [Governance Index](governance/docs/governance-index.md)
-9. [Project Memory Index](memory/project-kb/00_INDEX.md)
-10. [PR Handoff Templates](templates/pr-handoff/README.md)
-11. [Guardian Templates](templates/guardian/README.md)
-12. [Checklists](checklists/README.md)
-13. [Recovery Templates](templates/recovery/README.md)
-14. [AI Product Example](examples/ai-product/README.md)
-15. [Open Source Guide](OPEN_SOURCE_GUIDE.md)
-16. [Adaptation Guide](ADAPTATION_GUIDE.md)
-17. [Migration Guide](MIGRATION_GUIDE.md)
-18. [Validation Checklist](VALIDATION_CHECKLIST.md)
+Blueprint tracks validation as repository-owned evidence.
 
-Blueprint is currently a documentation-first framework. Additional example projects and automation will come later and must remain clearly marked until implemented.
-
-## Open Source Adoption
-
-Use these guides when applying Blueprint to another repository:
-
-| Guide | Purpose |
+| Validation artifact | Purpose |
 | --- | --- |
-| [Open Source Guide](OPEN_SOURCE_GUIDE.md) | Public entry points, status language, and quality rules |
-| [Adaptation Guide](ADAPTATION_GUIDE.md) | Minimal and full installation flow |
-| [Migration Guide](MIGRATION_GUIDE.md) | How to migrate an existing governance system safely |
-| [Validation Checklist](VALIDATION_CHECKLIST.md) | Release and adoption validation gates |
-| [AI Product Example](examples/ai-product/README.md) | First sanitized example adoption pattern |
+| [System use-case validation suite](docs/validation/system-use-case-suite.md) | Manual end-to-end use-case coverage |
+| [Process-efficiency dogfood audit](docs/validation/process-efficiency-dogfood-v0.4.1.md) | Evidence that L0/L1/L2 budgets work in this repository |
+| [Validation checklist](VALIDATION_CHECKLIST.md) | Public release and adoption validation gates |
+| [Bundle manifest](BUNDLE_MANIFEST.md) | Included, planned, and excluded assets |
 
-## Repository Development
-
-This repository includes an isolated local Docker preview environment.
-
-Requirements:
-
-- Docker Desktop with Docker Compose
-- `make`
-
-Start the environment:
+The current release also passed local repository checks:
 
 ```bash
 make doctor
-make up
+make config
 make smoke
+git diff --check
 ```
 
-Default local endpoints:
+<a id="roadmap"></a>
 
-| Service | URL |
-| --- | --- |
-| App preview | <http://127.0.0.1:3231> |
-| API placeholder | <http://127.0.0.1:8231> |
-| Mailpit | <http://127.0.0.1:8046> |
-| Postgres | `127.0.0.1:55461` |
-| Redis | `127.0.0.1:6406` |
-| SMTP | `127.0.0.1:1046` |
-
-Useful commands:
-
-```bash
-make doctor  # check local port and Docker namespace conflicts
-make config  # validate compose config
-make up      # start the local stack
-make ps      # show containers
-make logs    # stream logs
-make smoke   # verify app and api placeholders respond
-make down    # stop containers
-make clean   # stop containers and remove local volumes
-```
-
-## Roadmap
+## 🗺️ Roadmap
 
 | Version | Scope |
 | --- | --- |
-| v0.1.0 | Public repository bootstrap, architecture, manifest, contribution policy, preview environment |
+| v0.1.0 | Public repository bootstrap, architecture, manifest, and contribution policy |
 | v0.2.0 | Core operating contracts, governance standards, and Project Memory structure |
 | v0.3.0 | Recovery, Guardian, PR handoff, validation templates, checklists, first AI product example, and public release packaging |
 | v0.4.0 | System use-case validation, dependency verification, branch cleanup completion, and packaging readiness |
 | v0.4.1 | Process-level regression hardening, context budgets, and recovery budgets |
 | v0.4.2 | Process-efficiency dogfood audit and post-audit recovery state |
-| v1.0.0 | Stable manual installation path and complete public docs |
+| v0.5.0 | README funnel, practical use-case media, adoption readiness |
+| Next | Additional examples, adoption polish, and optional validation automation |
 
-## Release Packaging
+<a id="contributing"></a>
 
-Last released version: v0.4.2.
+## 🤝 Contributing
 
-Next release target: not selected.
+Blueprint uses professional commit, PR, validation, and versioning standards.
 
-Release-facing files:
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.
 
-- [VERSION](VERSION)
-- [Changelog](CHANGELOG.md)
-- [Release Process](RELEASE.md)
-- [Validation Checklist](VALIDATION_CHECKLIST.md)
+Release-facing PRs use:
 
-Release PRs target `main` only after `develop` is validated.
+```text
+Problem
+Solution
+Scope
+Validation
+Risks
+Follow-ups
+```
 
-## Open Source Presentation Benchmark
+<a id="license"></a>
 
-Blueprint uses [github/spec-kit](https://github.com/github/spec-kit) as the reference for open-source repository presentation, README structure, value proposition, documentation navigation, and community trust surfaces.
-
-See [docs/benchmarks/spec-kit-open-source-marketing-benchmark.md](docs/benchmarks/spec-kit-open-source-marketing-benchmark.md).
-
-## Support And Security
-
-- [Support](SUPPORT.md)
-- [Security Policy](SECURITY.md)
-- [Code Of Conduct](CODE_OF_CONDUCT.md)
-- [Core Security Baseline](core/SECURITY.md)
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
+## 📄 License
 
 Blueprint is released under the [MIT License](LICENSE).
