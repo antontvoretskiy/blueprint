@@ -10,6 +10,10 @@ They are not a CLI, installer, runtime, workflow engine, or code generator.
 | --- | --- |
 | `check_quality.py` | Runs manifest, link, wording, template index, and release consistency checks |
 
+Release consistency accepts the current `VERSION` as either the last released
+version or the next release target. This keeps release-preparation branches
+truthful before a GitHub Release or tag is published.
+
 ## Usage
 
 Run all quality checks:

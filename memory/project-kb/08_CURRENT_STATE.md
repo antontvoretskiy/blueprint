@@ -6,15 +6,16 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.6.1 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.7.0 public framework bundle after publication |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
 
 ## Current Work
 
-Blueprint v0.6.1 is released on public `main`.
+Blueprint v0.7.0 is the current prepared release state.
 
-The GitHub Release `v0.6.1` is published and points to the v0.6.1 release
-commit on `main`.
+The previous GitHub Release `v0.6.1` was published from public `main`.
+Publishing a GitHub Release or tag for `v0.7.0` remains a separate
+approval-gated step.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
@@ -33,6 +34,16 @@ Release `v0.5.1` publishes documentation alignment for the public branch model:
 Release `v0.6.1` keeps documentation quality gates on public `main` while
 removing the Dependabot configuration that created extra public maintenance
 branches.
+
+Release `v0.7.0` adds the documentation navigation layer:
+
+- `docs/index.md`;
+- `docs/nav.md`;
+- `docs/quickstart.md`;
+- `docs/concepts/repository-first.md`;
+- `docs/reference/templates.md`;
+- `docs/reference/governance.md`;
+- `docs/community.md`.
 
 The active quality-gate surface is:
 
@@ -69,6 +80,7 @@ runtime, workflow engine, or code generator.
 - v0.5.1 public README, branch model alignment, adoption copy map, and practical AI-agent use-case media in
   `main`.
 - v0.6.1 documentation quality workflow and scripts.
+- v0.7.0 documentation navigation, quickstart, concept, reference, and community pages.
 
 ## Not Yet Included
 
@@ -84,7 +96,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Select the next release scope after v0.6.1.
+Select the next release scope after v0.7.0.
 
-Do not start additional examples, CLI, installer, release automation, or
-integration work until the next scope is selected.
+Do not start additional examples, validation fixtures, CLI, installer, release
+automation, or integration work until the next scope is selected.

@@ -6,7 +6,7 @@ This file records what is currently included in Blueprint and what remains plann
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.6.1 public README is released |
+| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.7.0 public README is prepared |
 | Local preview environment | Included | Docker Compose preview and smoke checks |
 | Complete product map | Included | Product shape, subsystem links, process levels, project management, and feature management |
 | Core contracts | Included | Agent contract, task router, compact process levels, context budgets, recovery budgets, lifecycle, handoff, security |
@@ -27,12 +27,14 @@ This file records what is currently included in Blueprint and what remains plann
 | Public use-case media | Included | Blueprint logo and practical AI-agent use-case screenshots for the public README |
 | Public main-only branch model | Included | Public GitHub exposes `main` as the release-ready distribution branch; maintainer integration branches may be local or private |
 | Documentation quality gates | Included | Local `make quality` checks and docs-quality GitHub Actions workflow validate repository documentation claims |
+| Documentation navigation | Included | Docs landing page, navigation map, quickstart, repository-first concept, template reference, governance reference, and community guide |
 
 ## Planned
 
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
+| Validation fixtures | Planned | Test fixtures for validating documentation quality scripts when the script contracts stabilize |
 | CLI and installer | Planned | Remain outside the current bundle until manual adoption becomes too repetitive |
 | Release automation | Planned | Release publication remains manual until the release process repeats enough to automate safely |
 

@@ -6,6 +6,20 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.7.0 - 2026-06-12
+
+### Added
+
+- Added a documentation landing page, navigation map, quickstart, repository-first
+  concept page, template reference, governance reference, and community guide.
+- Linked the new documentation layer from the README, open-source guide,
+  bundle manifest, product map, Project Memory, and release metadata.
+
+### Changed
+
+- Updated release consistency checks so release-preparation branches can declare
+  the current version as an explicit next release target before tag publication.
+
 ## v0.6.1 - 2026-06-11
 
 ### Changed
