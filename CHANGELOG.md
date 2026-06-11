@@ -10,6 +10,11 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 - Reworked the README opening funnel with emoji navigation, practical AI-agent
   use cases, and a clearer repository-first adoption path.
+- Added audience, problem-fit, staged use-case map, and adoption-path sections
+  to make the README explain the full Blueprint workflow before showing
+  screenshots.
+- Removed comparison content and local preview details from the README funnel
+  so the public landing page stays focused on Blueprint adoption.
 - Updated the public Blueprint logo asset.
 - Added the first README use-case screenshot for fresh-chat recovery.
 - Added README use-case screenshots for context export and PR handoff.
