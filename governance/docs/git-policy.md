@@ -60,18 +60,19 @@ Source-reference repositories are read-only inputs. Do not create branches, comm
 
 ## Canonical Branch Rule
 
-Blueprint uses two long-lived branches:
+The public Blueprint repository exposes one long-lived distribution branch:
 
 | Branch | Role |
 | --- | --- |
 | `main` | Release-ready public state |
-| `develop` | Integration branch for unreleased framework work |
 
-Normal framework work starts from `develop` and opens PRs back into `develop`.
+Maintainers may use local or private integration branches before publication. Those branches are maintainer workflow details, not public distribution branches.
 
-Release preparation targets `main` through an explicit release PR.
+Normal public contribution work starts from current `main` and targets `main` unless maintainers explicitly request a private integration, hotfix, or release branch.
 
 Do not use `main` as a scratch branch.
+
+Adopting repositories may use either `main` only or `main` plus an integration branch. The chosen model must be recorded in the adopter repository Git policy and Project Memory.
 
 ## Branch Naming Standard
 
@@ -195,21 +196,29 @@ Small typo or link fixes may use a title-only commit if the title is specific.
 
 ## Branch Lifecycle
 
-Standard lifecycle:
+Public main-only lifecycle:
 
 ```text
-sync develop
-create scoped branch
+sync main
+create scoped branch from main
 make scoped changes
 run validation
 commit intentionally
-push branch
-open PR into develop
+open PR into main when public review is needed
 review
 squash merge
-sync develop
 delete merged branch
 run post-merge validation
+```
+
+Maintainer private-integration lifecycle:
+
+```text
+sync release baseline
+work in local/private integration branch
+validate release-ready state
+publish only the validated release state to main
+tag or create GitHub Release only after explicit approval
 ```
 
 Release branches follow the release process and target `main`.
@@ -346,9 +355,9 @@ Generated public assets may be committed only when:
 
 ## Merge Policy
 
-Integration PRs:
+Public contribution PRs:
 
-- target `develop`;
+- target `main` unless maintainers explicitly request another base;
 - use squash merge by default;
 - include current validation evidence;
 - avoid unrelated root-doc status changes.
@@ -358,7 +367,7 @@ Release PRs:
 - target `main`;
 - name the release version;
 - verify public status documents;
-- summarize what moves from `develop` to release-ready state.
+- summarize what moves into release-ready state.
 
 ## Relationship To PR Standard
 

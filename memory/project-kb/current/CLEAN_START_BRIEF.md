@@ -10,39 +10,14 @@ Blueprint v0.5.0 is released on `main`.
 
 The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, and completed post-validation branch cleanup.
 
-After v0.4.0, PR #30 landed process-level regression hardening in `develop`.
-UC-03 now requires RT-01 through RT-18 scenario evidence before future
-packaging can claim task-routing validation.
+GitHub Release `v0.5.0` is published and points to the released `main` commit.
 
-PR #32 landed router context and recovery budgets in `develop`.
-L0/L1 work now has explicit limits for response length, context loading, and
-recovery-document loading.
+The public GitHub repository now exposes only `main` as the release-ready
+distribution branch. Local or private maintainer integration branches may exist,
+but they are not part of the public branch list.
 
-PR #36 landed the v0.4.1 process-efficiency dogfood audit in `develop`.
-The audit records that L0/L1/L2 routing budgets can be applied to Blueprint
-itself without full-process escalation for simple docs-only work.
-
-The merged dogfood audit branch was removed locally and remotely after PR #36.
-
-Release `v0.4.2` publishes PR #36 and PR #37 from validated `develop` state to
-`main`.
-
-PR #41 merged the v0.5.0 public README update into `develop`.
-
-The merged scope includes the refreshed public README, updated Blueprint logo,
-practical AI-agent use-case screenshots, bundle manifest updates, changelog
-updates, and v0.5.0 release target notes.
-
-Post-merge validation on `develop` passed for `make doctor`, `make config`,
-`make smoke`, `git diff --check`, README local links/images, forbidden public
-wording scan, noisy wording scan, and bad commit wording scan.
-
-Release `v0.5.0` publishes the public README, Blueprint logo refresh,
-practical AI-agent use-case screenshots, bundle manifest updates, changelog
-updates, release target notes, and post-release clean-start state from validated
-`develop` state to `main`.
-
-The next recovery step is post-release sync from `main` back to `develop`.
+The current scoped task is v0.5.1 documentation alignment for the public
+main-only distribution model and clearer adoption copy maps.
 
 ## Read First
 
@@ -55,25 +30,29 @@ The next recovery step is post-release sync from `main` back to `develop`.
 
 ## Active Branch Model
 
-Feature work targets `develop`.
+Public distribution targets `main`.
 
-Release work targets `main` only through an explicit release PR.
+Maintainers may use local or private integration branches before publication.
+
+Adopting repositories may choose `main` only or `main` plus an integration
+branch, but the chosen model must be documented in their Git policy and Project
+Memory.
 
 ## Current Next Step
 
-Sync `develop` from `main` after the v0.5.0 release PR merges.
+Complete and validate the v0.5.1 docs-only alignment.
 
-Recommended next scoped PRs:
+Recommended next scoped work:
 
-1. Post-release sync from `main` to `develop`.
-2. Post-release Project Memory refresh only if durable recovery state changed.
-3. Additional examples or adoption polish only after post-release state is confirmed.
+1. Finish public main-only branch model alignment.
+2. Validate fresh-clone adoption path.
+3. Publish to public `main` only after maintainer approval.
 
 ## Do Not Do
 
 - Do not modify source-reference repositories.
 - Do not mix unrelated template families in one PR.
-- Do not move `develop` to `main` without a release PR.
+- Do not publish local or private integration branches to the public repository unless explicitly approved.
 - Do not start automation, CLI, installer, integration, or execution-layer work without explicit scope approval.
-- Do not create the v0.5.0 tag or GitHub Release without maintainer approval.
+- Do not create a new tag or GitHub Release without maintainer approval.
 - Do not delete branches without explicit maintainer approval.

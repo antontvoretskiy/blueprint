@@ -64,13 +64,26 @@ request
 -> validation evidence
 -> PR handoff when needed
 -> Project Memory update when durable state changed
--> PR into develop
+-> PR into the selected integration or release branch
 -> merge
 -> clean start
 -> next recovery from repository
 ```
 
 The loop is intentionally scalable. Small tasks do not pay the cost of full process. Meaningful, risky, architectural, or release work does.
+
+## Public Distribution Model
+
+The public Blueprint repository publishes release-ready framework state from `main`.
+
+Maintainers may use local or private integration branches while preparing a release. Those branches are workflow details, not public distribution requirements.
+
+Adopting repositories may choose:
+
+- `main` only, with short-lived scoped branches;
+- `main` plus an integration branch, when the team needs a staging branch before release.
+
+The selected branch model must be recorded in the adopter repository Git policy and Project Memory.
 
 ## Subsystem Map
 

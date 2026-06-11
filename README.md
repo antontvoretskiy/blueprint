@@ -17,7 +17,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
   <a href="docs/validation/process-efficiency-dogfood-v0.4.1.md"><img alt="Validation: dogfooded" src="https://img.shields.io/badge/validation-dogfooded-0f766e"></a>
   <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
-  <a href="https://github.com/antontvoretskiy/blueprint/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/antontvoretskiy/blueprint?style=social"></a>
+  <a href="https://github.com/antontvoretskiy/blueprint"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-blueprint-181717?logo=github"></a>
 </p>
 
 <a id="table-of-contents"></a>
@@ -180,9 +180,10 @@ Start with this 10-minute path:
 
 1. Read the product shape in [PRODUCT_MAP.md](PRODUCT_MAP.md).
 2. Pick an adoption path in [ADAPTATION_GUIDE.md](ADAPTATION_GUIDE.md).
-3. Copy either the minimal or full template set from [templates/](templates).
+3. Use the copy map in [ADAPTATION_GUIDE.md](ADAPTATION_GUIDE.md) to install a minimal or full Blueprint baseline.
 4. Create your Project Memory from [templates/project-memory/README.md](templates/project-memory/README.md).
-5. Run a recovery test from a new AI chat using the prompt below.
+5. Choose and document your branch model: `main` only, or `main` plus an integration branch.
+6. Run a recovery test from a new AI chat using the prompt below.
 
 Fresh-chat recovery prompt:
 
@@ -355,6 +356,8 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 Blueprint v0.5.0 is released on `main`.
 
+The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
+
 Included now:
 
 | Area | Status |
@@ -417,6 +420,7 @@ git diff --check
 | v0.4.1 | Process-level regression hardening, context budgets, and recovery budgets |
 | v0.4.2 | Process-efficiency dogfood audit and post-audit recovery state |
 | v0.5.0 | Public README, practical AI-agent use-case media, and adoption guidance |
+| v0.5.1 | Public main-only release model and clearer adoption copy map |
 | Next | Additional examples, adoption polish, and optional validation automation |
 
 <a id="contributing"></a>

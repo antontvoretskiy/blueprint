@@ -220,7 +220,7 @@ Release PRs:
 - include release validation evidence;
 - list known follow-ups.
 
-Integration PRs into `develop` are not release PRs.
+Scoped contribution PRs are not release PRs unless they change version, changelog, release status, public bundle state, or release packaging.
 
 ## Forbidden PR Patterns
 

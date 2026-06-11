@@ -610,17 +610,19 @@ If any condition is unclear and the risk is material, stop and ask for clarifica
 
 ## Branch Routing
 
-Default Blueprint development flow:
+Public Blueprint distribution flow:
 
 ```text
 main
-  -> develop
   -> docs/<scope> or fix/<scope>
-  -> PR into develop
-  -> release PR into main
+  -> validated update to main
 ```
 
-Use `main` for release-ready public state. Use `develop` for integration work before release.
+Use `main` for release-ready public state.
+
+Maintainers may use local or private integration branches before publication, but those branches are not required public state.
+
+Adopting repositories may choose `main` only or `main` plus an integration branch. The chosen model must be documented before branch-sensitive work starts.
 
 Do not create branches in a reference repository.
 

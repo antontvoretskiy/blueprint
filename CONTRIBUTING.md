@@ -46,19 +46,30 @@ If a change touches multiple operating layers, explain why they must land togeth
 
 ## Branch Strategy
 
-Blueprint uses `main` for release-ready public state and `develop` for integration work before release.
+The public Blueprint repository exposes `main` as the release-ready distribution branch.
 
-Default flow:
+Maintainers may use local or private integration branches before publication, but those branches are not part of the public distribution contract.
+
+Public contribution flow:
 
 ```text
 main
-  -> develop
   -> docs/<scope> or fix/<scope>
-  -> PR into develop
-  -> release PR into main
+  -> PR into main
 ```
 
-Create feature branches from `develop` unless the maintainer explicitly requests a release or hotfix branch.
+Maintainer release flow:
+
+```text
+local/private integration branch
+  -> release preparation
+  -> validated update to main
+  -> tag or GitHub Release only after explicit approval
+```
+
+Adopting repositories may use `main` only or `main` plus an integration branch. The selected branch model must be documented in the adopter repository Git policy and Project Memory.
+
+Create contribution branches from the current `main` unless the maintainer explicitly requests a private integration, release, or hotfix branch.
 
 Do not create branches in source-reference repositories.
 

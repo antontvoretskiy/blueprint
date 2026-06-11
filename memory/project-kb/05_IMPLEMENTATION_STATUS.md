@@ -25,13 +25,14 @@ This file records what is currently included in Blueprint and what remains plann
 | AI product example | Included | Sanitized adoption example for applying Blueprint to an AI product repository |
 | Public release packaging | Included | Version, changelog, release process, validation checklist, support, conduct, security, and GitHub contribution templates |
 | Public use-case media | Included | Blueprint logo and practical AI-agent use-case screenshots for the public README |
+| Public main-only branch model | Included | Public GitHub exposes `main` as the release-ready distribution branch; maintainer integration branches may be local or private |
 
 ## Planned
 
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| Post-release sync | Planned | Sync `develop` from `main` after v0.5.0 release and refresh recovery state if needed |
+| v0.5.1 adoption alignment | Planned | Publish clearer public main-only distribution docs and explicit adoption copy maps |
 
 ## Excluded From Core
 

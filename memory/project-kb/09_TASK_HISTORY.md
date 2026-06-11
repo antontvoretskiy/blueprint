@@ -43,6 +43,9 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-11 | Release `v0.4.2` | Published dogfood audit evidence and post-audit recovery state | `main` |
 | 2026-06-11 | PR #41 | Added v0.5.0 public README, logo refresh, use-case media, and release target notes | `develop` |
 | 2026-06-11 | Release `v0.5.0` | Published public README, logo refresh, use-case media, and release target notes | `main` |
+| 2026-06-11 | PR #44 | Synced release state back after v0.5.0 publication | `develop` |
+| 2026-06-11 | Release `v0.5.0` | Published GitHub Release and tag | `main` |
+| 2026-06-11 | Branch cleanup | Removed public release, docs, sync, and `develop` branches so the public repository exposes only `main` | remote refs |
 
 ## Update Rules
 

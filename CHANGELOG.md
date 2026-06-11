@@ -6,6 +6,14 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+### Changed
+
+- Clarified that the public Blueprint repository exposes `main` as the
+  release-ready distribution branch while maintainers may use local or private
+  integration branches before publication.
+- Added explicit minimal and full copy maps to the adoption guide so new
+  repositories can install Blueprint without relying on chat context.
+
 ## v0.5.0 - 2026-06-11
 
 ### Added

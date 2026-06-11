@@ -2,20 +2,22 @@
 
 Last released version: v0.5.0.
 
-Next release target: not selected.
+Next release target: v0.5.1.
 
 This document defines the manual release process for Blueprint.
 
-Release work is separate from feature, template, checklist, and example work. A release PR moves validated `develop` state into `main`.
+Release work is separate from feature, template, checklist, and example work.
+
+The public Blueprint repository uses `main` as the release-ready distribution branch. Maintainers may prepare release content on local or private integration branches, but only validated release state is published to the public repository.
 
 ## Release Branch Model
 
 | Branch | Role |
 | --- | --- |
-| `develop` | Integration branch for unreleased framework work |
-| `docs/<scope>` | Scoped documentation or packaging branch into `develop` |
-| `release/vX.Y.Z` | Optional release candidate branch when needed |
 | `main` | Release-ready public branch |
+| `docs/<scope>` | Scoped documentation or packaging branch before publication |
+| `release/vX.Y.Z` | Optional release candidate branch when needed |
+| local/private integration branch | Maintainer-only work before public release |
 
 ## Release Readiness Gates
 
@@ -84,7 +86,7 @@ Validation:
 ## Release Rules
 
 - Release PRs target `main`.
-- Release PRs should come from validated `develop` or a release branch.
+- Release PRs should come from a validated local/private integration branch, a scoped docs branch, or a release branch.
 - Release PRs must not add unrelated features.
 - Release PRs must not introduce product implementation.
 - Release PRs must not introduce automation unless that automation is the explicit release scope.
@@ -98,4 +100,4 @@ After a release PR merges:
 2. Confirm README, manifest, changelog, and version agree.
 3. Create a GitHub release or tag only when explicitly approved.
 4. Update Project Memory if the release changes durable state.
-5. Start the next scoped branch from updated `develop`.
+5. Start the next scoped branch from the current release baseline.

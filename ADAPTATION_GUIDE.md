@@ -4,6 +4,21 @@ This guide explains how to apply Blueprint to another repository.
 
 Use it with `BUNDLE_MANIFEST.md`, `templates/**`, `checklists/**`, and the AI product example.
 
+## Public Repository Model
+
+The public Blueprint repository exposes `main` as the release-ready distribution branch.
+
+Maintainers may use local or private integration branches before publishing a release, but those branches are not required for public adoption.
+
+Adopting repositories may choose either:
+
+| Model | Use when | Branch shape |
+| --- | --- | --- |
+| Main-only | Small teams, early adoption, or public framework distribution | `main` plus short-lived scoped branches |
+| Main plus integration | Teams that need a staging branch before release | `main`, `develop`, and short-lived scoped branches |
+
+Blueprint governs both models. The adopting repository must document which model it uses in its Git policy and Project Memory.
+
 ## Adaptation Goal
 
 After adaptation, a repository should answer:
@@ -67,6 +82,80 @@ Full installation adds:
 9. Run validation checks.
 10. Open one scoped PR for the adaptation.
 
+## Minimal Copy Map
+
+Use this map when a repository wants the smallest working Blueprint adoption.
+
+| Blueprint source | Target in adopter repository |
+| --- | --- |
+| `core/AGENTS.md` | `AGENTS.md` |
+| `core/TASK_PROCESS_ROUTER.md` | `TASK_PROCESS_ROUTER.md` |
+| `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md` | `PR_HANDOFF_AND_CLEAN_START_STANDARD.md` |
+| `governance/docs/governance-index.md` | `docs/governance-index.md` |
+| `governance/docs/git-policy.md` | `docs/git-policy.md` |
+| `governance/docs/pr-standard.md` | `docs/pr-standard.md` |
+| `governance/docs/verification-standard.md` | `docs/verification-standard.md` |
+| `templates/project-memory/00_INDEX.template.md` | `project-kb/00_INDEX.md` |
+| `templates/project-memory/05_IMPLEMENTATION_STATUS.template.md` | `project-kb/05_IMPLEMENTATION_STATUS.md` |
+| `templates/project-memory/08_CURRENT_STATE.template.md` | `project-kb/08_CURRENT_STATE.md` |
+| `templates/project-memory/10_REFERENCE.template.md` | `project-kb/10_REFERENCE.md` |
+| `templates/recovery/RECOVERY_PATH.template.md` | `project-kb/current/RECOVERY_PATH.md` or a linked section in `project-kb/00_INDEX.md` |
+| `templates/recovery/CLEAN_START_BRIEF.template.md` | `project-kb/current/CLEAN_START_BRIEF.md` |
+| `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | `project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` |
+
+After copying, replace placeholders, remove irrelevant sections, and make each target file truthful for the adopter repository.
+
+## Full Copy Map
+
+Use the full map when the repository needs feature lifecycle, decisions, task history, Guardian review, recovery validation, and checklists.
+
+| Blueprint source | Target in adopter repository |
+| --- | --- |
+| `core/FEATURE_LIFECYCLE_STANDARD.md` | `FEATURE_LIFECYCLE_STANDARD.md` |
+| `core/SECURITY.md` | `SECURITY.md` or a linked project security owner |
+| `governance/docs/engineering-governance.md` | `docs/engineering-governance.md` |
+| `governance/docs/documentation-standard.md` | `docs/documentation-standard.md` |
+| `governance/docs/adr-policy.md` | `docs/adr-policy.md` |
+| `templates/project-memory/*.template.md` | `project-kb/*.md` |
+| `templates/feature-lifecycle/*.template.md` | `project-kb/features/<feature-name>/*.md` |
+| `templates/pr-handoff/*.template.md` | `project-kb/templates/pr-handoff/*.md` or PR-local handoff docs |
+| `templates/guardian/*.template.md` | `project-kb/guardian/*.md` or linked Guardian owner docs |
+| `templates/recovery/*.template.md` | `project-kb/current/*.md` |
+| `checklists/*.md` | `checklists/*.md` |
+| `examples/ai-product/*.md` | Reference only; do not copy as project state |
+
+Examples explain adaptation patterns. They are not canonical rule owners for the adopter repository.
+
+## First Adoption PR
+
+The first adoption PR should be intentionally small.
+
+Recommended scope:
+
+- repository identity;
+- branch model;
+- minimal owner documents;
+- initial Project Memory;
+- recovery prompt;
+- installation checklist result.
+
+Do not combine first adoption with product implementation, refactoring, dependency changes, or automation.
+
+Suggested PR title:
+
+```text
+docs: adopt blueprint governance baseline
+```
+
+Suggested validation:
+
+```text
+git diff --check
+manual recovery check from a fresh AI chat
+installation checklist
+forbidden private-state scan
+```
+
 ## Placeholder Rules
 
 Replace placeholders such as:
@@ -81,6 +170,8 @@ Replace placeholders such as:
 Do not copy private product state, private release history, or private PR numbers into the adapted repository.
 
 ## Branch Mapping Example
+
+Choose this map only after selecting the repository branch model.
 
 | Project area | Example path | Branch family |
 | --- | --- | --- |
