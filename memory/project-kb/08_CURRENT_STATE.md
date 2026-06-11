@@ -6,16 +6,15 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.7.0 public framework bundle after publication |
+| `main` | Release-ready public state | Contains the released v0.7.0 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
 
 ## Current Work
 
-Blueprint v0.7.0 is the current prepared release state.
+Blueprint v0.7.0 is released on public `main`.
 
-The previous GitHub Release `v0.6.1` was published from public `main`.
-Publishing a GitHub Release or tag for `v0.7.0` remains a separate
-approval-gated step.
+The GitHub Release `v0.7.0` is published and points to the v0.7.0 release
+commit on `main`.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
