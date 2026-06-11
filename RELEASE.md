@@ -1,11 +1,8 @@
 # Blueprint Release Process
 
-Last released version: v0.4.2.
+Last released version: v0.5.0.
 
-Next release target: v0.5.0.
-
-Target scope: README public funnel, Blueprint logo refresh, and practical
-AI-agent use-case media.
+Next release target: not selected.
 
 This document defines the manual release process for Blueprint.
 

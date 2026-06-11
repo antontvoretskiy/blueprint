@@ -6,8 +6,8 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.4.2 public framework bundle |
-| `develop` | Integration branch | Contains the v0.5.0 README funnel integration state |
+| `main` | Release-ready public state | Contains the released v0.5.0 public framework bundle |
+| `develop` | Integration branch | Contains the v0.5.0 public README integration state before post-release sync |
 
 ## Current Work
 
@@ -43,9 +43,9 @@ Post-dogfood branch cleanup is complete for the merged PR #36 branch.
 Release `v0.4.2` publishes the dogfood audit and post-audit memory refresh from
 validated `develop` state to `main`.
 
-PR #41 merged the v0.5.0 README public funnel into `develop`.
+PR #41 merged the v0.5.0 public README update into `develop`.
 
-The merged scope includes the refreshed README funnel, updated Blueprint logo,
+The merged scope includes the refreshed public README, updated Blueprint logo,
 practical AI-agent use-case screenshots, bundle manifest updates, changelog
 updates, and v0.5.0 release target notes.
 
@@ -53,8 +53,13 @@ Post-merge validation on `develop` passed for `make doctor`, `make config`,
 `make smoke`, `git diff --check`, README local links/images, forbidden public
 wording scan, noisy wording scan, and bad commit wording scan.
 
-Current work is release preparation for v0.5.0 from validated `develop` state
-to `main`.
+Release `v0.5.0` publishes the public README, Blueprint logo refresh,
+practical AI-agent use-case screenshots, bundle manifest updates, changelog
+updates, release target notes, and post-release clean-start state from validated
+`develop` state to `main`.
+
+Current work after release is post-release sync from `main` back to `develop`
+and a post-release recovery refresh if needed.
 
 ## Current Included Layers
 
@@ -78,9 +83,9 @@ to `main`.
 - AI product example;
 - public release packaging;
 - support, security, and conduct files;
-- GitHub contribution templates.
-- v0.5.0 README public funnel and practical AI-agent use-case media in
-  `develop`.
+- GitHub contribution templates;
+- v0.5.0 public README and practical AI-agent use-case media in
+  `main`.
 
 ## Not Yet Included
 
@@ -96,12 +101,11 @@ to `main`.
 
 ## Next Recommended Work
 
-Prepare a separate `[Release] Prepare Blueprint v0.5.0` PR from validated
-`develop` to `main`.
+After the v0.5.0 release PR merges, sync `develop` from `main` and refresh
+post-release Project Memory only if durable recovery state changed.
 
-The release PR should bump `VERSION` to `0.5.0`, promote the `CHANGELOG.md`
-`Unreleased` entry to `v0.5.0 - 2026-06-11`, verify README, manifest,
-changelog, release notes, and version consistency, and avoid unrelated scope.
+Do not start additional examples, adoption polish, automation, CLI, installer,
+or integration work until the post-release state is confirmed.
 
-Do not create a tag or GitHub Release until the release PR has merged and
-maintainer approval is given.
+Create the v0.5.0 tag or GitHub Release only after the release PR has merged
+and maintainer approval is given.

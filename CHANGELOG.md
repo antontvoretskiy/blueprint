@@ -6,18 +6,22 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.5.0 - 2026-06-11
+
+### Added
+
+- Added audience, problem-fit, staged use-case map, and adoption-path sections
+  to explain the full Blueprint workflow before showing examples.
+- Added practical AI-agent use-case screenshots for fresh-chat recovery,
+  context export, and PR handoff.
+
 ### Changed
 
-- Reworked the README opening funnel with emoji navigation, practical AI-agent
-  use cases, and a clearer repository-first adoption path.
-- Added audience, problem-fit, staged use-case map, and adoption-path sections
-  to make the README explain the full Blueprint workflow before showing
-  screenshots.
-- Removed comparison content and local preview details from the README funnel
-  so the public landing page stays focused on Blueprint adoption.
+- Reworked the public README with emoji navigation, practical AI-agent use
+  cases, and a clearer repository-first adoption path.
+- Removed comparison content and local preview details from the public README
+  so the landing page stays focused on Blueprint adoption.
 - Updated the public Blueprint logo asset.
-- Added the first README use-case screenshot for fresh-chat recovery.
-- Added README use-case screenshots for context export and PR handoff.
 
 ## v0.4.2 - 2026-06-11
 

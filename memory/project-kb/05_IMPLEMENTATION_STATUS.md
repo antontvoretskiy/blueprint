@@ -6,7 +6,7 @@ This file records what is currently included in Blueprint and what remains plann
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.5.0 README funnel is merged to `develop` |
+| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.5.0 public README is released |
 | Local preview environment | Included | Docker Compose preview and smoke checks |
 | Complete product map | Included | Product shape, subsystem links, process levels, project management, and feature management |
 | Core contracts | Included | Agent contract, task router, compact process levels, context budgets, recovery budgets, lifecycle, handoff, security |
@@ -24,14 +24,14 @@ This file records what is currently included in Blueprint and what remains plann
 | Post-validation branch cleanup | Included | Merged docs branches after PRs #20 through #25 were removed locally and remotely after maintainer approval |
 | AI product example | Included | Sanitized adoption example for applying Blueprint to an AI product repository |
 | Public release packaging | Included | Version, changelog, release process, validation checklist, support, conduct, security, and GitHub contribution templates |
-| Public use-case media | Included | Blueprint logo and practical AI-agent use-case screenshots for README funnel |
+| Public use-case media | Included | Blueprint logo and practical AI-agent use-case screenshots for the public README |
 
 ## Planned
 
 | Area | Status | Notes |
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
-| v0.5.0 release PR | Planned | Prepare release PR from validated `develop` to `main`; bump `VERSION`, promote changelog entry, and verify release consistency |
+| Post-release sync | Planned | Sync `develop` from `main` after v0.5.0 release and refresh recovery state if needed |
 
 ## Excluded From Core
 

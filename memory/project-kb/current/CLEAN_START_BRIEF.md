@@ -6,7 +6,7 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.4.2 is released on `main`.
+Blueprint v0.5.0 is released on `main`.
 
 The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, and completed post-validation branch cleanup.
 
@@ -27,9 +27,9 @@ The merged dogfood audit branch was removed locally and remotely after PR #36.
 Release `v0.4.2` publishes PR #36 and PR #37 from validated `develop` state to
 `main`.
 
-PR #41 merged the v0.5.0 README public funnel into `develop`.
+PR #41 merged the v0.5.0 public README update into `develop`.
 
-The merged scope includes the refreshed README funnel, updated Blueprint logo,
+The merged scope includes the refreshed public README, updated Blueprint logo,
 practical AI-agent use-case screenshots, bundle manifest updates, changelog
 updates, and v0.5.0 release target notes.
 
@@ -37,7 +37,12 @@ Post-merge validation on `develop` passed for `make doctor`, `make config`,
 `make smoke`, `git diff --check`, README local links/images, forbidden public
 wording scan, noisy wording scan, and bad commit wording scan.
 
-The `develop` branch is now the base for the v0.5.0 release PR.
+Release `v0.5.0` publishes the public README, Blueprint logo refresh,
+practical AI-agent use-case screenshots, bundle manifest updates, changelog
+updates, release target notes, and post-release clean-start state from validated
+`develop` state to `main`.
+
+The next recovery step is post-release sync from `main` back to `develop`.
 
 ## Read First
 
@@ -56,14 +61,13 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Prepare a separate `[Release] Prepare Blueprint v0.5.0` PR from validated
-`develop` to `main`.
+Sync `develop` from `main` after the v0.5.0 release PR merges.
 
 Recommended next scoped PRs:
 
-1. Release PR for v0.5.0 from `develop` to `main`.
-2. Post-release Project Memory refresh after the release PR merges.
-3. Additional examples or adoption polish only after v0.5.0 release is complete.
+1. Post-release sync from `main` to `develop`.
+2. Post-release Project Memory refresh only if durable recovery state changed.
+3. Additional examples or adoption polish only after post-release state is confirmed.
 
 ## Do Not Do
 
@@ -71,6 +75,5 @@ Recommended next scoped PRs:
 - Do not mix unrelated template families in one PR.
 - Do not move `develop` to `main` without a release PR.
 - Do not start automation, CLI, installer, integration, or execution-layer work without explicit scope approval.
-- Do not create the v0.5.0 tag or GitHub Release before the release PR merges
-  and maintainer approval is given.
+- Do not create the v0.5.0 tag or GitHub Release without maintainer approval.
 - Do not delete branches without explicit maintainer approval.

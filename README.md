@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/antontvoretskiy/blueprint/releases/tag/v0.4.2"><img alt="Release: v0.4.2" src="https://img.shields.io/badge/release-v0.4.2-blue"></a>
+  <a href="https://github.com/antontvoretskiy/blueprint/releases/tag/v0.5.0"><img alt="Release: v0.5.0" src="https://img.shields.io/badge/release-v0.5.0-blue"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
   <a href="docs/validation/process-efficiency-dogfood-v0.4.1.md"><img alt="Validation: dogfooded" src="https://img.shields.io/badge/validation-dogfooded-0f766e"></a>
   <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
@@ -239,7 +239,7 @@ Keep only durable state that helps the next chat recover.
 
 ## 🧠 Practical AI-Agent Examples
 
-These screenshots are examples, not the full product boundary. The complete use-case map above is the product funnel.
+These screenshots are examples, not the full product boundary. The complete use-case map above describes the broader Blueprint workflow.
 
 ### 🧭 Recover A New Codex Chat
 
@@ -353,7 +353,7 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 ## ✅ Current Status
 
-Blueprint v0.4.2 is released on `main`.
+Blueprint v0.5.0 is released on `main`.
 
 Included now:
 
@@ -372,6 +372,7 @@ Included now:
 | AI product example | Included |
 | System use-case validation suite | Included |
 | Process-efficiency dogfood audit | Included |
+| Public README and practical AI-agent use-case media | Included |
 
 Not included yet:
 
@@ -415,7 +416,7 @@ git diff --check
 | v0.4.0 | System use-case validation, dependency verification, branch cleanup completion, and packaging readiness |
 | v0.4.1 | Process-level regression hardening, context budgets, and recovery budgets |
 | v0.4.2 | Process-efficiency dogfood audit and post-audit recovery state |
-| v0.5.0 | README funnel, practical use-case media, adoption readiness |
+| v0.5.0 | Public README, practical AI-agent use-case media, and adoption guidance |
 | Next | Additional examples, adoption polish, and optional validation automation |
 
 <a id="contributing"></a>
