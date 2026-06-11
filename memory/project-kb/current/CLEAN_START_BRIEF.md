@@ -27,9 +27,9 @@ The merged dogfood audit branch was removed locally and remotely after PR #36.
 Release `v0.4.2` publishes PR #36 and PR #37 from validated `develop` state to
 `main`.
 
-PR #41 merged the v0.5.0 README public funnel into `develop`.
+PR #41 merged the v0.5.0 public README update into `develop`.
 
-The merged scope includes the refreshed README funnel, updated Blueprint logo,
+The merged scope includes the refreshed public README, updated Blueprint logo,
 practical AI-agent use-case screenshots, bundle manifest updates, changelog
 updates, and v0.5.0 release target notes.
 
@@ -37,9 +37,9 @@ Post-merge validation on `develop` passed for `make doctor`, `make config`,
 `make smoke`, `git diff --check`, README local links/images, forbidden public
 wording scan, noisy wording scan, and bad commit wording scan.
 
-Release `v0.5.0` publishes the README public funnel, Blueprint logo refresh,
+Release `v0.5.0` publishes the public README, Blueprint logo refresh,
 practical AI-agent use-case screenshots, bundle manifest updates, changelog
-updates, release target notes, and post-funnel clean-start state from validated
+updates, release target notes, and post-release clean-start state from validated
 `develop` state to `main`.
 
 The next recovery step is post-release sync from `main` back to `develop`.
