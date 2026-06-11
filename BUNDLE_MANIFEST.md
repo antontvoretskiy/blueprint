@@ -31,7 +31,6 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `.github/ISSUE_TEMPLATE/framework_change.yml` | Included | Framework change request template |
 | `.github/ISSUE_TEMPLATE/docs_issue.yml` | Included | Documentation issue template |
 | `.github/workflows/docs-quality.yml` | Included | Documentation quality workflow |
-| `.github/dependabot.yml` | Included | GitHub Actions dependency update configuration |
 | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` | Included | Public presentation benchmark |
 | `media/blueprint-logo.png` | Included | Public brand asset |
 | `media/use-cases/codex-recovery-prompt.png` | Included | Public README use-case screenshot |

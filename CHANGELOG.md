@@ -6,14 +6,22 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.6.1 - 2026-06-11
+
+### Changed
+
+- Removed Dependabot from the public repository because automatic dependency
+  update branches conflict with the public `main`-only branch model.
+- Kept the documentation quality workflow while removing the source of extra
+  public maintenance branches.
+
 ## v0.6.0 - 2026-06-11
 
 ### Added
 
 - Added local documentation quality checks for manifest paths, markdown links,
   public wording, template indexes, and release consistency.
-- Added a GitHub Actions documentation quality workflow and Dependabot
-  configuration for GitHub Actions updates.
+- Added a GitHub Actions documentation quality workflow.
 
 ## v0.5.1 - 2026-06-11
 

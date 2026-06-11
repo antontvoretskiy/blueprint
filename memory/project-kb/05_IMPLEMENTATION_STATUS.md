@@ -6,7 +6,7 @@ This file records what is currently included in Blueprint and what remains plann
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.6.0 public README is released |
+| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.6.1 public README is released |
 | Local preview environment | Included | Docker Compose preview and smoke checks |
 | Complete product map | Included | Product shape, subsystem links, process levels, project management, and feature management |
 | Core contracts | Included | Agent contract, task router, compact process levels, context budgets, recovery budgets, lifecycle, handoff, security |

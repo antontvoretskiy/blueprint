@@ -6,14 +6,14 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.6.0 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.6.1 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
 
 ## Current Work
 
-Blueprint v0.6.0 is released on public `main`.
+Blueprint v0.6.1 is released on public `main`.
 
-The GitHub Release `v0.6.0` is published and points to the v0.6.0 release
+The GitHub Release `v0.6.1` is published and points to the v0.6.1 release
 commit on `main`.
 
 The public GitHub repository exposes only `main` as the release-ready
@@ -30,12 +30,15 @@ Release `v0.5.1` publishes documentation alignment for the public branch model:
 - add explicit adoption copy maps;
 - align governance, release, router, and memory documents with the public branch model.
 
-Release `v0.6.0` publishes documentation quality gates:
+Release `v0.6.1` keeps documentation quality gates on public `main` while
+removing the Dependabot configuration that created extra public maintenance
+branches.
+
+The active quality-gate surface is:
 
 - `make quality`;
 - `scripts/check_quality.py`;
 - `.github/workflows/docs-quality.yml`;
-- `.github/dependabot.yml`.
 
 These checks are validation tooling only. They are not a CLI, installer,
 runtime, workflow engine, or code generator.
@@ -65,7 +68,7 @@ runtime, workflow engine, or code generator.
 - GitHub contribution templates;
 - v0.5.1 public README, branch model alignment, adoption copy map, and practical AI-agent use-case media in
   `main`.
-- v0.6.0 documentation quality workflow and scripts.
+- v0.6.1 documentation quality workflow and scripts.
 
 ## Not Yet Included
 
@@ -81,7 +84,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Select the next release scope after v0.6.0.
+Select the next release scope after v0.6.1.
 
 Do not start additional examples, CLI, installer, release automation, or
 integration work until the next scope is selected.
