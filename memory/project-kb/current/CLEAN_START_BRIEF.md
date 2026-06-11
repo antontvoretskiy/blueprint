@@ -6,11 +6,11 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.5.1 is released on `main`.
+Blueprint v0.6.0 is released on `main`.
 
 The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, and completed post-validation branch cleanup.
 
-GitHub Release `v0.5.1` is published and points to the released `main` commit.
+GitHub Release `v0.6.0` is published and points to the released `main` commit.
 
 The public GitHub repository now exposes only `main` as the release-ready
 distribution branch. Local or private maintainer integration branches may exist,
@@ -19,7 +19,7 @@ but they are not part of the public branch list.
 Release `v0.5.1` aligns the public main-only distribution model and adds clearer
 adoption copy maps.
 
-The current stacked local task adds v0.6.0 documentation quality gates with
+Release `v0.6.0` adds documentation quality gates with
 `make quality`, `scripts/check_quality.py`, a docs-quality GitHub Actions
 workflow, and Dependabot configuration for GitHub Actions updates.
 
@@ -44,20 +44,19 @@ Memory.
 
 ## Current Next Step
 
-Complete and validate the v0.5.1 docs-only alignment and v0.6.0 quality-gates
-scope.
+Select the next release scope after v0.6.0.
 
 Recommended next scoped work:
 
-1. Finish documentation quality gates.
-2. Validate fresh-clone adoption path and CI-equivalent local checks.
-3. Publish to public `main` only after maintainer approval.
+1. Run fresh-clone verification for public `main`.
+2. Decide whether the next scope is docs site, examples catalog, or CI expansion.
+3. Keep CLI, installer, release automation, and integrations out of scope until explicitly approved.
 
 ## Do Not Do
 
 - Do not modify source-reference repositories.
 - Do not mix unrelated template families in one PR.
 - Do not publish local or private integration branches to the public repository unless explicitly approved.
-- Do not start automation, CLI, installer, integration, or execution-layer work without explicit scope approval.
+- Do not start CLI, installer, release automation, integration, or execution-layer work without explicit scope approval.
 - Do not create a new tag or GitHub Release without maintainer approval.
 - Do not delete branches without explicit maintainer approval.

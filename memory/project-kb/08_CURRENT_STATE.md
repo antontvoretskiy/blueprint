@@ -6,14 +6,14 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.5.1 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.6.0 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
 
 ## Current Work
 
-Blueprint v0.5.1 is released on public `main`.
+Blueprint v0.6.0 is released on public `main`.
 
-The GitHub Release `v0.5.1` is published and points to the v0.5.1 release
+The GitHub Release `v0.6.0` is published and points to the v0.6.0 release
 commit on `main`.
 
 The public GitHub repository exposes only `main` as the release-ready
@@ -30,7 +30,7 @@ Release `v0.5.1` publishes documentation alignment for the public branch model:
 - add explicit adoption copy maps;
 - align governance, release, router, and memory documents with the public branch model.
 
-The current stacked local scope adds v0.6.0 documentation quality gates:
+Release `v0.6.0` publishes documentation quality gates:
 
 - `make quality`;
 - `scripts/check_quality.py`;
@@ -65,12 +65,12 @@ runtime, workflow engine, or code generator.
 - GitHub contribution templates;
 - v0.5.1 public README, branch model alignment, adoption copy map, and practical AI-agent use-case media in
   `main`.
-- documentation quality workflow and scripts.
+- v0.6.0 documentation quality workflow and scripts.
 
 ## Not Yet Included
 
 - additional examples;
-- automation;
+- release automation;
 - CLI;
 - installer;
 - MCP integration;
@@ -81,8 +81,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Complete the v0.6.0 documentation quality-gates scope, validate it from a fresh
-clone, then publish to public `main` only after maintainer approval.
+Select the next release scope after v0.6.0.
 
-Do not start additional examples, CLI, installer, or integration work until the
-quality-gates scope is validated.
+Do not start additional examples, CLI, installer, release automation, or
+integration work until the next scope is selected.

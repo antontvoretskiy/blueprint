@@ -6,7 +6,7 @@ This file records what is currently included in Blueprint and what remains plann
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.5.1 public README is released |
+| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.6.0 public README is released |
 | Local preview environment | Included | Docker Compose preview and smoke checks |
 | Complete product map | Included | Product shape, subsystem links, process levels, project management, and feature management |
 | Core contracts | Included | Agent contract, task router, compact process levels, context budgets, recovery budgets, lifecycle, handoff, security |
@@ -34,6 +34,7 @@ This file records what is currently included in Blueprint and what remains plann
 | --- | --- | --- |
 | Additional examples | Planned | SaaS, marketplace, CRM, and regulated platform examples |
 | CLI and installer | Planned | Remain outside the current bundle until manual adoption becomes too repetitive |
+| Release automation | Planned | Release publication remains manual until the release process repeats enough to automate safely |
 
 ## Excluded From Core
 
@@ -58,6 +59,7 @@ Current local validation commands:
 
 ```bash
 make doctor
+make quality
 make smoke
 git diff --check
 ```

@@ -6,6 +6,8 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.6.0 - 2026-06-11
+
 ### Added
 
 - Added local documentation quality checks for manifest paths, markdown links,
