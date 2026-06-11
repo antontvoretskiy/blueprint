@@ -6,6 +6,8 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.5.0 - 2026-06-11
+
 ### Changed
 
 - Reworked the README opening funnel with emoji navigation, practical AI-agent
