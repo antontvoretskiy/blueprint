@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/blueprint-logo.png" alt="Blueprint logo" width="440">
+  <img src="media/blueprint-logo.png" alt="Blueprint logo" width="360">
 </p>
 
 <h1 align="center">📐 Blueprint</h1>
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  Keep governance, project memory, recovery, branch rules, and PR handoff inside the repository.
+  <strong>Keep project rules, memory, recovery, branch governance, and PR handoff inside the repository.</strong>
 </p>
 
 <p align="center">
@@ -20,11 +20,24 @@
   <a href="https://github.com/antontvoretskiy/blueprint/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/antontvoretskiy/blueprint?style=social"></a>
 </p>
 
-Blueprint helps software teams and AI agents operate from the repository instead of from fragile chat memory.
+<a id="table-of-contents"></a>
 
-Chat helps execution. The repository owns durable rules, current state, recovery points, validation evidence, and handoff.
+## 🧭 Table of Contents
 
-Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS starter kit, product framework, or UI framework.
+- [🧠 Practical AI-Agent Use Cases](#practical-ai-agent-use-cases)
+- [🤔 What Is Blueprint?](#what-is-blueprint)
+- [⚡ Get Started](#get-started)
+- [🧩 What Blueprint Manages](#what-blueprint-manages)
+- [🔁 Repository Recovery Loop](#repository-recovery-loop)
+- [🛡️ Guardian Checks](#guardian-checks)
+- [🌱 Blueprint vs GitHub Spec Kit](#blueprint-vs-github-spec-kit)
+- [📁 Repository Structure](#repository-structure)
+- [✅ Current Status](#current-status)
+- [🧪 Validation](#validation)
+- [🛠️ Repository Development](#repository-development)
+- [🗺️ Roadmap](#roadmap)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
 
 <a id="practical-ai-agent-use-cases"></a>
 
@@ -52,7 +65,7 @@ Tell me:
 ```
 
 <p align="center">
-  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="920">
+  <img src="media/use-cases/codex-recovery-prompt.png" alt="Codex recovery prompt example" width="560">
 </p>
 
 This is the core Blueprint behavior: a new AI chat recovers project state from repository-owned files instead of previous conversation history.
@@ -76,7 +89,7 @@ Return:
 ```
 
 <p align="center">
-  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="920">
+  <img src="media/use-cases/project-memory-export.png" alt="Project memory export example" width="560">
 </p>
 
 This makes project context portable across AI tools without copying private references or unrelated implementation files.
@@ -103,29 +116,10 @@ Use repository files as the source of truth.
 ```
 
 <p align="center">
-  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="920">
+  <img src="media/use-cases/pr-handoff.png" alt="Blueprint PR handoff example" width="560">
 </p>
 
 Blueprint PR handoff keeps problem, solution, scope, validation, risks, memory update, and clean-start decisions attached to the branch instead of trapped in chat.
-
-<a id="table-of-contents"></a>
-
-## 🧭 Table of Contents
-
-- [🤔 What Is Blueprint?](#what-is-blueprint)
-- [🧠 Practical AI-Agent Use Cases](#practical-ai-agent-use-cases)
-- [⚡ Get Started](#get-started)
-- [🧩 What Blueprint Manages](#what-blueprint-manages)
-- [🔁 Repository Recovery Loop](#repository-recovery-loop)
-- [🛡️ Guardian Checks](#guardian-checks)
-- [🌱 Blueprint vs GitHub Spec Kit](#blueprint-vs-github-spec-kit)
-- [📁 Repository Structure](#repository-structure)
-- [✅ Current Status](#current-status)
-- [🧪 Validation](#validation)
-- [🛠️ Repository Development](#repository-development)
-- [🗺️ Roadmap](#roadmap)
-- [🤝 Contributing](#contributing)
-- [📄 License](#license)
 
 <a id="what-is-blueprint"></a>
 
@@ -151,6 +145,8 @@ new way: project context lives in the repository
 ```
 
 That matters because AI-native projects fail when a new chat cannot recover state, a PR mixes unrelated scopes, or documentation claims more than the repository proves.
+
+Blueprint is not a runtime, code generator, agent runtime, workflow engine, SaaS starter kit, product framework, or UI framework.
 
 <a id="get-started"></a>
 
