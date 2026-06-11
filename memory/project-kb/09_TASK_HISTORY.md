@@ -41,6 +41,8 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-10 | Branch cleanup | Removed the merged dogfood audit branch after PR #36 | local and remote refs |
 | 2026-06-11 | PR #37 | Refreshed process-efficiency clean-start state after PR #36 | `develop` |
 | 2026-06-11 | Release `v0.4.2` | Published dogfood audit evidence and post-audit recovery state | `main` |
+| 2026-06-11 | PR #41 | Added v0.5.0 public README, logo refresh, use-case media, and release target notes | `develop` |
+| 2026-06-11 | Release `v0.5.0` | Published public README, logo refresh, use-case media, and release target notes | `main` |
 
 ## Update Rules
 

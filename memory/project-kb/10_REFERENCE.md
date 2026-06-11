@@ -12,6 +12,7 @@ This file lists canonical project references for recovery.
 | Bundle manifest | `BUNDLE_MANIFEST.md` |
 | Contribution rules | `CONTRIBUTING.md` |
 | Public README | `README.md` |
+| Public README media | `media/blueprint-logo.png`, `media/use-cases/` |
 | Spec Kit presentation benchmark | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` |
 | Version target | `VERSION` |
 | Changelog | `CHANGELOG.md` |
