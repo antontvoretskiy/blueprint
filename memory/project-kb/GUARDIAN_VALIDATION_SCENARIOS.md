@@ -26,7 +26,8 @@ Given normal Blueprint integration work
 
 When a feature branch is based on `main`
 
-Then the agent should rebase or recreate the branch from `develop` unless the task is release work.
+Then the agent should rebase or recreate the branch from the current release
+baseline unless the task is already on an approved scoped release branch.
 
 ## Scenario 4: Scope Drift
 

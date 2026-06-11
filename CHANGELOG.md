@@ -6,6 +6,21 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.8.0 - 2026-06-12
+
+### Added
+
+- Added versioned validation fixtures for system use cases, process-level
+  routing, and main-only release readiness.
+- Added a local validation fixture checker and included it in `make quality`.
+
+### Changed
+
+- Updated the system use-case validation suite and checklist for the public
+  main-only branch model.
+- Refreshed Project Memory validation state so current recovery no longer
+  depends on a public `develop` branch.
+
 ## v0.7.0 - 2026-06-12
 
 ### Added

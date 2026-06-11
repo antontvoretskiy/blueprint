@@ -1,0 +1,74 @@
+{
+  "asset": "release-readiness-fixtures",
+  "version": "v0.8.0",
+  "type": "Validation Fixture",
+  "status": "release-target",
+  "branch_model": {
+    "public_heads": ["main"],
+    "release_target": "main",
+    "private_integration_allowed": true,
+    "public_integration_branch_required": false
+  },
+  "required_commands": [
+    "make quality",
+    "make doctor",
+    "make config",
+    "make smoke",
+    "git diff --check",
+    "python3 -m py_compile scripts/check_quality.py",
+    "python3 -m py_compile scripts/check_validation_fixtures.py"
+  ],
+  "required_scans": [
+    "manifest paths",
+    "markdown links",
+    "public wording",
+    "template index",
+    "release consistency",
+    "validation fixtures",
+    "open PR check",
+    "remote public branch check",
+    "release tag check"
+  ],
+  "evidence_requirements": [
+    {
+      "id": "REL-01",
+      "name": "Release files agree",
+      "owner_documents": ["VERSION", "CHANGELOG.md", "RELEASE.md", "README.md"],
+      "pass_criteria": "Version, changelog, release process, and README describe the same release intent."
+    },
+    {
+      "id": "REL-02",
+      "name": "Bundle manifest agrees",
+      "owner_documents": ["BUNDLE_MANIFEST.md", "memory/project-kb/05_IMPLEMENTATION_STATUS.md"],
+      "pass_criteria": "Every included file exists and planned work stays planned."
+    },
+    {
+      "id": "REL-03",
+      "name": "Project Memory agrees",
+      "owner_documents": ["memory/project-kb/08_CURRENT_STATE.md", "memory/project-kb/current/CLEAN_START_BRIEF.md"],
+      "pass_criteria": "Recovery state points to the current public release and next scoped work."
+    },
+    {
+      "id": "REL-04",
+      "name": "Public branch list agrees",
+      "owner_documents": ["governance/docs/git-policy.md", "RELEASE.md"],
+      "pass_criteria": "The public repository exposes only main after merged release branches are deleted."
+    },
+    {
+      "id": "REL-05",
+      "name": "No excluded scope entered release",
+      "owner_documents": ["OPEN_SOURCE_SPEC.md", "ARCHITECTURE.md", "BUNDLE_MANIFEST.md"],
+      "pass_criteria": "CLI, installer, runtime, workflow engine, MCP integration, and release automation stay excluded unless explicitly selected."
+    }
+  ],
+  "forbidden_release_scopes": [
+    "CLI",
+    "installer",
+    "runtime",
+    "workflow engine",
+    "MCP integration",
+    "product implementation",
+    "release automation",
+    "dependency automation"
+  ]
+}

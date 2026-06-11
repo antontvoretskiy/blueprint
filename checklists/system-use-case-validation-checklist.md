@@ -1,6 +1,6 @@
 # Blueprint System Use-Case Validation Checklist
 
-Status: Checklist v0.4.1.
+Status: Checklist v0.8.0.
 
 Use this checklist with `docs/validation/system-use-case-suite.md` before public packaging, release preparation, or branch cleanup.
 
@@ -9,7 +9,7 @@ Use this checklist with `docs/validation/system-use-case-suite.md` before public
 | Check | Result | Evidence |
 | --- | --- | --- |
 | Working repository is `antontvoretskiy/blueprint` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
-| Work is on a scoped branch from `develop` | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| Work is on current `main` or a scoped/private maintainer branch | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | `main` is not changed directly | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | Source-reference repositories are not modified | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | Runtime, CLI, automation, and integration layers are out of scope unless explicitly selected | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
@@ -69,6 +69,7 @@ escalation trigger.
 | --- | --- | --- |
 | Manifest included files exist | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | New validation assets are linked from manifest and reference map | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
+| Validation fixtures pass local fixture checker | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | Checklist index includes this checklist | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | Memory files do not contradict manifest, changelog, release state, or clean-start state | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
 | No stale completed branch or PR is listed as current work | `<PASS_FAIL_OR_NA>` | `<EVIDENCE>` |
@@ -83,6 +84,7 @@ escalation trigger.
 | `make smoke` | `<PASS_FAIL_OR_NOT_RUN>` | `<EVIDENCE>` |
 | `git diff --check` | `<PASS_FAIL_OR_NOT_RUN>` | `<EVIDENCE>` |
 | Markdown local link check | `<PASS_FAIL_OR_NOT_RUN>` | `<EVIDENCE>` |
+| Validation fixture check | `<PASS_FAIL_OR_NOT_RUN>` | `<EVIDENCE>` |
 | Forbidden public wording scan | `<PASS_FAIL_OR_NOT_RUN>` | `<EVIDENCE>` |
 | Product-term scan | `<PASS_FAIL_OR_NOT_RUN>` | `<EVIDENCE>` |
 | Stale recovery phrase scan | `<PASS_FAIL_OR_NOT_RUN>` | `<EVIDENCE>` |

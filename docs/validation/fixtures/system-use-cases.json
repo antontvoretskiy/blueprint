@@ -1,0 +1,140 @@
+{
+  "asset": "system-use-case-fixtures",
+  "version": "v0.8.0",
+  "type": "Validation Fixture",
+  "status": "release-target",
+  "result_terms": ["PASS", "FAIL", "NOT RUN", "N/A"],
+  "use_cases": [
+    {
+      "id": "UC-01",
+      "name": "Repository identity and start gate",
+      "owner_documents": ["core/AGENTS.md", "VALIDATION_CHECKLIST.md", "governance/docs/git-policy.md"],
+      "method": "Confirm repository remote, current branch, target branch, dirty state, and forbidden paths.",
+      "pass_criteria": "Repository is antontvoretskiy/blueprint; work starts from current main or a scoped/private maintainer branch; source references stay read-only."
+    },
+    {
+      "id": "UC-02",
+      "name": "Fresh recovery without chat history",
+      "owner_documents": ["memory/project-kb/00_INDEX.md", "memory/project-kb/08_CURRENT_STATE.md", "memory/project-kb/10_REFERENCE.md"],
+      "method": "Follow the recovery path from repository files only.",
+      "pass_criteria": "Current state, included state, planned state, excluded state, and next work are clear without old chat."
+    },
+    {
+      "id": "UC-03",
+      "name": "Task routing by process level",
+      "owner_documents": ["core/TASK_PROCESS_ROUTER.md", "docs/validation/fixtures/process-level-regression.json"],
+      "method": "Classify the RT-01 through RT-18 process-level regression fixtures.",
+      "pass_criteria": "Small tasks stay L0 or L1, scoped layer work stays L2, feature work reaches L3, and architecture, migration, release, merge, or branch-state work reaches L4."
+    },
+    {
+      "id": "UC-04",
+      "name": "Owner document resolution",
+      "owner_documents": ["memory/project-kb/10_REFERENCE.md", "memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md"],
+      "method": "Pick a rule and trace it to one canonical owner.",
+      "pass_criteria": "The rule has one canonical owner and summaries do not redefine it."
+    },
+    {
+      "id": "UC-05",
+      "name": "Project Memory integrity",
+      "owner_documents": ["memory/project-kb/05_IMPLEMENTATION_STATUS.md", "memory/project-kb/08_CURRENT_STATE.md", "BUNDLE_MANIFEST.md"],
+      "method": "Compare included, planned, and excluded states.",
+      "pass_criteria": "Memory, manifest, and release status agree."
+    },
+    {
+      "id": "UC-06",
+      "name": "Clean start after merge",
+      "owner_documents": ["core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md", "memory/project-kb/current/CLEAN_START_BRIEF.md"],
+      "method": "Inspect the latest merged PR and current clean-start brief.",
+      "pass_criteria": "The next session does not need the previous chat or completed branch."
+    },
+    {
+      "id": "UC-07",
+      "name": "PR handoff readiness",
+      "owner_documents": ["governance/docs/pr-standard.md", "templates/pr-handoff/PR_BODY.template.md"],
+      "method": "Check a PR body against required sections.",
+      "pass_criteria": "Problem, Solution, Scope, Validation, Risks, and Follow-ups are present."
+    },
+    {
+      "id": "UC-08",
+      "name": "Branch governance",
+      "owner_documents": ["governance/docs/git-policy.md"],
+      "method": "Confirm branch family, base branch, target branch, and public branch list.",
+      "pass_criteria": "The public repository exposes only main; scoped work starts from current main or private maintainer integration and publishes only reviewed state to main."
+    },
+    {
+      "id": "UC-09",
+      "name": "Feature Lifecycle gate",
+      "owner_documents": ["core/FEATURE_LIFECYCLE_STANDARD.md", "templates/feature-lifecycle/README.md"],
+      "method": "Classify meaningful feature work.",
+      "pass_criteria": "Meaningful feature work requires feature artifacts before implementation."
+    },
+    {
+      "id": "UC-10",
+      "name": "Guardian boundary checks",
+      "owner_documents": ["memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md", "templates/guardian/README.md"],
+      "method": "Run repository, change, architecture, memory, PR, and release guard questions.",
+      "pass_criteria": "Scope, claims, memory need, validation evidence, and release readiness are checked."
+    },
+    {
+      "id": "UC-11",
+      "name": "Sanitization and leakage control",
+      "owner_documents": ["MIGRATION_GUIDE.md", "core/AGENTS.md", "BUNDLE_MANIFEST.md"],
+      "method": "Run product-term and forbidden wording scans.",
+      "pass_criteria": "Private source names, product domains, stage history, product memory, and private PR history are absent from public docs."
+    },
+    {
+      "id": "UC-12",
+      "name": "Documentation truthfulness",
+      "owner_documents": ["governance/docs/documentation-standard.md", "BUNDLE_MANIFEST.md"],
+      "method": "Compare public claims against files.",
+      "pass_criteria": "Planned work is not described as included or released."
+    },
+    {
+      "id": "UC-13",
+      "name": "Release flow",
+      "owner_documents": ["RELEASE.md", "CHANGELOG.md", "VERSION"],
+      "method": "Validate release state, branch targets, tag target, and GitHub release state.",
+      "pass_criteria": "Release files, main, tag, and GitHub Release agree; no public develop branch is required."
+    },
+    {
+      "id": "UC-14",
+      "name": "Public quality gate",
+      "owner_documents": ["docs/benchmarks/spec-kit-open-source-marketing-benchmark.md", "README.md", "scripts/check_quality.py"],
+      "method": "Review README, guides, checks, contribution flow, and trust signals.",
+      "pass_criteria": "Public surface meets the active quality standard or lists gaps honestly."
+    },
+    {
+      "id": "UC-15",
+      "name": "Adoption path",
+      "owner_documents": ["ADAPTATION_GUIDE.md", "OPEN_SOURCE_GUIDE.md", "examples/ai-product/README.md"],
+      "method": "Follow the install/adaptation path for one sanitized repository shape.",
+      "pass_criteria": "A user can identify what to copy, what to customize, and what remains external."
+    }
+  ],
+  "dependency_checks": [
+    {
+      "id": "DEP-01",
+      "name": "Manifest included files exist",
+      "owner_documents": ["BUNDLE_MANIFEST.md"],
+      "pass_criteria": "Every included non-glob path exists."
+    },
+    {
+      "id": "DEP-02",
+      "name": "Validation assets are indexed",
+      "owner_documents": ["BUNDLE_MANIFEST.md", "memory/project-kb/10_REFERENCE.md"],
+      "pass_criteria": "Every validation fixture and checker is linked from manifest and reference map."
+    },
+    {
+      "id": "DEP-03",
+      "name": "Checklist index includes validation checklist",
+      "owner_documents": ["checklists/README.md"],
+      "pass_criteria": "The system use-case validation checklist appears in the checklist index."
+    },
+    {
+      "id": "DEP-04",
+      "name": "Memory agrees with release state",
+      "owner_documents": ["memory/project-kb/05_IMPLEMENTATION_STATUS.md", "memory/project-kb/08_CURRENT_STATE.md", "RELEASE.md"],
+      "pass_criteria": "Memory, release process, changelog, manifest, and clean-start state agree."
+    }
+  ]
+}

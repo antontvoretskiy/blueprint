@@ -5,9 +5,9 @@ Use this checklist for public-facing PRs and release preparation.
 ## Repository Identity
 
 - [ ] Working repository is `antontvoretskiy/blueprint`.
-- [ ] Work is on a scoped Blueprint branch.
+- [ ] Work is on current `main` or a scoped/private maintainer branch.
 - [ ] Source-reference repositories are not modified.
-- [ ] `main` is not changed except through an explicit release PR.
+- [ ] `main` is not used as a scratch branch.
 - [ ] Unrelated untracked files are not staged.
 
 ## Scope
@@ -37,11 +37,13 @@ Use this checklist for public-facing PRs and release preparation.
 
 ## Local Validation
 
+- [ ] `make quality` passes.
 - [ ] `make doctor` passes.
 - [ ] `make config` passes.
 - [ ] `make smoke` passes.
 - [ ] System use-case validation suite is run when preparing public packaging, release, or branch cleanup.
 - [ ] UC-03 process-level regression matrix passes before claiming task-routing validation for future packaging.
+- [ ] Validation fixtures pass before release-readiness is claimed.
 - [ ] Additional checks are listed in the PR body.
 - [ ] Not-run checks are reported honestly.
 
@@ -64,4 +66,5 @@ Use this checklist for public-facing PRs and release preparation.
 - [ ] `CODE_OF_CONDUCT.md` exists.
 - [ ] GitHub contribution templates exist.
 - [ ] Release PR target is `main`.
+- [ ] Public branch list is `main` only after merge cleanup.
 - [ ] Branch cleanup is approval-gated.

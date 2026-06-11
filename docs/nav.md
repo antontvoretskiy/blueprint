@@ -47,6 +47,7 @@ It is a navigation layer, not a replacement for canonical owner documents.
 | --- | --- |
 | [Validation checklist](../VALIDATION_CHECKLIST.md) | You are preparing a public-facing PR or release |
 | [System use-case suite](validation/system-use-case-suite.md) | You need manual end-to-end coverage |
+| [Validation fixtures](validation/fixtures/README.md) | You need versioned UC, RT, and release-readiness expectations |
 | [Process-efficiency dogfood audit](validation/process-efficiency-dogfood-v0.4.1.md) | You need evidence for compact process levels |
 | [Quality script guide](../scripts/README.md) | You need local documentation quality checks |
 

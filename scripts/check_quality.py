@@ -30,6 +30,8 @@ PUBLIC_WORDING_PATHS = [
     "docs/reference/templates.md",
     "docs/reference/governance.md",
     "docs/community.md",
+    "docs/validation/fixtures/README.md",
+    "scripts/README.md",
 ]
 
 FORBIDDEN_PUBLIC_WORDING = [

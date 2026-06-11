@@ -23,6 +23,7 @@ It does not provide product implementation, runtime integrations, application sc
 | `docs/nav.md` | Documentation navigation map |
 | `docs/quickstart.md` | Documentation-first adoption quickstart |
 | `docs/community.md` | Community and contribution path guide |
+| `docs/validation/fixtures/README.md` | Validation fixture bundle guide |
 | `ADAPTATION_GUIDE.md` | How an adopter applies Blueprint |
 | `MIGRATION_GUIDE.md` | How to migrate from an existing internal system |
 | `VALIDATION_CHECKLIST.md` | Manual release and adoption checks |

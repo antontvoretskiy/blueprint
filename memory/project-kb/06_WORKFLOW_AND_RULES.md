@@ -10,21 +10,23 @@ Current Blueprint flow:
 
 ```text
 main
-  -> develop
   -> docs/<scope> or fix/<scope>
-  -> PR into develop
-  -> release PR into main
+  -> PR into main
+  -> squash merge
+  -> delete merged branch
 ```
 
 `main` is release-ready public state.
 
-`develop` is integration state for unreleased framework work.
+Maintainers may use local or private integration branches before publication.
+Those branches are not part of the public GitHub distribution model.
 
 ## Self-Hosting Rule
 
 Blueprint develops by using Blueprint.
 
-New rules should be applied to this repository on `develop` before they are presented as release-ready on `main`.
+New rules should be exercised on a scoped branch from the current release
+baseline before they are presented as release-ready on `main`.
 
 Canonical rule owner: `governance/docs/engineering-governance.md`.
 
@@ -62,7 +64,9 @@ Completed v0.3.0 build order:
 15. Release PR into `main`.
 16. GitHub tag and release.
 
-Next framework work should start from `develop`, use one scoped branch, and select the next release scope before adding new public assets.
+Next framework work should start from current `main` or a maintainer-private
+integration baseline, use one scoped branch, and select the next release scope
+before adding new public assets.
 
 ## Canonical References
 

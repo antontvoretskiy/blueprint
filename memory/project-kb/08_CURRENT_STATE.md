@@ -8,6 +8,7 @@ This file records the current recovery point for Blueprint.
 | --- | --- | --- |
 | `main` | Release-ready public state | Contains the released v0.7.0 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
+| `codex/validation-fixtures-v0.8.0` | Scoped release-target work | Prepares v0.8.0 validation fixtures before publication |
 
 ## Current Work
 
@@ -15,6 +16,9 @@ Blueprint v0.7.0 is released on public `main`.
 
 The GitHub Release `v0.7.0` is published and points to the v0.7.0 release
 commit on `main`.
+
+Blueprint v0.8.0 is the selected next release target. The scope is validation
+fixtures, fixture checking, and main-only validation state refresh.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
@@ -44,10 +48,19 @@ Release `v0.7.0` adds the documentation navigation layer:
 - `docs/reference/governance.md`;
 - `docs/community.md`.
 
+Release target `v0.8.0` adds the validation fixture layer:
+
+- `docs/validation/fixtures/README.md`;
+- `docs/validation/fixtures/system-use-cases.json`;
+- `docs/validation/fixtures/process-level-regression.json`;
+- `docs/validation/fixtures/release-readiness.json`;
+- `scripts/check_validation_fixtures.py`.
+
 The active quality-gate surface is:
 
 - `make quality`;
 - `scripts/check_quality.py`;
+- `scripts/check_validation_fixtures.py`;
 - `.github/workflows/docs-quality.yml`;
 
 These checks are validation tooling only. They are not a CLI, installer,
@@ -72,6 +85,7 @@ runtime, workflow engine, or code generator.
 - system relationship map;
 - system use-case validation suite;
 - system use-case validation result;
+- validation fixtures;
 - AI product example;
 - public release packaging;
 - support, security, and conduct files;
@@ -80,6 +94,7 @@ runtime, workflow engine, or code generator.
   `main`.
 - v0.6.1 documentation quality workflow and scripts.
 - v0.7.0 documentation navigation, quickstart, concept, reference, and community pages.
+- v0.8.0 validation fixtures, fixture checker, and main-only validation state refresh.
 
 ## Not Yet Included
 
@@ -95,7 +110,17 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Select the next release scope after v0.7.0.
+Complete the v0.8.0 validation fixture release target.
 
-Do not start additional examples, validation fixtures, CLI, installer, release
-automation, or integration work until the next scope is selected.
+Required validation before publication:
+
+- `make quality`;
+- `make doctor`;
+- `make config`;
+- `make smoke`;
+- `git diff --check`;
+- Python compile checks for validation scripts;
+- public branch and open PR checks.
+
+Do not start additional examples, CLI, installer, release automation, or
+integration work until the v0.8.0 validation fixture scope is complete.

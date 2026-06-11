@@ -9,6 +9,7 @@ They are not a CLI, installer, runtime, workflow engine, or code generator.
 | Script | Purpose |
 | --- | --- |
 | `check_quality.py` | Runs manifest, link, wording, template index, and release consistency checks |
+| `check_validation_fixtures.py` | Validates system use-case, process-level, and release-readiness fixtures |
 
 Release consistency accepts the current `VERSION` as either the last released
 version or the next release target. This keeps release-preparation branches
@@ -26,11 +27,14 @@ Or run the script directly:
 
 ```bash
 python3 scripts/check_quality.py
+python3 scripts/check_validation_fixtures.py
 ```
 
 ## Boundaries
 
 Validation scripts may check repository files, public claims, links, and template references.
+They may also check versioned validation fixtures for shape, required IDs,
+expected process levels, and owner-document references.
 
 They must not:
 
