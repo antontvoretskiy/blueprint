@@ -27,7 +27,17 @@ The merged dogfood audit branch was removed locally and remotely after PR #36.
 Release `v0.4.2` publishes PR #36 and PR #37 from validated `develop` state to
 `main`.
 
-The `develop` branch remains the base for the next scoped framework work.
+PR #41 merged the v0.5.0 README public funnel into `develop`.
+
+The merged scope includes the refreshed README funnel, updated Blueprint logo,
+practical AI-agent use-case screenshots, bundle manifest updates, changelog
+updates, and v0.5.0 release target notes.
+
+Post-merge validation on `develop` passed for `make doctor`, `make config`,
+`make smoke`, `git diff --check`, README local links/images, forbidden public
+wording scan, noisy wording scan, and bad commit wording scan.
+
+The `develop` branch is now the base for the v0.5.0 release PR.
 
 ## Read First
 
@@ -46,13 +56,14 @@ Release work targets `main` only through an explicit release PR.
 
 ## Current Next Step
 
-Select the next release scope through `core/TASK_PROCESS_ROUTER.md`.
+Prepare a separate `[Release] Prepare Blueprint v0.5.0` PR from validated
+`develop` to `main`.
 
 Recommended next scoped PRs:
 
-1. Next release scope planning.
-2. Public packaging or release preparation only after the next scope is selected.
-3. Additional examples or public polish only after the next scope is selected.
+1. Release PR for v0.5.0 from `develop` to `main`.
+2. Post-release Project Memory refresh after the release PR merges.
+3. Additional examples or adoption polish only after v0.5.0 release is complete.
 
 ## Do Not Do
 
@@ -60,4 +71,6 @@ Recommended next scoped PRs:
 - Do not mix unrelated template families in one PR.
 - Do not move `develop` to `main` without a release PR.
 - Do not start automation, CLI, installer, integration, or execution-layer work without explicit scope approval.
+- Do not create the v0.5.0 tag or GitHub Release before the release PR merges
+  and maintainer approval is given.
 - Do not delete branches without explicit maintainer approval.
