@@ -25,7 +25,7 @@ working map for adoption, governance, validation, and contribution.
 | Product model | Define boundaries, included layers, and future scope | [Product map](../PRODUCT_MAP.md) |
 | Adoption | Apply Blueprint to another repository | [Adaptation guide](../ADAPTATION_GUIDE.md) |
 | Governance | Keep rules owned by one canonical document | [Governance index](../governance/docs/governance-index.md) |
-| Validation | Tie public claims to evidence | [Verification standard](../governance/docs/verification-standard.md) |
+| Validation | Tie public claims to evidence | [Verification standard](../governance/docs/verification-standard.md), [validation fixtures](validation/fixtures/README.md) |
 | Project Memory | Recover current state without old chat history | [Project Memory index](../memory/project-kb/00_INDEX.md) |
 | Templates | Copy reusable framework artifacts into adopter repositories | [Template reference](reference/templates.md) |
 

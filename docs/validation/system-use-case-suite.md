@@ -1,14 +1,16 @@
 # Blueprint System Use-Case Validation Suite
 
 Asset: system-use-case-validation-suite
-Version: v0.4.1
+Version: v0.8.0
 Type: Validation Suite
 Author: Blueprint Maintainers
-Status: Unreleased on `develop`
+Status: Release target
 
 This suite validates the repository workflows Blueprint promises to manage.
 
-It is a manual validation suite. It does not add automation, a CLI, an installer, an integration, or an execution layer.
+It is a manual validation suite paired with versioned validation fixtures. It
+does not add a CLI, installer, integration, release automation, runtime, or
+execution layer.
 
 ## Purpose
 
@@ -21,7 +23,7 @@ The suite answers:
 - Can meaningful work be routed to the right owner documents?
 - Can a merge end with a clean start?
 - Can public claims be traced to existing files?
-- Can release state move from `develop` to `main` without stale memory?
+- Can release state move through the public `main` branch without stale memory?
 - Can private or product-specific content be kept out of the public framework?
 
 ## Router Classification
@@ -47,9 +49,13 @@ Read these files before running the suite:
 6. `memory/project-kb/10_REFERENCE.md`
 7. `BUNDLE_MANIFEST.md`
 8. `VALIDATION_CHECKLIST.md`
-9. `governance/docs/verification-standard.md`
-10. `governance/docs/git-policy.md`
-11. `governance/docs/pr-standard.md`
+9. `docs/validation/fixtures/README.md`
+10. `docs/validation/fixtures/system-use-cases.json`
+11. `docs/validation/fixtures/process-level-regression.json`
+12. `docs/validation/fixtures/release-readiness.json`
+13. `governance/docs/verification-standard.md`
+14. `governance/docs/git-policy.md`
+15. `governance/docs/pr-standard.md`
 
 Load additional owner documents when a test touches that owner.
 
@@ -88,19 +94,19 @@ If any required scenario selects L4 without a real L4 trigger, UC-03 is `FAIL`.
 
 | ID | Use case | Owner documents | Method | Pass criteria |
 | --- | --- | --- | --- | --- |
-| UC-01 | Repository identity and start gate | `core/AGENTS.md`, `VALIDATION_CHECKLIST.md` | Confirm remote, branch, base branch, dirty state, and forbidden paths | Repository is `antontvoretskiy/blueprint`; work starts from a scoped branch; source references stay read-only |
+| UC-01 | Repository identity and start gate | `core/AGENTS.md`, `VALIDATION_CHECKLIST.md` | Confirm remote, branch, target branch, dirty state, and forbidden paths | Repository is `antontvoretskiy/blueprint`; work starts from current `main` or a scoped/private maintainer branch; source references stay read-only |
 | UC-02 | Fresh recovery without chat history | `memory/project-kb/00_INDEX.md`, `memory/project-kb/08_CURRENT_STATE.md`, `memory/project-kb/10_REFERENCE.md` | Follow the recovery path from repository files only | Current state, included state, planned state, excluded state, and next work are clear |
-| UC-03 | Task routing by process level | `core/TASK_PROCESS_ROUTER.md` | Classify the process-level regression scenarios below | Small tasks stay L0/L1, scoped layer work stays L2, feature work reaches L3, and architecture, migration, release, merge, or branch-state work reaches L4 |
+| UC-03 | Task routing by process level | `core/TASK_PROCESS_ROUTER.md`, `docs/validation/fixtures/process-level-regression.json` | Classify the process-level regression scenarios below | Small tasks stay L0/L1, scoped layer work stays L2, feature work reaches L3, and architecture, migration, release, merge, or branch-state work reaches L4 |
 | UC-04 | Owner document resolution | `memory/project-kb/10_REFERENCE.md`, `memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md` | Pick a rule and trace it to one owner | The rule has one canonical owner and summaries do not redefine it |
 | UC-05 | Project Memory integrity | `memory/project-kb/05_IMPLEMENTATION_STATUS.md`, `memory/project-kb/08_CURRENT_STATE.md`, `BUNDLE_MANIFEST.md` | Compare included, planned, and excluded states | Memory, manifest, and release status agree |
 | UC-06 | Clean start after merge | `core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md`, `memory/project-kb/current/CLEAN_START_BRIEF.md` | Inspect the latest merged PR and current clean-start brief | The next session does not need the previous chat or completed branch |
 | UC-07 | PR handoff readiness | `governance/docs/pr-standard.md`, `templates/pr-handoff/PR_BODY.template.md` | Check a PR body against required sections | Problem, Solution, Scope, Validation, Risks, and Follow-ups are present |
-| UC-08 | Branch governance | `governance/docs/git-policy.md` | Confirm branch family, base branch, and target branch | `develop` is used for integration; `main` changes only through release PRs |
+| UC-08 | Branch governance | `governance/docs/git-policy.md` | Confirm branch family, base branch, target branch, and public branch list | The public repository exposes only `main`; scoped work starts from current `main` or private maintainer integration and publishes only reviewed state to `main` |
 | UC-09 | Feature Lifecycle gate | `core/FEATURE_LIFECYCLE_STANDARD.md`, `templates/feature-lifecycle/**` | Classify meaningful feature work | Meaningful feature work requires feature artifacts before implementation |
 | UC-10 | Guardian boundary checks | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md`, `templates/guardian/**` | Run repository, change, architecture, memory, PR, and release guard questions | Scope, claims, memory need, validation evidence, and release readiness are checked |
 | UC-11 | Sanitization and leakage control | `MIGRATION_GUIDE.md`, `core/AGENTS.md`, `BUNDLE_MANIFEST.md` | Run product-term and forbidden wording scans | Private source names, product domains, stage history, product memory, and private PR history are absent |
 | UC-12 | Documentation truthfulness | `governance/docs/documentation-standard.md`, `BUNDLE_MANIFEST.md` | Compare public claims against files | Planned work is not described as included or released |
-| UC-13 | Release flow | `RELEASE.md`, `CHANGELOG.md`, `VERSION` | Validate release state and branch targets | `develop` contains unreleased work; `main` receives only release-ready snapshots |
+| UC-13 | Release flow | `RELEASE.md`, `CHANGELOG.md`, `VERSION`, `docs/validation/fixtures/release-readiness.json` | Validate release state, branch targets, tag target, and GitHub release state | Release files, `main`, tag, and GitHub Release agree; no public `develop` branch is required |
 | UC-14 | Public quality gate | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md`, `README.md` | Review README, guides, checks, contribution flow, and trust signals | Public surface meets the active quality standard or lists gaps honestly |
 | UC-15 | Adoption path | `ADAPTATION_GUIDE.md`, `OPEN_SOURCE_GUIDE.md`, `examples/ai-product/**` | Follow the install/adaptation path for one sanitized repository shape | A user can identify what to copy, what to customize, and what remains external |
 
@@ -161,6 +167,7 @@ Use this dependency pass after the use-case matrix:
 | --- | --- |
 | Every included file in `BUNDLE_MANIFEST.md` exists | PASS |
 | Every new validation asset is linked from `BUNDLE_MANIFEST.md` and `memory/project-kb/10_REFERENCE.md` | PASS |
+| Validation fixtures pass `scripts/check_validation_fixtures.py` | PASS |
 | Every checklist is linked from `checklists/README.md` | PASS |
 | Every memory owner points to an existing file | PASS |
 | `README.md`, `BUNDLE_MANIFEST.md`, `CHANGELOG.md`, `RELEASE.md`, and `memory/project-kb/08_CURRENT_STATE.md` agree on release state | PASS |
@@ -172,15 +179,18 @@ Use this dependency pass after the use-case matrix:
 Run these commands when validating the suite:
 
 ```bash
+make quality
 make doctor
 make config
 make smoke
 git diff --check
+python3 -m py_compile scripts/check_validation_fixtures.py
 ```
 
 Also run:
 
 - markdown local link check;
+- validation fixture check;
 - forbidden public wording scan;
 - product-term scan;
 - stale recovery phrase scan;

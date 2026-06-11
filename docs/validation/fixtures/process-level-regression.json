@@ -1,0 +1,154 @@
+{
+  "asset": "process-level-regression-fixtures",
+  "version": "v0.8.0",
+  "type": "Validation Fixture",
+  "status": "release-target",
+  "levels": ["L0", "L1", "L2", "L3", "L4"],
+  "result_terms": ["PASS", "FAIL", "NOT RUN", "N/A"],
+  "scenarios": [
+    {
+      "id": "RT-01",
+      "input_task": "Answer a simple repository question without edits.",
+      "expected_level": "L0",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Answer does not run full Guardian or release checks."
+    },
+    {
+      "id": "RT-02",
+      "input_task": "Report clean repository status.",
+      "expected_level": "L0",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Report includes repo, branch, status, risk, and next step only."
+    },
+    {
+      "id": "RT-03",
+      "input_task": "Fix a single typo in one Markdown file.",
+      "expected_level": "L0",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Validation is scoped to identity, dirty tree, scope, and git diff --check."
+    },
+    {
+      "id": "RT-04",
+      "input_task": "Update docs-only wording without changing ownership or public claims.",
+      "expected_level": "L1",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Owner/source-of-truth check runs; Feature Lifecycle and full Guardian are skipped."
+    },
+    {
+      "id": "RT-05",
+      "input_task": "Prepare a PR-ready handoff report for docs-only work without creating the PR.",
+      "expected_level": "L1",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Uses compact handoff and does not run release or merge gates."
+    },
+    {
+      "id": "RT-06",
+      "input_task": "Produce a clean-start status report after a docs PR already merged.",
+      "expected_level": "L1",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Reports current state without re-running full release validation."
+    },
+    {
+      "id": "RT-07",
+      "input_task": "Commit docs-only changes on an already scoped branch.",
+      "expected_level": "L1",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Commit validation stays docs-only; ordinary branch HEAD movement is not treated as L4."
+    },
+    {
+      "id": "RT-08",
+      "input_task": "Update compact Project Memory after a small docs-only state correction.",
+      "expected_level": "L1",
+      "compact_mode": true,
+      "escalation_trigger": null,
+      "pass_criteria": "Memory update stays scoped and does not become architecture review."
+    },
+    {
+      "id": "RT-09",
+      "input_task": "Add or version a checklist, template, or validation asset.",
+      "expected_level": "L2",
+      "compact_mode": false,
+      "escalation_trigger": "Public asset versioned.",
+      "pass_criteria": "Layer boundary and manifest/reference checks run."
+    },
+    {
+      "id": "RT-10",
+      "input_task": "Add a sanitized example project.",
+      "expected_level": "L2",
+      "compact_mode": false,
+      "escalation_trigger": "Example layer changes.",
+      "pass_criteria": "Example boundaries and leakage checks run."
+    },
+    {
+      "id": "RT-11",
+      "input_task": "Update a core contract without changing architecture ownership.",
+      "expected_level": "L2",
+      "compact_mode": false,
+      "escalation_trigger": "Core layer changes.",
+      "pass_criteria": "Core owner and adjacent standards are checked."
+    },
+    {
+      "id": "RT-12",
+      "input_task": "Change rule ownership or source-of-truth boundaries.",
+      "expected_level": "L4",
+      "compact_mode": false,
+      "escalation_trigger": "Architecture/source-of-truth boundary changes.",
+      "pass_criteria": "Architecture review, owner map, and memory checks run."
+    },
+    {
+      "id": "RT-13",
+      "input_task": "Start meaningful feature implementation.",
+      "expected_level": "L3",
+      "compact_mode": false,
+      "escalation_trigger": "Feature implementation.",
+      "pass_criteria": "Feature Lifecycle artifacts are required before implementation."
+    },
+    {
+      "id": "RT-14",
+      "input_task": "Add a new public workflow that requires feature artifacts.",
+      "expected_level": "L3",
+      "compact_mode": false,
+      "escalation_trigger": "Meaningful public workflow.",
+      "pass_criteria": "FEATURE, CLARIFICATION, PLAN, and TASKS are present or implementation stops."
+    },
+    {
+      "id": "RT-15",
+      "input_task": "Transfer material from a source-reference repository.",
+      "expected_level": "L4",
+      "compact_mode": false,
+      "escalation_trigger": "Migration/source-reference transfer.",
+      "pass_criteria": "Include/review/exclude matrix and sanitization checks run."
+    },
+    {
+      "id": "RT-16",
+      "input_task": "Prepare release version, tag, or release PR into main.",
+      "expected_level": "L4",
+      "compact_mode": false,
+      "escalation_trigger": "Release state changes.",
+      "pass_criteria": "Release Guardian, version, changelog, and manifest checks run."
+    },
+    {
+      "id": "RT-17",
+      "input_task": "Merge, branch synchronization, or branch cleanup.",
+      "expected_level": "L4",
+      "compact_mode": false,
+      "escalation_trigger": "Merge or branch-state changes.",
+      "pass_criteria": "Branch policy, clean start, and recovery state checks run."
+    },
+    {
+      "id": "RT-18",
+      "input_task": "Modify runtime, CLI, automation, dependencies, or integrations.",
+      "expected_level": "L4",
+      "compact_mode": false,
+      "escalation_trigger": "Implementation or integration surface changes.",
+      "pass_criteria": "Stops unless explicitly approved and routed to the correct owner."
+    }
+  ]
+}

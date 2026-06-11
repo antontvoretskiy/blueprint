@@ -29,6 +29,10 @@ This file lists canonical project references for recovery.
 | Migration guide | `MIGRATION_GUIDE.md` |
 | Validation checklist | `VALIDATION_CHECKLIST.md` |
 | System use-case validation suite | `docs/validation/system-use-case-suite.md` |
+| Validation fixtures | `docs/validation/fixtures/README.md` |
+| System use-case fixture data | `docs/validation/fixtures/system-use-cases.json` |
+| Process-level regression fixture data | `docs/validation/fixtures/process-level-regression.json` |
+| Release-readiness fixture data | `docs/validation/fixtures/release-readiness.json` |
 | Process efficiency dogfood audit | `docs/validation/process-efficiency-dogfood-v0.4.1.md` |
 | Support | `SUPPORT.md` |
 | Security policy | `SECURITY.md` |
@@ -118,6 +122,13 @@ This file lists canonical project references for recovery.
 | PR readiness checklist | `checklists/pr-readiness-checklist.md` |
 | Clean-start checklist | `checklists/clean-start-checklist.md` |
 | System use-case validation checklist | `checklists/system-use-case-validation-checklist.md` |
+
+## Validation Script References
+
+| Reference | Path |
+| --- | --- |
+| Quality checker | `scripts/check_quality.py` |
+| Validation fixture checker | `scripts/check_validation_fixtures.py` |
 
 ## Example References
 

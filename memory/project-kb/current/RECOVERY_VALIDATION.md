@@ -1,16 +1,16 @@
 # Blueprint Recovery Validation
 
-Status: Completed recovery validation.
+Status: Current recovery validation baseline.
 Repository: `antontvoretskiy/blueprint`
-Branch: `develop`
-Merged validation branch: `docs/dogfood-recovery-validation`
-Merged PR: `#20`
+Public branch model: `main` only
+Last released version: `v0.7.0`
+Next release target: `v0.8.0`
 Validator: Blueprint Maintainers
-Date: `2026-06-10`
+Date: `2026-06-12`
 
-This validation originally checked whether a fresh session could recover Blueprint state from repository files after the v0.3.0 release.
-
-Current release state is now owned by `memory/project-kb/08_CURRENT_STATE.md` and `memory/project-kb/current/CLEAN_START_BRIEF.md`.
+This validation checks whether a fresh session can recover Blueprint state from
+repository files after the public repository moved to a main-only distribution
+model.
 
 ## Inputs
 
@@ -29,35 +29,24 @@ Read:
 | Check | Expected evidence | Result |
 | --- | --- | --- |
 | Repository identity is clear | Remote and repository name match the task | PASS |
-| Branch role is clear | Current branch and target branch are known | PASS |
-| Current state is recoverable | `08_CURRENT_STATE.md` explains the recovery point | PASS |
+| Public branch role is clear | `main` is the only public distribution branch | PASS |
+| Current state is recoverable | `08_CURRENT_STATE.md` explains v0.7.0 and the v0.8.0 target | PASS |
 | Included state is accurate | `05_IMPLEMENTATION_STATUS.md` matches repository contents | PASS |
-| Reference map is usable | `10_REFERENCE.md` points to owner documents | PASS |
-| Next work is routable | `TASK_PROCESS_ROUTER.md` identifies the workflow | PASS |
+| Reference map is usable | `10_REFERENCE.md` points to owner documents and validation fixtures | PASS |
+| Next work is routable | `TASK_PROCESS_ROUTER.md` identifies the workflow and process level | PASS |
 | Planned work is separated | Planned items are not described as included | PASS |
 | Clean-start brief is scoped | Brief links back to canonical memory and owner docs | PASS |
 | Old chat is not required | Recovery can complete from repository files | PASS |
-
-## Findings
-
-Initial post-release recovery found stale Project Memory:
-
-- `core/AGENTS.md` still described Project Memory as future recovery input.
-- `08_CURRENT_STATE.md` still described `main` as bootstrap-only state.
-- `09_TASK_HISTORY.md` did not include PR #18, PR #19, or the v0.3.0 release.
-- `current/CLEAN_START_BRIEF.md` still routed the next session toward a release PR that was already complete.
-
-This branch updates those recovery owners so repository state, release state, and next work agree.
 
 ## Recovery Summary
 
 ```text
 Repository: antontvoretskiy/blueprint
-Branch: develop
-Current recovery point: v0.4.0 released on main; next release scope selection starts from develop
-Included state: v0.4.0 public framework bundle
-Not included: automation, CLI, installer, MCP integration, execution layers, additional examples
-Next recommended work: select the next release scope through the task router
+Public branch model: main only
+Current recovery point: v0.7.0 released on main; v0.8.0 validation fixtures selected as next release target
+Included state: v0.7.0 public framework bundle plus v0.8.0 release-target validation fixture work on the scoped branch
+Not included: CLI, installer, runtime, MCP integration, execution layers, release automation, additional examples
+Next recommended work: complete v0.8.0 validation fixtures, run release validation, and publish only validated state to main
 Applicable owner documents: core/AGENTS.md, memory/project-kb/00_INDEX.md, memory/project-kb/08_CURRENT_STATE.md, memory/project-kb/05_IMPLEMENTATION_STATUS.md, memory/project-kb/10_REFERENCE.md, core/TASK_PROCESS_ROUTER.md
 ```
 
@@ -69,4 +58,4 @@ Selected result:
 
 Reason:
 
-`Repository-owned recovery files describe the released v0.4.0 state and the next develop-based workflow without requiring previous chat history.`
+`Repository-owned recovery files describe the released v0.7.0 state, the selected v0.8.0 validation-fixture target, and the main-only public branch model without requiring previous chat history.`

@@ -27,7 +27,11 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `docs/reference/templates.md` | Included | Template selection reference |
 | `docs/reference/governance.md` | Included | Governance owner reference |
 | `docs/community.md` | Included | Community and contribution path guide |
-| `docs/validation/system-use-case-suite.md` | Included | Manual system use-case validation suite, v0.4.1 |
+| `docs/validation/system-use-case-suite.md` | Included | Manual system use-case validation suite, v0.8.0 |
+| `docs/validation/fixtures/README.md` | Included | Validation fixture bundle guide, v0.8.0 |
+| `docs/validation/fixtures/system-use-cases.json` | Included | System use-case validation fixture data, v0.8.0 |
+| `docs/validation/fixtures/process-level-regression.json` | Included | Process-level regression fixture data, v0.8.0 |
+| `docs/validation/fixtures/release-readiness.json` | Included | Release-readiness fixture data, v0.8.0 |
 | `docs/validation/process-efficiency-dogfood-v0.4.1.md` | Included | Manual process-efficiency dogfood audit, v0.4.1 |
 | `PRODUCT_MAP.md` | Included | Complete product shape, process levels, and project/feature management model |
 | `ARCHITECTURE.md` | Included | Core, extension, and example layer boundaries |
@@ -46,6 +50,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `Makefile` | Included | Local validation commands |
 | `scripts/README.md` | Included | Validation script boundary and usage guide |
 | `scripts/check_quality.py` | Included | Manifest, link, wording, template, and release consistency checks |
+| `scripts/check_validation_fixtures.py` | Included | Validation fixture consistency checks |
 | `compose.yaml` | Included | Isolated local preview environment |
 | `.env.example` | Included | Non-secret local environment defaults |
 | `public/` | Included | Static preview surface |
@@ -115,7 +120,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `checklists/branch-governance-checklist.md` | Included | Branch governance acceptance checklist |
 | `checklists/pr-readiness-checklist.md` | Included | PR readiness acceptance checklist |
 | `checklists/clean-start-checklist.md` | Included | Clean-start acceptance checklist |
-| `checklists/system-use-case-validation-checklist.md` | Included | System use-case validation checklist, v0.4.1 |
+| `checklists/system-use-case-validation-checklist.md` | Included | System use-case validation checklist, v0.8.0 |
 | `examples/ai-product/README.md` | Included | AI product adoption example guide, v0.3.0 |
 | `examples/ai-product/ADOPTION_MAP.md` | Included | AI product adoption mapping example |
 | `examples/ai-product/BRANCH_GOVERNANCE_EXAMPLE.md` | Included | AI product branch governance example |

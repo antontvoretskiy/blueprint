@@ -126,15 +126,15 @@ request
 -> recovery path
 -> task routing
 -> owner document lookup
--> scoped branch from develop
+-> scoped branch from current main or private maintainer integration
 -> implementation or documentation work
 -> validation evidence
 -> PR handoff
 -> memory update check
--> PR into develop
+-> PR into main when publication is required
 -> merge
 -> clean start
--> next branch from updated develop
+-> next branch from updated main
 ```
 
 ## Recovery Flow
@@ -169,15 +169,16 @@ BUNDLE_MANIFEST.md
 
 ## Self-Hosting Flow
 
-Blueprint validates its own rules by using them on `develop` before release.
+Blueprint validates its own rules by using them on scoped branches before
+release.
 
 ```text
 new rule or template
--> scoped PR into develop
+-> scoped branch from current release baseline
 -> validation using current Blueprint standards
 -> Project Memory update if durable state changes
 -> clean start can recover the new state
--> only then eligible for release PR into main
+-> PR into main when publication is required
 ```
 
 If a rule cannot guide Blueprint itself, it is not ready to be presented as release-ready.

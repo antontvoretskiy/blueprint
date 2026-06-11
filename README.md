@@ -375,6 +375,9 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 Blueprint v0.7.0 is released on `main`.
 
+Blueprint v0.8.0 is the next release target for validation fixtures and
+main-only validation evidence.
+
 The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
 
 Included now:
@@ -393,6 +396,7 @@ Included now:
 | Checklists | Included |
 | AI product example | Included |
 | System use-case validation suite | Included |
+| Validation fixtures | Included |
 | Process-efficiency dogfood audit | Included |
 | Public README and practical AI-agent use-case media | Included |
 | Documentation quality workflow and scripts | Included |
@@ -415,6 +419,7 @@ Blueprint tracks validation as repository-owned evidence.
 | Validation artifact | Purpose |
 | --- | --- |
 | [System use-case validation suite](docs/validation/system-use-case-suite.md) | Manual end-to-end use-case coverage |
+| [Validation fixtures](docs/validation/fixtures/README.md) | Versioned UC, RT, and release-readiness expectations |
 | [Process-efficiency dogfood audit](docs/validation/process-efficiency-dogfood-v0.4.1.md) | Evidence that L0/L1/L2 budgets work in this repository |
 | [Validation checklist](VALIDATION_CHECKLIST.md) | Public release and adoption validation gates |
 | [Bundle manifest](BUNDLE_MANIFEST.md) | Included, planned, and excluded assets |
@@ -428,6 +433,10 @@ make quality
 make smoke
 git diff --check
 ```
+
+For v0.8.0, `make quality` also checks validation fixture shape, required
+scenario IDs, expected process levels, owner-document references, and main-only
+release-readiness settings.
 
 <a id="roadmap"></a>
 
@@ -446,7 +455,8 @@ git diff --check
 | v0.6.0 | Documentation quality workflow and validation scripts |
 | v0.6.1 | Public main-only cleanup after Dependabot branch leakage |
 | v0.7.0 | Documentation navigation, quickstart, concepts, reference, and community pages |
-| Next | Additional examples, validation fixtures, release automation, and optional CI expansion |
+| v0.8.0 | Validation fixtures, fixture checker, and main-only validation state refresh |
+| Next | Additional examples, release automation, and optional CI expansion |
 
 <a id="contributing"></a>
 

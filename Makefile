@@ -74,6 +74,7 @@ config: init
 quality:
 	@git diff --check
 	@python3 scripts/check_quality.py
+	@python3 scripts/check_validation_fixtures.py
 
 up: init config
 	@$(COMPOSE) up -d --build

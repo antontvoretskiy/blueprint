@@ -48,6 +48,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-11 | Branch cleanup | Removed public release, docs, sync, and `develop` branches so the public repository exposes only `main` | remote refs |
 | 2026-06-12 | PR #46 | Prepared v0.7.0 documentation navigation release | `main` |
 | 2026-06-12 | Release `v0.7.0` | Published documentation navigation, quickstart, reference, and community pages | `main` |
+| 2026-06-12 | Release target `v0.8.0` | Selected validation fixtures, fixture checker, and main-only validation state refresh | `main` |
 
 ## Update Rules
 
