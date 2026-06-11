@@ -6,14 +6,14 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.5.0 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.5.1 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
 
 ## Current Work
 
-Blueprint v0.5.0 is released on public `main`.
+Blueprint v0.5.1 is released on public `main`.
 
-The GitHub Release `v0.5.0` is published and points to the v0.5.0 release
+The GitHub Release `v0.5.1` is published and points to the v0.5.1 release
 commit on `main`.
 
 The public GitHub repository exposes only `main` as the release-ready
@@ -23,7 +23,7 @@ sync, and docs branches were removed after maintainer approval.
 Local or private integration branches may still be used by maintainers before
 publication, but they are not part of the public distribution contract.
 
-Current scoped work is v0.5.1 documentation alignment:
+Release `v0.5.1` publishes documentation alignment for the public branch model:
 
 - clarify public main-only release distribution;
 - clarify local/private maintainer integration branches;
@@ -53,7 +53,7 @@ Current scoped work is v0.5.1 documentation alignment:
 - public release packaging;
 - support, security, and conduct files;
 - GitHub contribution templates;
-- v0.5.0 public README and practical AI-agent use-case media in
+- v0.5.1 public README, branch model alignment, adoption copy map, and practical AI-agent use-case media in
   `main`.
 
 ## Not Yet Included
@@ -70,8 +70,8 @@ Current scoped work is v0.5.1 documentation alignment:
 
 ## Next Recommended Work
 
-Complete the v0.5.1 docs-only alignment, validate it from a fresh clone, then
-publish it to public `main` only after maintainer approval.
+Start the v0.6.0 documentation quality-gates scope from the v0.5.1 release
+baseline.
 
-Do not start additional examples, automation, CLI, installer, or integration
-work until the public branch model and adoption path are aligned.
+Do not start additional examples, CLI, installer, or integration work until the
+quality-gates scope is validated.

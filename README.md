@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/antontvoretskiy/blueprint/releases/tag/v0.5.0"><img alt="Release: v0.5.0" src="https://img.shields.io/badge/release-v0.5.0-blue"></a>
+  <a href="https://github.com/antontvoretskiy/blueprint/releases/tag/v0.5.1"><img alt="Release: v0.5.1" src="https://img.shields.io/badge/release-v0.5.1-blue"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green"></a>
   <a href="docs/validation/process-efficiency-dogfood-v0.4.1.md"><img alt="Validation: dogfooded" src="https://img.shields.io/badge/validation-dogfooded-0f766e"></a>
   <a href="BUNDLE_MANIFEST.md"><img alt="Status: released" src="https://img.shields.io/badge/status-released-0f766e"></a>
@@ -354,7 +354,7 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 ## ✅ Current Status
 
-Blueprint v0.5.0 is released on `main`.
+Blueprint v0.5.1 is released on `main`.
 
 The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
 

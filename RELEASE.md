@@ -1,8 +1,8 @@
 # Blueprint Release Process
 
-Last released version: v0.5.0.
+Last released version: v0.5.1.
 
-Next release target: v0.5.1.
+Next release target: v0.6.0.
 
 This document defines the manual release process for Blueprint.
 
