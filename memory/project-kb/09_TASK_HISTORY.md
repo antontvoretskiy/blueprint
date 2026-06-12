@@ -51,6 +51,7 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-12 | Release target `v0.8.0` | Selected validation fixtures, fixture checker, and main-only validation state refresh | `main` |
 | 2026-06-12 | Release `v0.8.0` | Published validation fixtures, fixture checker, and main-only validation evidence | `main` |
 | 2026-06-12 | Release target `v0.9.0` | Selected context export commands for external LLMs and fresh chats | `main` |
+| 2026-06-12 | Release `v0.9.0` | Published context export commands and ordered repository-owned context bundles | `main` |
 
 ## Update Rules
 

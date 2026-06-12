@@ -6,20 +6,15 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.8.0 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.9.0 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
-| `codex/context-export-v0.9.0` | Scoped release-target work | Prepares v0.9.0 context export commands before publication |
 
 ## Current Work
 
-Blueprint v0.8.0 is released on public `main`.
+Blueprint v0.9.0 is released on public `main`.
 
-The GitHub Release `v0.8.0` is published and points to the v0.8.0 release
+The GitHub Release `v0.9.0` is published and points to the v0.9.0 release
 commit on `main`.
-
-Blueprint v0.9.0 is the selected next release target. The scope is
-repository-owned context export commands for external LLMs, databases, and
-fresh Codex or Cursor chats.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
@@ -57,7 +52,7 @@ Release `v0.8.0` adds the validation fixture layer:
 - `docs/validation/fixtures/release-readiness.json`;
 - `scripts/check_validation_fixtures.py`.
 
-Release target `v0.9.0` adds the context export layer:
+Release `v0.9.0` adds the context export layer:
 
 - `context/README.md`;
 - `context/export-manifest.json`;
@@ -123,7 +118,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Complete the v0.9.0 context export release target.
+Select the next release scope after v0.9.0.
 
 Required validation before any new release publication:
 
@@ -138,4 +133,4 @@ Required validation before any new release publication:
 - public branch and open PR checks.
 
 Do not start additional examples, CLI, installer, release automation, or
-integration work until the v0.9.0 context export scope is complete.
+integration work until the next scope is selected.
