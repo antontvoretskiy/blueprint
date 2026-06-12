@@ -373,9 +373,9 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 ## ✅ Current Status
 
-Blueprint v0.10.0 is released on `main`.
+Blueprint v0.11.1 is released on `main`.
 
-The next release target is v0.11.0 for JSONL context export.
+The next release target is v0.12.0 for ZIP context export bundles.
 
 The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
 
@@ -455,7 +455,7 @@ make context-cursor
 make context-database
 ```
 
-The v0.11.0 release target adds JSONL export:
+The current release includes JSONL export:
 
 ```bash
 make context-jsonl
@@ -482,7 +482,8 @@ make context-jsonl
 | v0.9.0 | Context export commands for external LLMs and fresh chats |
 | v0.10.0 | Separate context export profiles for Codex, Cursor, and database/RAG ingestion |
 | v0.11.0 | JSONL context export for database/RAG ingestion |
-| Next | Additional examples, release automation, and optional CI expansion |
+| v0.11.1 | Release-state truthfulness and stronger release consistency checks |
+| Next | ZIP context export bundles, additional examples, release automation, and optional CI expansion |
 
 <a id="contributing"></a>
 

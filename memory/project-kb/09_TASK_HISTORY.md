@@ -55,6 +55,8 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-12 | Release target `v0.10.0` | Added explicit Codex, Cursor, and database-ingest context export profiles | `codex/context-profiles-v0.10.0` |
 | 2026-06-12 | Release `v0.10.0` | Published profile-specific context export commands | `main` |
 | 2026-06-12 | Release target `v0.11.0` | Added JSONL context export for database/RAG ingestion | `codex/context-jsonl-v0.11.0` |
+| 2026-06-12 | Release `v0.11.0` | Published JSONL context export for database/RAG ingestion | `main` |
+| 2026-06-12 | Release target `v0.11.1` | Aligned post-release state and strengthened release consistency checks | `codex/release-state-v0.11.1` |
 
 ## Update Rules
 
