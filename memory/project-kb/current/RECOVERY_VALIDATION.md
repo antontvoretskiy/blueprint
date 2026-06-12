@@ -3,8 +3,8 @@
 Status: Current recovery validation baseline.
 Repository: `antontvoretskiy/blueprint`
 Public branch model: `main` only
-Last released version: `v0.9.0`
-Next release target: `v0.10.0`
+Last released version: `v0.10.0`
+Next release target: `v0.11.0`
 Validator: Blueprint Maintainers
 Date: `2026-06-12`
 
@@ -30,7 +30,7 @@ Read:
 | --- | --- | --- |
 | Repository identity is clear | Remote and repository name match the task | PASS |
 | Public branch role is clear | `main` is the only public distribution branch | PASS |
-| Current state is recoverable | `08_CURRENT_STATE.md` explains v0.9.0 and the v0.10.0 release target | PASS |
+| Current state is recoverable | `08_CURRENT_STATE.md` explains v0.10.0 and the v0.11.0 release target | PASS |
 | Included state is accurate | `05_IMPLEMENTATION_STATUS.md` matches repository contents | PASS |
 | Reference map is usable | `10_REFERENCE.md` points to owner documents, validation fixtures, context export, and feature artifacts | PASS |
 | Next work is routable | `TASK_PROCESS_ROUTER.md` identifies the workflow and process level | PASS |
@@ -43,8 +43,8 @@ Read:
 ```text
 Repository: antontvoretskiy/blueprint
 Public branch model: main only
-Current recovery point: v0.9.0 released on main; v0.10.0 profile-specific context export target in progress
-Included state: v0.9.0 public framework bundle with context export commands; v0.10.0 target adds explicit export profiles
+Current recovery point: v0.10.0 released on main; v0.11.0 JSONL context export target in progress
+Included state: v0.10.0 public framework bundle with profile-specific context export commands; v0.11.0 target adds JSONL export
 Not included: CLI, installer, runtime, MCP integration, execution layers, release automation, additional examples
 Next recommended work: select the next release scope before adding more public assets
 Applicable owner documents: core/AGENTS.md, memory/project-kb/00_INDEX.md, memory/project-kb/08_CURRENT_STATE.md, memory/project-kb/05_IMPLEMENTATION_STATUS.md, memory/project-kb/10_REFERENCE.md, core/TASK_PROCESS_ROUTER.md
@@ -58,4 +58,4 @@ Selected result:
 
 Reason:
 
-`Repository-owned recovery files describe the released v0.9.0 state, the v0.10.0 release target, and the main-only public branch model without requiring previous chat history.`
+`Repository-owned recovery files describe the released v0.10.0 state, the v0.11.0 release target, and the main-only public branch model without requiring previous chat history.`

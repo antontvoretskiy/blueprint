@@ -1,7 +1,7 @@
 # Context Export Feature
 
 Feature: context-export
-Version: v0.10.0
+Version: v0.11.0
 Status: Release target
 Owner: Blueprint Maintainers
 
@@ -15,6 +15,8 @@ Owner: Blueprint Maintainers
    repository files and does not depend on old chat history.
 4. A maintainer wants separate context profiles for Codex, Cursor, and
    database/RAG ingestion because each target needs a different context size.
+5. A maintainer wants a structured JSONL corpus for database or RAG ingestion
+   without parsing a combined Markdown bundle.
 
 ## User Stories
 
@@ -26,6 +28,7 @@ Owner: Blueprint Maintainers
   Codex or Cursor.
 - As a maintainer, I can export explicit `codex`, `cursor`, and
   `database-ingest` profiles.
+- As a maintainer, I can export the database-ingest profile as JSONL.
 
 ### P2
 
@@ -67,8 +70,10 @@ Owner: Blueprint Maintainers
   external service integration.
 - FR-011: The human-facing documentation must explain why the exported document
   pack exists and which source-of-truth questions it answers.
-- FR-012: JSONL output, ZIP bundles, and adopter templates must remain separate
-  future release scopes.
+- FR-012: The repository must provide a JSONL export command for
+  database-ingest context.
+- FR-013: ZIP bundles and adopter templates must remain separate future release
+  scopes.
 
 ## Key Entities
 
@@ -79,6 +84,7 @@ Owner: Blueprint Maintainers
 | Chat bootstrap bundle | Markdown file optimized for a fresh Codex or Cursor chat |
 | Profile | Named subset of manifest documents |
 | Database ingest bundle | Markdown corpus for database, RAG, retrieval, audit, or review ingestion |
+| JSONL corpus | One JSON object per source document for database or RAG ingestion |
 
 ## Success Criteria
 
@@ -87,9 +93,10 @@ Owner: Blueprint Maintainers
 - SC-002: `make context-chat` produces a Markdown chat bootstrap bundle.
 - SC-003: `make context-codex`, `make context-cursor`, and
   `make context-database` produce profile-specific Markdown bundles.
-- SC-004: `make quality` validates the context manifest and export script.
-- SC-005: Generated bundles are ignored by Git.
-- SC-006: Documentation tells maintainers which commands to run and what is not
+- SC-004: `make context-jsonl` produces a database-ingest JSONL corpus.
+- SC-005: `make quality` validates the context manifest and export script.
+- SC-006: Generated bundles are ignored by Git.
+- SC-007: Documentation tells maintainers which commands to run and what is not
   automated.
 
 ## Assumptions

@@ -1,7 +1,7 @@
 # Context Export Clarification
 
 Feature: context-export
-Version: v0.10.0
+Version: v0.11.0
 Status: Release target
 
 | Question | Decision | Reason |
@@ -12,7 +12,8 @@ Status: Release target
 | Should the export include file contents or only paths? | Include file contents | External LLMs and databases need a self-contained context payload |
 | Should there be more than one profile? | Yes | Codex, Cursor, and database/RAG ingestion need different context sizes and document coverage |
 | Should quality checks validate this feature? | Yes | The command depends on an ordered manifest and must fail when paths drift |
-| Should JSONL, ZIP, and adopter templates be included now? | No | They are useful but belong to separate scoped releases after profile behavior is stable |
+| Should JSONL be included now? | Yes | Database and RAG ingestion need structured records instead of only combined Markdown |
+| Should ZIP and adopter templates be included now? | No | They belong to separate scoped releases after JSONL behavior is stable |
 
 ## Open Questions
 
@@ -20,6 +21,6 @@ No critical open questions block implementation.
 
 Future optional questions:
 
-- Whether adopters need JSONL or ZIP output.
+- Whether adopters need ZIP output.
 - Whether a future packaged CLI should wrap the same manifest.
 - Whether editor-specific launchers should live outside Blueprint core.

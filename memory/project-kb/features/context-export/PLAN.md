@@ -1,13 +1,13 @@
 # Context Export Plan
 
 Feature: context-export
-Version: v0.10.0
+Version: v0.11.0
 Status: Release target
 
 ## Summary
 
-Extend the repository-local context export workflow with explicit `codex`,
-`cursor`, and `database-ingest` profiles.
+Extend the repository-local context export workflow with JSONL output for
+database/RAG ingestion.
 
 ## Technical Context
 
@@ -27,7 +27,6 @@ Excluded layers:
 - external editor integration;
 - release automation;
 - dependency automation.
-- JSONL export;
 - ZIP bundle generation;
 - adopter-facing template packaging.
 
@@ -51,7 +50,7 @@ implementation.
 | --- | --- |
 | `context/README.md` | Human-facing command guide |
 | `context/export-manifest.json` | Ordered profiles, source files, and document membership |
-| `scripts/export_context.py` | Manifest validation and bundle generation |
+| `scripts/export_context.py` | Manifest validation and Markdown/JSONL bundle generation |
 | `.blueprint/context/` | Ignored default output location |
 
 ## Profile Model
@@ -61,6 +60,12 @@ implementation.
 | `codex` | Fresh Codex chat recovery and validation context |
 | `cursor` | Fresh Cursor chat recovery, implementation boundary, and navigation context |
 | `database-ingest` | Broader Markdown corpus for database, RAG, retrieval, audit, or external review |
+
+## JSONL Model
+
+JSONL output writes one source document per line with repository metadata,
+profile, manifest path, document identity, purpose, content hash, and content.
+It uses the same manifest order and profile membership as Markdown export.
 
 ## Validation Strategy
 
@@ -73,6 +78,7 @@ make context-chat
 make context-codex
 make context-cursor
 make context-database
+make context-jsonl
 python3 scripts/export_context.py check
 python3 -m py_compile scripts/export_context.py
 git diff --check

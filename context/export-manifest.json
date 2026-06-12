@@ -1,12 +1,17 @@
 {
   "asset": "context-export-manifest",
-  "version": "v0.10.0",
+  "version": "v0.11.0",
   "type": "Context Export Manifest",
   "status": "release-target",
   "default_outputs": {
     "codex": ".blueprint/context/blueprint-codex-context.md",
     "cursor": ".blueprint/context/blueprint-cursor-context.md",
     "database-ingest": ".blueprint/context/blueprint-database-ingest.md"
+  },
+  "default_jsonl_outputs": {
+    "codex": ".blueprint/context/blueprint-codex-context.jsonl",
+    "cursor": ".blueprint/context/blueprint-cursor-context.jsonl",
+    "database-ingest": ".blueprint/context/blueprint-database-ingest.jsonl"
   },
   "profiles": {
     "codex": {

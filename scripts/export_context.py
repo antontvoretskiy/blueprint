@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import re
 import subprocess
@@ -74,6 +75,18 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
         elif not output.startswith(".blueprint/context/"):
             errors.append(f"profile `{profile}` output must stay under .blueprint/context/")
 
+    default_jsonl_outputs = manifest.get("default_jsonl_outputs")
+    if default_jsonl_outputs is not None:
+        if not isinstance(default_jsonl_outputs, dict):
+            errors.append("manifest default_jsonl_outputs must be an object")
+            default_jsonl_outputs = {}
+        for profile in profiles:
+            output = default_jsonl_outputs.get(profile)
+            if not isinstance(output, str) or not output.endswith(".jsonl"):
+                errors.append(f"profile `{profile}` must define a JSONL default output")
+            elif not output.startswith(".blueprint/context/"):
+                errors.append(f"profile `{profile}` JSONL output must stay under .blueprint/context/")
+
     documents = manifest.get("documents")
     if not isinstance(documents, list) or not documents:
         errors.append("manifest must define documents")
@@ -127,6 +140,14 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
 
 def output_path_for(manifest: dict[str, Any], profile: str, output: str | None) -> Path:
     raw_output = output or manifest["default_outputs"][profile]
+    path = Path(raw_output)
+    if not path.is_absolute():
+        path = ROOT / path
+    return path
+
+
+def jsonl_output_path_for(manifest: dict[str, Any], profile: str, output: str | None) -> Path:
+    raw_output = output or manifest["default_jsonl_outputs"][profile]
     path = Path(raw_output)
     if not path.is_absolute():
         path = ROOT / path
@@ -201,6 +222,40 @@ def render_bundle(manifest: dict[str, Any], profile: str, mode: str) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def render_jsonl(manifest: dict[str, Any], profile: str) -> str:
+    documents = documents_for_profile(manifest, profile)
+    generated_at = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
+    head = git_value(["rev-parse", "HEAD"])
+    branch = git_value(["branch", "--show-current"])
+    status = git_value(["status", "--short"])
+    status_text = "clean" if status == "unknown" or not status else "dirty"
+
+    lines = []
+    for index, document in enumerate(documents, start=1):
+        path = ROOT / document["path"]
+        text = path.read_text()
+        row = {
+            "schema_version": "v1",
+            "asset": "blueprint-context-document",
+            "generated_at": generated_at,
+            "repository": "antontvoretskiy/blueprint",
+            "branch": branch,
+            "commit": head,
+            "worktree": status_text,
+            "profile": profile,
+            "manifest": rel(MANIFEST_PATH),
+            "ordinal": index,
+            "id": document["id"],
+            "path": document["path"],
+            "title": document["title"],
+            "purpose": document["purpose"],
+            "content_sha256": hashlib.sha256(text.encode()).hexdigest(),
+            "content": text.rstrip(),
+        }
+        lines.append(json.dumps(row, ensure_ascii=False, sort_keys=True))
+    return "\n".join(lines) + "\n"
+
+
 def command_check(_: argparse.Namespace) -> int:
     manifest = load_manifest()
     errors = validate_manifest(manifest)
@@ -232,6 +287,28 @@ def command_export(args: argparse.Namespace) -> int:
     return 0
 
 
+def command_jsonl(args: argparse.Namespace) -> int:
+    manifest = load_manifest()
+    errors = validate_manifest(manifest)
+    if errors:
+        print("fail context export")
+        for error in errors:
+            print(f"  - {error}")
+        return 1
+    profile = args.profile
+    if profile not in manifest["profiles"]:
+        print(f"fail context export\n  - unknown profile `{profile}`")
+        return 1
+    if "default_jsonl_outputs" not in manifest and not args.output:
+        print(f"fail context export\n  - profile `{profile}` has no JSONL default output")
+        return 1
+    output_path = jsonl_output_path_for(manifest, profile, args.output)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(render_jsonl(manifest, profile))
+    print(f"wrote {rel(output_path)}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Export ordered Blueprint context bundles.")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -248,6 +325,11 @@ def build_parser() -> argparse.ArgumentParser:
     chat.add_argument("--profile", default="codex", help="manifest profile to export")
     chat.add_argument("--output", help="output Markdown path")
     chat.set_defaults(func=command_export, mode="chat")
+
+    jsonl_export = subparsers.add_parser("jsonl", help="write a JSONL context corpus")
+    jsonl_export.add_argument("--profile", default=DEFAULT_PROFILE, help="manifest profile to export")
+    jsonl_export.add_argument("--output", help="output JSONL path")
+    jsonl_export.set_defaults(func=command_jsonl)
 
     return parser
 

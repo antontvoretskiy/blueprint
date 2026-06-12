@@ -6,17 +6,17 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.9.0 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.10.0 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
 
 ## Current Work
 
-Blueprint v0.9.0 is released on public `main`.
+Blueprint v0.10.0 is released on public `main`.
 
-The GitHub Release `v0.9.0` is published and points to the v0.9.0 release
+The GitHub Release `v0.10.0` is published and points to the v0.10.0 release
 commit on `main`.
 
-The next release target is v0.10.0 for profile-specific context exports.
+The next release target is v0.11.0 for JSONL context export.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
@@ -63,7 +63,7 @@ Release `v0.9.0` adds the context export layer:
 - `make context-chat`;
 - ignored generated output under `.blueprint/context/`.
 
-Release target `v0.10.0` extends context export with explicit profiles:
+Release `v0.10.0` extends context export with explicit profiles:
 
 - `codex`;
 - `cursor`;
@@ -71,6 +71,13 @@ Release target `v0.10.0` extends context export with explicit profiles:
 - `make context-codex`;
 - `make context-cursor`;
 - `make context-database`.
+
+Release target `v0.11.0` extends context export with JSONL output:
+
+- `default_jsonl_outputs` in `context/export-manifest.json`;
+- `python3 scripts/export_context.py jsonl`;
+- `make context-jsonl`;
+- one JSON object per source document for database/RAG ingestion.
 
 The active quality-gate surface is:
 
@@ -105,6 +112,7 @@ runtime, workflow engine, or code generator.
 - validation fixtures;
 - context export commands;
 - profile-specific context export commands;
+- JSONL context export command;
 - AI product example;
 - public release packaging;
 - support, security, and conduct files;
@@ -115,7 +123,8 @@ runtime, workflow engine, or code generator.
 - v0.7.0 documentation navigation, quickstart, concept, reference, and community pages.
 - v0.8.0 validation fixtures, fixture checker, and main-only validation state refresh.
 - v0.9.0 context export commands for external LLMs and fresh chats.
-- v0.10.0 release target for profile-specific context exports.
+- v0.10.0 profile-specific context exports.
+- v0.11.0 release target for JSONL context export.
 
 ## Not Yet Included
 
@@ -131,7 +140,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Validate and publish the v0.10.0 profile-specific context export scope.
+Validate and publish the v0.11.0 JSONL context export scope.
 
 Required validation before any new release publication:
 
@@ -146,7 +155,8 @@ Required validation before any new release publication:
 - `make context-codex`;
 - `make context-cursor`;
 - `make context-database`;
+- `make context-jsonl`;
 - public branch and open PR checks.
 
 Do not start additional examples, CLI, installer, release automation, or
-integration work until the v0.10.0 scope is validated and published.
+integration work until the v0.11.0 scope is validated and published.
