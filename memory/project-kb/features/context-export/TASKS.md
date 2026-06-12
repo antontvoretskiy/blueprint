@@ -1,7 +1,7 @@
 # Context Export Tasks
 
 Feature: context-export
-Version: v0.9.0
+Version: v0.10.0
 Status: Release target
 
 ## Phase 1 - Feature Artifacts
@@ -29,7 +29,7 @@ Status: Release target
 - [x] Update README, docs navigation, product map, manifest, reference map, and
   script guide.
 - [x] Update Project Memory current state and implementation status.
-- [x] Update release metadata for v0.9.0 target.
+- [x] Update release metadata for the context export release target.
 
 ## Phase 5 - Validation
 
@@ -38,3 +38,13 @@ Status: Release target
 - [x] Run `make context-chat`.
 - [x] Run `python3 -m py_compile scripts/export_context.py`.
 - [x] Run release-readiness commands before merge or release.
+
+## Phase 6 - Profile-Specific Exports
+
+- [x] Add explicit `codex`, `cursor`, and `database-ingest` profiles.
+- [x] Add `make context-codex`.
+- [x] Add `make context-cursor`.
+- [x] Add `make context-database`.
+- [x] Document why the context pack includes each class of source-of-truth
+  document.
+- [x] Run profile-specific export validation before release.

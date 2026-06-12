@@ -16,6 +16,8 @@ Blueprint v0.9.0 is released on public `main`.
 The GitHub Release `v0.9.0` is published and points to the v0.9.0 release
 commit on `main`.
 
+The next release target is v0.10.0 for profile-specific context exports.
+
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
 sync, and docs branches were removed after maintainer approval.
@@ -61,6 +63,15 @@ Release `v0.9.0` adds the context export layer:
 - `make context-chat`;
 - ignored generated output under `.blueprint/context/`.
 
+Release target `v0.10.0` extends context export with explicit profiles:
+
+- `codex`;
+- `cursor`;
+- `database-ingest`;
+- `make context-codex`;
+- `make context-cursor`;
+- `make context-database`.
+
 The active quality-gate surface is:
 
 - `make quality`;
@@ -93,6 +104,7 @@ runtime, workflow engine, or code generator.
 - system use-case validation result;
 - validation fixtures;
 - context export commands;
+- profile-specific context export commands;
 - AI product example;
 - public release packaging;
 - support, security, and conduct files;
@@ -103,6 +115,7 @@ runtime, workflow engine, or code generator.
 - v0.7.0 documentation navigation, quickstart, concept, reference, and community pages.
 - v0.8.0 validation fixtures, fixture checker, and main-only validation state refresh.
 - v0.9.0 context export commands for external LLMs and fresh chats.
+- v0.10.0 release target for profile-specific context exports.
 
 ## Not Yet Included
 
@@ -118,7 +131,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Select the next release scope after v0.9.0.
+Validate and publish the v0.10.0 profile-specific context export scope.
 
 Required validation before any new release publication:
 
@@ -130,7 +143,10 @@ Required validation before any new release publication:
 - Python compile checks for validation scripts;
 - `make context-export`;
 - `make context-chat`;
+- `make context-codex`;
+- `make context-cursor`;
+- `make context-database`;
 - public branch and open PR checks.
 
 Do not start additional examples, CLI, installer, release automation, or
-integration work until the next scope is selected.
+integration work until the v0.10.0 scope is validated and published.

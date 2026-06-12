@@ -1,7 +1,7 @@
 # Context Export Clarification
 
 Feature: context-export
-Version: v0.9.0
+Version: v0.10.0
 Status: Release target
 
 | Question | Decision | Reason |
@@ -10,8 +10,9 @@ Status: Release target
 | Should the command open Codex or Cursor automatically? | No | Opening or controlling editor chat sessions is tool-specific and not portable |
 | Should generated bundles be committed? | No | Bundles are generated artifacts; repository files remain canonical |
 | Should the export include file contents or only paths? | Include file contents | External LLMs and databases need a self-contained context payload |
-| Should there be more than one profile? | Yes | External LLM export and chat bootstrap have different context sizes |
+| Should there be more than one profile? | Yes | Codex, Cursor, and database/RAG ingestion need different context sizes and document coverage |
 | Should quality checks validate this feature? | Yes | The command depends on an ordered manifest and must fail when paths drift |
+| Should JSONL, ZIP, and adopter templates be included now? | No | They are useful but belong to separate scoped releases after profile behavior is stable |
 
 ## Open Questions
 

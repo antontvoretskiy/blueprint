@@ -15,7 +15,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "context" / "export-manifest.json"
-DEFAULT_PROFILE = "external-llm"
+DEFAULT_PROFILE = "database-ingest"
 
 
 def rel(path: Path) -> str:
@@ -59,7 +59,7 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
     if not isinstance(profiles, dict) or not profiles:
         errors.append("manifest must define profiles")
         profiles = {}
-    for required_profile in ("external-llm", "chat-bootstrap"):
+    for required_profile in ("codex", "cursor", "database-ingest"):
         if required_profile not in profiles:
             errors.append(f"manifest missing required profile `{required_profile}`")
 
@@ -161,7 +161,7 @@ def render_bundle(manifest: dict[str, Any], profile: str, mode: str) -> str:
     if mode == "chat":
         lines.extend(
             [
-                "Use this bundle as repository-owned context for a fresh coding-agent chat.",
+                f"Use this bundle as repository-owned context for a fresh {profile} chat.",
                 "Treat repository files as the source of truth. Do not rely on old chat history.",
                 "Start by reading the table of contents, then the embedded documents in order.",
             ]
@@ -169,7 +169,7 @@ def render_bundle(manifest: dict[str, Any], profile: str, mode: str) -> str:
     else:
         lines.extend(
             [
-                "Use this bundle as a portable context payload for an external LLM, database, or review tool.",
+                "Use this bundle as a portable context payload for ingestion, retrieval, or review.",
                 "The embedded documents appear in manifest order.",
                 "Generated output is not canonical state; repository files remain canonical.",
             ]
@@ -245,7 +245,7 @@ def build_parser() -> argparse.ArgumentParser:
     export.set_defaults(func=command_export, mode="export")
 
     chat = subparsers.add_parser("chat", help="write a chat bootstrap bundle")
-    chat.add_argument("--profile", default="chat-bootstrap", help="manifest profile to export")
+    chat.add_argument("--profile", default="codex", help="manifest profile to export")
     chat.add_argument("--output", help="output Markdown path")
     chat.set_defaults(func=command_export, mode="chat")
 

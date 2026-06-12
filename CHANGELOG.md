@@ -6,6 +6,21 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.10.0 - 2026-06-12
+
+### Added
+
+- Added explicit context export profiles for Codex, Cursor, and database/RAG
+  ingestion.
+- Added dedicated Make targets for profile-specific context exports.
+- Documented why each context pack exists and which source-of-truth questions
+  the exported documents answer.
+
+### Changed
+
+- Updated the default context export profile to `database-ingest`.
+- Updated the default chat bootstrap profile to `codex`.
+
 ## v0.9.0 - 2026-06-12
 
 ### Added
