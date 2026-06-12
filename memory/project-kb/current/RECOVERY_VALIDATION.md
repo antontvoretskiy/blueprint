@@ -4,7 +4,7 @@ Status: Current recovery validation baseline.
 Repository: `antontvoretskiy/blueprint`
 Public branch model: `main` only
 Last released version: `v0.8.0`
-Next release target: not selected
+Next release target: `v0.9.0`
 Validator: Blueprint Maintainers
 Date: `2026-06-12`
 
@@ -30,9 +30,9 @@ Read:
 | --- | --- | --- |
 | Repository identity is clear | Remote and repository name match the task | PASS |
 | Public branch role is clear | `main` is the only public distribution branch | PASS |
-| Current state is recoverable | `08_CURRENT_STATE.md` explains v0.8.0 and the next-scope selection point | PASS |
+| Current state is recoverable | `08_CURRENT_STATE.md` explains v0.8.0 and the v0.9.0 context export target | PASS |
 | Included state is accurate | `05_IMPLEMENTATION_STATUS.md` matches repository contents | PASS |
-| Reference map is usable | `10_REFERENCE.md` points to owner documents and validation fixtures | PASS |
+| Reference map is usable | `10_REFERENCE.md` points to owner documents, validation fixtures, context export, and feature artifacts | PASS |
 | Next work is routable | `TASK_PROCESS_ROUTER.md` identifies the workflow and process level | PASS |
 | Planned work is separated | Planned items are not described as included | PASS |
 | Clean-start brief is scoped | Brief links back to canonical memory and owner docs | PASS |
@@ -43,10 +43,10 @@ Read:
 ```text
 Repository: antontvoretskiy/blueprint
 Public branch model: main only
-Current recovery point: v0.8.0 released on main; next release scope not selected
-Included state: v0.8.0 public framework bundle with validation fixtures and fixture checker
+Current recovery point: v0.8.0 released on main; v0.9.0 context export selected as next release target
+Included state: v0.8.0 public framework bundle plus v0.9.0 release-target context export work on the scoped branch
 Not included: CLI, installer, runtime, MCP integration, execution layers, release automation, additional examples
-Next recommended work: select the next release scope before adding more public assets
+Next recommended work: complete v0.9.0 context export, run release validation, and publish only validated state to main
 Applicable owner documents: core/AGENTS.md, memory/project-kb/00_INDEX.md, memory/project-kb/08_CURRENT_STATE.md, memory/project-kb/05_IMPLEMENTATION_STATUS.md, memory/project-kb/10_REFERENCE.md, core/TASK_PROCESS_ROUTER.md
 ```
 
@@ -58,4 +58,4 @@ Selected result:
 
 Reason:
 
-`Repository-owned recovery files describe the released v0.8.0 state, the next-scope selection point, and the main-only public branch model without requiring previous chat history.`
+`Repository-owned recovery files describe the released v0.8.0 state, the selected v0.9.0 context-export target, and the main-only public branch model without requiring previous chat history.`

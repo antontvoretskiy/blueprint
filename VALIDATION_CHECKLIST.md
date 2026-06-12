@@ -41,6 +41,8 @@ Use this checklist for public-facing PRs and release preparation.
 - [ ] `make doctor` passes.
 - [ ] `make config` passes.
 - [ ] `make smoke` passes.
+- [ ] `make context-export` passes when context export is in scope.
+- [ ] `make context-chat` passes when context export is in scope.
 - [ ] System use-case validation suite is run when preparing public packaging, release, or branch cleanup.
 - [ ] UC-03 process-level regression matrix passes before claiming task-routing validation for future packaging.
 - [ ] Validation fixtures pass before release-readiness is claimed.

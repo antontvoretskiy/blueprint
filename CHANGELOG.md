@@ -6,6 +6,20 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.9.0 - 2026-06-12
+
+### Added
+
+- Added repository-owned context export commands for external LLM/database
+  context bundles and fresh-chat bootstrap bundles.
+- Added an ordered context export manifest and generated bundle output under
+  ignored `.blueprint/context/` paths.
+- Added Feature Lifecycle artifacts for the context export workflow.
+
+### Changed
+
+- Extended `make quality` to validate the context export manifest.
+
 ## v0.8.0 - 2026-06-12
 
 ### Added

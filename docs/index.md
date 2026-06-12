@@ -28,6 +28,7 @@ working map for adoption, governance, validation, and contribution.
 | Validation | Tie public claims to evidence | [Verification standard](../governance/docs/verification-standard.md), [validation fixtures](validation/fixtures/README.md) |
 | Project Memory | Recover current state without old chat history | [Project Memory index](../memory/project-kb/00_INDEX.md) |
 | Templates | Copy reusable framework artifacts into adopter repositories | [Template reference](reference/templates.md) |
+| Context export | Export ordered repository-owned context for external LLMs and fresh chats | [Context export](../context/README.md) |
 
 ## Current Boundary
 
@@ -42,7 +43,9 @@ MCP server, or product implementation.
 1. Use [Quickstart](quickstart.md) for the first adoption path.
 2. Use [Documentation navigation](nav.md) when you need a complete map.
 3. Use reference pages to find the owner document before editing rules.
-4. Use [Community guide](community.md) before opening issues or PRs.
+4. Use [Context export](../context/README.md) when a new LLM/chat needs the
+   repository-owned truth in order.
+5. Use [Community guide](community.md) before opening issues or PRs.
 
 Docs pages summarize and route. Canonical rules remain in the owner documents
 they link to.

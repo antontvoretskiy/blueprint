@@ -12,6 +12,9 @@ The released bundle includes bootstrap presentation, complete product map, core 
 
 GitHub Release `v0.8.0` is published and points to the released `main` commit.
 
+Blueprint v0.9.0 is the selected next release target for context export
+commands.
+
 The public GitHub repository now exposes only `main` as the release-ready
 distribution branch. Local or private maintainer integration branches may exist,
 but they are not part of the public branch list.
@@ -30,6 +33,9 @@ Release `v0.7.0` adds `docs/index.md`, `docs/nav.md`, `docs/quickstart.md`,
 Release `v0.8.0` adds `docs/validation/fixtures/**` and
 `scripts/check_validation_fixtures.py`, then wires those checks into
 `make quality`.
+
+Release target `v0.9.0` adds `context/export-manifest.json`,
+`scripts/export_context.py`, `make context-export`, and `make context-chat`.
 
 ## Read First
 
@@ -52,13 +58,14 @@ Memory.
 
 ## Current Next Step
 
-Select the next release scope after v0.8.0.
+Complete the v0.9.0 context export release target.
 
 Recommended next scoped work:
 
 1. Confirm that the public branch list remains `main` only.
-2. Decide whether the next scope is examples catalog, release automation, or optional CI expansion.
-3. Run the full validation package before any new release edits.
+2. Validate context export commands and generated ignored artifacts.
+3. Prepare a PR into `main`.
+4. Publish a tag or GitHub Release only after explicit maintainer approval.
 
 ## Do Not Do
 

@@ -27,6 +27,8 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `docs/reference/templates.md` | Included | Template selection reference |
 | `docs/reference/governance.md` | Included | Governance owner reference |
 | `docs/community.md` | Included | Community and contribution path guide |
+| `context/README.md` | Included | Context export command guide, v0.9.0 |
+| `context/export-manifest.json` | Included | Ordered context export manifest, v0.9.0 |
 | `docs/validation/system-use-case-suite.md` | Included | Manual system use-case validation suite, v0.8.0 |
 | `docs/validation/fixtures/README.md` | Included | Validation fixture bundle guide, v0.8.0 |
 | `docs/validation/fixtures/system-use-cases.json` | Included | System use-case validation fixture data, v0.8.0 |
@@ -51,6 +53,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `scripts/README.md` | Included | Validation script boundary and usage guide |
 | `scripts/check_quality.py` | Included | Manifest, link, wording, template, and release consistency checks |
 | `scripts/check_validation_fixtures.py` | Included | Validation fixture consistency checks |
+| `scripts/export_context.py` | Included | Context export manifest checks and bundle generation |
 | `compose.yaml` | Included | Isolated local preview environment |
 | `.env.example` | Included | Non-secret local environment defaults |
 | `public/` | Included | Static preview surface |
@@ -79,6 +82,10 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `memory/project-kb/current/CLEAN_START_BRIEF.md` | Included | Current clean-start brief |
 | `memory/project-kb/current/RECOVERY_VALIDATION.md` | Included | Current recovery validation result |
 | `memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md` | Included | Current system use-case validation result |
+| `memory/project-kb/features/context-export/FEATURE.md` | Included | Context export feature specification, v0.9.0 |
+| `memory/project-kb/features/context-export/CLARIFICATION.md` | Included | Context export clarification decisions, v0.9.0 |
+| `memory/project-kb/features/context-export/PLAN.md` | Included | Context export implementation plan, v0.9.0 |
+| `memory/project-kb/features/context-export/TASKS.md` | Included | Context export task breakdown, v0.9.0 |
 | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` | Included | Guardian process architecture |
 | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` | Included | Generic Guardian validation scenarios |
 | `templates/project-memory/README.md` | Included | Project Memory template bundle guide, v0.2.0 |

@@ -20,6 +20,8 @@ This file lists canonical project references for recovery.
 | Template reference | `docs/reference/templates.md` |
 | Governance reference | `docs/reference/governance.md` |
 | Community guide | `docs/community.md` |
+| Context export guide | `context/README.md` |
+| Context export manifest | `context/export-manifest.json` |
 | Spec Kit presentation benchmark | `docs/benchmarks/spec-kit-open-source-marketing-benchmark.md` |
 | Version target | `VERSION` |
 | Changelog | `CHANGELOG.md` |
@@ -75,6 +77,10 @@ This file lists canonical project references for recovery.
 | Clean-start brief | `memory/project-kb/current/CLEAN_START_BRIEF.md` |
 | Recovery validation | `memory/project-kb/current/RECOVERY_VALIDATION.md` |
 | System use-case validation result | `memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md` |
+| Context export feature specification | `memory/project-kb/features/context-export/FEATURE.md` |
+| Context export clarification | `memory/project-kb/features/context-export/CLARIFICATION.md` |
+| Context export plan | `memory/project-kb/features/context-export/PLAN.md` |
+| Context export tasks | `memory/project-kb/features/context-export/TASKS.md` |
 | Guardian architecture | `memory/project-kb/architecture-decisions/GUARDIAN_ARCHITECTURE.md` |
 | Guardian validation scenarios | `memory/project-kb/GUARDIAN_VALIDATION_SCENARIOS.md` |
 
@@ -129,6 +135,7 @@ This file lists canonical project references for recovery.
 | --- | --- |
 | Quality checker | `scripts/check_quality.py` |
 | Validation fixture checker | `scripts/check_validation_fixtures.py` |
+| Context export script | `scripts/export_context.py` |
 
 ## Example References
 
