@@ -53,6 +53,8 @@ Do not use it as a chat log. Record only durable repository changes that help fu
 | 2026-06-12 | Release target `v0.9.0` | Selected context export commands for external LLMs and fresh chats | `main` |
 | 2026-06-12 | Release `v0.9.0` | Published context export commands and ordered repository-owned context bundles | `main` |
 | 2026-06-12 | Release target `v0.10.0` | Added explicit Codex, Cursor, and database-ingest context export profiles | `codex/context-profiles-v0.10.0` |
+| 2026-06-12 | Release `v0.10.0` | Published profile-specific context export commands | `main` |
+| 2026-06-12 | Release target `v0.11.0` | Added JSONL context export for database/RAG ingestion | `codex/context-jsonl-v0.11.0` |
 
 ## Update Rules
 

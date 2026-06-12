@@ -6,13 +6,13 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.9.0 is released on `main`.
+Blueprint v0.10.0 is released on `main`.
 
 The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, completed post-validation branch cleanup, documentation quality gates, and documentation navigation pages.
 
-GitHub Release `v0.9.0` is published and points to the released `main` commit.
+GitHub Release `v0.10.0` is published and points to the released `main` commit.
 
-The next release target is v0.10.0 for profile-specific context exports.
+The next release target is v0.11.0 for JSONL context export.
 
 The public GitHub repository now exposes only `main` as the release-ready
 distribution branch. Local or private maintainer integration branches may exist,
@@ -36,9 +36,12 @@ Release `v0.8.0` adds `docs/validation/fixtures/**` and
 Release `v0.9.0` adds `context/export-manifest.json`,
 `scripts/export_context.py`, `make context-export`, and `make context-chat`.
 
-Release target `v0.10.0` adds explicit `codex`, `cursor`, and
+Release `v0.10.0` adds explicit `codex`, `cursor`, and
 `database-ingest` profiles plus `make context-codex`, `make context-cursor`,
 and `make context-database`.
+
+Release target `v0.11.0` adds JSONL export for database/RAG ingestion through
+`make context-jsonl` and `python3 scripts/export_context.py jsonl`.
 
 ## Read First
 
@@ -61,14 +64,14 @@ Memory.
 
 ## Current Next Step
 
-Validate and publish the v0.10.0 profile-specific context export scope.
+Validate and publish the v0.11.0 JSONL context export scope.
 
 Recommended next scoped work:
 
 1. Confirm that the public branch list remains `main` only.
 2. Run the full validation package before release publication.
-3. Keep JSONL export, ZIP bundles, adopter templates, CLI, and installer work
-   out of the v0.10.0 scope.
+3. Keep ZIP bundles, adopter templates, CLI, and installer work out of the
+   v0.11.0 scope.
 
 ## Do Not Do
 

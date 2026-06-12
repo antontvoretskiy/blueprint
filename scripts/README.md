@@ -32,6 +32,7 @@ make context-chat
 make context-codex
 make context-cursor
 make context-database
+make context-jsonl
 ```
 
 Or run the script directly:
@@ -43,6 +44,7 @@ python3 scripts/export_context.py check
 python3 scripts/export_context.py export --profile database-ingest
 python3 scripts/export_context.py chat --profile codex
 python3 scripts/export_context.py chat --profile cursor
+python3 scripts/export_context.py jsonl --profile database-ingest
 ```
 
 ## Boundaries
@@ -50,8 +52,8 @@ python3 scripts/export_context.py chat --profile cursor
 Validation scripts may check repository files, public claims, links, and template references.
 They may also check versioned validation fixtures for shape, required IDs,
 expected process levels, and owner-document references.
-They may check context export manifests and write generated context bundles
-under ignored output paths.
+They may check context export manifests and write generated Markdown or JSONL
+context bundles under ignored output paths.
 
 They must not:
 

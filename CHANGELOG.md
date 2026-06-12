@@ -6,6 +6,16 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.11.0 - 2026-06-12
+
+### Added
+
+- Added JSONL context export for database/RAG ingestion.
+- Added a `make context-jsonl` target for the default database-ingest JSONL
+  corpus.
+- Added JSONL output metadata for repository state, profile, source document
+  identity, purpose, content hash, and content.
+
 ## v0.10.0 - 2026-06-12
 
 ### Added

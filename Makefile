@@ -4,7 +4,7 @@ ENV_FILE ?= .env.local
 COMPOSE_ENV := $(if $(wildcard $(ENV_FILE)),--env-file $(ENV_FILE),--env-file .env.example)
 COMPOSE := docker compose $(COMPOSE_ENV)
 
-.PHONY: init doctor config quality context-export context-chat context-codex context-cursor context-database up down restart ps logs smoke clean
+.PHONY: init doctor config quality context-export context-chat context-codex context-cursor context-database context-jsonl up down restart ps logs smoke clean
 
 init:
 	@if [[ ! -f "$(ENV_FILE)" ]]; then cp .env.example "$(ENV_FILE)"; echo "created $(ENV_FILE)"; else echo "$(ENV_FILE) already exists"; fi
@@ -91,6 +91,9 @@ context-cursor:
 
 context-database:
 	@python3 scripts/export_context.py export --profile database-ingest
+
+context-jsonl:
+	@python3 scripts/export_context.py jsonl --profile database-ingest
 
 up: init config
 	@$(COMPOSE) up -d --build

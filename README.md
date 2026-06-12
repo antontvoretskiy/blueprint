@@ -373,9 +373,9 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 ## ✅ Current Status
 
-Blueprint v0.9.0 is released on `main`.
+Blueprint v0.10.0 is released on `main`.
 
-The next release target is v0.10.0 for profile-specific context exports.
+The next release target is v0.11.0 for JSONL context export.
 
 The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
 
@@ -401,6 +401,7 @@ Included now:
 | Documentation quality workflow and scripts | Included |
 | Documentation navigation pages | Included |
 | Context export commands | Included |
+| Profile-specific context export commands | Included |
 
 Not included yet:
 
@@ -423,7 +424,7 @@ Blueprint tracks validation as repository-owned evidence.
 | [Process-efficiency dogfood audit](docs/validation/process-efficiency-dogfood-v0.4.1.md) | Evidence that L0/L1/L2 budgets work in this repository |
 | [Validation checklist](VALIDATION_CHECKLIST.md) | Public release and adoption validation gates |
 | [Bundle manifest](BUNDLE_MANIFEST.md) | Included, planned, and excluded assets |
-| [Context export](context/README.md) | Ordered repository-owned context bundles for external LLMs and fresh chats |
+| [Context export](context/README.md) | Ordered repository-owned Markdown and JSONL context bundles |
 
 The current release also passed local repository checks:
 
@@ -446,12 +447,18 @@ make context-export
 make context-chat
 ```
 
-The v0.10.0 release target adds explicit profile commands:
+The current release includes explicit profile commands:
 
 ```bash
 make context-codex
 make context-cursor
 make context-database
+```
+
+The v0.11.0 release target adds JSONL export:
+
+```bash
+make context-jsonl
 ```
 
 <a id="roadmap"></a>
@@ -474,6 +481,7 @@ make context-database
 | v0.8.0 | Validation fixtures, fixture checker, and main-only validation state refresh |
 | v0.9.0 | Context export commands for external LLMs and fresh chats |
 | v0.10.0 | Separate context export profiles for Codex, Cursor, and database/RAG ingestion |
+| v0.11.0 | JSONL context export for database/RAG ingestion |
 | Next | Additional examples, release automation, and optional CI expansion |
 
 <a id="contributing"></a>

@@ -30,7 +30,7 @@ It is a navigation layer, not a replacement for canonical owner documents.
 | [Governance reference](reference/governance.md) | You need the owner for a policy, branch, PR, or validation rule |
 | [Bundle manifest](../BUNDLE_MANIFEST.md) | You need the included, planned, and excluded asset list |
 | [Reference map](../memory/project-kb/10_REFERENCE.md) | You need the recovery-oriented canonical file map |
-| [Context export](../context/README.md) | You need an ordered context bundle for an external LLM or fresh chat |
+| [Context export](../context/README.md) | You need an ordered Markdown or JSONL context bundle |
 
 ## Governance
 

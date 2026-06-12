@@ -1,13 +1,13 @@
 # Blueprint Context Export
 
 Asset: context-export
-Version: v0.10.0
+Version: v0.11.0
 Type: Local Command Workflow
 Author: Blueprint Maintainers
 Status: Release target
 
-Context export creates ordered Markdown bundles from repository-owned source of
-truth files.
+Context export creates ordered Markdown bundles and JSONL corpora from
+repository-owned source of truth files.
 
 Use it when you need to give Codex, Cursor, a database, a review tool, or
 another LLM the current Blueprint context without depending on old chat history.
@@ -46,6 +46,18 @@ make context-cursor
 make context-database
 ```
 
+Export the database/RAG ingest JSONL corpus:
+
+```bash
+make context-jsonl
+```
+
+Default output:
+
+```text
+.blueprint/context/blueprint-database-ingest.jsonl
+```
+
 Validate the manifest without writing bundles:
 
 ```bash
@@ -59,6 +71,19 @@ python3 scripts/export_context.py check
 | `codex` | Fresh Codex chat context for recovery, current state, active scope, rules, and validation |
 | `cursor` | Fresh Cursor chat context for recovery, current state, active scope, implementation boundaries, and docs navigation |
 | `database-ingest` | Broader Markdown corpus for database, RAG, retrieval, audit, or external review ingestion |
+
+## JSONL Format
+
+JSONL output writes one JSON object per source document. Each row includes:
+
+- repository metadata: `repository`, `branch`, `commit`, and `worktree`;
+- export metadata: `profile`, `manifest`, `generated_at`, and `ordinal`;
+- document metadata: `id`, `path`, `title`, and `purpose`;
+- content fields: `content_sha256` and `content`.
+
+Use JSONL when a database, RAG index, retrieval tool, or audit pipeline needs
+structured records instead of one combined Markdown bundle. The JSONL file is
+still generated output; repository files remain canonical.
 
 ## Why These Documents
 
@@ -101,7 +126,6 @@ This workflow does not:
 - call external services;
 - install Blueprint into another repository;
 - create a packaged CLI;
-- create JSONL output;
 - create ZIP bundles;
 - add runtime behavior;
 - replace Project Memory, release validation, or PR review.

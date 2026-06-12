@@ -1,7 +1,7 @@
 # Context Export Tasks
 
 Feature: context-export
-Version: v0.10.0
+Version: v0.11.0
 Status: Release target
 
 ## Phase 1 - Feature Artifacts
@@ -48,3 +48,11 @@ Status: Release target
 - [x] Document why the context pack includes each class of source-of-truth
   document.
 - [x] Run profile-specific export validation before release.
+
+## Phase 7 - JSONL Export
+
+- [x] Add JSONL default outputs to the context manifest.
+- [x] Add `python3 scripts/export_context.py jsonl`.
+- [x] Add `make context-jsonl`.
+- [x] Document the JSONL row shape and intended database/RAG use.
+- [x] Run JSONL export validation before release.
