@@ -375,6 +375,8 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 Blueprint v0.9.0 is released on `main`.
 
+The next release target is v0.10.0 for profile-specific context exports.
+
 The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
 
 Included now:
@@ -444,6 +446,14 @@ make context-export
 make context-chat
 ```
 
+The v0.10.0 release target adds explicit profile commands:
+
+```bash
+make context-codex
+make context-cursor
+make context-database
+```
+
 <a id="roadmap"></a>
 
 ## 🗺️ Roadmap
@@ -463,6 +473,7 @@ make context-chat
 | v0.7.0 | Documentation navigation, quickstart, concepts, reference, and community pages |
 | v0.8.0 | Validation fixtures, fixture checker, and main-only validation state refresh |
 | v0.9.0 | Context export commands for external LLMs and fresh chats |
+| v0.10.0 | Separate context export profiles for Codex, Cursor, and database/RAG ingestion |
 | Next | Additional examples, release automation, and optional CI expansion |
 
 <a id="contributing"></a>

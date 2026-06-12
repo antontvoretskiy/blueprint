@@ -12,6 +12,8 @@ The released bundle includes bootstrap presentation, complete product map, core 
 
 GitHub Release `v0.9.0` is published and points to the released `main` commit.
 
+The next release target is v0.10.0 for profile-specific context exports.
+
 The public GitHub repository now exposes only `main` as the release-ready
 distribution branch. Local or private maintainer integration branches may exist,
 but they are not part of the public branch list.
@@ -34,6 +36,10 @@ Release `v0.8.0` adds `docs/validation/fixtures/**` and
 Release `v0.9.0` adds `context/export-manifest.json`,
 `scripts/export_context.py`, `make context-export`, and `make context-chat`.
 
+Release target `v0.10.0` adds explicit `codex`, `cursor`, and
+`database-ingest` profiles plus `make context-codex`, `make context-cursor`,
+and `make context-database`.
+
 ## Read First
 
 1. `memory/project-kb/00_INDEX.md`
@@ -55,13 +61,14 @@ Memory.
 
 ## Current Next Step
 
-Select the next release scope after v0.9.0.
+Validate and publish the v0.10.0 profile-specific context export scope.
 
 Recommended next scoped work:
 
 1. Confirm that the public branch list remains `main` only.
-2. Decide whether the next scope is examples catalog, release automation, optional CI expansion, or packaged CLI/installer planning.
-3. Run the full validation package before any new release edits.
+2. Run the full validation package before release publication.
+3. Keep JSONL export, ZIP bundles, adopter templates, CLI, and installer work
+   out of the v0.10.0 scope.
 
 ## Do Not Do
 

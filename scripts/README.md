@@ -29,6 +29,9 @@ Generate context bundles:
 ```bash
 make context-export
 make context-chat
+make context-codex
+make context-cursor
+make context-database
 ```
 
 Or run the script directly:
@@ -37,8 +40,9 @@ Or run the script directly:
 python3 scripts/check_quality.py
 python3 scripts/check_validation_fixtures.py
 python3 scripts/export_context.py check
-python3 scripts/export_context.py export
-python3 scripts/export_context.py chat
+python3 scripts/export_context.py export --profile database-ingest
+python3 scripts/export_context.py chat --profile codex
+python3 scripts/export_context.py chat --profile cursor
 ```
 
 ## Boundaries

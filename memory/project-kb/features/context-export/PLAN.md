@@ -1,13 +1,13 @@
 # Context Export Plan
 
 Feature: context-export
-Version: v0.9.0
+Version: v0.10.0
 Status: Release target
 
 ## Summary
 
-Add a repository-local context export workflow that can generate ordered
-Markdown bundles for external LLMs and fresh Codex or Cursor chats.
+Extend the repository-local context export workflow with explicit `codex`,
+`cursor`, and `database-ingest` profiles.
 
 ## Technical Context
 
@@ -27,6 +27,9 @@ Excluded layers:
 - external editor integration;
 - release automation;
 - dependency automation.
+- JSONL export;
+- ZIP bundle generation;
+- adopter-facing template packaging.
 
 ## Governance Check
 
@@ -47,9 +50,17 @@ implementation.
 | Document | Purpose |
 | --- | --- |
 | `context/README.md` | Human-facing command guide |
-| `context/export-manifest.json` | Ordered profiles and source files |
+| `context/export-manifest.json` | Ordered profiles, source files, and document membership |
 | `scripts/export_context.py` | Manifest validation and bundle generation |
 | `.blueprint/context/` | Ignored default output location |
+
+## Profile Model
+
+| Profile | Purpose |
+| --- | --- |
+| `codex` | Fresh Codex chat recovery and validation context |
+| `cursor` | Fresh Cursor chat recovery, implementation boundary, and navigation context |
+| `database-ingest` | Broader Markdown corpus for database, RAG, retrieval, audit, or external review |
 
 ## Validation Strategy
 
@@ -59,6 +70,9 @@ Required commands:
 make quality
 make context-export
 make context-chat
+make context-codex
+make context-cursor
+make context-database
 python3 scripts/export_context.py check
 python3 -m py_compile scripts/export_context.py
 git diff --check
