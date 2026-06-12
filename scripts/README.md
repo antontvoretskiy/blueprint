@@ -8,7 +8,7 @@ They are not a CLI, installer, runtime, workflow engine, or code generator.
 
 | Script | Purpose |
 | --- | --- |
-| `check_quality.py` | Runs manifest, link, wording, template index, and release consistency checks |
+| `check_quality.py` | Runs manifest, link, wording, template index, and release-state consistency checks |
 | `check_validation_fixtures.py` | Validates system use-case, process-level, and release-readiness fixtures |
 | `export_context.py` | Validates context export manifests and writes ordered context bundles |
 

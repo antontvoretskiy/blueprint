@@ -6,6 +6,14 @@ Blueprint uses SemVer. Release entries describe public framework assets, templat
 
 ## Unreleased
 
+## v0.11.1 - 2026-06-12
+
+### Changed
+
+- Aligned release-state wording after the v0.11.0 publication.
+- Strengthened release consistency checks so README and Project Memory current
+  release state must match `RELEASE.md`.
+
 ## v0.11.0 - 2026-06-12
 
 ### Added

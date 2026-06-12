@@ -184,6 +184,39 @@ def check_release_consistency() -> int:
     if not any(marker in release_text for marker in release_markers):
         expected = "`Last released version` or `Next release target`"
         errors.append(f"RELEASE.md does not declare {version_tag} as {expected}")
+    last_release = re.search(r"^Last released version: (v\d+\.\d+\.\d+)\.$", release_text, re.MULTILINE)
+    next_target = re.search(
+        r"^Next release target: (not selected|v\d+\.\d+\.\d+)\.$",
+        release_text,
+        re.MULTILINE,
+    )
+    if not last_release:
+        errors.append("RELEASE.md must declare `Last released version: vX.Y.Z.`")
+    if not next_target:
+        errors.append("RELEASE.md must declare `Next release target: vX.Y.Z.` or `not selected`")
+    if last_release and next_target:
+        last_release_tag = last_release.group(1)
+        next_target_value = next_target.group(1)
+        if next_target_value == last_release_tag:
+            errors.append("RELEASE.md next release target must not equal the last released version")
+        readme_text = (ROOT / "README.md").read_text()
+        expected_current = f"Blueprint {last_release_tag} is released on `main`."
+        if expected_current not in readme_text:
+            errors.append(f"README.md current status must contain `{expected_current}`")
+        stale_next = f"The next release target is {last_release_tag}"
+        if stale_next in readme_text:
+            errors.append(f"README.md must not describe {last_release_tag} as the next release target")
+
+        memory_expectations = {
+            "memory/project-kb/08_CURRENT_STATE.md": f"Blueprint {last_release_tag} is released",
+            "memory/project-kb/current/CLEAN_START_BRIEF.md": f"Blueprint {last_release_tag} is released",
+            "memory/project-kb/current/RECOVERY_VALIDATION.md": f"Last released version: `{last_release_tag}`",
+            "memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md": f"Last released version: `{last_release_tag}`",
+        }
+        for relative_path, expected in memory_expectations.items():
+            text = (ROOT / relative_path).read_text()
+            if expected not in text:
+                errors.append(f"{relative_path} must contain `{expected}`")
     return fail("release consistency", errors) if errors else ok("release consistency")
 
 

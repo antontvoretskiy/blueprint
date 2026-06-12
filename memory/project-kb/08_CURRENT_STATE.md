@@ -6,17 +6,17 @@ This file records the current recovery point for Blueprint.
 
 | Branch | Role | Current meaning |
 | --- | --- | --- |
-| `main` | Release-ready public state | Contains the released v0.10.0 public framework bundle |
+| `main` | Release-ready public state | Contains the released v0.11.1 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
 
 ## Current Work
 
-Blueprint v0.10.0 is released on public `main`.
+Blueprint v0.11.1 is released on public `main`.
 
-The GitHub Release `v0.10.0` is published and points to the v0.10.0 release
+The GitHub Release `v0.11.1` is published and points to the v0.11.1 release
 commit on `main`.
 
-The next release target is v0.11.0 for JSONL context export.
+The next release target is v0.12.0 for ZIP context export bundles.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
@@ -72,12 +72,19 @@ Release `v0.10.0` extends context export with explicit profiles:
 - `make context-cursor`;
 - `make context-database`.
 
-Release target `v0.11.0` extends context export with JSONL output:
+Release `v0.11.0` extends context export with JSONL output:
 
 - `default_jsonl_outputs` in `context/export-manifest.json`;
 - `python3 scripts/export_context.py jsonl`;
 - `make context-jsonl`;
 - one JSON object per source document for database/RAG ingestion.
+
+Release `v0.11.1` aligns release-state truthfulness after publication:
+
+- README current release state;
+- `RELEASE.md` last released and next target state;
+- Project Memory current-state and validation state;
+- stronger release consistency checks in `scripts/check_quality.py`.
 
 The active quality-gate surface is:
 
@@ -124,7 +131,8 @@ runtime, workflow engine, or code generator.
 - v0.8.0 validation fixtures, fixture checker, and main-only validation state refresh.
 - v0.9.0 context export commands for external LLMs and fresh chats.
 - v0.10.0 profile-specific context exports.
-- v0.11.0 release target for JSONL context export.
+- v0.11.0 JSONL context export.
+- v0.11.1 release-state truthfulness and stronger release consistency checks.
 
 ## Not Yet Included
 
@@ -140,7 +148,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Validate and publish the v0.11.0 JSONL context export scope.
+Validate and publish the v0.12.0 ZIP context export bundle scope.
 
 Required validation before any new release publication:
 
@@ -159,4 +167,4 @@ Required validation before any new release publication:
 - public branch and open PR checks.
 
 Do not start additional examples, CLI, installer, release automation, or
-integration work until the v0.11.0 scope is validated and published.
+integration work until the v0.12.0 scope is selected and validated.

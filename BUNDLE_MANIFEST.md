@@ -51,7 +51,7 @@ This manifest defines what belongs in the current Blueprint bundle, what is plan
 | `media/use-cases/pr-handoff.png` | Included | Public README use-case screenshot |
 | `Makefile` | Included | Local validation commands |
 | `scripts/README.md` | Included | Validation script boundary and usage guide |
-| `scripts/check_quality.py` | Included | Manifest, link, wording, template, and release consistency checks |
+| `scripts/check_quality.py` | Included | Manifest, link, wording, template, and release-state consistency checks |
 | `scripts/check_validation_fixtures.py` | Included | Validation fixture consistency checks |
 | `scripts/export_context.py` | Included | Context export manifest checks and Markdown/JSONL bundle generation |
 | `compose.yaml` | Included | Isolated local preview environment |

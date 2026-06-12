@@ -6,13 +6,13 @@ It is not a second memory system. Canonical state lives in Project Memory, core,
 
 ## Current Recovery Point
 
-Blueprint v0.10.0 is released on `main`.
+Blueprint v0.11.1 is released on `main`.
 
 The released bundle includes bootstrap presentation, complete product map, core contracts, governance standards, self-hosting governance, Project Memory structure, Project Memory templates, Feature Lifecycle templates, PR handoff templates, Guardian templates, checklists, recovery templates, source coverage matrix, system relationship map, AI product example, public release packaging, the system use-case validation suite, process-level regression evidence, context budgets, recovery budgets, the process-efficiency dogfood audit, completed post-validation branch cleanup, documentation quality gates, and documentation navigation pages.
 
-GitHub Release `v0.10.0` is published and points to the released `main` commit.
+GitHub Release `v0.11.1` is published and points to the released `main` commit.
 
-The next release target is v0.11.0 for JSONL context export.
+The next release target is v0.12.0 for ZIP context export bundles.
 
 The public GitHub repository now exposes only `main` as the release-ready
 distribution branch. Local or private maintainer integration branches may exist,
@@ -40,8 +40,11 @@ Release `v0.10.0` adds explicit `codex`, `cursor`, and
 `database-ingest` profiles plus `make context-codex`, `make context-cursor`,
 and `make context-database`.
 
-Release target `v0.11.0` adds JSONL export for database/RAG ingestion through
+Release `v0.11.0` adds JSONL export for database/RAG ingestion through
 `make context-jsonl` and `python3 scripts/export_context.py jsonl`.
+
+Release `v0.11.1` aligns post-release state after the v0.11.0 publication and
+adds release-state checks to `scripts/check_quality.py`.
 
 ## Read First
 
@@ -64,14 +67,13 @@ Memory.
 
 ## Current Next Step
 
-Validate and publish the v0.11.0 JSONL context export scope.
+Validate and publish the v0.12.0 ZIP context export bundle scope.
 
 Recommended next scoped work:
 
 1. Confirm that the public branch list remains `main` only.
 2. Run the full validation package before release publication.
-3. Keep ZIP bundles, adopter templates, CLI, and installer work out of the
-   v0.11.0 scope.
+3. Keep adopter templates, CLI, and installer work out of the v0.12.0 scope.
 
 ## Do Not Do
 

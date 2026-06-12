@@ -1,25 +1,25 @@
 # Blueprint System Use-Case Validation Result
 
-Status: v0.11.0 JSONL context export release-target result.
+Status: v0.11.1 release-state truthfulness result.
 Repository: `antontvoretskiy/blueprint`
 Public branch model: `main` only
-Last released version: `v0.10.0`
-Next release target: `v0.11.0`
+Last released version: `v0.11.1`
+Next release target: `v0.12.0`
 Validator: Blueprint Maintainers
 Date: `2026-06-12`
 
-This result records the current system validation baseline for the v0.11.0
-JSONL context export release target.
+This result records the current system validation baseline for the v0.11.1
+release-state truthfulness patch release.
 
 The historical v0.4.0 manual validation result and v0.4.1 process-level
 regression evidence remain useful context, but they are not sufficient for
 current public packaging unless the v0.8.0 fixtures, v0.9.0 context export
-commands, v0.10.0 profile-specific context exports, v0.11.0 JSONL export, and
-main-only branch model also validate.
+commands, v0.10.0 profile-specific context exports, v0.11.0 JSONL export,
+v0.11.1 release-state checks, and main-only branch model also validate.
 
 ## Scope
 
-Validated for the v0.11.0 release target:
+Validated for the v0.11.1 release:
 
 - repository identity and start gate;
 - fresh recovery without chat history;
@@ -42,6 +42,7 @@ Validated for the v0.11.0 release target:
 - profile-specific Codex, Cursor, and database-ingest context bundle
   generation.
 - JSONL context export generation.
+- release-state truthfulness after publication.
 
 Not changed:
 
@@ -64,6 +65,7 @@ Not changed:
 | Cursor chat bundle | PASS | `make context-cursor` writes `.blueprint/context/blueprint-cursor-context.md` |
 | Database ingest JSONL | PASS | `make context-jsonl` writes `.blueprint/context/blueprint-database-ingest.jsonl` |
 | Generated artifacts ignored | PASS | `.blueprint/` is ignored by Git |
+| Release-state consistency | PASS | `scripts/check_quality.py` validates README and Project Memory current release state against `RELEASE.md` |
 
 ## Fixture Evidence
 
@@ -78,7 +80,7 @@ Not changed:
 
 | Command or scan | Result | Evidence |
 | --- | --- | --- |
-| `make quality` | PASS | Manifest paths, markdown links, public wording, template index, release consistency, validation fixtures, and context export passed |
+| `make quality` | PASS | Manifest paths, markdown links, public wording, template index, release-state consistency, validation fixtures, and context export passed |
 | `make doctor` | PASS | Local ports and Docker namespace are owned by `blueprint-dev` |
 | `make config` | PASS | Compose config validates |
 | `make smoke` | PASS | App `127.0.0.1:3231` and API `127.0.0.1:8231` respond |
@@ -92,7 +94,7 @@ Not changed:
 | `make context-jsonl` | PASS | Database-ingest JSONL corpus generated under ignored `.blueprint/context/` |
 | Remote public branch check | Not run | Required before release publication |
 | Open PR check | Not run | Required before release publication |
-| Release tag check | Not run | Required before release publication; v0.11.0 is not published yet |
+| Release tag check | Not run | Required before release publication; v0.11.1 is not published yet |
 
 ## Use-Case Results
 
@@ -102,14 +104,14 @@ Not changed:
 | UC-02 Fresh recovery without chat history | PASS | Recovery path loads Project Memory, current state, implementation status, reference map, clean-start brief, and task router |
 | UC-03 Task routing by process level | PASS | RT-01 through RT-18 are represented in `process-level-regression.json` with expected L0-L4 levels |
 | UC-04 Owner document resolution | PASS | `memory/project-kb/10_REFERENCE.md` and `12_SYSTEM_RELATIONSHIP_MAP.md` link owner documents |
-| UC-05 Project Memory integrity | PASS | Manifest, implementation status, current state, release process, and clean-start state agree on the v0.11.0 release target |
-| UC-06 Clean start after merge | PASS | Clean-start brief points to the v0.10.0 release state and v0.11.0 target validation |
+| UC-05 Project Memory integrity | PASS | Manifest, implementation status, current state, release process, and clean-start state agree on the v0.11.1 release |
+| UC-06 Clean start after merge | PASS | Clean-start brief points to the v0.11.1 release state and v0.12.0 target selection |
 | UC-07 PR handoff readiness | PASS | PR standard and templates require Problem, Solution, Scope, Validation, Risks, and Follow-ups |
 | UC-08 Branch governance | PASS | Public GitHub distribution is `main` only; scoped branches target `main` when publication is required |
 | UC-09 Feature Lifecycle gate | PASS | Meaningful feature work still requires lifecycle artifacts before implementation |
 | UC-10 Guardian boundary checks | PASS | Guardian architecture and scenarios cover repository, scope, architecture, memory, PR, and release checks |
 | UC-11 Sanitization and leakage control | PASS | Public wording and fixture checks keep private source terms out of release-target docs |
-| UC-12 Documentation truthfulness | PASS | v0.10.0 is described as the current published release and v0.11.0 as the next release target |
+| UC-12 Documentation truthfulness | PASS | v0.11.1 is described as the current published release and v0.12.0 as the next release target |
 | UC-13 Release flow | PASS | Release-readiness fixture requires file, branch, tag, and GitHub Release agreement |
 | UC-14 Public quality gate | PASS | README, docs navigation, manifest, quality scripts, validation fixtures, and context export define the current public quality surface |
 | UC-15 Adoption path | PASS | Open-source, adaptation, migration guides, templates, checklists, docs navigation, and the AI product example provide the current adoption path |
@@ -121,7 +123,7 @@ Not changed:
 | Manifest included files exist | PASS | `make quality` checks manifest paths |
 | Validation assets are linked | PASS | Fixtures and checker are linked from manifest, reference map, docs navigation, and script guide |
 | Checklist index includes validation checklist | PASS | `checklists/README.md` links the system use-case validation checklist |
-| Memory agrees with release state | PASS | Current state records v0.10.0 as released and v0.11.0 as the next target |
+| Memory agrees with release state | PASS | Current state records v0.11.1 as released and v0.12.0 as the next target |
 | No stale current public branch | PASS | Current workflow uses public `main` and scoped branches, not a public integration branch |
 | Context output ignored | PASS | Generated bundles under `.blueprint/context/` are ignored by Git |
 
@@ -133,4 +135,4 @@ Selected result:
 
 Reason:
 
-`The v0.11.0 JSONL context export target is represented by updated feature artifacts, an ordered profile manifest, local Markdown and JSONL export commands, ignored generated outputs, refreshed recovery state, and passing local command evidence. Publication checks remain required before release.`
+`The v0.11.1 release-state truthfulness patch is represented by refreshed release state, stronger release consistency checks, refreshed recovery state, and passing local command evidence. Publication checks remain required before release.`
