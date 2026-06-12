@@ -375,6 +375,9 @@ The full bundle is listed in [BUNDLE_MANIFEST.md](BUNDLE_MANIFEST.md).
 
 Blueprint v0.8.0 is released on `main`.
 
+Blueprint v0.9.0 is the next release target for repository-owned context export
+commands.
+
 The public repository exposes `main` as the release-ready distribution branch. Maintainers may use local or private integration branches before publishing, but public adoption does not require a visible `develop` branch.
 
 Included now:
@@ -398,6 +401,7 @@ Included now:
 | Public README and practical AI-agent use-case media | Included |
 | Documentation quality workflow and scripts | Included |
 | Documentation navigation pages | Included |
+| Context export commands | Included |
 
 Not included yet:
 
@@ -420,6 +424,7 @@ Blueprint tracks validation as repository-owned evidence.
 | [Process-efficiency dogfood audit](docs/validation/process-efficiency-dogfood-v0.4.1.md) | Evidence that L0/L1/L2 budgets work in this repository |
 | [Validation checklist](VALIDATION_CHECKLIST.md) | Public release and adoption validation gates |
 | [Bundle manifest](BUNDLE_MANIFEST.md) | Included, planned, and excluded assets |
+| [Context export](context/README.md) | Ordered repository-owned context bundles for external LLMs and fresh chats |
 
 The current release also passed local repository checks:
 
@@ -434,6 +439,13 @@ git diff --check
 The current release also checks validation fixture shape, required scenario
 IDs, expected process levels, owner-document references, and main-only
 release-readiness settings.
+
+The v0.9.0 release target adds context export commands:
+
+```bash
+make context-export
+make context-chat
+```
 
 <a id="roadmap"></a>
 
@@ -453,6 +465,7 @@ release-readiness settings.
 | v0.6.1 | Public main-only cleanup after Dependabot branch leakage |
 | v0.7.0 | Documentation navigation, quickstart, concepts, reference, and community pages |
 | v0.8.0 | Validation fixtures, fixture checker, and main-only validation state refresh |
+| v0.9.0 | Context export commands for external LLMs and fresh chats |
 | Next | Additional examples, release automation, and optional CI expansion |
 
 <a id="contributing"></a>

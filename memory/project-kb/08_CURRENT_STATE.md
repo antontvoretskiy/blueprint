@@ -8,6 +8,7 @@ This file records the current recovery point for Blueprint.
 | --- | --- | --- |
 | `main` | Release-ready public state | Contains the released v0.8.0 public framework bundle |
 | local/private integration branches | Maintainer-only work | May exist outside the public GitHub branch list |
+| `codex/context-export-v0.9.0` | Scoped release-target work | Prepares v0.9.0 context export commands before publication |
 
 ## Current Work
 
@@ -15,6 +16,10 @@ Blueprint v0.8.0 is released on public `main`.
 
 The GitHub Release `v0.8.0` is published and points to the v0.8.0 release
 commit on `main`.
+
+Blueprint v0.9.0 is the selected next release target. The scope is
+repository-owned context export commands for external LLMs, databases, and
+fresh Codex or Cursor chats.
 
 The public GitHub repository exposes only `main` as the release-ready
 distribution branch. The former public `develop` branch and merged release,
@@ -52,11 +57,21 @@ Release `v0.8.0` adds the validation fixture layer:
 - `docs/validation/fixtures/release-readiness.json`;
 - `scripts/check_validation_fixtures.py`.
 
+Release target `v0.9.0` adds the context export layer:
+
+- `context/README.md`;
+- `context/export-manifest.json`;
+- `scripts/export_context.py`;
+- `make context-export`;
+- `make context-chat`;
+- ignored generated output under `.blueprint/context/`.
+
 The active quality-gate surface is:
 
 - `make quality`;
 - `scripts/check_quality.py`;
 - `scripts/check_validation_fixtures.py`;
+- `scripts/export_context.py`;
 - `.github/workflows/docs-quality.yml`;
 
 These checks are validation tooling only. They are not a CLI, installer,
@@ -82,6 +97,7 @@ runtime, workflow engine, or code generator.
 - system use-case validation suite;
 - system use-case validation result;
 - validation fixtures;
+- context export commands;
 - AI product example;
 - public release packaging;
 - support, security, and conduct files;
@@ -91,6 +107,7 @@ runtime, workflow engine, or code generator.
 - v0.6.1 documentation quality workflow and scripts.
 - v0.7.0 documentation navigation, quickstart, concept, reference, and community pages.
 - v0.8.0 validation fixtures, fixture checker, and main-only validation state refresh.
+- v0.9.0 context export commands for external LLMs and fresh chats.
 
 ## Not Yet Included
 
@@ -106,7 +123,7 @@ runtime, workflow engine, or code generator.
 
 ## Next Recommended Work
 
-Select the next release scope after v0.8.0.
+Complete the v0.9.0 context export release target.
 
 Required validation before any new release publication:
 
@@ -116,7 +133,9 @@ Required validation before any new release publication:
 - `make smoke`;
 - `git diff --check`;
 - Python compile checks for validation scripts;
+- `make context-export`;
+- `make context-chat`;
 - public branch and open PR checks.
 
 Do not start additional examples, CLI, installer, release automation, or
-integration work until the next scope is selected.
+integration work until the v0.9.0 context export scope is complete.

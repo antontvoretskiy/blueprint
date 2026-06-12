@@ -97,6 +97,7 @@ The selected branch model must be recorded in the adopter repository Git policy 
 | Documentation navigation | Route users from README into quickstart, concepts, reference, governance, validation, and community docs | `docs/index.md`, `docs/nav.md`, `docs/quickstart.md` | Yes |
 | Documentation quality gates | Validate repository links, manifest paths, public wording, templates, and release consistency | `scripts/check_quality.py`, `.github/workflows/docs-quality.yml` | Yes |
 | Validation fixtures | Define versioned UC, RT, and release-readiness expectations for quality gates | `docs/validation/fixtures/**`, `scripts/check_validation_fixtures.py` | Yes |
+| Context export | Export ordered repository-owned context bundles for external LLMs and fresh chats | `context/export-manifest.json`, `scripts/export_context.py` | Yes |
 | Open-source support | Define public support, conduct, and security boundaries | `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` | Yes |
 | GitHub contribution templates | Structure public issues and PRs | `.github/**` | Yes |
 | Agent entrypoint | Define how agents start and recover | `core/AGENTS.md` | Yes |

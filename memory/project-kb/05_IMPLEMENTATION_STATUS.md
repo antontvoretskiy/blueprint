@@ -6,7 +6,7 @@ This file records what is currently included in Blueprint and what remains plann
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.8.0 public README is released |
+| Public repository presentation | Included | README, license, contribution guide, architecture, manifest; v0.8.0 public README is released and v0.9.0 is the next release target |
 | Local preview environment | Included | Docker Compose preview and smoke checks |
 | Complete product map | Included | Product shape, subsystem links, process levels, project management, and feature management |
 | Core contracts | Included | Agent contract, task router, compact process levels, context budgets, recovery budgets, lifecycle, handoff, security |
@@ -29,6 +29,7 @@ This file records what is currently included in Blueprint and what remains plann
 | Documentation quality gates | Included | Local `make quality` checks, validation fixture checks, and docs-quality GitHub Actions workflow validate repository documentation claims |
 | Documentation navigation | Included | Docs landing page, navigation map, quickstart, repository-first concept, template reference, governance reference, and community guide |
 | Validation fixtures | Included | Versioned UC, RT, and release-readiness fixture data plus `scripts/check_validation_fixtures.py` |
+| Context export | Included | Ordered context export manifest, local bundle generation commands, and ignored generated output path |
 
 ## Planned
 
@@ -67,6 +68,9 @@ make smoke
 git diff --check
 python3 -m py_compile scripts/check_quality.py
 python3 -m py_compile scripts/check_validation_fixtures.py
+python3 -m py_compile scripts/export_context.py
+make context-export
+make context-chat
 ```
 
 Public PRs also run wording, link, path-scope, title, and PR-body checks.

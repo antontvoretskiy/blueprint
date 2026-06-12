@@ -10,6 +10,7 @@
 logs/
 tmp/
 .cache/
+.blueprint/
 
 # Node / frontend outputs
 node_modules/

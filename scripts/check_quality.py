@@ -30,6 +30,7 @@ PUBLIC_WORDING_PATHS = [
     "docs/reference/templates.md",
     "docs/reference/governance.md",
     "docs/community.md",
+    "context/README.md",
     "docs/validation/fixtures/README.md",
     "scripts/README.md",
 ]
@@ -94,7 +95,7 @@ def iter_markdown_files() -> list[Path]:
     return sorted(
         path
         for path in ROOT.rglob("*.md")
-        if ".git" not in path.parts and ".venv" not in path.parts
+        if ".git" not in path.parts and ".venv" not in path.parts and ".blueprint" not in path.parts
     )
 
 

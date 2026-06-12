@@ -1,0 +1,246 @@
+{
+  "asset": "context-export-manifest",
+  "version": "v0.9.0",
+  "type": "Context Export Manifest",
+  "status": "release-target",
+  "default_outputs": {
+    "external-llm": ".blueprint/context/blueprint-context-bundle.md",
+    "chat-bootstrap": ".blueprint/context/blueprint-chat-bootstrap.md"
+  },
+  "profiles": {
+    "external-llm": {
+      "title": "Blueprint External LLM Context Bundle",
+      "description": "Full repository-owned context for an outside LLM, database, or review tool."
+    },
+    "chat-bootstrap": {
+      "title": "Blueprint Chat Bootstrap Bundle",
+      "description": "Fresh-chat context for Codex, Cursor, or another coding agent."
+    }
+  },
+  "documents": [
+    {
+      "id": "repo-readme",
+      "path": "README.md",
+      "title": "Public README",
+      "purpose": "Public overview, status, validation, and roadmap.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "clean-start",
+      "path": "memory/project-kb/current/CLEAN_START_BRIEF.md",
+      "title": "Current Clean Start Brief",
+      "purpose": "Fastest current recovery point for a new session.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "memory-index",
+      "path": "memory/project-kb/00_INDEX.md",
+      "title": "Project Memory Index",
+      "purpose": "Project Memory entrypoint and recovery order.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "current-state",
+      "path": "memory/project-kb/08_CURRENT_STATE.md",
+      "title": "Current State",
+      "purpose": "Current release, included state, excluded state, and next work.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "implementation-status",
+      "path": "memory/project-kb/05_IMPLEMENTATION_STATUS.md",
+      "title": "Implementation Status",
+      "purpose": "Included, planned, and excluded implementation state.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "reference-map",
+      "path": "memory/project-kb/10_REFERENCE.md",
+      "title": "Reference Map",
+      "purpose": "Canonical owner file map for recovery and navigation.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "agent-contract",
+      "path": "core/AGENTS.md",
+      "title": "Agent Contract",
+      "purpose": "Rules for agents working from repository-owned truth.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "task-router",
+      "path": "core/TASK_PROCESS_ROUTER.md",
+      "title": "Task Process Router",
+      "purpose": "Process levels, routing, recovery budgets, and escalation triggers.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "product-map",
+      "path": "PRODUCT_MAP.md",
+      "title": "Product Map",
+      "purpose": "Complete product shape and subsystem map.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "bundle-manifest",
+      "path": "BUNDLE_MANIFEST.md",
+      "title": "Bundle Manifest",
+      "purpose": "Included, planned, and excluded bundle contents.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "release-process",
+      "path": "RELEASE.md",
+      "title": "Release Process",
+      "purpose": "Manual release gates and release state.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "validation-checklist",
+      "path": "VALIDATION_CHECKLIST.md",
+      "title": "Validation Checklist",
+      "purpose": "Public PR and release validation gates.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "workflow-rules",
+      "path": "memory/project-kb/06_WORKFLOW_AND_RULES.md",
+      "title": "Workflow And Rules",
+      "purpose": "Active workflow summary and canonical references.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "decisions-log",
+      "path": "memory/project-kb/07_DECISIONS_LOG.md",
+      "title": "Decisions Log",
+      "purpose": "Durable accepted decisions.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "task-history",
+      "path": "memory/project-kb/09_TASK_HISTORY.md",
+      "title": "Task History",
+      "purpose": "Durable merged task history.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "source-coverage",
+      "path": "memory/project-kb/11_SOURCE_COVERAGE_MATRIX.md",
+      "title": "Source Coverage Matrix",
+      "purpose": "Transfer coverage and remaining source-reference gaps.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "relationship-map",
+      "path": "memory/project-kb/12_SYSTEM_RELATIONSHIP_MAP.md",
+      "title": "System Relationship Map",
+      "purpose": "Owner, dependency, and workflow relationship map.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "recovery-validation",
+      "path": "memory/project-kb/current/RECOVERY_VALIDATION.md",
+      "title": "Recovery Validation",
+      "purpose": "Evidence that recovery works from repository files.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "system-validation",
+      "path": "memory/project-kb/current/SYSTEM_USE_CASE_VALIDATION.md",
+      "title": "System Use-Case Validation",
+      "purpose": "Current use-case validation evidence.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "open-source-spec",
+      "path": "OPEN_SOURCE_SPEC.md",
+      "title": "Open Source Specification",
+      "purpose": "Public product definition and boundaries.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "architecture",
+      "path": "ARCHITECTURE.md",
+      "title": "Architecture",
+      "purpose": "Core, extension, and example layer boundaries.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "docs-navigation",
+      "path": "docs/nav.md",
+      "title": "Documentation Navigation",
+      "purpose": "Task-oriented documentation map.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "context-export",
+      "path": "context/README.md",
+      "title": "Context Export",
+      "purpose": "Commands for ordered repository-owned context bundles.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "quickstart",
+      "path": "docs/quickstart.md",
+      "title": "Quickstart",
+      "purpose": "Adoption path for a new repository.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "governance-index",
+      "path": "governance/docs/governance-index.md",
+      "title": "Governance Index",
+      "purpose": "Canonical governance owner map.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "git-policy",
+      "path": "governance/docs/git-policy.md",
+      "title": "Git Policy",
+      "purpose": "Branch, commit, merge, and cleanup rules.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "pr-standard",
+      "path": "governance/docs/pr-standard.md",
+      "title": "PR Standard",
+      "purpose": "PR scope, body, validation, and review rules.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "verification-standard",
+      "path": "governance/docs/verification-standard.md",
+      "title": "Verification Standard",
+      "purpose": "Validation language and evidence requirements.",
+      "profiles": ["external-llm", "chat-bootstrap"]
+    },
+    {
+      "id": "documentation-standard",
+      "path": "governance/docs/documentation-standard.md",
+      "title": "Documentation Standard",
+      "purpose": "Truthfulness and status-label rules.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "feature-lifecycle",
+      "path": "core/FEATURE_LIFECYCLE_STANDARD.md",
+      "title": "Feature Lifecycle Standard",
+      "purpose": "Feature artifact and implementation gate rules.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "pr-handoff-clean-start",
+      "path": "core/PR_HANDOFF_AND_CLEAN_START_STANDARD.md",
+      "title": "PR Handoff And Clean Start Standard",
+      "purpose": "PR handoff and post-merge recovery rules.",
+      "profiles": ["external-llm"]
+    },
+    {
+      "id": "context-export-feature",
+      "path": "memory/project-kb/features/context-export/FEATURE.md",
+      "title": "Context Export Feature",
+      "purpose": "Feature requirements for context export.",
+      "profiles": ["external-llm"]
+    }
+  ]
+}
